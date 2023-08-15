@@ -311,7 +311,7 @@ e [`@NonNull`](https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/latest
 
 ### Analogia
 
-#### Nullables e a caixa de presente vazia
+#### Nullables e caixas de presente
 
 Imagine que cada variável em um programa é como uma caixa de presente. Essas caixas podem estar vazias, sem nenhum presente dentro, ou podem
 conter um presente específico. Esses presentes representam os valores que as variáveis podem armazenar.
