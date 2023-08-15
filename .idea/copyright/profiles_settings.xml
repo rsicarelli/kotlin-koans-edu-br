@@ -4,7 +4,7 @@
       <element module="Project Files" copyright="MIT - Pessoal" />
     </module2copyright>
     <LanguageOptions name="__TEMPLATE__">
-      <option name="addBlankAfter" value="false" />
+      <option name="addBlankBefore" value="true" />
     </LanguageOptions>
   </settings>
 </component>

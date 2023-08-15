@@ -8,6 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/MIT___Pessoal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/MIT___Pessoal.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
@@ -103,7 +105,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoJava.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoJavaScript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoPHP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoSwift.swift" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoSwift.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/JavaRandom.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/JavaRandom.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/KotlinRandom.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/KotlinRandom.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/SoluçãoDart.dart" afterDir="false" />
@@ -206,7 +207,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
+    "settings.editor.selected.configurable": "copyright.profiles"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -222,6 +223,26 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="kotlin-koans-edu-br.Introduction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -250,6 +271,100 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="kotlin-koans-edu-br.Introduction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="kotlin-koans-edu-br.Introduction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="kotlin-koans-edu-br.Introduction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="kotlin-koans-edu-br.Introduction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="kotlin-koans-edu-br.Introduction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="kotlin-koans-edu-br.Introduction" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SwiftWorkspaceSettings">
@@ -272,11 +387,15 @@
       <workItem from="1692036826212" duration="107000" />
       <workItem from="1692036953184" duration="8867000" />
       <workItem from="1692079859862" duration="561000" />
+      <workItem from="1692080428446" duration="343000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
