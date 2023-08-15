@@ -1,0 +1,17 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 137
+    length: 8
+    placeholder_text: TODO()
+  - offset: 215
+    length: 10
+    placeholder_text: TODO()
+  - offset: 297
+    length: 32
+    placeholder_text: TODO()
+- name: test/tests.kt
+  visible: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSeYool5qTz-p77fzn_9UKQVjO3u3Al6WjzEyW5cbjspRwtQig/viewform?usp=pp_url&entry.2103429047=Collections+/+Getting+Used+to+New+Style

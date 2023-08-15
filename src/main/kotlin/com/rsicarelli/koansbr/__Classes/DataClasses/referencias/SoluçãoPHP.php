@@ -1,0 +1,32 @@
+<?php
+
+class Person
+{
+    public $name;
+    public $age;
+
+    function __construct($name, $age)
+    {
+        $this->name = $name;
+        $this->age = $age;
+    }
+
+    function equals($other): bool
+    {
+        return $this->name == $other->name && $this->age == $other->age;
+    }
+}
+
+function getPeople(): array
+{
+    return [new Person("Alice", 29), new Person("Bob", 31)];
+}
+
+function comparePeople(): bool
+{
+    $p1 = new Person("Alice", 29);
+    $p2 = new Person("Alice", 29);
+    return $p1->equals($p2); // should be true
+}
+
+echo comparePeople() ? 'true' : 'false';

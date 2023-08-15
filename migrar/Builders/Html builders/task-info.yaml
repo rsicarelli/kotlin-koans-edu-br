@@ -1,0 +1,24 @@
+type: edu
+files:
+- name: src/html.kt
+  visible: true
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 83
+    length: 25
+    placeholder_text: /* TODO */
+  - offset: 404
+    length: 481
+    placeholder_text: TODO()
+- name: src/data.kt
+  visible: true
+- name: src/demo.kt
+  visible: true
+- name: test/tests.kt
+  visible: false
+- name: src/demo.kt.wb
+  visible: false
+- name: task.md.wb
+  visible: false
+feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSeYool5qTz-p77fzn_9UKQVjO3u3Al6WjzEyW5cbjspRwtQig/viewform?usp=pp_url&entry.2103429047=Builders+/+Html+builders

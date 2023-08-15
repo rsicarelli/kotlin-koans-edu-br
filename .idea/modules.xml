@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin-koans-edu-br.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin-koans-edu-br.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kotlin-koans-edu-br.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kotlin-koans-edu-br.test.iml" />
+    </modules>
+  </component>
+</project>
