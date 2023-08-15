@@ -76,11 +76,59 @@ predefinido.
 - **Parâmetros padrão discartados no bytecode Java:** Quando utilizamos funções do Java no Kotlin, os valores padrão não estão disponíveis e
   cada combinação precisa ser sobrecarregada explicitamente na função `@JvmOverloads` para que os valores padrão sejam usados.
 
-## Notas
 
-- O uso de argumentos padrão é uma ferramenta poderosa e pode ajudar a escrever um código mais limpo e eficiente, mas, como
-  sempre, é importante usá-los com moderação e atenção para evitar a complexidade desnecessária
+### JVMOverloads
+[`@JvmOverloads`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/) é uma anotação em Kotlin que instrui o compilador a gerar sobrecargas de uma função (ou construtor) para cada combinação de parâmetros com valores padrão.
 
-## Dicas
+Em Kotlin, é possível definir valores padrão para parâmetros de funções, evitando a necessidade de criar múltiplas sobrecargas da mesma função. No entanto, esse conceito não existe em Java da mesma forma que existe em Kotlin. Portanto, se você quiser chamar uma função Kotlin com argumentos padrão a partir do código Java, pode encontrar problemas.
 
-- Na tarefa, o número `42` é um ótimo candidato para ser um argumento predefinido.
+A anotação `@JvmOverloads` resolve esse problema gerando sobrecargas adequadas para o código Java.
+
+```kotlin
+@JvmOverloads
+fun displayMessage(message: String, times: Int = 1, prefix: String = "") {
+    for (i in 1..times) {
+        println("$prefix$message")
+    }
+}
+```
+
+Ao adicionar a anotação `@JvmOverloads`, o compilador Kotlin gerará as seguintes sobrecargas (para uso em Java):
+
+```java
+void displayMessage(String message) { ... }
+void displayMessage(String message, int times) { ... }
+void displayMessage(String message, int times, String prefix) { ... }
+```
+
+Dessa forma, o código Java pode chamar qualquer uma dessas sobrecargas, dependendo de quantos argumentos a pessoa programadora deseja fornecer.
+
+### Analogia
+#### Padaria e default arguments
+Imagine que você vá a uma padaria famosa pelo seu café da manhã chamado "Café Padrão". Esse "Café Padrão" é simplesmente um café preto médio, sem adições.
+
+No entanto, a padaria reconhece que nem todos gostam do café preto puro. Algumas pessoas podem querer alguma bebiba vegetal, açúcar, caramelo, chantilly, entre outros.
+
+Mas se um cliente entra e simplesmente diz: "Quero um café", sem dar mais detalhes, o atendente entregará o "Café Padrão" (café preto médio), porque esse é o padrão.
+
+Agora, pense nos default arguments em Kotlin da mesma maneira. Ao definir uma função, você pode estabelecer alguns valores padrão para certos argumentos. Se alguém chamar essa função sem fornecer detalhes para esses argumentos, os valores padrão são usados.
+
+Por exemplo, você pode ter uma função assim:
+
+```kotlin
+fun pedirCafe(tamanho: String = "médio", adicional: String? = null) {
+    // prepara o café
+}
+
+pedirCafe()
+```
+
+Você receberá um café médio sem adições, pois são os valores padrão.
+
+Mas, se você quiser algo diferente, pode ser específico:
+
+```kotlin
+pedirCafe("grande", "com caramelo e chantilly")
+```
+
+E aí, você receberá um café grande com caramelo e chantilly!
