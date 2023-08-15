@@ -8,8 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/ExtensionsFunctionsTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/PersonTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/PersonTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/koans/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/SealedClassesKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/SealedClassesKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/SealedClassesTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/SealedClassesTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,7 @@
         <option value="Class" />
         <option value="Go File" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -125,7 +128,7 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/Smart casts" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ExtensionsFunctionsTest">
+  <component name="RunManager" selected="Gradle.SealedClassesTest.DADO todas as possíveis implementações de Expr QUANDO eu avalio CADA uma ENTÃO não ocorre nenhuma exceção de implementação faltante">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -141,30 +144,6 @@
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <method v="2" />
-    </configuration>
-    <configuration name="DataClassesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/koans" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":koans:cleanDesktopTest" />
-            <option value=":koans:desktopTest" />
-            <option value="--tests &quot;com.rsicarelli.koansbr.classes.DataClassesTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="DataClassesTest.QUANDO a função getPeople é chamada, ENTÃO ela deve retornar uma lista contendo Alice e Bob" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -215,10 +194,10 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Testando" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SealedClassesTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/koans" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -226,9 +205,33 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.rsicarelli.koansbr.classes.Testando&quot;" />
+            <option value=":koans:cleanDesktopTest" />
+            <option value=":koans:desktopTest" />
+            <option value="--tests &quot;com.rsicarelli.koansbr.classes.SealedClassesTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SealedClassesTest.DADO todas as possíveis implementações de Expr QUANDO eu avalio CADA uma ENTÃO não ocorre nenhuma exceção de implementação faltante" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/koans" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":koans:cleanDesktopTest" />
+            <option value=":koans:desktopTest" />
+            <option value="--tests &quot;com.rsicarelli.koansbr.classes.SealedClassesTest.DADO todas as possíveis implementações de Expr QUANDO eu avalio CADA uma ENTÃO não ocorre nenhuma exceção de implementação faltante&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -276,19 +279,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.DataClassesTest" />
       <item itemvalue="Gradle.DataClassesTest.QUANDO a função getPeople é chamada, ENTÃO ela deve retornar uma lista contendo Alice e Bob" />
       <item itemvalue="Gradle.ExtensionsFunctionsTest" />
+      <item itemvalue="Gradle.SealedClassesTest" />
+      <item itemvalue="Gradle.SealedClassesTest.DADO todas as possíveis implementações de Expr QUANDO eu avalio CADA uma ENTÃO não ocorre nenhuma exceção de implementação faltante" />
       <item itemvalue="Gradle.Tests in 'com.rsicarelli'" />
-      <item itemvalue="Gradle.Testando" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SealedClassesTest.DADO todas as possíveis implementações de Expr QUANDO eu avalio CADA uma ENTÃO não ocorre nenhuma exceção de implementação faltante" />
+        <item itemvalue="Gradle.SealedClassesTest" />
+        <item itemvalue="Gradle.SealedClassesTest" />
         <item itemvalue="Gradle.ExtensionsFunctionsTest" />
         <item itemvalue="Gradle.Tests in 'com.rsicarelli'" />
-        <item itemvalue="Gradle.DataClassesTest" />
-        <item itemvalue="Gradle.DataClassesTest.QUANDO a função getPeople é chamada, ENTÃO ela deve retornar uma lista contendo Alice e Bob" />
-        <item itemvalue="Gradle.DataClassesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -317,7 +320,7 @@
       <workItem from="1692095994022" duration="10584000" />
       <workItem from="1692112030314" duration="542000" />
       <workItem from="1692112580193" duration="51000" />
-      <workItem from="1692112636736" duration="2775000" />
+      <workItem from="1692112636736" duration="4243000" />
     </task>
     <servers />
   </component>
