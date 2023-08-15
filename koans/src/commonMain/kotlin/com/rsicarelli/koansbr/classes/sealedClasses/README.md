@@ -117,7 +117,7 @@ sealed class ResultadoOperacao {
     ) : ResultadoOperacao()
 }
 
-fun main{
+fun main() {
     val sucesso: ResultadoOperacao = Sucesso
     val erro: ResultadoOperacao = Erro(404, "Página não encontrada")
 }
@@ -138,7 +138,7 @@ sealed interface DiaDaSemana {
     object Domingo : DiaDaSemana
 }
 
-fun main{
+fun main() {
     require(Segunda is DiaDaSemana)
     require(Sexta is DiaDaSemana)
     require(Segunda is Sexta) // Não é verdade que Segunda é Sexta
