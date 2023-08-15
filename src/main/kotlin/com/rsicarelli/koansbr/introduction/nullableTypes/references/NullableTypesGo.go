@@ -18,6 +18,7 @@ type Mailer interface {
 	SendMessage(string, string)
 }
 
+//goland:noinspection GoUnusedFunction
 func sendMessageToClient(client *Client, message string, mailer Mailer) {
 	if client == nil || client.PersonalInfo == nil || message == "" {
 		return

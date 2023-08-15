@@ -21,6 +21,7 @@ class Mailer {
     }
 }
 
+// noinspection JSUnusedGlobalSymbols
 function sendMessageToClient(client, message, mailer) {
     const email = client?.personalInfo?.email;
     if (email && message) {

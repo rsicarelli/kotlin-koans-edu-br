@@ -11,6 +11,7 @@ import (
 	"strings"
 )
 
+//goland:noinspection GoUnusedFunction
 func main() {
 	question := "life, the universe, and everything"
 	answer := 42

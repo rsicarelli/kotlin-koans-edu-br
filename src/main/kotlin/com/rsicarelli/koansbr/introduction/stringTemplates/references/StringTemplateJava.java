@@ -6,6 +6,7 @@
 
 package com.rsicarelli.koansbr.introduction.stringTemplates.references;
 
+@SuppressWarnings("unused")
 public class StringTemplateJava {
     private static final String MONTH = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)";
 

@@ -16,6 +16,7 @@ func getPattern() string {
 	return "\\d{2} " + month + " \\d{4}"
 }
 
+//goland:noinspection GoUnusedFunction
 func main() {
 	fmt.Println(getPattern())
 }

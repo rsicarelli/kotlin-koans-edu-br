@@ -19,20 +19,25 @@ Reescreva o código a seguir para que ele tenha apenas uma expressão `if`:
   <summary>Java</summary>
 
 ```java
-public void com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient(
-    @Nullable com.rsicarelli.koansbr.introduction.nullableTypes.Client client,
+package main
+        
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+public void sendMessageToClient(
+    @Nullable Client client,
     @Nullable String message,
-    @NotNull com.rsicarelli.koansbr.introduction.nullableTypes.Mailer mailer
-){
-    if(client==null||message==null)return;
+    @NotNull Mailer mailer
+) {
+    if (client == null || message == null) return;
     
-    com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo personalInfo=client.getPersonalInfo();
-    if(personalInfo==null)return;
+    PersonalInfoJava personalInfo = client.getPersonalInfo();
+    if (personalInfo == null) return;
     
-    String email=personalInfo.getEmail();
-    if(email==null)return;
+    String email = personalInfo.getEmail();
+    if (email == null) return;
     
-    mailer.sendMessage(email,message);
+    mailer.sendMessage(email, message);
 }
 ```
 
@@ -41,7 +46,7 @@ public void com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClien
   <summary>JavaScript</summary>
 
 ```javascript
-function com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient(client, message, mailer) {
+function sendMessageToClient(client, message, mailer) {
     if (client === null || message === null) return;
 
     const personalInfo = client.getPersonalInfo();
@@ -60,22 +65,22 @@ function com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient(c
   <summary>TypeScript</summary>
 
 ```typescript
-interface com.rsicarelli.koansbr.introduction.nullableTypes.Client {
-    getPersonalInfo: () => com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo | null;
+interface Client {
+    getPersonalInfo: () => PersonalInfo | null;
 }
 
-interface com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo {
+interface PersonalInfo {
     getEmail: () => string | null;
 }
 
-interface com.rsicarelli.koansbr.introduction.nullableTypes.Mailer {
+interface Mailer {
     sendMessage: (email: string, message: string) => void;
 }
 
-function com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient(client: com.rsicarelli.koansbr.introduction.nullableTypes.Client | null, message: string | null, mailer: com.rsicarelli.koansbr.introduction.nullableTypes.Mailer): void {
+function sendMessageToClient(client: Client | null, message: string | null, mailer: Mailer): void {
     if (client === null || message === null) return;
 
-    const personalInfo: com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo | null = client.getPersonalInfo();
+    const personalInfo: PersonalInfo | null = client.getPersonalInfo();
     if (personalInfo === null) return;
 
     const email: string | null = personalInfo.getEmail();
@@ -112,7 +117,7 @@ def send_message_to_client(client, message, mailer):
   <summary>Swift</summary>
 
 ```swift
-func com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient(client: com.rsicarelli.koansbr.introduction.nullableTypes.Client?, message: String?, mailer: com.rsicarelli.koansbr.introduction.nullableTypes.Mailer) {
+func sendMessageToClient(client: Client?, message: String?, mailer: Mailer) {
     guard let client = client, let message = message else { return }
 
     guard let personalInfo = client.getPersonalInfo() else { return }
@@ -131,7 +136,7 @@ func com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient(clien
 ```injectablephp
 <?php
 
-function com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient($client, $message, $mailer) {
+function sendMessageToClient($client, $message, $mailer) {
     if($client === null || $message === null) {
         return;
     }
@@ -157,10 +162,10 @@ function com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient($
   <summary>Dart</summary>
 
 ```dart
-void com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient(com.rsicarelli.koansbr.introduction.nullableTypes.Client client, String message, com.rsicarelli.koansbr.introduction.nullableTypes.Mailer mailer) {
+void sendMessageToClient(Client client, String message, Mailer mailer) {
   if (client == null || message == null) return;
 
-  com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo personalInfo = client.getPersonalInfo();
+  PersonalInfo personalInfo = client.getPersonalInfo();
   if (personalInfo == null) return;
 
   String email = personalInfo.getEmail();
@@ -176,46 +181,50 @@ void com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient(com.r
   <summary>Go</summary>
 
 ```go
-func com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient(client *com.rsicarelli.koansbr.introduction.nullableTypes.Client, message string, mailer *com.rsicarelli.koansbr.introduction.nullableTypes.Mailer) {
-    if client == nil || message == "" {
-        return
-    }
-    
-    personalInfo := client.getPersonalInfo()
-    if personalInfo == nil {
-        return
-    }
-    
-    email := personalInfo.getEmail()
-    if email == "" {
-        return
-    }
-    
-    mailer.sendMessage(email, message)
+package main
+
+func sendMessageToClient(client *Client, message string, mailer *Mailer) {
+	if client == nil || message == "" {
+		return
+	}
+
+	personalInfo := client.getPersonalInfo()
+	if personalInfo == nil {
+		return
+	}
+
+	email := personalInfo.getEmail()
+	if email == "" {
+		return
+	}
+
+	mailer.sendMessage(email, message)
 }
 
-type com.rsicarelli.koansbr.introduction.nullableTypes.Client struct {
-    personalInfo *com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo
+type Client struct {
+	personalInfo *PersonalInfo
 }
 
-func (c *com.rsicarelli.koansbr.introduction.nullableTypes.Client) getPersonalInfo() *com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo {
-    return c.personalInfo
+func (c *Client) getPersonalInfo() *PersonalInfo {
+	return c.personalInfo
 }
 
-type com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo struct {
-    email string
+type PersonalInfo struct {
+	email string
 }
 
-func (pi *com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo) getEmail() string {
-    return pi.email
+func (pi *PersonalInfo) getEmail() string {
+	return pi.email
 }
 
-type com.rsicarelli.koansbr.introduction.nullableTypes.Mailer struct{}
+type Mailer struct{}
 
-func (m *com.rsicarelli.koansbr.introduction.nullableTypes.Mailer) sendMessage(email string, message string) {
-    // lógica de envio de mensagem
+func (m *Mailer) sendMessage(email string, message string) {
+	// lógica de envio de mensagem
 }
+
 ```
+
 </details>
 
 <details>
@@ -223,13 +232,13 @@ func (m *com.rsicarelli.koansbr.introduction.nullableTypes.Mailer) sendMessage(e
 
 ```csharp
 public void SendMessageToClient(
-    com.rsicarelli.koansbr.introduction.nullableTypes.Client client,
+    Client client,
     string message,
-    com.rsicarelli.koansbr.introduction.nullableTypes.Mailer mailer
+    Mailer mailer
 ){
     if(client==null || message==null) return;
     
-    com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo personalInfo=client.GetPersonalInfo();
+    PersonalInfo personalInfo=client.GetPersonalInfo();
     if(personalInfo==null) return;
     
     string email=personalInfo.Email; 
@@ -286,7 +295,7 @@ println(tamanho) //6
 val elemento: String = list.find { ... } ?: ValorPadrao
 ```
 
-- **Evitar !!**: O operador `!!` pode ser perigoso, pois força o uso de uma variável nullable e lança uma exceção se ela for nula. Tente
+- **Evitar!!**: O operador `!!` pode ser perigoso, pois força o uso de uma variável nullable e lança uma exceção se ela for nula. Tente
   evitar seu
   uso sempre que possível e optar por manipulação segura de nulos.
 - **Usar [let](https://kotlinlang.org/docs/scope-functions.html#let), [run](https://kotlinlang.org/docs/scope-functions.html#run)
@@ -295,9 +304,9 @@ val elemento: String = list.find { ... } ?: ValorPadrao
 - **Use declarações `if` para verificações de nulidade**: Graças aos [smart casts](https://kotlinlang.org/docs/typecasts.html#smart-casts)
   do Kotlin, se você verificar a nulidade de uma variável usando `if`, então dentro desse bloco `if` você pode usar a variável como se ela
   fosse não-nula.
-- **Usar tipos não nullables quando possível**: Se um valor nunca deveria ser nulo durante o ciclo de vida normal de um programa, deve ser
+- **Usar tipos não nullables quando possível**: se um valor nunca deveria ser nulo durante o ciclo de vida normal de um programa, deve ser
   um tipo não nullable.
-- **Manter as verificações de nulidade simples**: Verificações de nulidade complexas levam a código desnecessariamente complicado. Tente
+- **Manter as verificações de nulidade simples**: verificações de nulidade complexas levam a código desnecessariamente complicado. Tente
   mantê-los o mais simples possível.
 
 #### Compatibilidade com Java
@@ -305,7 +314,7 @@ val elemento: String = list.find { ... } ?: ValorPadrao
 Kotlin trata a nulidade de forma diferente do Java, evitando muitos erros comuns. Ao usar código Java em Kotlin ou vice-versa, é importante
 estar ciente das diferenças nos tipos nulos para evitar problemas de compilação.
 
-Em Java, para expressar a nullabilidade de uma variável, precisamos das
+Em Java, para expressar o tipo `null` de uma variável, precisamos das
 anotações [`@Nullable`](https://javadoc.io/doc/org.jetbrains/annotations/20.1.0/org/jetbrains/annotations/Nullable.html)
 e [`@NonNull`](https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/latest/javax/annotation/Nonnull.html).
 
