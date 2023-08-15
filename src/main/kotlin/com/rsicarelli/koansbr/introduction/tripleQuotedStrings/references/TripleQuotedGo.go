@@ -17,7 +17,7 @@ func main() {
 
 	tripleQuotedString := fmt.Sprintf(`
     #question = "%v"
-    #com.rsicarelli.koansbr.introduction.tripleQuotedStrings.answer = %v
+    #answer = %v
     `, question, answer)
 
 	tripleQuotedString = strings.TrimSpace(tripleQuotedString)

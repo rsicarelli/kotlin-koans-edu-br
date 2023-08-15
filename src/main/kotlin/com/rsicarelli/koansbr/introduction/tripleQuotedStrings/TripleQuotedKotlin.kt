@@ -11,7 +11,7 @@ const val answer: Int = 42
 val tripleQuotedString: String =
     """
     #question = "$question"
-    #com.rsicarelli.koansbr.introduction.tripleQuotedStrings.answer = $answer
+    #answer = $answer
     """.trimMargin(
         marginPrefix = "#"
     )

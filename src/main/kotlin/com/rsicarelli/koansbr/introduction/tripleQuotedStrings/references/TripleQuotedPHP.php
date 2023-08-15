@@ -10,6 +10,6 @@ const ANSWER = 42;
 
 $tripleQuotedString = "
 #question = \"" . QUESTION . "\"
-#com.rsicarelli.koansbr.introduction.tripleQuotedStrings.answer = " . ANSWER;
+#answer = " . ANSWER;
 
 echo $tripleQuotedString;

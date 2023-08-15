@@ -31,6 +31,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
+import org.junit.jupiter.params.provider.ValueSource
 
 class IntroductionTests {
 
@@ -156,7 +157,7 @@ class IntroductionTests {
             // DADO
             val outputEsperado: String = """
             question = "life, the universe, and everything"
-            com.rsicarelli.koansbr.introduction.tripleQuotedStrings.answer = 42
+            answer = 42
         """.trimIndent()
 
             // QUANDO
@@ -238,7 +239,7 @@ class IntroductionTests {
     inner class NullTypeTests {
 
         /**
-         * FakeMailer é uma classe "fake" que implementa a interface com.rsicarelli.koansbr.introduction.nullableTypes.Mailer.
+         * FakeMailer é uma classe "fake" que implementa a interface [Mailer].
          *
          * Um "fake" em testes unitários é uma implementação funcional de uma classe ou interface
          * usada para testar comportamentos na unidade de código sob teste. Em contraste com
@@ -247,7 +248,7 @@ class IntroductionTests {
          * ou não desejado em um teste de unidade (por exemplo, enviar um e-mail de verdade).
          *
          * Esta classe [FakeMailer] é usada para testar se a função [sendMessageToClient] está chamando
-         * corretamente a função [Mailer.sendMessage] na interface com.rsicarelli.koansbr.introduction.nullableTypes.Mailer. Ela guarda a última mensagem e
+         * corretamente a função [Mailer.sendMessage]. Ela guarda a última mensagem e
          * o destinatário em que a função [Mailer.sendMessage] foi chamada, permitindo que o teste verifique
          * se as chamadas corretas foram feitas.
          */
@@ -346,7 +347,7 @@ class IntroductionTests {
                 client = null,
                 message = null,
                 mailer = fakeMailer
-            );
+            )
 
             // ENTÃO
             assertNull(fakeMailer.receiver)
@@ -370,7 +371,7 @@ class IntroductionTests {
         }
 
         @Test
-        fun `DADO idade negativa, QUANDO checkAge eh chamado, ENTÃO deve lançar IllegalArgumentException`() {
+        fun `DADO idade negativa, QUANDO checkAge é chamado, ENTÃO deve lançar IllegalArgumentException`() {
             // DADO
             val idade = -1
 
@@ -382,7 +383,7 @@ class IntroductionTests {
         }
 
         @Test
-        fun `DADO idade muito alta, QUANDO checkAge eh chamado, ENTÃO deve lançar IllegalArgumentException`() {
+        fun `DADO idade muito alta, QUANDO checkAge é chamado, ENTÃO deve lançar IllegalArgumentException`() {
             // DADO
             val idade = 151
 
@@ -394,18 +395,18 @@ class IntroductionTests {
         }
 
         @Test
-        fun `DADO idade aceitável, QUANDO checkAge eh chamado, ENTÃO a mensagem correta deve ser impressa`() {
+        fun `DADO idade aceitável, QUANDO checkAge é chamado, ENTÃO a mensagem correta deve ser impressa`() {
             // DADO
             val idade = 25
-            val baos = ByteArrayOutputStream()
+            val nextAgeOutput = ByteArrayOutputStream()
             val oldOut = System.out
-            System.setOut(PrintStream(baos))
+            System.setOut(PrintStream(nextAgeOutput))
 
             // QUANDO
             checkAge(idade)
 
             // ENTÃO
-            assertEquals("Congrats! Next year you'll be ${idade + 1}.\n", baos.toString())
+            assertEquals("Congrats! Next year you'll be ${idade + 1}.\n", nextAgeOutput.toString())
 
             // Restaurar o output do console
             System.setOut(oldOut)
@@ -416,23 +417,35 @@ class IntroductionTests {
     @Nested
     inner class LambdaTests {
 
-        @Test
-        fun contains() {
+        @ParameterizedTest
+        @ValueSource(strings = ["1,2,3,126,555", "2", "2,4,6,8,10"])
+        fun `DADO uma coleção contendo um numero par, QUANDO containsEven é chamado, ENTÃO deve retornar true`(inputString: String) {
+            // DADO
+            val evenNumbers: List<Int> = inputString.split(",").map(String::toInt)
+
+            // QUANDO
+            val resultado: Boolean = containsEven(evenNumbers)
+
+            // ENTÃO
             assertTrue(
-                actual = containsEven(
-                    collection = listOf(1, 2, 3, 126, 555)
-                ),
-                message = "The result should be true if the collection contains an even number"
+                actual = resultado,
+                message = "Resultado deveria ser true para a coleção: $evenNumbers"
             )
         }
 
-        @Test
-        fun notContains() {
+        @ParameterizedTest
+        @ValueSource(strings = ["43,33", "1", "1,3,5,7,9"])
+        fun `DADO uma coleção sem números pares, QUANDO containsEven é chamado, ENTÃO deve retornar false`(inputString: String) {
+            // DADO
+            val oddNumbers: List<Int> = inputString.split(",").map(String::toInt)
+
+            // QUANDO
+            val resultado: Boolean = containsEven(oddNumbers)
+
+            // ENTÃO
             assertFalse(
-                actual = containsEven(
-                    collection = listOf(43, 33)
-                ),
-                message = "The result should be false if the collection doesn't contain an even number"
+                actual = resultado,
+                message = "Resultado deveria ser false para a coleção: $oddNumbers"
             )
         }
     }

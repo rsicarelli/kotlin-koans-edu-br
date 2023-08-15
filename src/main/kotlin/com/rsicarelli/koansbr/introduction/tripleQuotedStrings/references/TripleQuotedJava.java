@@ -12,7 +12,7 @@ public class TripleQuotedJava {
         String question = "life, the universe, and everything";
         int answer = 42;
 
-        String tripleQuotedString = "#question = \"" + question + "\"\n#com.rsicarelli.koansbr.introduction.tripleQuotedStrings.answer = " + answer;
+        String tripleQuotedString = "#question = \"" + question + "\"\n#answer = " + answer;
         tripleQuotedString = tripleQuotedString.trim();
 
         System.out.println(tripleQuotedString);

@@ -15,4 +15,4 @@ answer = 42
 
 triple_quoted_string = f"""
 #question = "{question}"
-#com.rsicarelli.koansbr.introduction.tripleQuotedStrings.answer = {answer}""".strip()
+#answer = {answer}""".strip()
