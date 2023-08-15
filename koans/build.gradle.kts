@@ -1,4 +1,3 @@
-
 /*
  * SPDX-License-Identifier: MIT
  * Copyright (c) 2014-2019 JetBrains s.r.o.
@@ -10,13 +9,11 @@ plugins {
 }
 
 kotlin {
-
     jvm("desktop") {
         jvmToolchain(11)
     }
 
     sourceSets {
-
         val commonMain by getting {}
 
         val commonTest by getting {

@@ -10,6 +10,8 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         mavenCentral()
+        maven("https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental")
+
     }
 
     plugins {
@@ -18,11 +20,12 @@ pluginManagement {
 }
 
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
 
     repositories {
         mavenCentral()
         google()
+        maven("https://nodesource.com/repos/nodejs")
     }
 }
 
