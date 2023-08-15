@@ -10,14 +10,14 @@ using KRandom = KotlinRandom;
 public class JavaRandom {
 
     public int NextInt(int value) {
-        return 0;
+        return value;
     }
 }
 
 public class KotlinRandom {
 
     public int NextInt(int value) {
-        return 0;
+        return value;
     }
 }
 

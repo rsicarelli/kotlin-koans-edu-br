@@ -4,25 +4,9 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-package com.rsicarelli.koansbr.classes.RenameOnImport.referencias;
+package com.rsicarelli.koansbr.classes.renameOnImport.referencias;
 
-class JavaRandom {
-
-    @SuppressWarnings("SameReturnValue")
-    public int nextInt(int value) {
-        return 0;
-    }
-}
-
-class KotlinRandom {
-
-    @SuppressWarnings("SameReturnValue")
-    public int nextInt(int value) {
-        return 0;
-    }
-}
-
-class Test {
+class RenameOnImportJava {
 
     public static String useDifferentRandomClasses() {
         return "Kotlin random: " +
@@ -34,5 +18,19 @@ class Test {
 
     public static void main(String[] args) {
         System.out.println(useDifferentRandomClasses());
+    }
+}
+
+class JavaRandom {
+
+    public int nextInt(int value) {
+        return value;
+    }
+}
+
+class KotlinRandom {
+
+    public int nextInt(int value) {
+        return value;
     }
 }

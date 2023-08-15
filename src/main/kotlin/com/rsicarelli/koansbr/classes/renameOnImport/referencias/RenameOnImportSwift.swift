@@ -6,13 +6,13 @@
 
 class JavaRandom {
     func nextInt(value: Int) -> Int {
-        return 0
+        return value
     }
 }
 
 class KotlinRandom {
     func nextInt(value: Int) -> Int {
-        return 0
+        return value
     }
 }
 

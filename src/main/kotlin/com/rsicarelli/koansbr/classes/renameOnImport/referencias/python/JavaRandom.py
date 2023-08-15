@@ -4,5 +4,6 @@
 #
 
 class JavaRandom:
+    # noinspection PyMethodMayBeStatic
     def next_int(self, value):
         return 0

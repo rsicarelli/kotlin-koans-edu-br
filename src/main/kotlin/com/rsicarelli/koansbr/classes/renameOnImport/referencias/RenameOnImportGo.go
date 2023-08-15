@@ -14,13 +14,13 @@ import "fmt"
 type JavaRandom struct{}
 
 func (j JavaRandom) NextInt(value int) int {
-	return 0
+	return value
 }
 
 type KotlinRandom struct{}
 
 func (k KotlinRandom) NextInt(value int) int {
-	return 0
+	return value
 }
 
 type KRandom struct {

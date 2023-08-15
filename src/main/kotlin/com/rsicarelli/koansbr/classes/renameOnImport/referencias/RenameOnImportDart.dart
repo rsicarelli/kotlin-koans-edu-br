@@ -4,8 +4,8 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-import 'JavaRandom.dart' as JRandom;
-import 'KotlinRandom.dart' as KRandom;
+import 'dart/JavaRandom.dart' as JRandom;
+import 'dart/KotlinRandom.dart' as KRandom;
 
 String useDifferentRandomClasses() {
   return "Kotlin random: " +

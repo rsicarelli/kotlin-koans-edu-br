@@ -3,6 +3,7 @@
  * Copyright (c) 2014-2019 JetBrains s.r.o.
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
+package com.rsicarelli.koansbr.classes.renameOnImport
 
 import java.util.Random as JRandom
 import kotlin.random.Random as KRandom
