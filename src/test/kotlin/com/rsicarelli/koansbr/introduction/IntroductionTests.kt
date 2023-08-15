@@ -6,18 +6,22 @@
 
 @file:Suppress("NonAsciiCharacters")
 
-package com.rsicarelli.koansbr.Introduction
+package com.rsicarelli.koansbr.introduction
 
+import com.rsicarelli.koansbr.introduction.defaultArguments.foo
+import com.rsicarelli.koansbr.introduction.defaultArguments.useFoo
+import com.rsicarelli.koansbr.introduction.helloWorld.start
+import com.rsicarelli.koansbr.introduction.lambdas.containsEven
+import com.rsicarelli.koansbr.introduction.namedArguments.joinOptions
+import com.rsicarelli.koansbr.introduction.nothingType.checkAge
 import com.rsicarelli.koansbr.introduction.nullableTypes.Client
 import com.rsicarelli.koansbr.introduction.nullableTypes.Mailer
 import com.rsicarelli.koansbr.introduction.nullableTypes.PersonalInfo
-import com.rsicarelli.koansbr.introduction.nothingType.checkAge
-import com.rsicarelli.koansbr.introduction.lambdas.containsEven
-import com.rsicarelli.koansbr.introduction.defaultArguments.foo
-import getPattern
+import com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient
+import com.rsicarelli.koansbr.introduction.stringTemplates.getPattern
+import com.rsicarelli.koansbr.introduction.tripleQuotedStrings.tripleQuotedString
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
-import com.rsicarelli.koansbr.introduction.namedArguments.joinOptions
 import kotlin.test.assertEquals
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
@@ -27,10 +31,6 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.CsvSource
-import com.rsicarelli.koansbr.introduction.nullableTypes.sendMessageToClient
-import start
-import com.rsicarelli.koansbr.introduction.tripleQuotedStrings.tripleQuotedString
-import com.rsicarelli.koansbr.introduction.defaultArguments.useFoo
 
 class IntroductionTests {
 

@@ -1,11 +1,13 @@
-import org.junit.Assert
+import kotlin.test.DefaultAsserter.assertTrue
+import org.junit.jupiter.api.Test
 
 class Test {
-    @Test(timeout = 1000)
+
+    @Test
     fun testRandom() {
         val string = useDifferentRandomClasses()
-        Assert.assertTrue(
-                "The string should contain random numbers 0 or 1\n$string",
-                setOf('0', '1').any { it in string })
+        assertTrue(
+            "The string should contain random numbers 0 or 1\n$string",
+            setOf('0', '1').any { it in string })
     }
 }
