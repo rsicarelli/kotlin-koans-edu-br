@@ -1,4 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023-2023 Rodrigo Sicarelli
+ *
+ */
+
+/*
 * TypeScript (JavaScript) não suporta a extensão de tipos nativos com novos métodos, então, infelizmente, não seria possível ter uma tradução direta para TypeScript.
 * */
 

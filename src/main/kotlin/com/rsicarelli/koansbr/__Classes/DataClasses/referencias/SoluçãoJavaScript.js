@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023-2023 Rodrigo Sicarelli
+ *
+ */
+
 class Person {
     constructor(name, age) {
         this.name = name;

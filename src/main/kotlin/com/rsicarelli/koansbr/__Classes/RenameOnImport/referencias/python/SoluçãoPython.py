@@ -1,3 +1,11 @@
+#  *SPDX-License-Identifier: MIT
+#  *Copyright (c) 2023-2023 Rodrigo Sicarelli
+#
+#
+#
+#
+#
+
 from JavaRandom import JavaRandom as JRandom
 from KotlinRandom import KotlinRandom as KRandom
 

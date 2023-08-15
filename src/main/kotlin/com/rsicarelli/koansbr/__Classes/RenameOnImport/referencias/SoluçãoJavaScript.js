@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023-2023 Rodrigo Sicarelli
+ *
+ */
+
 import {JavaRandom as JRandom} from './typescript/JavaRandom';
 import {KotlinRandom as KRandom} from './typescript/KotlinRandom';
 

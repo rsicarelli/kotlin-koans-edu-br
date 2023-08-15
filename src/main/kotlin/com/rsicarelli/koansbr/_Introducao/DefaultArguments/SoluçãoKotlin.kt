@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023-2023 Rodrigo Sicarelli
+ *
+ */
+
 fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false): String =
     (if (toUpperCase) name.uppercase() else name) + number
 

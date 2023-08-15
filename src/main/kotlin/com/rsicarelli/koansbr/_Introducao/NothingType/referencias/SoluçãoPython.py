@@ -1,3 +1,11 @@
+#  *SPDX-License-Identifier: MIT
+#  *Copyright (c) 2023-2023 Rodrigo Sicarelli
+#
+#
+#
+#
+#
+
 def fail_with_wrong_age(age):
     raise ValueError("Wrong age: " + str(age))
 

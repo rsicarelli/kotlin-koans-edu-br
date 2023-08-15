@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023-2023 Rodrigo Sicarelli
+ *
+ */
+
 void failWithWrongAge(int? age) {
   throw ArgumentError('Wrong age: $age');
 }

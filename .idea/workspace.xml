@@ -1,10 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="" />
+    <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoJavascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoJavascript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/DefaultArguments/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/SoluçãoKoltin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/SoluçãoKoltin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/HelloWorld/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NothingType/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/java/ClientJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/java/ClientJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/java/MailerJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/java/MailerJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/java/PersonalInfoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/java/PersonalInfoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/java/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NullableTypes/referencias/java/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/StringTemplates/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/DataClasses/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoJavascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoJavascript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/java/RationalNumberJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/java/RationalNumberJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/java/RationalUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/java/RationalUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/java/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/ExtensionFunctions/referencias/java/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/SoluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/SoluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoGo.go" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoGo.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoJavaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoJavaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoPHP.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoPHP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoSwift.swift" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/SoluçãoSwift.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/JavaRandom.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/JavaRandom.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/KotlinRandom.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/KotlinRandom.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/SoluçãoDart.dart" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart/SoluçãoDart.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/python/JavaRandom.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/python/JavaRandom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/python/KotlinRandom.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/python/KotlinRandom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/python/SoluçãoPython.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/python/SoluçãoPython.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/typescript/JavaRandom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/typescript/JavaRandom.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/typescript/KotlinRandom.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/typescript/KotlinRandom.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/typescript/SoluçãoTypeScript.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/typescript/SoluçãoTypeScript.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/SealedClasses/soluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/SealedClasses/soluçãoKotlin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/SmartCasts/soluçãoKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/SmartCasts/soluçãoKotlin.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,9 +148,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin File" />
-        <option value="Go File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Go File" />
       </list>
     </option>
   </component>
@@ -85,7 +196,7 @@
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "jdk.selected.JAVA_MODULE": "11",
     "last_opened_file_path": "/Users/rodrigosicarelli/Workspace/Educacional/kotlin-koans-edu-br",
@@ -95,7 +206,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "dart.settings"
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -103,11 +214,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/typescript" />
+      <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/Smart casts" />
       <recent name="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Classes" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/Sealed classes" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/Rename on import" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/Extension functions" />
     </key>
   </component>
   <component name="RunManager">
@@ -159,7 +270,8 @@
       <workItem from="1692031593582" duration="3796000" />
       <workItem from="1692035865416" duration="939000" />
       <workItem from="1692036826212" duration="107000" />
-      <workItem from="1692036953184" duration="3126000" />
+      <workItem from="1692036953184" duration="8867000" />
+      <workItem from="1692079859862" duration="561000" />
     </task>
     <servers />
   </component>

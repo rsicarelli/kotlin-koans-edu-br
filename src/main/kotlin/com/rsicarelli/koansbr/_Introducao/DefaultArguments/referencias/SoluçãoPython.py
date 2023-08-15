@@ -1,3 +1,11 @@
+#  *SPDX-License-Identifier: MIT
+#  *Copyright (c) 2023-2023 Rodrigo Sicarelli
+#
+#
+#
+#
+#
+
 def foo(name, number=42, to_upper_case=False):
     return (name.upper() if to_upper_case else name) + str(number)
 

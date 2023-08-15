@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023-2023 Rodrigo Sicarelli
+ *
+ */
+
 function failWithWrongAge(age: number | null): never {
     throw new Error("Wrong age: " + age);
 }

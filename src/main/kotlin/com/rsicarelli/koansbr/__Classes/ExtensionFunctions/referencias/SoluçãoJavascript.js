@@ -1,4 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023-2023 Rodrigo Sicarelli
+ *
+ */
+
+/*
 * JavaScript não suporta tipos estáticos ou extensão de tipos primitivos, então desta forma não seria possível ter uma tradução direta para JavaScript.
 * */
 

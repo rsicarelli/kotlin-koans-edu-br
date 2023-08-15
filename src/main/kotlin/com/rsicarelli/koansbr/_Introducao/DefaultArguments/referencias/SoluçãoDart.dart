@@ -1,3 +1,9 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023-2023 Rodrigo Sicarelli
+ *
+ */
+
 String foo(String name, [int number = 42, bool toUpperCase = false]) {
   return (toUpperCase ? name.toUpperCase() : name) + number.toString();
 }

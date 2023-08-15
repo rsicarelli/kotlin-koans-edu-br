@@ -1,7 +1,3 @@
-/*
-* Swift não suporta named imports.
-*/
-
 class JavaRandom {
     func nextInt(value: Int) -> Int {
         return 0
