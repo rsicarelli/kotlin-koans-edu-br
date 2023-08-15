@@ -12,13 +12,15 @@
 
 from collections import namedtuple
 
-Person = namedtuple('Person', ['name', 'age'])
+Person = namedtuple('com.rsicarelli.koansbr.classes.dataClasses.Person', ['name', 'age'])
+
 
 def get_people():
     return [
         Person(name="Alice", age=29),
         Person(name="Bob", age=31)
     ]
+
 
 def compare_people():
     p1 = Person("Alice", 29)

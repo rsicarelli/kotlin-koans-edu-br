@@ -4,19 +4,19 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-package com.rsicarelli.koansbr.__Classes.DataClasses.referencias;
+package com.rsicarelli.koansbr.classes.dataClasses.references;
 
 import java.util.Arrays;
 import java.util.List;
 
-class SoluçãoJava {
+class DataClassesJava {
     public static void main(String[] args) {
         System.out.println(comparePeople());
     }
 
     static class Person {
-        String name;
-        int age;
+        final String name;
+        final int age;
 
         Person(String name, int age) {
             this.name = name;

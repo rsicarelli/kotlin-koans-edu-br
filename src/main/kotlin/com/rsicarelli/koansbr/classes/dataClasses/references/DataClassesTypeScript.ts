@@ -23,8 +23,8 @@ function getPeople(): Person[] {
 }
 
 function comparePeople(): boolean {
-    let p1 = new Person("Alice", 29);
-    let p2 = new Person("Alice", 29);
+    let p1: Person = new Person("Alice", 29);
+    let p2: Person = new Person("Alice", 29);
     return p1.equals(p2); // should be true
 }
 

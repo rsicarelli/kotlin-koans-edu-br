@@ -4,7 +4,7 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-package com.rsicarelli.koansbr.__Classes.ExtensionFunctions.referencias.java;
+package com.rsicarelli.koansbr.classes.ExtensionFunctions.referencias.java;
 
 public class RationalUtils {
     public static RationalNumberJava r(int n) {

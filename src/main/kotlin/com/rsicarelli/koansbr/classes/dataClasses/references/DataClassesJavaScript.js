@@ -11,7 +11,7 @@ class Person {
     }
 
     equals(other) {
-        return this.name == other.name && this.age == other.age;
+        return this.name === other.name && this.age === other.age;
     }
 }
 

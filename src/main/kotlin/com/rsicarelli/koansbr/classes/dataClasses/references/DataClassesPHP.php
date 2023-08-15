@@ -5,6 +5,8 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
+/** @noinspection PhpIllegalPsrClassPathInspection */
+
 class Person
 {
     public $name;

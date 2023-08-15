@@ -4,10 +4,11 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-package com.rsicarelli.koansbr.__Classes.RenameOnImport.referencias;
+package com.rsicarelli.koansbr.classes.RenameOnImport.referencias;
 
 class JavaRandom {
 
+    @SuppressWarnings("SameReturnValue")
     public int nextInt(int value) {
         return 0;
     }
@@ -15,6 +16,7 @@ class JavaRandom {
 
 class KotlinRandom {
 
+    @SuppressWarnings("SameReturnValue")
     public int nextInt(int value) {
         return 0;
     }

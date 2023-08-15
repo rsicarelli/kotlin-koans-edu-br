@@ -4,7 +4,7 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-package referencias
+package references
 
 import "fmt"
 
@@ -13,6 +13,7 @@ type Person struct {
 	age  int
 }
 
+//goland:noinspection GoUnusedFunction
 func getPeople() []Person {
 	return []Person{{"Alice", 29}, {"Bob", 31}}
 }
@@ -23,6 +24,7 @@ func comparePeople() bool {
 	return p1 == p2 // should be true
 }
 
+//goland:noinspection GoUnusedFunction
 func main() {
 	fmt.Println(comparePeople())
 }
