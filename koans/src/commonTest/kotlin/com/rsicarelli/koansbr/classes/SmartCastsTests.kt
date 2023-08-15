@@ -30,6 +30,7 @@ class SmartCastsTests {
                 // ENTÃO
                 assertEquals(5, expr.value)
 
+            //compilador sabe que é impossível chegar nessa linha
             is Sum -> throw IllegalStateException("Isso não deveria acontecer neste teste!")
         }
     }
@@ -45,7 +46,7 @@ class SmartCastsTests {
             assertEquals(2, expr.value)
         } else {
             assertFailsWith<AssertionError> {
-                @Suppress("UNUSED_EXPRESSION")
+                @Suppress("UNUSED_EXPRESSION") //compilador sabe que é impossível chegar nessa linha
                 "Expr não é do tipo Num"
             }
         }
@@ -63,7 +64,7 @@ class SmartCastsTests {
             assertEquals(4, (expr.right as Num).value)
         } else {
             assertFailsWith<AssertionError> {
-                @Suppress("UNUSED_EXPRESSION")
+                @Suppress("UNUSED_EXPRESSION") //compilador sabe que é impossível chegar nessa linha
                 "Expr não é do tipo Sum"
             }
         }
