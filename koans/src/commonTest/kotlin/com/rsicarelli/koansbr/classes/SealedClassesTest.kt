@@ -19,13 +19,13 @@ class SealedClassesTest {
 
     @Test
     fun `DADO um valor do tipo Num QUANDO eu avalio ENTÃO o resultado deve ser igual ao valor fornecido`() {
-        // DADO um valor do tipo Num
+        // DADO
         val num = Num(value = 2)
 
-        // QUANDO avaliamos o valor
+        // QUANDO
         val result: Int = eval(num)
 
-        // ENTÃO o resultado deve ser igual ao valor fornecido
+        // ENTÃO
         assertEquals(
             expected = 2,
             actual = result
@@ -34,16 +34,16 @@ class SealedClassesTest {
 
     @Test
     fun `DADO uma soma de dois números QUANDO eu avalio ENTÃO o resultado deve ser a soma dos dois números`() {
-        // DADO uma soma de dois números
+        // DADO
         val sum = Sum(
             left = Num(value = 2),
             right = Num(value = 1)
         )
 
-        // QUANDO avaliamos a soma dos dois números
+        // QUANDO
         val result = eval(sum)
 
-        // ENTÃO o resultado deve ser a soma dos dois números
+        // ENTÃO
         assertEquals(
             expected = 3,
             actual = result
@@ -52,7 +52,7 @@ class SealedClassesTest {
 
     @Test
     fun `DADO uma soma que inclui outra soma QUANDO eu avalio ENTÃO o resultado deve ser a soma das somas`() {
-        // DADO uma soma que inclui outra soma
+        // DADO
         val sumWithSum = Sum(
             left = Sum(
                 left = Num(value = 2),
@@ -61,10 +61,10 @@ class SealedClassesTest {
             right = Num(value = 3)
         )
 
-        // QUANDO avaliamos a soma que inclui outra soma
+        // QUANDO
         val result: Int = eval(sumWithSum)
 
-        // ENTÃO o resultado deve ser a soma das somas
+        // ENTÃO
         assertEquals(
             expected = 6,
             actual = result
