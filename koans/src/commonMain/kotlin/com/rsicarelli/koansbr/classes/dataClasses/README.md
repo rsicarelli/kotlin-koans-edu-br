@@ -1,14 +1,9 @@
 ## Data classes
 
-As data classes no Kotlin são uma maneira concisa de criar classes que apenas mantêm dados. Elas automaticamente fornecem métodos úteis,
-como `equals()`, `hashCode()`, `toString()`, além do `copy()`. Isso ajuda a reduzir a verbosidade do código
+As [Data Classes](https://kotlinlang.org/docs/data-classes.html) no Kotlin são uma maneira concisa de criar classes que apenas mantêm dados. Elas automaticamente fornecem métodos úteis,
+como `equals()`, `hashCode()`, `toString()`, `copy()` e `.componentN()`. Isso ajuda a reduzir a verbosidade do código
 
-Saiba mais sobre [classes](https://kotlinlang.org/docs/classes.html),
-[properties](https://kotlinlang.org/docs/properties.html)
-e [classes de dados](https://kotlinlang.org/docs/data-classes.html)
-e, em seguida,
-
-As data classes são uma parte muito útil e poderosa do Kotlin, sendo usadas frequentemente para cases em que você precisa armazenar dados,
+As data classes são uma parte muito útil e poderosa do Kotlin, sendo usadas frequentemente para casos em que você precisa armazenar dados,
 mas não precisa de muita lógica ou comportamento adicional na classe.
 
 ### Tarefa

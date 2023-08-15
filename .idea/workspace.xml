@@ -8,19 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/koans/kotlin-koans-edu-br.koans.commonMain.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/koans/kotlin-koans-edu-br.koans.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/SealedClassesDart.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references/SealedClassesC#.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references/SealedClassesGo.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references/SealedClassesJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references/SealedClassesJavaScript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references/SealedClassesPHP.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references/SealedClassesPython.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/kotlin-koans-edu-br.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/kotlin-koans-edu-br.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/task.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/RenameOnImportKotlinTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/RenameOnImportKotlinTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,11 +121,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references" />
       <recent name="$PROJECT_DIR$/koans" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/referencias" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/typescript" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/Smart casts" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.SmartCastsTests">
@@ -331,7 +322,7 @@
       <workItem from="1692112580193" duration="51000" />
       <workItem from="1692112636736" duration="5639000" />
       <workItem from="1692118561120" duration="107000" />
-      <workItem from="1692118673271" duration="120000" />
+      <workItem from="1692118673271" duration="7209000" />
     </task>
     <servers />
   </component>

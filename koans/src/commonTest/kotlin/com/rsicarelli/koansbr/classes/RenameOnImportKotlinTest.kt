@@ -24,3 +24,16 @@ class RenameOnImportKotlinTest {
         )
     }
 }
+
+sealed class FormaGeometrica {
+    data class Circulo(val raio: Double) : FormaGeometrica()
+    data class Retangulo(
+        val largura: Double,
+        val altura: Double,
+    ) : FormaGeometrica()
+
+    fun calcularArea(): Double = when (this) {
+        is Circulo -> Math.PI * raio * raio
+        is Retangulo -> largura * altura
+    }
+}
