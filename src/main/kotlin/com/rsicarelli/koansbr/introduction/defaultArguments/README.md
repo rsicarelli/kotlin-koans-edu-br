@@ -1,41 +1,40 @@
 ## Argumentos Predefinidos
 
-Em Kotlin, pode-se definir um valor predefinido para um argumento de uma função. Isto é referido como argumentos predefinidos,
-ou [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments).
+Em Kotlin, é possível ter valores predefinidos [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) para os
+argumentos de uma função.
 
-Esta é uma característica útil que permite que
-argumentos sejam omitidos quando uma função é chamada, nesse caso, o
-compilador usará os valores predefinidos para esses argumentos.
+Esta é uma característica útil que permite que argumentos sejam omitidos quando uma função é chamada, nesse caso, o compilador usará os
+valores predefinidos para esses argumentos.
 
 ## Tarefa
 
 https://play.kotlinlang.org/koans/Introduction/Default%20arguments/Task.kt
 
-Imagine que você tenha várias sobrecargas de `com.rsicarelli.koansbr.introduction.defaultArguments.foo()` em Java:
+Imagine que você tenha várias sobrecargas de `foo()` em Java:
 
 ```java
 class SobrecargaJava {
-    public String com.rsicarelli.koansbr.introduction.defaultArguments.foo(String name, int number, boolean toUpperCase) {
+    public String foo(String name, int number, boolean toUpperCase) {
         return (toUpperCase ? name.toUpperCase() : name) + number;
     }
 
-    public String com.rsicarelli.koansbr.introduction.defaultArguments.foo(String name, int number) {
-        return com.rsicarelli.koansbr.introduction.defaultArguments.foo(name, number, false);
+    public String foo(String name, int number) {
+        return foo(name, number, false);
     }
 
-    public String com.rsicarelli.koansbr.introduction.defaultArguments.foo(String name, boolean toUpperCase) {
-        return com.rsicarelli.koansbr.introduction.defaultArguments.foo(name, 42, toUpperCase);
+    public String foo(String name, boolean toUpperCase) {
+        return foo(name, 42, toUpperCase);
     }
 
-    public String com.rsicarelli.koansbr.introduction.defaultArguments.foo(String name) {
-        return com.rsicarelli.koansbr.introduction.defaultArguments.foo(name, 42);
+    public String foo(String name) {
+        return foo(name, 42);
     }
 }
 ```
 
 Você pode substituir todas essas sobrecargas do Java por uma única função em Kotlin.
 
-Altere a declaração da função `com.rsicarelli.koansbr.introduction.defaultArguments.foo` de forma que o código que usa `com.rsicarelli.koansbr.introduction.defaultArguments.foo` seja compilado.
+Altere a declaração da função `foo` de forma que o código que usa `foo` seja compilado.
 
 ## Caso de uso
 
@@ -66,21 +65,27 @@ predefinido.
   sem um valor predefinido sejam fornecidos.
 - **Código mais limpo e menos verboso**: O uso de argumentos predefinido ajuda a reduzir a quantidade de código que precisa ser escrita para
   atender a todos os casos de uso possíveis de uma função.
-- **Compatibilidade total com Java**: Funções com argumentos predefinido podem ser chamadas a partir do código Java, como se fossem sobrecargas
+- **Compatibilidade total com Java**: Funções com argumentos predefinido podem ser chamadas a partir do código Java, como se fossem
+  sobrecargas
   da mesma função.
 
 ### Desvantagens
 
-- **Complexidade do código:** O uso excessivo de argumentos predefinido pode tornar o código mais difícil de ler e entender, especialmente para
+- **Complexidade do código:** O uso excessivo de argumentos predefinido pode tornar o código mais difícil de ler e entender, especialmente
+  para
   programadores menos experientes.
-- **Parâmetros predefinido descartados no bytecode Java:** Quando utilizamos funções do Java no Kotlin, os valores predefinido não estão disponíveis e
+- **Parâmetros predefinido descartados no bytecode Java:** Quando utilizamos funções do Java no Kotlin, os valores predefinido não estão
+  disponíveis e
   cada combinação precisa ser sobrecarregada explicitamente na função `@JvmOverloads` para que os valores predefinido sejam usados.
 
-
 ### JVMOverloads
-[`@JvmOverloads`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/) é uma anotação em Kotlin que instrui o compilador a gerar sobrecargas de uma função (ou construtor) para cada combinação de parâmetros com valores predefinido.
 
-Em Kotlin, é possível definir valores predefinido para parâmetros de funções, evitando a necessidade de criar múltiplas sobrecargas da mesma função. No entanto, esse conceito não existe em Java da mesma forma que existe em Kotlin. Portanto, se você quiser chamar uma função Kotlin com argumentos predefinido a partir do código Java, pode encontrar problemas.
+[`@JvmOverloads`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/) é uma anotação em Kotlin que instrui o compilador
+a gerar sobrecargas de uma função (ou construtor) para cada combinação de parâmetros com valores predefinido.
+
+Em Kotlin, é possível definir valores predefinido para parâmetros de funções, evitando a necessidade de criar múltiplas sobrecargas da mesma
+função. No entanto, esse conceito não existe em Java da mesma forma que existe em Kotlin. Portanto, se você quiser chamar uma função Kotlin
+com argumentos predefinido a partir do código Java, pode encontrar problemas.
 
 A anotação `@JvmOverloads` resolve esse problema gerando sobrecargas adequadas para o código Java.
 
@@ -96,22 +101,29 @@ fun displayMessage(message: String, times: Int = 1, prefix: String = "") {
 Ao adicionar a anotação `@JvmOverloads`, o compilador Kotlin gerará as seguintes sobrecargas (para uso em Java):
 
 ```java
-void displayMessage(String message) { ... }
-void displayMessage(String message, int times) { ... }
-void displayMessage(String message, int times, String prefix) { ... }
+void displayMessage(String message){...}
+        void displayMessage(String message,int times){...}
+        void displayMessage(String message,int times,String prefix){...}
 ```
 
-Dessa forma, o código Java pode chamar qualquer uma dessas sobrecargas, dependendo de quantos argumentos a pessoa programadora deseja fornecer.
+Dessa forma, o código Java pode chamar qualquer uma dessas sobrecargas, dependendo de quantos argumentos a pessoa programadora deseja
+fornecer.
 
 ### Analogia
+
 #### Padaria e default arguments
-Imagine que você vá a uma padaria famosa pelo seu café da manhã chamado "Café Padrão". Esse "Café Padrão" é simplesmente um café preto médio, sem adições.
 
-No entanto, a padaria reconhece que nem todos gostam do café preto puro. Algumas pessoas podem querer alguma bebiba vegetal, açúcar, caramelo, chantilly, entre outros.
+Imagine que você vá a uma padaria famosa pelo seu café da manhã chamado "Café Padrão". Esse "Café Padrão" é simplesmente um café preto
+médio, sem adições.
 
-Mas se um cliente entra e simplesmente diz: "Quero um café", sem dar mais detalhes, o atendente entregará o "Café Padrão" (café preto médio), porque esse é o predefinido.
+No entanto, a padaria reconhece que nem todos gostam do café preto puro. Algumas pessoas podem querer alguma bebiba vegetal, açúcar,
+caramelo, chantilly, entre outros.
 
-Agora, pense nos default arguments em Kotlin da mesma maneira. Ao definir uma função, você pode estabelecer alguns valores predefinido para certos argumentos. Se alguém chamar essa função sem fornecer detalhes para esses argumentos, os valores predefinido são usados.
+Mas se um cliente entra e simplesmente diz: "Quero um café", sem dar mais detalhes, o atendente entregará o "Café Padrão" (café preto
+médio), porque esse é o predefinido.
+
+Agora, pense nos default arguments em Kotlin da mesma maneira. Ao definir uma função, você pode estabelecer alguns valores predefinido para
+certos argumentos. Se alguém chamar essa função sem fornecer detalhes para esses argumentos, os valores predefinido são usados.
 
 Por exemplo, você pode ter uma função assim:
 
