@@ -28,4 +28,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "kotlin-koans-edu-br"
 
-include("Introduction")
+include("koans")
