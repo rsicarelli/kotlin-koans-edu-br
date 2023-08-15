@@ -4,7 +4,7 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-package referencias
+package references
 
 /*
 * Go não tem uma tradução direta para named imports.

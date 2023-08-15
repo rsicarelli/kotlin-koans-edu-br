@@ -8,7 +8,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/TripleQuotedStrings/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/IntroductionTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/Lambdas/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/_Introducao/NamedArguments/referencias/SoluçãoJava.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/ArgumentosNomeados/tests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/ArgumentosPredefinidos/tests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/Lambdas/tests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/OlaMundo/tests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/StringComAspasTriplas/Tests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/TemplatesComString/tests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/TipoNothing/Tests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/TipoNothing/Tests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/TipoNulo/tests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/rsicarelli/koansbr/Introduction/TipoNulo/tests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +52,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Interface" />
         <option value="Class" />
         <option value="Go File" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -166,7 +177,7 @@
       <workItem from="1692036826212" duration="107000" />
       <workItem from="1692036953184" duration="8867000" />
       <workItem from="1692079859862" duration="561000" />
-      <workItem from="1692080428446" duration="7429000" />
+      <workItem from="1692080428446" duration="11384000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,7 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-package referencias
+package references
 
 /*
 * Go não suporta classes aninhadas ou sobrecarga de métodos, então desta forma não seria possível ter uma tradução direta.

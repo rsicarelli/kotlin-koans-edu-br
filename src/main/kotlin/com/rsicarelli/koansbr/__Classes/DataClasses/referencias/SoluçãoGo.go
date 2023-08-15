@@ -4,7 +4,7 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-package main
+package referencias
 
 import "fmt"
 
