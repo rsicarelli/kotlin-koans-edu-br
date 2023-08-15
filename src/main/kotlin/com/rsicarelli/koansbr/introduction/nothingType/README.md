@@ -17,9 +17,9 @@ programa não vai continuar normalmente após essa função, então ele lida com
 
 https://play.kotlinlang.org/koans/Introduction/Nothing%20type/Task.kt
 
-Especifique o tipo de retorno `Nothing` para a função `com.rsicarelli.koansbr.introduction.nothingType.failWithWrongAge`.
+Especifique o tipo de retorno `Nothing` para a função `failWithWrongAge`.
 
-Observe que, sem o tipo `Nothing`, a função `com.rsicarelli.koansbr.introduction.nothingType.checkAge` não é compilada porque o compilador
+Observe que, sem o tipo `Nothing`, a função `checkAge` não é compilada porque o compilador
 assume que `age` pode ser `null`.
 
 ### Caso de uso

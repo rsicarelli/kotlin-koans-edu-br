@@ -7,7 +7,7 @@ tornando o código mais claro e fácil de entender.
 
 https://play.kotlinlang.org/koans/Introduction/Named%20arguments/Task.kt
 
-Faça com que a função `com.rsicarelli.koansbr.introduction.namedArguments.joinOptions()` retorne a lista em formato [JSON](https://pt.wikipedia.org/wiki/JSON) (por exemplo, `[a, b, c]`)
+Faça com que a função `joinOptions()` retorne a lista em formato [JSON](https://pt.wikipedia.org/wiki/JSON) (por exemplo, `[a, b, c]`)
 especificando apenas dois argumentos.
 
 Você pode utilizar a função [`joinToString`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html) disponível
