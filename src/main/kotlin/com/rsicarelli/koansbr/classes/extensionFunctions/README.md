@@ -1,8 +1,8 @@
 ## Extension functions
 
-As [Extension Functions](https://kotlinlang.org/docs/extensions.html#extension-functions) em Kotlin são recursos que permitem "estender" uma
-classe com novas funcionalidades sem precisar herdar dela ou usar qualquer tipo de padrão de ‘design’. Basicamente, você anexa uma nova
-função a uma classe existente.
+Em Kotlin, As [Extension Functions](https://kotlinlang.org/docs/extensions.html#extension-functions) são uma ferramenta poderosa que permite
+adicionar novas funcionalidades a uma classe sem a necessidade de
+modificá-la ou herdar-la: você a "estende".
 
 ### Tarefa
 
@@ -12,7 +12,8 @@ Implemente as funções de extensão `Int.r()` e `Pair.r()` e faça com que elas
 
 #### Pair
 
-Em Kotlin, [Pair](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/) é uma classe que representa um valor composto por dois elementos - uma 'dupla'. É uma maneira simples de armazenar dois
+Em Kotlin, [Pair](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/) é uma classe que representa um valor composto por dois
+elementos - uma 'dupla'. É uma maneira simples de armazenar dois
 valores relacionados juntos, mas sem semântica particular.
 
 `Pair` é uma classe definida na `stdlib`:
@@ -26,6 +27,9 @@ data class Pair<out A, out B>(
 
 ### Casos de uso
 
+Ao criar uma extensão, essa função atua como se fosse um membro daquela classe, mas internamente o compilador a trata como apenas uma função
+comum que aceita uma instância daquela classe como seu primeiro parâmetro.
+
 ```kotlin
 fun String.printHello() {
     println("Hello, $this")
@@ -35,46 +39,37 @@ val name = "Kotlin"
 name.printHello() // Imprime: "Hello, Kotlin"
 ```
 
-No Kotlin, uma "função de extensão" funciona essencialmente da mesma maneira que uma função comum. A diferença principal é que a função de
-extensão tem um "objeto recepitor" (a instância que chama a função de extensão) que, nos bastidores, é passado como o primeiro parâmetro da
-função.
+No exemplo acima, a função `printHello` é extension function para a classe `String`. No contexto dessa função, `$this` refere-se ao objeto
+`String` ao qual a função foi aplicada.
 
-Em outras palavras, quando você cria uma função de extensão no Kotlin, o compilador transforma essa função de extensão em uma função
-estática normal, onde o objeto que você está "estendendo" (o objeto recepitor) é passado como o primeiro argumento dessa função. Isso
-significa não haver impacto adicional no desempenho ao usar funções de extensão, quando comparado com as funções comuns.
+#### Como Elas Funcionam?
+
+Por baixo dos panos, uma extensão é apenas uma função estática que recebe o objeto que você está "expandindo" (o objeto receptor)
+como seu primeiro argumento.
+
+Dessa forma, não existe uma sobrecarga de desempenho ao usar funções de extensão em comparação com funções normais.
 
 #### Vantagens
 
-- **Melhora a legibilidade do código**: Às vezes, é mais natural chamar um método em um objeto do que passar o objeto para uma função. As
-  funções de extensão permitem que você faça isso mesmo se não controlar a classe original.
-- **Evita poluição de namespace**: Você pode definir funções de extensão em classes onde faz sentido usá-las, em vez de criar funções de
-  utilidade genérica.
-- **Evita subclasses desnecessárias**: As funções de extensão podem ser uma alternativa melhor do que criar subclasses apenas para adicionar
-  funcionalidades extras a uma classe.
+- **Melhora a legibilidade do código**: Muitas vezes, chamar um método em um objeto é mais intuitivo do que passar o objeto como um
+  argumento para uma função.
+- **Evita poluição do namespace**: Ao invés de criar funções de utilidade genérica, você pode criar as suas próprias extensões privadas
+  apenas no contexto onde ela é utilizada.
+- **Evita subclasses desnecessárias**: Em vez de criar uma subclasse apenas para adicionar algumas funcionalidades, você pode criar
+  extensões
 
 #### Desvantagens
 
-- **Não substituem os métodos originais**: Se a classe original tem um método com a mesma assinatura que a função de extensão, o método
-  original terá prioridade.
-- **Não podem acessar membros protegidos ou privados da classe**: Funções de extensão apenas têm acesso aos mesmos membros públicos do
-  objeto que qualquer outra classe.
-- **Podem causar confusão**: Muitas extensões em um código podem dificultar o rastreamento de quais funções são realmente parte de uma
-  classe e quais são extensões. Manter a moderação e a organização é fundamental.
+- **Não substituem métodos originais**: Se a classe original tiver um método com a mesma assinatura da função de extensão, o método original
+  será chamado.
+- **Acesso limitado**: funções de extensão não podem acessar membros protegidos ou privados da classe.
+- **Podem levar à confusão**: O uso excessivo sem organização adequada pode tornar o código difícil de entender.
 
 #### Testabilidade
 
-1. **Isolamento e Pureza:**
-   As extensions functions são naturalmente isoladas devido ao seu baixo acoplamento. Para melhor testabilidade, elas idealmente devem
-   operar como funções puras, retornando o mesmo resultado para um conjunto de entradas específico e sem efeitos colaterais. Assim, os
-   testes podem focar apenas nas entradas e saídas.
-
-2. **Restrição de Acesso:**
-   As funções de extensão não têm acesso a membros privados da classe alvo. Isso restringe a superfície de interação, tornando mais simples
-   e direto testar a função, já que ela só pode interagir com os métodos públicos da classe.
-
-3. **Simplicidade:**
-   Funções de extensão devem ser mantidas simples e com uma única responsabilidade. Quanto mais direta for a função, mais fácil será
-   testá-la, independentemente da abordagem ou ferramenta de teste escolhida.
+- **Isolamento e Pureza**: Idealmente, as funções de extensão devem operar como funções puras, tornando os testes mais previsíveis.
+- **Restrição de Acesso**: Sua incapacidade de acessar membros privados torna as funções de extensão mais fáceis de testar.
+- **Simplicidade**: funções de extensão devem ter uma única responsabilidade. Isto facilita o teste.
 
 
 
