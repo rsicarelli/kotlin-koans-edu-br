@@ -23,5 +23,6 @@ def r(self: int) -> RationalNumber:
     return RationalNumber(self, 1)
 
 
+# noinspection PyRedeclaration
 def r(self: tuple) -> RationalNumber:
     return RationalNumber(self[0], self[1])

@@ -1,6 +1,6 @@
-PHP não suporta tipos estáticos ou extensão de classes fundamentais, por isso não temos uma tradução direta para PHP.
-
 <?php
+
+/** @noinspection PhpIllegalPsrClassPathInspection */
 
 class RationalNumber
 {

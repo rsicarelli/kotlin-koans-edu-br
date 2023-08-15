@@ -2,12 +2,17 @@
 
 As [Extension Functions](https://kotlinlang.org/docs/extensions.html#extension-functions) em Kotlin são recursos que permitem "estender" uma
 classe com novas funcionalidades sem precisar herdar dela ou usar qualquer tipo de padrão de ‘design’. Basicamente, você anexa uma nova
-função
-a uma classe existente.
+função a uma classe existente.
 
-### Pair
+### Tarefa
 
-Em Kotlin, Pair é uma classe que representa um valor composto por dois elementos - uma 'dupla'. É uma maneira simples de armazenar duas
+https://play.kotlinlang.org/koans/Classes/Extension%20functions/Task.kt
+
+Implemente as funções de extensão `Int.r()` e `Pair.r()` e faça com que elas convertam `Int` e `Pair` em um `RationalNumber`.
+
+#### Pair
+
+Em Kotlin, [Pair](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/) é uma classe que representa um valor composto por dois elementos - uma 'dupla'. É uma maneira simples de armazenar dois
 valores relacionados juntos, mas sem semântica particular.
 
 `Pair` é uma classe definida na `stdlib`:
@@ -18,12 +23,6 @@ data class Pair<out A, out B>(
     val second: B
 )
 ```
-
-### Tarefa
-
-https://play.kotlinlang.org/koans/Classes/Extension%20functions/Task.kt
-
-Implemente as funções de extensão `Int.r()` e `Pair.r()` e faça com que elas convertam `Int` e `Pair` em um `RationalNumber`.
 
 ### Casos de uso
 
@@ -63,14 +62,19 @@ significa não haver impacto adicional no desempenho ao usar funções de extens
   classe e quais são extensões. Manter a moderação e a organização é fundamental.
 
 #### Testabilidade
+
 1. **Isolamento e Pureza:**
-As extensions functions são naturalmente isoladas devido ao seu baixo acoplamento. Para melhor testabilidade, elas idealmente devem operar como funções puras, retornando o mesmo resultado para um conjunto de entradas específico e sem efeitos colaterais. Assim, os testes podem focar apenas nas entradas e saídas.
+   As extensions functions são naturalmente isoladas devido ao seu baixo acoplamento. Para melhor testabilidade, elas idealmente devem
+   operar como funções puras, retornando o mesmo resultado para um conjunto de entradas específico e sem efeitos colaterais. Assim, os
+   testes podem focar apenas nas entradas e saídas.
 
 2. **Restrição de Acesso:**
-As funções de extensão não têm acesso a membros privados da classe alvo. Isso restringe a superfície de interação, tornando mais simples e direto testar a função, já que ela só pode interagir com os métodos públicos da classe.
+   As funções de extensão não têm acesso a membros privados da classe alvo. Isso restringe a superfície de interação, tornando mais simples
+   e direto testar a função, já que ela só pode interagir com os métodos públicos da classe.
 
 3. **Simplicidade:**
-Funções de extensão devem ser mantidas simples e com uma única responsabilidade. Quanto mais direta for a função, mais fácil será testá-la, independentemente da abordagem ou ferramenta de teste escolhida.
+   Funções de extensão devem ser mantidas simples e com uma única responsabilidade. Quanto mais direta for a função, mais fácil será
+   testá-la, independentemente da abordagem ou ferramenta de teste escolhida.
 
 
 
