@@ -6,27 +6,30 @@
 
 using System;
 using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 
-public class Program
+// C# suporta default arguments.
+class Program
 {
-    public static string Foo(string name, int number = 42, bool toUppercase = false)
+    static string Foo(string name, int number = 42, bool toUpperCase = false)
     {
-        return (toUppercase ? name.ToUpper() : name) + number;
+        return (toUpperCase ? name.ToUpper() : name) + number;
     }
 
-    public static List<string> UseFoo()
+    static List<string> UseFoo()
     {
-        return new List<string>
-        {
-            Foo(name: "a"),
-            Foo(name: "b", number: 1),
-            Foo(name: "c", toUppercase: true),
-            Foo(name: "d", number: 2, toUppercase: true)
-        };
+        List<string> result = new List<string>();
+        result.Add(Foo(name: "a"));
+        result.Add(Foo(name: "b", number: 1));
+        result.Add(Foo(name: "c", toUpperCase: true));
+        result.Add(Foo(name: "d", number: 2, toUpperCase: true));
+        return result;
     }
 
-    public static void Main()
+    static void Main()
     {
-        Console.WriteLine(string.Join(", ", UseFoo()));
+        List<string> result = UseFoo();
+        Console.WriteLine(string.Join(", ", result));
     }
 }

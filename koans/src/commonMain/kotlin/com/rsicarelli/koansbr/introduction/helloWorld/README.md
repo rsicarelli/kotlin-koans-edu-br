@@ -1,52 +1,35 @@
-## Funções
+## Hello World
+
+Ao abrir um novo livro, sentimos a expectativa do que está por vir em suas páginas. Esta sensação de descoberta é semelhante ao mergulho em
+uma nova linguagem de programação.
+
+Imagine Kotlin como um livro de histórias. Dentro desse livro, temos diversos capítulos que narram diferentes partes da trama. Em Kotlin, as
+funções atuam como esses capítulos, contando suas próprias histórias ou tarefas.
 
 ```kotlin
-fun nomeDaFuncao(param1: Tipo, param2: Tipo): TipoDeRetorno {
-    // corpo da função
+fun nomeDoCapitulo(
+    protagonista1: Descrição,
+    coadjuvante: Descrição,
+): Desfecho {
+    // narração do capítulo
 }
 ```
 
-`fun`: Palavra-chave, ou palavra reservada que indica que você está declarando uma função ou um método.
+- **`fun`**: Assim como identificamos um novo capítulo ao virar a página, em Kotlin, a palavra "fun" nos indica que estamos prestes a
+  começar uma nova "narrativa" ou função.
 
-`nomeDaFuncao`: O nome da função que você está declarando. Em Kotlin, a convenção de nomenclatura normalmente usa camelCase.
+- **`nomeDoCapitulo`**: Cada capítulo de um livro tem um título, que nos dá uma ideia sobre o que ele irá tratar. Da mesma forma, o nome da
+  função nos dá pistas sobre seu propósito ou ação principal.
 
-`(param1: Tipo, param2: Tipo)`: a lista de argumentos da função, separados por vírgula. Obrigatoriamente cada argumento precisa ter um nome
-e um tipo.
+- **`(protagonista1: Descrição, coadjuvante: Descrição)`**: Um capítulo tem personagens, e cada personagem desempenha um papel importante na
+  história. Em Kotlin, os argumentos da função são como esses personagens. Eles têm nomes e características (ou tipos), que nos informam sua
+  relevância no "capítulo".
 
-`: TipoDeRetorno`: O tipo de valor que a função irá retornar, podendo ser
-qualquer [tipo válido em Kotlin](https://kotlinlang.org/docs/basic-types.html), incluindo tipos personalizados on internos do seu domínio.
+- **`: Desfecho`**: Ao final de um capítulo, chegamos a uma conclusão ou reviravolta. Em Kotlin, essa é a "conclusão" da nossa função,
+  conhecida como tipo de retorno, indicando o que esperar ao final da execução.
 
-`{}`: Este é o corpo da função, onde o código será executado quando a função for chamada.
-
-### Outros tipos básicos de função
-
-#### Funções de linha única
-
-Para funções expressas em uma única linha, Kotlin permite uma sintaxe simplificada.
-
-```kotlin
-fun somar(a: Int, b: Int): Int = a + b
-```
-
-#### Tipo de retorno inferido
-
-Para funções com corpos de expressão, o tipo de retorno pode ser inferido pelo compilador e, pode ser omitido.
-
-```kotlin
-fun somar(a: Int, b: Int) = a + b  // O compilador sabe que o tipo de retorno é Int
-```
-
-#### Funções com Varargs
-
-Você pode passar um número variável de argumentos para uma função usando o modificador `vararg`.
-
-```kotlin
-fun imprimirNomes(vararg nomes: String) {
-    for (nome in nomes) {
-        println(nome)
-    }
-} 
-```
+- **`{}`**: Este é o conteúdo do capítulo, onde os eventos se desenrolam. Em Kotlin, é dentro dessas chaves que colocamos a narrativa
+  principal da função, o código que ela executará.
 
 ### Tarefa
 
@@ -57,38 +40,150 @@ Altere o código para que a função `start` retorne a string `"OK"`.
 Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
 Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
 
-### Nota
+### Casos de uso
 
-- Se a função não retorna um valor, você pode omitir o retorno. Por padrão, todas as funções que não retornam nada tem um
-  tipo [`Unit`](https://kotlinlang.org/docs/functions.html#unit-returning-functions) - a função retornará implicitamente "uma unidade".
+#### Funções em uma linha
+
+Em um livro, certos capítulos podem ter um resumo ou uma frase destacada para facilitar a compreensão. Kotlin permite expressar funções de
+forma concisa, quase como um resumo rápido.
+
+No exemplo a seguir, as chaves `{}` foram removidas, sendo substituída para atribuição `=`.
+
+```kotlin
+fun resumoDoCapitulo(título: String, definição: String): String = "$título: $definição"
+
+val resumo = resumoDoCapitulo("Biblioteca", "Um lugar para guardar livros.")
+println(resumo)  // Saída: Biblioteca: Um lugar para guardar livros.
+```
+
+#### Tipo de retorno inferido
+
+É comum calcular o tamanho de um livro pelo número de palavras. Em Kotlin, se uma função retorna "algo direto", substituindo o `{}`, o tipo
+de retorno pode ser inferido pelo compilador.
+
+```kotlin
+fun calcularTamanhoDoLivro(palavras: String) = palavras.length
+
+val tamanho = calcularTamanhoDoLivro("Era uma vez...")
+println(tamanho)  // Saída: 14
+```
+
+#### Funções com Varargs
+
+Em uma estante de livros, você pode ter uma coleção de contos, onde cada conto é uma história única, mas todos estão contidos em um único
+volume. Da mesma forma, em Kotlin, existe um conceito chamado `varargs`, que permite que uma função aceite um número variável de argumentos.
+
+```kotlin
+fun contosNoLivro(vararg contos: String) {
+    for (conto in contos) {
+        println("Nome do conto: $conto")
+    }
+}
+
+contosNoLivro("O Aprendiz de Feiticeiro", "A Princesa e a Ervilha", "O Cavaleiro e o Dragão")
+```
+
+### O tipo de unidade Unit
+
+Em Kotlin, [`Unit`](https://kotlinlang.org/docs/functions.html#unit-returning-functions) é o equivalente ao `void` de outras linguagens de
+programação, como Java ou C++. No entanto, há uma diferença conceitual importante entre eles: enquanto `void` literalmente significa "sem
+valor", `Unit` é um tipo real com um único valor (também chamado de `Unit`).
 
 ```kotlin
 fun semRetorno(): Unit = Unit
 fun semRetorno(): Unit = { }
 fun semRetorno() = Unit
 fun semRetorno() = { }
+
+val unidade: Unit = semRetorno()
+print(unidade) //Saída: Unit
 ```
 
-### Analogia
+### Declarando variáveis
 
-Imagine que uma função em Kotlin é como uma máquina de café automatizada:
+Em Kotlin, temos duas maneiras principais de declarar variáveis: usando `val` e `var`.
 
-1. **Nome da Função** - É como o nome da bebida que você deseja. Por exemplo, "Cappuccino", "Latte" ou "Espresso".
+1. `val` de "value" ou valor
 
-2. **Parâmetros da Função** - São como os ingredientes ou personalizações que você pode escolher ao fazer seu café. Por exemplo, você pode
-   escolher a quantidade de açúcar, se deseja alguma bebida vegetal ou se prefere um café descafeinado.
+Quando declaramos uma variável usando `val`, ela só pode receber um valor uma única vez. Depois de definido, esse valor não pode ser
+alterado.
+Em outras palavras, essa variável é **imutável**.
 
-3. **Tipo de Retorno** - É o tipo de bebida que a máquina entrega. Se você selecionar "Cappuccino", a máquina lhe entregará um cappuccino e
-   não um espresso.
+```kotlin
+val tituloDoLivro = "A Jornada Dev"
+// tituloDoLivro = "Outro Título" -> Isto causará um erro, porque não podemos mudar o valor de uma variável 'val' após atribuí-la.
+```
 
-4. **Corpo da Função** - É o processo interno da máquina. Você não vê exatamente como a máquina faz o café, mas sabe que ela está fazendo
-   seu trabalho internamente e, no final, entrega a bebida escolhida.
+2. `var` "variable" ou variável
 
-5. **Chamar a Função** - É como pressionar o botão na máquina para obter sua bebida. Assim que você seleciona as opções desejadas e
-   pressiona o botão (ou seja, chama a função em Kotlin), a máquina (função) faz o trabalho e entrega o café (resultado).
+Ao usar `var` na declaração de uma variável, ela pode ter seu valor modificado diversas vezes conforme necessário.
 
-6. **Valor Padrão** (que é um conceito em Kotlin) - Pode ser comparado a escolher um café "regular" sem personalizações específicas. Se você
-   não especificar suas preferências, a máquina simplesmente lhe dá a versão padrão da bebida.
+```kotlin
+var paginaDeRascunho = "Isto é um esboço do capítulo 1."
+paginaDeRascunho = "Isto é um esboço revisado do capítulo 1." // Nenhum erro aqui, porque podemos mudar o valor de uma variável 'var'.
+```
 
-Usando esta analogia, pense numa função em Kotlin como numa máquina de café: você seleciona a bebida, define suas personalizações e, em
-seguida, a máquina prepara e entrega exatamente o que você pediu.
+### Tipos em Kotlin
+
+https://kotlinlang.org/docs/kotlin-tour-basic-types.html
+
+Em Kotlin, assim como em outras linguagens de programação, os tipos definem a natureza de um valor e determinam as operações que podem ser
+realizadas com esse valor.
+
+```kotlin
+// ExemplosTipos.kt
+
+// Int: Representa números inteiros.
+val anoAtual: Int = 2023
+
+// Double: número em ponto flutuante de precisão dupla
+val peso: Double = 1.534776
+
+// Float: ponto flutuante de precisão simples
+val altura: Float = 1.82F
+
+// Long: Para números inteiros grandes.
+val populacaoMundial: Long = 7800000000L
+
+// Byte: Um tipo de número inteiro menor.
+val idade: Byte = 25
+
+// Char: Representa um único caractere.
+val inicial: Char = 'K'
+
+// Boolean: Valores verdadeiros ou falsos.
+val estudandoKotlin: Boolean = true
+
+// String: Sequência de caracteres.
+val nome: String = "Chico"
+
+// List: Lista de elementos.
+val livros: List<String> = listOf("Kotlin para Iniciantes", "Programação Funcional")
+
+// Set: Coleção de elementos únicos, sem repetição.
+val cores: Set<String> = setOf("Vermelho", "Azul", "Verde")
+
+// Map: Coleção de pares chave-valor.
+val dicionario: Map<String, String> = mapOf("Kotlin" to "Uma linguagem de programação", "Lua" to "Outra linguagem de programação")
+
+// Sequence: Sequência de elementos, ideal para coleções grandes ou cálculos mais pesados.
+val numeros: Sequence<Int> = sequenceOf(1, 2, 3, 4, 5)
+
+// Array: Similar a List, mas de tamanho fixo.
+val diasDaSemana: Array<String> = arrayOf("Segunda", "Terça", "Quarta")
+
+// Byte: representa um valor integral de 8 bits, com valor entre -128 e 127.
+val exemploByte: Byte = 127
+
+// UByte: um byte não assinado que representa um valor integral entre 0 e 255.
+val uByteExemplo: UByte = 255u
+
+// UShort: um short não assinado que representa um valor integral entre 0 e 65,535.
+val uShortExemplo: UShort = 65535u
+
+// UInt: um int não assinado que representa um valor integral entre 0 e 4,294,967,295.
+val uIntExemplo: UInt = 4294967295u
+
+// ULong: um long não assinado que representa um valor integral entre 0 e 18,446,744,073,709,551,615.
+val uLongExemplo: ULong = 18446744073709551615uL
+```

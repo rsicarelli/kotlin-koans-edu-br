@@ -4,22 +4,23 @@
  * Copyright (c) 2014-2019 JetBrains s.r.o.
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
+// PHP suporta default arguments.
+/** @noinspection PhpMissingReturnTypeInspection */
 
-function foo($name, $number = 42, $toUpperCase = false): string
+function foo($name, $number = 42, $toUpperCase = false)
 {
-    if ($toUpperCase) {
-        $name = strtoupper($name);
-    }
-
-    return $name . $number;
+    return ($toUpperCase ? strtoupper($name) : $name) . $number;
 }
 
-function useFoo(): array
+function useFoo()
 {
-    return array(
-        foo("a"),
-        foo("b", 1),
-        foo("c", 42, true),
-        foo("d", 2, true)
-    );
+    $result = [];
+    $result[] = foo("a");
+    $result[] = foo("b", 1);
+    $result[] = foo("c", null, true);
+    $result[] = foo("d", 2, true);
+    return $result;
 }
+
+$result = useFoo();
+echo implode(", ", $result);

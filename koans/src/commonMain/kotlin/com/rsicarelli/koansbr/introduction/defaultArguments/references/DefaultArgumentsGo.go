@@ -8,30 +8,35 @@ package references
 
 import (
 	"fmt"
-	"strings"
 )
 
-func foo(name string, number *int, toUpperCase *bool) string {
-	num := 42
-	upper := false
-	if number != nil {
-		num = *number
-	}
-	if toUpperCase != nil {
-		upper = *toUpperCase
-	}
+// Go não suporta default arguments.
 
-	if upper {
-		name = strings.ToUpper(name)
+func foo(name string, options ...interface{}) string {
+	number := 42
+	toUpperCase := false
+	if len(options) > 0 {
+		number = options[0].(int)
 	}
-	return fmt.Sprintf("%s%d", name, num)
+	if len(options) > 1 {
+		toUpperCase = options[1].(bool)
+	}
+	if toUpperCase {
+		return name + fmt.Sprintf("%d", number)
+	}
+	return name + fmt.Sprintf("%d", number)
 }
 
 func useFoo() []string {
-	return []string{
-		foo("a", nil, nil),
-		foo("b", func() *int { var i = 1; return &i }(), nil),
-		foo("c", nil, func() *bool { var b = true; return &b }()),
-		foo("d", func() *int { var i = 2; return &i }(), func() *bool { var b = true; return &b }()),
-	}
+	result := make([]string, 0)
+	result = append(result, foo("a"))
+	result = append(result, foo("b", 1))
+	result = append(result, foo("c", false))
+	result = append(result, foo("d", 2, true))
+	return result
+}
+
+func main() {
+	result := useFoo()
+	fmt.Println(result)
 }

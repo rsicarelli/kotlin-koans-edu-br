@@ -10,9 +10,7 @@
 #
 #
 
-def str(number):
-    pass
-
+# Python suporta default arguments.
 
 def foo(name, number=42, to_upper_case=False):
     return (name.upper() if to_upper_case else name) + str(number)
@@ -23,5 +21,9 @@ def use_foo():
         foo("a"),
         foo("b", number=1),
         foo("c", to_upper_case=True),
-        foo(name="d", number=2, to_upper_case=True)
+        foo("d", number=2, to_upper_case=True)
     ]
+
+
+result = use_foo()
+print(result)
