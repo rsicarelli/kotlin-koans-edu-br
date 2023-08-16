@@ -1,7 +1,7 @@
-## Argumentos nomeados
+## Named arguments
 
-Em Kotlin, os 'Argumentos nomeados' (`named arguments`) permitem que você especifique o nome do argumento diretamente ao chamar uma função,
-tornando o código mais claro e fácil de entender.
+Em Kotlin, os [Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) permitem que você especifique o
+nome do argumento diretamente ao chamar uma função, tornando o código mais claro e fácil de entender.
 
 ### Tarefa
 
@@ -73,13 +73,6 @@ joinToString(
   argumentos posicionais (quando você passa valores baseados apenas na ordem, sem especificar nomes).
 - **Verbosidade:** Em alguns casos, o uso de argumentos nomeados pode tornar o código mais verboso, especialmente se o nome do argumento for
   longo.
-
-### Dicas
-
-- Você pode criar uma instância de `List` utilizando a
-  função [`listOf()`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/list-of.html)
-- Posicione o cursor sobre uma função, aperte `Alt + Enter` e selecione `Adicionar nomes aos argumentos`
-- Pode usar o `Alt + Enter` também para `Colocar os argumentos em linhas separadas`
 
 ### Analogia
 

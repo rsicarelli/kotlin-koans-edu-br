@@ -4,14 +4,14 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
+// Dart não suporta named arguments.
 String joinOptions(List<String> options) {
-  return '[' + options.join(', ') + ']';
+  return options.join(', ');
 }
 
 void main() {
-  print(joinOptions([
-    'Option 1',
-    'Option 2',
-    'Option 3'
-  ])); // Outputs: [Option 1, Option 2, Option 3]
+  List<String> options = ['Option 1', 'Option 2', 'Option 3'];
+  String result = joinOptions(options);
+  print(result);
 }
+

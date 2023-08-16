@@ -7,9 +7,18 @@
 package references
 
 import (
+	"fmt"
 	"strings"
 )
 
+// Go não suporta named arguments.
+
 func joinOptions(options []string) string {
-	return "[" + strings.Join(options, ", ") + "]"
+	return strings.Join(options, ", ")
+}
+
+func main() {
+	options := []string{"Option 1", "Option 2", "Option 3"}
+	result := joinOptions(options)
+	fmt.Println(result)
 }

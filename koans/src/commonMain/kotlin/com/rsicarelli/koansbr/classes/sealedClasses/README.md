@@ -45,13 +45,20 @@ Ambas compartilham a mesma ideia e resolvem o mesmo problema. As principais dife
 
 ##### Sealed Class
 - Pode ter propriedades e métodos, assim como qualquer outra classe.
-- Comumente usada quando se deseja representar um número limitado e conhecido de subtipos.
 
 ```kotlin
-sealed class StatusPagamento(val id: String) { 
-    class Aprovado(id: String, val detalhes: String) : StatusPagamento(id)
-    class Recusado(id: String, val razao: String) : StatusPagamento(id)
-    class Pendente(id: String) : StatusPagamento(id)
+sealed class StatusPedido(open val id: Int) {
+
+    fun estaAtivo(): Boolean = when (this) {
+        is AguardandoPagamento, is Enviado, is Processando -> true
+        is Cancelado, is Entregue -> false
+    }
+
+    data class AguardandoPagamento(override val id: Int) : StatusPedido(id)
+    data class Processando(override val id: Int, val dataEstimadaProcessamento: String) : StatusPedido(id)
+    data class Enviado(override val id: Int, val dataEstimadaEntrega: String, val codigoRastreamento: String) : StatusPedido(id)
+    data class Entregue(override val id: Int, val dataEntrega: String) : StatusPedido(id)
+    data class Cancelado(override val id: Int, val razao: String) : StatusPedido(id)
 }
 ```
 

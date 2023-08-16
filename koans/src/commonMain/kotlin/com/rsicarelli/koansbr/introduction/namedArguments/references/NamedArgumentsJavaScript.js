@@ -4,6 +4,12 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-function joinOptions(options){
-    return "[" + options.join(', ') + "]";
+// JavaScript não suporta named arguments.
+
+function joinOptions(options) {
+    return options.join(', ');
 }
+
+const options = ['Option 1', 'Option 2', 'Option 3'];
+const result = joinOptions(options);
+console.log(result);
