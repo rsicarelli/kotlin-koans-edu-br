@@ -2,8 +2,8 @@
 
 [Sealed Classes e Interfaces](https://kotlinlang.org/docs/sealed-classes.html) em Kotlin são um recurso especial para criar um conjunto
 específico e limitado de classes relacionadas. São como caixas que
-contêm opções predefinidas e não permitem a criação de novas opções fora desse conjunto. Isso traz segurança e controle ao código, evitando
-erros e simplificando a compreensão.
+contêm opções predefinidas e não permitem a criação de novas opções fora desse conjunto. Isso traz segurança e controle ao código,
+evitando erro e simplificando a compreensão.
 
 ```kotlin
 sealed class InstrumentoMusical(
@@ -31,17 +31,53 @@ Assim, você não precisará mais do bloco `else` na expressão `when`.
 
 ### Casos de uso
 
-#### Qual Problema as Sealed Classes Resolvem?
+#### Por que usar Sealed Classes?
 
-As Sealed Classes resolvem o problema de representar um conjunto limitado e específico de estados ou tipos em uma hierarquia de classes ou
-interfaces. Elas garantem que apenas um conjunto predefinido de subclasses seja criado, evitando a introdução acidental de novos estados ou
-tipos que não façam sentido no contexto. Isso significa que, outros arquivos não poderão herdar suas `sealed` classes, apenas onde ela for
-declarada.
+Sealed Classes ajudam a definir um número fixo de estados ou tipos em uma estrutura de classes, ou interfaces. Elas asseguram que apenas
+certas subclasses sejam criadas, impedindo a adição inesperada de novos estados. Assim, classes externas não podem herdar dessas classes
+marcadas como sealed, a menos que estejam no mesmo arquivo.
 
-Isso é especialmente útil quando você precisa lidar com situações em que só um número limitado de variações é válido. Por exemplo, em um
-aplicativo de processamento de pagamentos, as Sealed Classes poderiam ser usadas para representar diferentes estados de pagamento,
-como `Aprovado > Recusado > Pendente`. Dessa forma, você tem um controle rigoroso sobre os estados possíveis e evita inconsistências no
-código.
+Isso é prático quando só algumas variações específicas são aceitáveis. Por exemplo, em um app de pagamentos, as Sealed Classes podem
+representar estados como Aprovado, Recusado e Pendente, garantindo mais consistência e evitando erros no código.
+
+#### Sealed Class vs Interface 
+Ambas compartilham a mesma ideia e resolvem o mesmo problema. As principais diferenças são:
+
+##### Sealed Class
+- Pode ter propriedades e métodos, assim como qualquer outra classe.
+- Comumente usada quando se deseja representar um número limitado e conhecido de subtipos.
+
+```kotlin
+sealed class StatusPagamento(val id: String) { 
+    class Aprovado(id: String, val detalhes: String) : StatusPagamento(id)
+    class Recusado(id: String, val razao: String) : StatusPagamento(id)
+    class Pendente(id: String) : StatusPagamento(id)
+}
+```
+
+##### Sealed Interface
+- Não pode ter propriedades com estado ou métodos com implementação (mas pode ter propriedades abstratas e métodos abstratos).
+- É a escolha ideal quando não há necessidade de compartilhar estado entre os subtipos.
+
+```kotlin
+sealed interface Desconto {
+    
+    val aplicadoAs = System.currentTimeMillis()
+    fun calcularDesconto(preçoOriginal: Double): Double
+
+    data class DescontoFixo(val valor: Double) : Desconto {
+        override fun calcularDesconto(precoOriginal: Double) = precoOriginal - valor
+    }
+
+    data class DescontoPercentual(private val percentual: Double) : Desconto {
+        override fun calcularDesconto(precoOriginal: Double) = precoOriginal * (1 - percentual / 100)
+    }
+
+    data object FreteGratis : Desconto {
+        override fun calcularDesconto(precoOriginal: Double) = precoOriginal
+    }
+}
+```
 
 #### Relação das Sealed Classes com Enums
 
@@ -231,7 +267,48 @@ fun atualizarStatusDoPedido(status: PedidoStatus) {
 }
 ```
 
-#### Vantagens
+#### Data Object
+
+A partir do Kotlin `1.9.0`, temos disponível um novo tipo de classe chamado `data object`. Esse tipo de classe brilha muito quando utilizada
+junto a sealed classes. Vamos entender o por quê
+
+```kotlin
+package com.rsicarelli.koansbr.classes.sealedClasses
+
+sealed interface Trabalho
+object Empresa : Trabalho
+object Faculdade : Trabalho
+object Escola : Trabalho
+
+println(Empresa) //Vai imprimir com.rsicarelli.koansbr.classes.sealedClasses.Empresa@2fc14f68
+```
+
+O motivo é que `object` em Kotlin é "puro", ou seja, não há nenhuma outra implementação extra do Kotlin acontecendo.
+
+Ou seja, num `object` não há uma função `toString()` definida e quando pedimos para printar o valor, recebemos o padrão:
+
+`{pacote} + {NomeObjeto} + {@EndereçoMemória}`
+
+É aí que as `data object` entram em jogo:
+
+```kotlin
+package com.rsicarelli.koansbr.classes.sealedClasses
+
+sealed interface Trabalho
+data object Empresa : Trabalho
+data object Faculdade : Trabalho
+data object Escola : Trabalho
+
+println(Faculdade) //Faculdade
+```
+
+Apenas adicionando o modificador `data` a frente do meu `object`, já temos um resultado muito melhor no console.
+
+Note que `toString()` é a única função implementada pelos `data object`. Funções como `equals()` e `hashCode()` irá se comportar igual
+a de qualquer outro objeto. Funções como `copy()` e `componentN()` não estão disponíveis.
+---------
+
+### Vantagens
 
 - **Hierarquia explícita**: Sealed classes fornecem uma maneira clara e explícita de definir uma hierarquia limitada de classes
   relacionadas. Isso ajuda a comunicar a estrutura da hierarquia aos desenvolvedores que trabalham no código.
@@ -247,7 +324,7 @@ fun atualizarStatusDoPedido(status: PedidoStatus) {
   novos
   casos é seguro, pois você precisa atualizar todas as partes do código que lidam com a expressão when.
 
-#### Desvantagens
+### Desvantagens
 
 - **Restrição da hierarquia**: Sealed classes limitam a hierarquia a um conjunto fixo de subclasses. Isso pode ser restritivo em cenários
   onde a hierarquia precisa ser expandida dinamicamente.
@@ -277,7 +354,7 @@ object EstadoVazio : EstadoCampo() // Uso desnecessário de sealed class
   fluxo de
   controle do código.
 
-#### Testabilidade
+### Testabilidade
 
 - **Cobertura de Casos**: Certifique-se de testar cada caso possível da sealed class. Cada subclasse deve ser testada para garantir que os
   comportamentos específicos sejam tratados corretamente.

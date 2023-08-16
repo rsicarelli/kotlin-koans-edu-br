@@ -8,12 +8,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/koans_wasm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/koans/kotlin-js-store/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/koans/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/SealedClassesKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/SealedClassesKotlin.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +127,7 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)">
+  <component name="RunManager" selected="Gradle.SealedClassesKotlin [desktop]">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -148,29 +145,18 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'kotlin-koans-edu-br.koans.commonTest' (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SealedClassesKotlin [desktop]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/koans" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--continue" />
+        <option name="scriptParameters" value="-DmainClass=com.rsicarelli.koansbr.classes.sealedClasses.SealedClassesKotlinKt --quiet" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":koans:cleanJvmTest" />
-            <option value=":koans:jvmTest" />
-            <option value=":koans:cleanIosSimulatorArm64Test" />
-            <option value=":koans:iosSimulatorArm64Test" />
-            <option value=":koans:cleanTvosSimulatorArm64Test" />
-            <option value=":koans:tvosSimulatorArm64Test" />
-            <option value=":koans:cleanWasmBrowserTest" />
-            <option value=":koans:wasmBrowserTest" />
-            <option value=":koans:cleanMacosArm64Test" />
-            <option value=":koans:macosArm64Test" />
-            <option value=":koans:cleanWatchosSimulatorArm64Test" />
-            <option value=":koans:watchosSimulatorArm64Test" />
+            <option value="desktopRun" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -178,10 +164,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'kotlin-koans-edu-br.koans.commonTest' (2)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Tests in 'com.rsicarelli'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -192,8 +178,10 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":koans:cleanWatchosSimulatorArm64Test" />
-            <option value=":koans:watchosSimulatorArm64Test" />
+            <option value=":koans:cleanDesktopTest" />
+            <option value=":koans:desktopTest" />
+            <option value="--tests" />
+            <option value="&quot;com.rsicarelli.*&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -285,19 +273,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (2)" />
+      <item itemvalue="Gradle.SealedClassesKotlin [desktop]" />
       <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (3)" />
       <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (4)" />
       <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)" />
-      <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (1)" />
+      <item itemvalue="Gradle.Tests in 'com.rsicarelli'" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SealedClassesKotlin [desktop]" />
+        <item itemvalue="Gradle.Tests in 'com.rsicarelli'" />
         <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)" />
         <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (4)" />
         <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (3)" />
-        <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (2)" />
-        <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +321,7 @@
       <workItem from="1692127848423" duration="212000" />
       <workItem from="1692128074966" duration="818000" />
       <workItem from="1692128901580" duration="86000" />
-      <workItem from="1692128994317" duration="318000" />
+      <workItem from="1692128994317" duration="3800000" />
     </task>
     <servers />
   </component>
