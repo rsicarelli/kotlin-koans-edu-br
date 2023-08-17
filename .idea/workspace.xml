@@ -7,7 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="" />
+    <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/SealedClassesKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/SealedClassesKotlin.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,8 +111,8 @@
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.detekt",
-    "ts.external.directory.path": "/Users/rodrigosicarelli/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/232.9559.10/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/rodrigosicarelli/Library/Application Support/JetBrains/Toolbox/apps/IDEA-U/ch-0/232.9559.34/IntelliJ IDEA.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -320,6 +323,8 @@
       <workItem from="1692128901580" duration="86000" />
       <workItem from="1692128994317" duration="6024000" />
       <workItem from="1692208082871" duration="10285000" />
+      <workItem from="1692253610213" duration="4625000" />
+      <workItem from="1692277687235" duration="533000" />
     </task>
     <servers />
   </component>

@@ -4,16 +4,24 @@
  * Copyright (c) 2023 Rodrigo Sicarelli
  */
 
-indirect enum Expr {
-    case num(value: Int)
-    case sum(left: Expr, right: Expr)
+protocol Expr {}
+
+struct Num: Expr {
+    let value: Int
+}
+
+struct Sum: Expr {
+    let left: Expr
+    let right: Expr
 }
 
 func eval(_ expr: Expr) -> Int {
     switch expr {
-    case let .num(value):
-        return value
-    case let .sum(left, right):
-        return eval(left) + eval(right)
+    case let n as Num:
+        return n.value
+    case let s as Sum:
+        return eval(s.left) + eval(s.right)
+    default:
+        fatalError("Unknown Expr type")
     }
 }

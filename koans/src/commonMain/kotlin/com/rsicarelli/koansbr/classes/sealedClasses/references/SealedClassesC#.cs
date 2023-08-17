@@ -4,21 +4,30 @@
  * Copyright (c) 2023 Rodrigo Sicarelli
  */
 
-public abstract class Expr { }
+public abstract class Expr {}
 
-public sealed class Num : Expr {
+public class Num : Expr {
     public int Value { get; }
     public Num(int value) => Value = value;
 }
 
-public sealed class Sum : Expr {
+public class Sum : Expr {
     public Expr Left { get; }
     public Expr Right { get; }
-    public Sum(Expr left, Expr right) => (Left, Right) = (left, right);
+    public Sum(Expr left, Expr right) {
+        Left = left;
+        Right = right;
+    }
 }
 
-public static int Eval(Expr expr) => expr switch {
-    Num n => n.Value,
-    Sum s => Eval(s.Left) + Eval(s.Right),
-    _ => throw new ArgumentException("Unknown Expr type"),
-};
+// Evaluation function
+public static int Eval(Expr expr) {
+    switch (expr) {
+        case Num n:
+            return n.Value;
+        case Sum s:
+            return Eval(s.Left) + Eval(s.Right);
+        default:
+            throw new InvalidOperationException("Unknown Expr type");
+    }
+}

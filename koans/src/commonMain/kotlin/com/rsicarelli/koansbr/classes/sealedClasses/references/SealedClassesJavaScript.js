@@ -27,6 +27,8 @@ function eval(expr) {
         return expr.value;
     } else if (expr instanceof Sum) {
         return eval(expr.left) + eval(expr.right);
+    } else {
+        throw new Error("Unknown Expr type");
     }
-    throw new Error("Unknown Expr type");
 }
+

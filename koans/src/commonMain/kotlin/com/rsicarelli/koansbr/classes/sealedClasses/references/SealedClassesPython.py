@@ -2,7 +2,10 @@
 #  Copyright (c) 2014-2019 JetBrains s.r.o.
 #  Copyright (c) 2023 Rodrigo Sicarelli
 
-class Expr:
+from abc import ABC
+
+
+class Expr(ABC):
     pass
 
 
@@ -17,9 +20,10 @@ class Sum(Expr):
         self.right = right
 
 
-def evaluate(expr):
+def eval(expr):
     if isinstance(expr, Num):
         return expr.value
     elif isinstance(expr, Sum):
         return eval(expr.left) + eval(expr.right)
-    raise ValueError("Unknown Expr type")
+    else:
+        raise ValueError("Unknown Expr type")

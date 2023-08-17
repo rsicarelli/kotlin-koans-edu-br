@@ -9,38 +9,20 @@ package com.rsicarelli.koansbr.classes.sealedClasses.references;
 public class SealedClassesJava {
     static int eval(Expr expr) {
         if (expr instanceof Num) {
-            return ((Num) expr).value;
+            return ((Num) expr).value();
         } else if (expr instanceof Sum) {
-            return eval(((Sum) expr).left) + eval(((Sum) expr).right);
+            return eval(((Sum) expr).left()) + eval(((Sum) expr).right());
+        } else {
+            throw new IllegalArgumentException("Unknown Expr type");
         }
-        throw new IllegalArgumentException("Unknown Expr type");
     }
 }
 
-abstract class Expr {
+sealed interface Expr permits Num, Sum {
 }
 
-/**
- * O Java não possui suporte direto para "sealed classes", mas pode-se usar um modificador final em
- * classes para impedir a extensão
- */
-final class Num extends Expr {
-    public final int value;
-
-    public Num(int value) {
-        this.value = value;
-    }
+record Num(int value) implements Expr {
 }
 
-final class Sum extends Expr {
-    public final Expr left;
-    public final Expr right;
-
-    public Sum(Expr left, Expr right) {
-        this.left = left;
-        this.right = right;
-    }
+record Sum(Expr left, Expr right) implements Expr {
 }
-
-
-

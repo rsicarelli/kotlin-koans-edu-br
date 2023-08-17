@@ -14,7 +14,7 @@ abstract class Expr
 {
 }
 
-final class Num extends Expr
+class Num extends Expr
 {
     public $value;
 
@@ -24,7 +24,7 @@ final class Num extends Expr
     }
 }
 
-final class Sum extends Expr
+class Sum extends Expr
 {
     public $left, $right;
 
@@ -35,7 +35,6 @@ final class Sum extends Expr
     }
 }
 
-//eval é uma função interna do PHP e não pode ser redefinida. Por isso, renomeamos para algo diferente, por exemplo, evaluate.
 /**
  * @throws Exception
  */
@@ -45,6 +44,7 @@ function evaluate($expr)
         return $expr->value;
     } elseif ($expr instanceof Sum) {
         return evaluate($expr->left) + evaluate($expr->right);
+    } else {
+        throw new Exception("Unknown Expr type");
     }
-    throw new Exception("Unknown Expr type");
 }

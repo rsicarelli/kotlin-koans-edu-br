@@ -13,7 +13,8 @@ type Num struct {
 }
 
 type Sum struct {
-	Left, Right Expr
+	Left  Expr
+	Right Expr
 }
 
 func Eval(expr Expr) int {
