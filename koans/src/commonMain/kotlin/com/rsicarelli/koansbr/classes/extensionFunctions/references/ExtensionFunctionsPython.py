@@ -9,20 +9,28 @@
 #
 #
 #
+class Pair:
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second
 
-from dataclasses import dataclass
 
-
-@dataclass
 class RationalNumber:
-    numerator: int
-    denominator: int
+    def __init__(self, numerator, denominator):
+        self.numerator = numerator
+        self.denominator = denominator
 
 
-def r(self: int) -> RationalNumber:
-    return RationalNumber(self, 1)
+def r_int(value):
+    return RationalNumber(value, 1)
 
 
-# noinspection PyRedeclaration
-def r(self: tuple) -> RationalNumber:
-    return RationalNumber(self[0], self[1])
+def r_pair(pair):
+    return RationalNumber(pair.first, pair.second)
+
+
+result1 = r_int(5)
+result2 = r_pair(Pair(7, 3))
+
+print(result1)
+print(result2)

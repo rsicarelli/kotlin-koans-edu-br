@@ -4,17 +4,30 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-class RationalNumber {
-    constructor(numerator, denominator) {
-        this.numerator = numerator
-        this.denominator = denominator
+class Pair {
+    constructor(first, second) {
+        this.first = first;
+        this.second = second;
     }
 }
 
-function R(i) {
-    return new RationalNumber(i, 1);
+class RationalNumber {
+    constructor(numerator, denominator) {
+        this.numerator = numerator;
+        this.denominator = denominator;
+    }
 }
 
-function R2(a, b) {
-    return new RationalNumber(a, b);
-}
+Number.prototype.r = function () {
+    return new RationalNumber(this, 1);
+};
+
+Pair.prototype.r = function () {
+    return new RationalNumber(this.first, this.second);
+};
+
+const result1 = (5).r();
+const result2 = new Pair(7, 3).r();
+
+console.log(result1);
+console.log(result2);

@@ -7,38 +7,58 @@
 package com.rsicarelli.koansbr.classes.extensionFunctions.references;
 
 public class ExtensionFunctionsJava {
-
     public static void main(String[] args) {
-        RationalNumberJava rn = RationalUtils.r(2, 3);
-        System.out.println(rn);
+        RationalNumber result1 = ExtensionFunctions.r(5);
+        RationalNumber result2 = ExtensionFunctions.r(new Pair<>(7, 3));
+
+        System.out.println(result1);
+        System.out.println(result2);
     }
 }
 
-class RationalUtils {
-    public static RationalNumberJava r(int n) {
-        return new RationalNumberJava(n, 1);
+class ExtensionFunctions {
+    public static RationalNumber r(int value) {
+        return new RationalNumber(value, 1);
     }
 
-    public static RationalNumberJava r(int numerator, int denominator) {
-        return new RationalNumberJava(numerator, denominator);
+    public static RationalNumber r(Pair<Integer, Integer> pair) {
+        return new RationalNumber(pair.getFirst(), pair.getSecond());
     }
 }
 
-class RationalNumberJava {
+class Pair<T, U> {
+    private final T first;
+    private final U second;
+
+    public Pair(T first, U second) {
+        this.first = first;
+        this.second = second;
+    }
+
+    public T getFirst() {
+        return first;
+    }
+
+    public U getSecond() {
+        return second;
+    }
+}
+
+class RationalNumber {
     private final int numerator;
     private final int denominator;
 
-    public RationalNumberJava(int numerator, int denominator) {
+    public RationalNumber(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
 
-    public int getNumerator() {
-        return numerator;
-    }
-
-    public int getDenominator() {
-        return denominator;
+    @Override
+    public String toString() {
+        return "RationalNumber{" +
+                "numerator=" + numerator +
+                ", denominator=" + denominator +
+                '}';
     }
 }
 
