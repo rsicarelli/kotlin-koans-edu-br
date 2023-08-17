@@ -40,10 +40,12 @@ marcadas como sealed, a menos que estejam no mesmo arquivo.
 Isso é prático quando só algumas variações específicas são aceitáveis. Por exemplo, em um app de pagamentos, as Sealed Classes podem
 representar estados como Aprovado, Recusado e Pendente, garantindo mais consistência e evitando erros no código.
 
-#### Sealed Class vs Interface 
+#### Sealed Class vs Interface
+
 Ambas compartilham a mesma ideia e resolvem o mesmo problema. As principais diferenças são:
 
 ##### Sealed Class
+
 - Pode ter propriedades e métodos, assim como qualquer outra classe.
 
 ```kotlin
@@ -63,6 +65,7 @@ sealed class StatusPedido(open val id: Int) {
 ```
 
 ##### Sealed Interface
+
 - Não pode ter propriedades com estado ou métodos com implementação (mas pode ter propriedades abstratas e métodos abstratos).
 - É a escolha ideal quando não há necessidade de compartilhar estado entre os subtipos.
 

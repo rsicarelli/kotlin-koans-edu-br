@@ -287,7 +287,8 @@ predefinido.
 - **Complexidade do código:** O uso excessivo de argumentos predefinido pode tornar o código mais difícil de ler e entender, especialmente
   para pessoas novatas.
 - **Default arguments são descartados no bytecode Java:** Quando utilizamos funções do Java no Kotlin, os default arguments não estão
-  disponíveis e cada combinação precisa ser sobrecarregada explicitamente na função `@JvmOverloads` para que os default arguments sejam usados.
+  disponíveis e cada combinação precisa ser sobrecarregada explicitamente na função `@JvmOverloads` para que os default arguments sejam
+  usados.
 
 ### JVMOverloads
 

@@ -1,10 +1,12 @@
 /*
  * SPDX-License-Identifier: MIT
- * Copyright (c) 2014-2019 JetBrains s.r.o.
- * Copyright (c) 2023 Rodrigo Sicarelli
+ * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
 package com.rsicarelli.koansbr.classes.sealedClasses.references;
+
+sealed interface Expr permits Num, Sum {
+}
 
 /**
  * Classe principal para demonstrar o uso de classes seladas.
@@ -27,9 +29,6 @@ public class SealedClassesJava {
             throw new IllegalArgumentException("Tipo de expressão desconhecido");
         }
     }
-}
-
-sealed interface Expr permits Num, Sum {
 }
 
 record Num(int value) implements Expr {
