@@ -7,7 +7,7 @@
 const question: string = "life, the universe, and everything";
 const answer: number = 42;
 
-// noinspection JSUnusedGlobalSymbols
 const tripleQuotedString: string = `
 #question = "${question}"
-#answer = ${answer}`.trim();
+#answer = ${answer}
+`.trim().replace(/#/g, '');

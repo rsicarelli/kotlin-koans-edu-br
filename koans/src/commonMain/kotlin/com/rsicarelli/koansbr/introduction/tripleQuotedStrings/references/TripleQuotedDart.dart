@@ -4,17 +4,10 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-const question = 'life, the universe, and everything';
-const answer = 42;
+const String question = "life, the universe, and everything";
+const int answer = 42;
 
-String getTripleQuotedString() {
-  return '''
-  #question = "$question"
-  #answer = $answer
-  '''
-      .trimLeft();
-}
-
-void main() {
-  print(getTripleQuotedString());
-}
+const String tripleQuotedString = '''
+#question = "$question"
+#answer = $answer
+'''.trim().replaceAll('#', '');

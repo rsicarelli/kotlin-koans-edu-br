@@ -3,17 +3,19 @@
  * Copyright (c) 2014-2019 JetBrains s.r.o.
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
-public class Program
+using System;
+
+class Program
 {
-    const string Month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)";
+    const string month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)";
 
-    public static string GetPattern()
-    {
-        return "\\d{2} " + Month + " \\d{4}";
-    }
-
-    public static void Main()
+    static void Main(string[] args)
     {
         Console.WriteLine(GetPattern());
+    }
+
+    static string GetPattern()
+    {
+        return @"\d{2} " + month + @" \d{4}";
     }
 }

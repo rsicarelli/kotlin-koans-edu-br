@@ -5,20 +5,18 @@
  */
 using System;
 
-public class Program
+class Program
 {
-    const string Question = "life, the universe, and everything";
-    const int Answer = 42;
+    const string question = "life, the universe, and everything";
+    const int answer = 42;
 
-    public static string TripleQuotedString()
-    {
-        return $@"#question = ""{Question}""
-                #answer = {Answer}
-                ".TrimStart('#').TrimEnd('#');
-    }
+    static readonly string tripleQuotedString = @$"
+    #question = ""{question}""
+    #answer = {answer}
+    ".Trim().Replace("#", "");
 
-    public static void Main()
+    static void Main(string[] args)
     {
-        Console.WriteLine(TripleQuotedString());
+        Console.WriteLine(tripleQuotedString);
     }
 }

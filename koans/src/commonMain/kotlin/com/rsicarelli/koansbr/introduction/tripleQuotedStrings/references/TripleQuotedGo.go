@@ -11,16 +11,17 @@ import (
 	"strings"
 )
 
-//goland:noinspection GoUnusedFunction
-func main() {
+func getTripleQuotedString() string {
 	question := "life, the universe, and everything"
 	answer := 42
 
-	tripleQuotedString := fmt.Sprintf(`
-    #question = "%v"
-    #answer = %v
-    `, question, answer)
+	tripleQuotedString := `
+	#question = "` + question + `"
+	#answer = ` + fmt.Sprintf("%d", answer) + `
+	`
+	return strings.ReplaceAll(tripleQuotedString, "#", "")
+}
 
-	tripleQuotedString = strings.TrimSpace(tripleQuotedString)
-	fmt.Println(tripleQuotedString)
+func main() {
+	fmt.Println(getTripleQuotedString())
 }

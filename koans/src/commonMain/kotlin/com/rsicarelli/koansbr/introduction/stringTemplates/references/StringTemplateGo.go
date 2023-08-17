@@ -10,13 +10,12 @@ import (
 	"fmt"
 )
 
-var month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
+const month = `(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)`
 
-func getPattern() string {
-	return "\\d{2} " + month + " \\d{4}"
+func getPattern(month string) string {
+	return `\d{2} ` + month + ` \d{4}`
 }
 
-//goland:noinspection GoUnusedFunction
 func main() {
-	fmt.Println(getPattern())
+	fmt.Println(getPattern(month))
 }

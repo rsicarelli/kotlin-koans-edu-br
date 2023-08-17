@@ -9,9 +9,15 @@
 #
 #
 #
+month = '(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)'
 
-month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
+
+def main():
+    print(get_pattern(month))
 
 
-def get_pattern():
-    return "\\d{2} " + month + " \\d{4}"
+def get_pattern(local_month):
+    return rf'\d{{2}} {local_month} \d{{4}}'
+
+
+main()

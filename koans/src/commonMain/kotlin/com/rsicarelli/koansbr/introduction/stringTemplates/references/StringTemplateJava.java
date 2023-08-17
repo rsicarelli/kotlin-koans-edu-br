@@ -8,9 +8,14 @@ package com.rsicarelli.koansbr.introduction.stringTemplates.references;
 
 @SuppressWarnings("unused")
 public class StringTemplateJava {
-    private static final String MONTH = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)";
+    public static final String MONTH = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)";
 
-    public static String getPatternJava() {
-        return "\\d{2} " + MONTH + " \\d{4}";
+    public static void main(String[] args) {
+        System.out.println(getPattern(MONTH));
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    static String getPattern(String month) {
+        return "\\d{2} " + month + " \\d{4}";
     }
 }

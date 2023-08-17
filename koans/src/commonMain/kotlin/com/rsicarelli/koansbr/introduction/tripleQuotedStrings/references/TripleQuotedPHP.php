@@ -5,11 +5,11 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-const QUESTION = "life, the universe, and everything";
-const ANSWER = 42;
 
-$tripleQuotedString = "
-#question = \"" . QUESTION . "\"
-#answer = " . ANSWER;
-
-echo $tripleQuotedString;
+$answer = 42;
+$question = "life, the universe, and everything";
+define("tripleQuotedString", <<<EOT
+#question = "$question"
+#answer = $answer
+EOT
+);

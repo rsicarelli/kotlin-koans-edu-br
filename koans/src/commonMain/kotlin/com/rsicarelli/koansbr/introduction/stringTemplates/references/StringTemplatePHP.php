@@ -4,12 +4,17 @@
  * Copyright (c) 2014-2019 JetBrains s.r.o.
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
+$month = '(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)';
 
-const MONTH = '(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)';
-
-function getPattern(): string
+function getPattern($month): string
 {
-    return '/\d{2} ' . MONTH . ' \d{4}/';
+    return "\\d{2} $month \\d{4}";
 }
 
-echo getPattern();
+function main()
+{
+    global $month;
+    echo getPattern($month);
+}
+
+main();
