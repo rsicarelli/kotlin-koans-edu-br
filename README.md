@@ -13,6 +13,10 @@ o conteúdo original para o português, facilitando o acesso aos falantes nativo
 2. Neste repositório, você encontrará uma pasta para cada módulo dos Kotlin Koans, contendo traduções e outros recursos relevantes.
 3. Utilize os exercícios do site Kotlin Koans em combinação com os arquivos deste repositório para uma aprendizagem mais interativa.
 
+### Comece por aqui
+
+👋 [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
+
 ## Tirando Dúvidas
 
 Caso tenha dúvidas ou precise de esclarecimentos sobre o conteúdo, ou as soluções, siga os passos:
