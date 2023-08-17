@@ -6,39 +6,52 @@
 
 package com.rsicarelli.koansbr.classes.dataClasses.references;
 
-import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
-class DataClassesJava {
+public class DataClassesJava {
     public static void main(String[] args) {
-        System.out.println(comparePeople());
-    }
+        List<Person> people = List.of(
+                new Person("Alice", 29),
+                new Person("Bob", 31)
+        );
 
-    static class PersonJava {
-        final String name;
-        final int age;
+        Person p1 = new Person("Alice", 29);
+        Person p2 = new Person("Alice", 29);
 
-        PersonJava(String name, int age) {
-            this.name = name;
-            this.age = age;
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if (this == obj) return true;
-            if (obj == null || getClass() != obj.getClass()) return false;
-            PersonJava PersonJava = (PersonJava) obj;
-            return age == PersonJava.age && name.equals(PersonJava.name);
-        }
-    }
-
-    static List<PersonJava> getPeople() {
-        return Arrays.asList(new PersonJava("Alice", 29), new PersonJava("Bob", 31));
-    }
-
-    static boolean comparePeople() {
-        PersonJava p1 = new PersonJava("Alice", 29);
-        PersonJava p2 = new PersonJava("Alice", 29);
-        return p1.equals(p2); // should be true
+        System.out.println(people);
+        System.out.println(p1.equals(p2));  // true
     }
 }
+
+class Person {
+    private final String name;
+    private final int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Objects.equals(name, person.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, age);
+    }
+}
+

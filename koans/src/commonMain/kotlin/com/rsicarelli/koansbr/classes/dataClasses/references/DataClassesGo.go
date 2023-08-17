@@ -9,22 +9,35 @@ package references
 import "fmt"
 
 type Person struct {
-	name string
-	age  int
+	Name string
+	Age  int
 }
 
-//goland:noinspection GoUnusedFunction
+func (p Person) Equals(other Person) bool {
+	return p.Name == other.Name && p.Age == other.Age
+}
+
+func (p Person) String() string {
+	return fmt.Sprintf("Person{Name: %s, Age: %d}", p.Name, p.Age)
+}
+
 func getPeople() []Person {
-	return []Person{{"Alice", 29}, {"Bob", 31}}
+	return []Person{
+		{"Alice", 29},
+		{"Bob", 31},
+	}
 }
 
 func comparePeople() bool {
 	p1 := Person{"Alice", 29}
 	p2 := Person{"Alice", 29}
-	return p1 == p2 // should be true
+	return p1.Equals(p2) // true
 }
 
-//goland:noinspection GoUnusedFunction
 func main() {
+	people := getPeople()
+	for _, person := range people {
+		fmt.Println(person)
+	}
 	fmt.Println(comparePeople())
 }

@@ -10,9 +10,18 @@
 #
 #
 
-from collections import namedtuple
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-Person = namedtuple('com.rsicarelli.koansbr.classes.dataClasses.Person', ['name', 'age'])
+    def __eq__(self, other):
+        if isinstance(other, Person):
+            return self.name == other.name and self.age == other.age
+        return False
+
+    def __str__(self):
+        return f"Person(name='{self.name}', age={self.age})"
 
 
 def get_people():
@@ -25,4 +34,9 @@ def get_people():
 def compare_people():
     p1 = Person("Alice", 29)
     p2 = Person("Alice", 29)
-    return p1 == p2  # should be True
+    return p1 == p2  # True
+
+
+people = get_people()
+print("\n".join(map(str, people)))
+print(compare_people())

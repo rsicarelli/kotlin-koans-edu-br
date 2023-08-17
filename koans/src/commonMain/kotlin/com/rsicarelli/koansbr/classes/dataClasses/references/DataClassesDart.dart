@@ -5,28 +5,41 @@
  */
 
 class Person {
-  String name;
-  int age;
+  final String name;
+  final int age;
 
   Person(this.name, this.age);
 
-  bool operator ==(var other) {
-    return other is Person && other.name == name && other.age == age;
-  }
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is Person &&
+          runtimeType == other.runtimeType &&
+          name == other.name &&
+          age == other.age;
 
+  @override
   int get hashCode => name.hashCode ^ age.hashCode;
+
+  @override
+  String toString() => 'Person{name: $name, age: $age}';
 }
 
 List<Person> getPeople() {
-  return [Person('Alice', 29), Person('Bob', 31)];
+  return [
+    Person('Alice', 29),
+    Person('Bob', 31),
+  ];
 }
 
 bool comparePeople() {
-  var p1 = Person('Alice', 29);
-  var p2 = Person('Alice', 29);
-  return p1 == p2; // should be true
+  final p1 = Person('Alice', 29);
+  final p2 = Person('Alice', 29);
+  return p1 == p2; // true
 }
 
-main() {
+void main() {
+  final people = getPeople();
+  print(people);
   print(comparePeople());
 }

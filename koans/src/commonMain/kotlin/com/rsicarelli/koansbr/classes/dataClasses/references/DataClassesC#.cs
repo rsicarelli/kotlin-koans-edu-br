@@ -7,7 +7,7 @@
 using System;
 using System.Collections.Generic;
 
-public class Person
+class Person
 {
     public string Name { get; }
     public int Age { get; }
@@ -20,45 +20,31 @@ public class Person
 
     public override bool Equals(object obj)
     {
-        var person = obj as Person;
-        if (person == null)
-            return false;
-
-        return Name == person.Name && Age == person.Age;
+        return obj is Person person &&
+               Name == person.Name &&
+               Age == person.Age;
     }
 
     public override int GetHashCode()
     {
-        unchecked
-        {
-            int hash = 17;
-            hash = hash * 23 + (Name != null ? Name.GetHashCode() : 0);
-            hash = hash * 23 + Age.GetHashCode();
-            return hash;
-        }
+        return HashCode.Combine(Name, Age);
     }
 }
 
-public static class MainClass
+class Program
 {
-    public static List<Person> GetPeople()
+    static void Main(string[] args)
     {
-        return new List<Person>
+        List<Person> people = new List<Person>
         {
             new Person("Alice", 29),
-            new Person("Bob", 31),
+            new Person("Bob", 31)
         };
-    }
 
-    public static bool ComparePeople()
-    {
-        var p1 = new Person("Alice", 29);
-        var p2 = new Person("Alice", 29);
-        return p1.Equals(p2); // should be true
-    }
+        Person p1 = new Person("Alice", 29);
+        Person p2 = new Person("Alice", 29);
 
-    public static void Main(string[] args)
-    {
-        Console.WriteLine(ComparePeople());
+        Console.WriteLine(string.Join(Environment.NewLine, people));
+        Console.WriteLine(p1.Equals(p2));  // True
     }
 }

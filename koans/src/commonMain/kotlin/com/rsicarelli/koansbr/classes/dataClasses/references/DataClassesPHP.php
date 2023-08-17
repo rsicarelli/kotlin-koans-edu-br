@@ -12,28 +12,40 @@ class Person
     public $name;
     public $age;
 
-    function __construct($name, $age)
+    public function __construct($name, $age)
     {
         $this->name = $name;
         $this->age = $age;
     }
 
-    function equals($other): bool
+    public function __toString()
     {
-        return $this->name == $other->name && $this->age == $other->age;
+        return "Person{name: $this->name, age: $this->age}";
+    }
+
+    public function equals($other): bool
+    {
+        return $other instanceof Person && $this->name === $other->name && $this->age === $other->age;
     }
 }
 
 function getPeople(): array
 {
-    return [new Person("Alice", 29), new Person("Bob", 31)];
+    return [
+        new Person('Alice', 29),
+        new Person('Bob', 31),
+    ];
 }
 
 function comparePeople(): bool
 {
-    $p1 = new Person("Alice", 29);
-    $p2 = new Person("Alice", 29);
-    return $p1->equals($p2); // should be true
+    $p1 = new Person('Alice', 29);
+    $p2 = new Person('Alice', 29);
+    return $p1->equals($p2); // true
 }
 
-echo comparePeople() ? 'true' : 'false';
+$people = getPeople();
+foreach ($people as $person) {
+    echo $person . "\n";
+}
+echo comparePeople();

@@ -19,7 +19,10 @@ func getPeople() -> [Person] {
 func comparePeople() -> Bool {
     let p1 = Person(name: "Alice", age: 29)
     let p2 = Person(name: "Alice", age: 29)
-    return p1 == p2  // should be true
+    return p1 == p2  // true
 }
 
+let people = getPeople()
+print(people)
 print(comparePeople())
+

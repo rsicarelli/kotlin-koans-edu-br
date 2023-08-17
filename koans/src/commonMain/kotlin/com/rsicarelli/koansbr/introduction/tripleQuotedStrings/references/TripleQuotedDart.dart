@@ -7,7 +7,9 @@
 const String question = "life, the universe, and everything";
 const int answer = 42;
 
-const String tripleQuotedString = '''
-#question = "$question"
-#answer = $answer
-'''.trim().replaceAll('#', '');
+final String tripleQuotedString = """
+  #question = "$question"
+  #answer = $answer
+"""
+    .trim()
+    .replaceAll('#', '');
