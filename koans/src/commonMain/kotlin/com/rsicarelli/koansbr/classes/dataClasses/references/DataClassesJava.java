@@ -7,7 +7,6 @@
 package com.rsicarelli.koansbr.classes.dataClasses.references;
 
 import java.util.List;
-import java.util.Objects;
 
 public class DataClassesJava {
     public static void main(String[] args) {
@@ -24,34 +23,5 @@ public class DataClassesJava {
     }
 }
 
-class Person {
-    private final String name;
-    private final int age;
-
-    public Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Person person = (Person) o;
-        return age == person.age && Objects.equals(name, person.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, age);
-    }
+record Person(String name, int age) {
 }
-
