@@ -9,19 +9,20 @@
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
-## Argumentos padrão (Default arguments)
+---
 
-Em Kotlin, é possível ter [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) para os argumentos de uma
-função.
+### Tarefa
 
-Esta é uma característica útil que permite que argumentos sejam omitidos quando uma função é chamada, nesse caso, o compilador usará os
-"default argument" para cada argumento.
+[Kotlin Koans: Default Arguments](https://play.kotlinlang.org/koans/Introduction/Default%20arguments/Task.kt)
 
-## Tarefa
+Imagine que você tenha várias sobrecargas de `foo()` em na sua linguagem favorita.
 
-https://play.kotlinlang.org/koans/Introduction/Default%20arguments/Task.kt
+Você pode substituir todas essas sobrecargas por uma única função em Kotlin.
 
-Imagine que você tenha várias sobrecargas de `foo()` em na sua linguagem favorita:
+Altere a declaração da função `foo` de forma que o código que usa `foo` seja compilado.
+
+<details>
+  <summary>Java</summary>
 
 ```java
 class SobrecargaJava {
@@ -42,6 +43,8 @@ class SobrecargaJava {
     }
 }
 ```
+
+</details>
 
 <details>
   <summary>C#</summary>
@@ -256,9 +259,15 @@ class SobrecargaTypeScript {
 
 </details>
 
-Você pode substituir todas essas sobrecargas por uma única função em Kotlin.
+---
 
-Altere a declaração da função `foo` de forma que o código que usa `foo` seja compilado.
+# Argumentos padrão (Default arguments)
+
+Em Kotlin, é possível ter [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) para os argumentos de uma
+função.
+
+Esta é uma característica útil que permite que argumentos sejam omitidos quando uma função é chamada, nesse caso, o compilador usará os
+"default argument" para cada argumento.
 
 ## Caso de uso
 

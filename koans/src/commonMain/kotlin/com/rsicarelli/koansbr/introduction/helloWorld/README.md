@@ -1,3 +1,4 @@
+## Introdução
 ### Índice:
 
 1. 📖 **[Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)**
@@ -9,7 +10,16 @@
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
-## Olá, mundo! (Hello, world!)
+---
+### Tarefa 
+[Kotlin Koan: Hello World!](https://play.kotlinlang.org/koans/Introduction/Hello,%20world!/Task.kt)
+
+Altere o código para que a função `start` retorne a string `"OK"`.
+
+Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
+Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
+---
+# Olá, mundo! (Hello, world!)
 
 Ao abrir um novo livro, sentimos a expectativa do que está por vir em suas páginas. Esta sensação de descoberta é semelhante ao mergulho em
 uma nova linguagem de programação.
@@ -19,8 +29,8 @@ funções atuam como esses capítulos, contando suas próprias histórias ou tar
 
 ```kotlin
 fun nomeDoCapitulo(
-    protagonista1: Descrição,
-    coadjuvante: Descrição,
+    protagonista1: Descricao,
+    coadjuvante: Descricao,
 ): Desfecho {
     // narração do capítulo
 }
@@ -41,15 +51,6 @@ fun nomeDoCapitulo(
 
 - **`{}`**: Este é o conteúdo do capítulo, onde os eventos se desenrolam. Em Kotlin, é dentro dessas chaves que colocamos a narrativa
   principal da função, o código que ela executará.
-
-### Tarefa
-
-https://play.kotlinlang.org/koans/Introduction/Hello,%20world!/Task.kt
-
-Altere o código para que a função `start` retorne a string `"OK"`.
-
-Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
-Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
 
 ### Casos de uso
 

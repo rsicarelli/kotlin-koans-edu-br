@@ -9,21 +9,9 @@
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
-## Tipos anuláveis (Nullable types)
-
-Em Kotlin, quando falamos sobre tipos anuláveis, estamos nos referindo à capacidade de lidar com referências que podem não apontar para nenhum
-objeto ("nulas"). A grande sacada é que essa possibilidade de nulidade deve ser especificada explicitamente no sistema de tipos.
-
-Isso significa que, se você tiver uma variável que pode ser nula, você precisa indicar isso usando o ponto de interrogação `?` logo após o
-tipo da variável:
-
-```kotlin
-var textoNullable: String? = null
-```
-
-Aprenda mais sobre [nullables e chamadas seguras](https://kotlinlang.org/docs/null-safety.html)
-
+---
 ### Tarefa
+[Kotlin Koans: Nullable types](https://play.kotlinlang.org/koans/Introduction/Nullable%20types/Task.kt)
 
 Reescreva o código a seguir para que ele tenha apenas uma expressão `if`:
 <details>
@@ -260,6 +248,21 @@ public void SendMessageToClient(
 ```
 
 </details>
+
+---
+# Tipos anuláveis (Nullable types)
+
+Em Kotlin, quando falamos sobre tipos anuláveis, estamos nos referindo à capacidade de lidar com referências que podem não apontar para nenhum
+objeto ("nulas"). A grande sacada é que essa possibilidade de nulidade deve ser especificada explicitamente no sistema de tipos.
+
+Isso significa que, se você tiver uma variável que pode ser nula, você precisa indicar isso usando o ponto de interrogação `?` logo após o
+tipo da variável:
+
+```kotlin
+var textoNullable: String? = null
+```
+
+Aprenda mais sobre [nullables e chamadas seguras](https://kotlinlang.org/docs/null-safety.html)
 
 ### Caso de uso
 

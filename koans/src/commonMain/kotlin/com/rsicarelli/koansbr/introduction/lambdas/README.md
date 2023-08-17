@@ -9,7 +9,16 @@
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. 📖 **[Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)**
 
-## Lambdas
+---
+## Tarefa
+
+[Kotlin Koans: Lambdas](https://play.kotlinlang.org/koans/Introduction/Lambdas/Task.kt)
+
+Passe um lambda para a função [`any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html)
+para verificar se a coleção contém um número par.
+A função `any` recebe um predicado como argumento e retorna verdadeiro se pelo menos um elemento satisfizer o predicado.
+---
+# Lambdas
 
 [Lambdas](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions) são uma das características mais poderosas e
 elegantes introduzidas em linguagens de programação modernas, e Kotlin não é exceção. Imagine conseguir representar uma ação ou
@@ -27,14 +36,6 @@ quando se trata de programação funcional e design de API expressivo.
 
 Em Kotlin, toda expressão lambda é envolvida por chaves `{}`. Dentro delas, os parâmetros ficam à esquerda do símbolo `->`, enquanto o
 conjunto de instruções da função, ou seu corpo, fica à direita.
-
-## Tarefa
-
-https://play.kotlinlang.org/koans/Introduction/Lambdas/Task.kt
-
-Passe um lambda para a função [`any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html)
-para verificar se a coleção contém um número par.
-A função `any` recebe um predicado como argumento e retorna verdadeiro se pelo menos um elemento satisfizer o predicado.
 
 ## Caso de uso
 

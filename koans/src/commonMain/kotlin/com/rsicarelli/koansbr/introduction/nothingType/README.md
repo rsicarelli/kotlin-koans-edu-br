@@ -9,7 +9,18 @@
 7. 📖 **[Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)**
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
-## Tipo "nenhum" (Nothing type)
+---
+### Tarefa
+
+[Kotlin Koans: Nothing type](https://play.kotlinlang.org/koans/Introduction/Nothing%20type/Task.kt)
+
+Especifique o tipo de retorno `Nothing` para a função `failWithWrongAge`.
+
+Observe que, sem o tipo `Nothing`, a função `checkAge` não é compilada porque o compilador
+assume que `age` pode ser `null`.
+---
+
+# Tipo "nenhum" (Nothing type)
 
 Imagine que você está escrevendo um programa e em certos momentos você quer que uma função sempre lance uma exceção, ou talvez ela entre em
 um loop infinito. Nestes casos, o tipo [Nothing](https://kotlinlang.org/docs/exceptions.html#the-nothing-type) pode ser usado como o tipo de
@@ -23,15 +34,6 @@ programa não vai continuar normalmente após essa função, então ele lida com
 - **Não adivinha tipos e aplica otimizações**: ao utilizar uma função com retorno `Nothing`, o compilador não tenta adivinhar um tipo e
   entende que a função pode encerrar antes de produzir um valor. Adicionalmente, o compilador pode aplicar otimizações e remover partes do
   código que são inalcançáveis, com base no conhecimento de que a função retorna um `Nothing`.
-
-### Tarefa
-
-https://play.kotlinlang.org/koans/Introduction/Nothing%20type/Task.kt
-
-Especifique o tipo de retorno `Nothing` para a função `failWithWrongAge`.
-
-Observe que, sem o tipo `Nothing`, a função `checkAge` não é compilada porque o compilador
-assume que `age` pode ser `null`.
 
 ### Caso de uso
 

@@ -9,18 +9,9 @@
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
-## Strings com três aspas (Triple-quoted strings)
-
-Em Kotlin, as [aspas triplas](https://kotlinlang.org/docs/strings.html#multiline-strings) (`multiline strings`) são uma ferramenta poderosa
-para lidar com Strings que contêm várias linhas e caracteres especiais sem a necessidade de escape. Essa abordagem melhora a legibilidade do
-código e facilita a manipulação de textos extensos ou formatados de maneira complexa.
-
-Saiba mais sobre os [diferentes literais de string e modelos de string](https://kotlinlang.org/docs/strings.html#string-literals)
-em Kotlin.
-
-## Tarefa
-
-https://play.kotlinlang.org/koans/Introduction/Triple-quoted%20strings/Task.kt
+---
+### Tarefa
+[Kotlin Koans: Triple quoted Strings](https://play.kotlinlang.org/koans/Introduction/Triple-quoted%20strings/Task.kt)
 
 Substitua a chamada `trimIndent` pela chamada `trimMargin` tomando `#` como valor de prefixo para que a string resultante não contenha o
 caractere de prefixo.
@@ -29,6 +20,16 @@ Você pode usar as funções
 [`trimIndent`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html)
 e [`trimMargin`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html)
 para formatar ‘strings’ de múltiplas linhas com aspas triplas conforme o código ao redor.
+---
+
+# Strings com três aspas (Triple-quoted strings)
+
+Em Kotlin, as [aspas triplas](https://kotlinlang.org/docs/strings.html#multiline-strings) (`multiline strings`) são uma ferramenta poderosa
+para lidar com Strings que contêm várias linhas e caracteres especiais sem a necessidade de escape. Essa abordagem melhora a legibilidade do
+código e facilita a manipulação de textos extensos ou formatados de maneira complexa.
+
+Saiba mais sobre os [diferentes literais de string e modelos de string](https://kotlinlang.org/docs/strings.html#string-literals)
+em Kotlin.
 
 ## Caso de uso
 

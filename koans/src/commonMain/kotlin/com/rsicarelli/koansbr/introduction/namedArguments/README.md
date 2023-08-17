@@ -9,14 +9,10 @@
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
-## Argumentos nomeados (Named arguments)
-
-Em Kotlin, os [Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) permitem que você especifique o
-nome do argumento diretamente ao chamar uma função, tornando o código mais claro e fácil de entender.
-
+---
 ### Tarefa
 
-https://play.kotlinlang.org/koans/Introduction/Named%20arguments/Task.kt
+[Kotlin Koans: Named arguments](https://play.kotlinlang.org/koans/Introduction/Named%20arguments/Task.kt)
 
 Faça com que a função `joinOptions()` retorne a lista em formato [JSON](https://pt.wikipedia.org/wiki/JSON) (por exemplo, `[a, b, c]`)
 especificando apenas dois argumentos.
@@ -32,6 +28,12 @@ fun joinToString(
     /* ... */
 ): String
 ```
+---
+
+# Argumentos nomeados (Named arguments)
+
+Em Kotlin, os [Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) permitem que você especifique o
+nome do argumento diretamente ao chamar uma função, tornando o código mais claro e fácil de entender.
 
 ### Caso de uso
 

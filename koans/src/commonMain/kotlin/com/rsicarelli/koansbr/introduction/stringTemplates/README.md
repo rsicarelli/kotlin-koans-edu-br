@@ -9,15 +9,9 @@
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
-## Modelos de string (String templates)
-
-Em Kotlin, as [string templates](https://kotlinlang.org/docs/strings.html#string-templates) são uma maneira interessante de criar strings
-que incluem valores de variáveis ou expressões. Isso é como colocar peças de um quebra-cabeça numa frase para fazer sentido.
-
-As cadeias de caracteres entre aspas triplas não são úteis apenas para cadeias de caracteres de várias linhas, mas também
-para criar padrões de regex, pois não é necessário escapar de uma barra invertida com uma barra invertida.
-
+---
 ### Tarefa
+[Kotlin Koans: String templates](https://play.kotlinlang.org/koans/Introduction/String%20templates/Task.kt)
 
 O padrão a seguir corresponde a uma data no formato `13.06.1992`
 (dois dígitos, um ponto, dois dígitos, um ponto, quatro dígitos):
@@ -28,6 +22,17 @@ fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
 
 Usando a variável `month`, reescreva esse padrão de forma que ele corresponda à data no formato `13 JUN 1992`
 (dois dígitos, um espaço em branco, uma abreviação de mês, um espaço em branco, quatro dígitos).
+---
+
+# Modelos de string (String templates)
+
+Em Kotlin, as [string templates](https://kotlinlang.org/docs/strings.html#string-templates) são uma maneira interessante de criar strings
+que incluem valores de variáveis ou expressões. Isso é como colocar peças de um quebra-cabeça numa frase para fazer sentido.
+
+As cadeias de caracteres entre aspas triplas não são úteis apenas para cadeias de caracteres de várias linhas, mas também
+para criar padrões de regex, pois não é necessário escapar de uma barra invertida com uma barra invertida.
+
+
 
 ### Caso de uso
 
