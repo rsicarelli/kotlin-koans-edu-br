@@ -10,40 +10,48 @@
 
 /** @noinspection PhpMultipleClassesDeclarationsInOneFile */
 
-
+/**
+ * @property mixed $personalInfo
+ */
 class Client
 {
-    public $personalInfo;
-
-    function __construct($personalInfo)
+    public function __construct($personalInfo)
     {
         $this->personalInfo = $personalInfo;
     }
 }
 
+/**
+ * @property mixed $email
+ */
 class PersonalInfo
 {
-    public $email;
-
-    function __construct($email)
+    public function __construct($email)
     {
         $this->email = $email;
     }
 }
 
-interface Mailer
+class Mailer
 {
-    public function sendMessage($email, $message);
+    public function sendMessage($email, $message)
+    {
+        echo "Sending message to $email: $message\n";
+    }
+}
+
+class ConsoleMailer extends Mailer
+{
 }
 
 function sendMessageToClient($client, $message, $mailer)
 {
-    $email = null;
-    if ($client != null && $client->personalInfo != null) {
-        $email = $client->personalInfo->email;
-    }
-
-    if ($email != null && $message != null) {
+    $email = $client->personalInfo->email ?? null;
+    if ($email !== null && $message !== null) {
         $mailer->sendMessage($email, $message);
     }
 }
+
+$client = new Client(new PersonalInfo('test@example.com'));
+$mailer = new ConsoleMailer();
+sendMessageToClient($client, 'Hello, client!', $mailer);

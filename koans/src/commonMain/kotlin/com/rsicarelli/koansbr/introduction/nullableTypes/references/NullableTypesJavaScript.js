@@ -3,28 +3,34 @@
  * Copyright (c) 2014-2019 JetBrains s.r.o.
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
-
 class Client {
-    constructor(personalInfo = null) {
+    constructor(personalInfo) {
         this.personalInfo = personalInfo;
     }
 }
 
 class PersonalInfo {
-    constructor(email = '') {
+    constructor(email) {
         this.email = email;
     }
 }
 
 class Mailer {
     sendMessage(email, message) {
+        console.log(`Sending message to ${email}: ${message}`);
     }
 }
 
-// noinspection JSUnusedGlobalSymbols
+class ConsoleMailer extends Mailer {
+}
+
 function sendMessageToClient(client, message, mailer) {
     const email = client?.personalInfo?.email;
-    if (email && message) {
+    if (email !== undefined && message !== undefined) {
         mailer.sendMessage(email, message);
     }
 }
+
+const client = new Client(new PersonalInfo('test@example.com'));
+const mailer = new ConsoleMailer();
+sendMessageToClient(client, 'Hello, client!', mailer);

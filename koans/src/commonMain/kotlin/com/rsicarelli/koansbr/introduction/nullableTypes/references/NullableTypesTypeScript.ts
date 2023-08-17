@@ -3,32 +3,34 @@
  * Copyright (c) 2014-2019 JetBrains s.r.o.
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
-
 class Client {
-    personalInfo: PersonalInfo | null;
-
-    constructor(personalInfo: PersonalInfo | null = null) {
-        this.personalInfo = personalInfo;
+    constructor(public personalInfo: PersonalInfo) {
     }
 }
 
 class PersonalInfo {
-    email: string | null;
-
-    constructor(email: string | null = null) {
-        this.email = email;
+    constructor(public email: string) {
     }
 }
 
-class Mailer {
+interface Mailer {
+    sendMessage(email: string, message: string): void;
+}
+
+class ConsoleMailer implements Mailer {
     sendMessage(email: string, message: string): void {
-        // Implementation of sendMessage goes here.
+        console.log(`Sending message to ${email}: ${message}`);
     }
 }
 
 function sendMessageToClient(client: Client | null, message: string | null, mailer: Mailer): void {
-    const email = client?.personalInfo?.email;
-    if (email && message) {
+    const email: string = client?.personalInfo?.email;
+    if (email !== undefined && message !== null) {
         mailer.sendMessage(email, message);
     }
 }
+
+const personalInfo: PersonalInfo = new PersonalInfo('test@example.com');
+const client: Client = new Client(personalInfo);
+const mailer: ConsoleMailer = new ConsoleMailer();
+sendMessageToClient(client, 'Hello, client!', mailer);

@@ -4,16 +4,30 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-func failWithWrongAge(age: Int?) -> Never {
-    fatalError("Wrong age: \(age ?? 0)")
-}
+import Foundation
 
-func checkAge(age: Int?) {
-    if age == nil || age! < 0 || age! > 150 {
-        failWithWrongAge(age: age)
-    } else {
-        print("Congrats! Next year you'll be \(age! + 1).")
+func main() {
+    do {
+        try checkAge(10)
+    } catch let error as NSError {
+        print(error.localizedDescription)
     }
 }
 
-checkAge(age: 10)
+enum CustomError: Error {
+    case wrongAge(Int)
+}
+
+func failWithWrongAge(age: Int) throws -> Never {
+    throw CustomError.wrongAge(age)
+}
+
+func checkAge(age: Int?) throws {
+    guard let age = age, age >= 0, age <= 150 else {
+        try failWithWrongAge(age: age ?? 0)
+        return
+    }
+    print("Congrats! Next year you'll be \(age + 1).")
+}
+
+main()

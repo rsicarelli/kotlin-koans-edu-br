@@ -10,13 +10,21 @@
 #
 #
 
+def main():
+    try:
+        check_age(10)
+    except Exception as e:
+        print(e)
+
+
 def fail_with_wrong_age(age):
-    raise ValueError("Wrong age: " + str(age))
+    raise ValueError(f"Wrong age: {age}")
+
 
 def check_age(age):
     if age is None or age < 0 or age > 150:
         fail_with_wrong_age(age)
-    else:
-        print("Congrats! Next year you'll be " + str(age + 1))
+    print(f"Congrats! Next year you'll be {age + 1}.")
 
-check_age(10)
+
+main()

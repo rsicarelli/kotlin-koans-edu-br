@@ -4,7 +4,28 @@
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
-public class Client
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Client client = new Client(new PersonalInfo("test@example.com"));
+        Mailer mailer = new ConsoleMailer();
+        SendMessageToClient(client, "Hello, client!", mailer);
+    }
+
+    static void SendMessageToClient(Client? client, string? message, Mailer mailer)
+    {
+        string? email = client?.PersonalInfo?.Email;
+        if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(message))
+        {
+            mailer.SendMessage(email, message);
+        }
+    }
+}
+
+class Client
 {
     public PersonalInfo? PersonalInfo { get; }
 
@@ -14,7 +35,7 @@ public class Client
     }
 }
 
-public class PersonalInfo
+class PersonalInfo
 {
     public string? Email { get; }
 
@@ -24,20 +45,16 @@ public class PersonalInfo
     }
 }
 
-public interface IMailer
+interface Mailer
 {
     void SendMessage(string email, string message);
 }
 
-public static class MessageService
+class ConsoleMailer : Mailer
 {
-    public static void SendMessageToClient(
-        Client? client, string? message, IMailer mailer)
+    public void SendMessage(string email, string message)
     {
-        string? email = client?.PersonalInfo?.Email;
-        if (email != null && message != null)
-        {
-            mailer.SendMessage(email, message);
-        }
+        Console.WriteLine($"Sending message to {email}: {message}");
     }
 }
+

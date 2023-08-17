@@ -9,50 +9,48 @@ package com.rsicarelli.koansbr.introduction.nullableTypes.references;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-interface Mailer {
-    void sendMessage(String email, String message);
+public class NullableTypesJava {
+    public static void main(String[] args) {
+        PersonalInfo personalInfo = new PersonalInfo("test@example.com");
+        Client client = new Client(personalInfo);
+        Mailer mailer = new ConsoleMailer();
+        sendMessageToClient(client, "Hello, client!", mailer);
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    static void sendMessageToClient(@Nullable Client client, @Nullable String message, @NotNull Mailer mailer) {
+        String email = client != null && client.personalInfo != null ? client.personalInfo.email : null;
+        if (email != null && message != null) {
+            mailer.sendMessage(email, message);
+        }
+    }
 }
 
 class Client {
-    private final PersonalInfoJava personalInfo;
+    @Nullable
+    PersonalInfo personalInfo;
 
-    public Client(PersonalInfoJava personalInfo) {
+    Client(@Nullable PersonalInfo personalInfo) {
         this.personalInfo = personalInfo;
     }
-
-    public PersonalInfoJava getPersonalInfo() {
-        return personalInfo;
-    }
 }
 
-class PersonalInfoJava {
-    private final String email;
+class PersonalInfo {
+    @NotNull
+    String email;
 
-    public PersonalInfoJava(String email) {
+    PersonalInfo(@NotNull String email) {
         this.email = email;
     }
+}
 
-    public String getEmail() {
-        return email;
+interface Mailer {
+    void sendMessage(@NotNull String email, @NotNull String message);
+}
+
+class ConsoleMailer implements Mailer {
+    public void sendMessage(@NotNull String email, @NotNull String message) {
+        System.out.printf("Sending message to %s: %s%n", email, message);
     }
 }
 
-@SuppressWarnings("unused")
-public class NullableTypesJava {
-    @SuppressWarnings("ClassEscapesDefinedScope")
-public void sendMessageToClient(
-        @Nullable Client client,
-        @Nullable String message,
-        @NotNull Mailer mailer
-) {
-    if (client == null || message == null) return;
-
-    PersonalInfoJava personalInfo = client.getPersonalInfo();
-    if (personalInfo == null) return;
-
-    String email = personalInfo.getEmail();
-    if (email == null) return;
-
-    mailer.sendMessage(email, message);
-}
-}

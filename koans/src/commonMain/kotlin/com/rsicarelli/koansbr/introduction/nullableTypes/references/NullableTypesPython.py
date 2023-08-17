@@ -11,22 +11,32 @@
 #
 
 class Client:
-    def __init__(self, personal_info=None):
+    def __init__(self, personal_info):
         self.personal_info = personal_info
 
 
 class PersonalInfo:
-    def __init__(self, email=None):
+    def __init__(self, email):
         self.email = email
 
 
 class Mailer:
-    def send_message(self, email: str, message: str):
-        # Implementation of send_message goes here.
-        pass
+    @staticmethod
+    def send_message(email, message):
+        print(f"Sending message to {email}: {message}")
 
 
+class ConsoleMailer(Mailer):
+    pass
+
+
+# noinspection PyShadowingNames
 def send_message_to_client(client, message, mailer):
-    email = None if client is None else client.personal_info.email
-    if email and message:
+    email = client.personal_info.email if client and client.personal_info and client.personal_info.email else None
+    if email is not None and message is not None:
         mailer.send_message(email, message)
+
+
+client = Client(PersonalInfo("test@example.com"))
+mailer = ConsoleMailer()
+send_message_to_client(client, "Hello, client!", mailer)
