@@ -10,6 +10,7 @@
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
 ---
+
 ### Tarefa
 [Kotlin Koans: Nullable types](https://play.kotlinlang.org/koans/Introduction/Nullable%20types/Task.kt)
 
@@ -250,6 +251,7 @@ public void SendMessageToClient(
 </details>
 
 ---
+
 # Tipos anuláveis (Nullable types)
 
 Em Kotlin, quando falamos sobre tipos anuláveis, estamos nos referindo à capacidade de lidar com referências que podem não apontar para nenhum

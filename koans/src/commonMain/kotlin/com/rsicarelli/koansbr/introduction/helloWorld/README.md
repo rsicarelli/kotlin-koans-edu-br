@@ -11,6 +11,7 @@
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
 ---
+
 ### Tarefa 
 [Kotlin Koan: Hello World!](https://play.kotlinlang.org/koans/Introduction/Hello,%20world!/Task.kt)
 
@@ -18,7 +19,9 @@ Altere o código para que a função `start` retorne a string `"OK"`.
 
 Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
 Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
+
 ---
+
 # Olá, mundo! (Hello, world!)
 
 Ao abrir um novo livro, sentimos a expectativa do que está por vir em suas páginas. Esta sensação de descoberta é semelhante ao mergulho em

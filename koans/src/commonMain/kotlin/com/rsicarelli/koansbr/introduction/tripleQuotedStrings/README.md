@@ -10,16 +10,15 @@
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
 ---
+
 ### Tarefa
 [Kotlin Koans: Triple quoted Strings](https://play.kotlinlang.org/koans/Introduction/Triple-quoted%20strings/Task.kt)
 
 Substitua a chamada `trimIndent` pela chamada `trimMargin` tomando `#` como valor de prefixo para que a string resultante não contenha o
 caractere de prefixo.
 
-Você pode usar as funções
-[`trimIndent`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html)
-e [`trimMargin`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html)
-para formatar ‘strings’ de múltiplas linhas com aspas triplas conforme o código ao redor.
+Você pode usar as funções [`trimIndent`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html) e [`trimMargin`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html)para formatar ‘strings’ de múltiplas linhas com aspas triplas conforme o código ao redor.
+
 ---
 
 # Strings com três aspas (Triple-quoted strings)

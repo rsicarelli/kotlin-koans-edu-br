@@ -10,6 +10,7 @@
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
 ---
+
 ### Tarefa
 
 [Kotlin Koans: Named arguments](https://play.kotlinlang.org/koans/Introduction/Named%20arguments/Task.kt)
@@ -28,6 +29,7 @@ fun joinToString(
     /* ... */
 ): String
 ```
+
 ---
 
 # Argumentos nomeados (Named arguments)

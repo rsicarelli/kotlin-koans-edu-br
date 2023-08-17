@@ -22,6 +22,7 @@ fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
 
 Usando a variável `month`, reescreva esse padrão de forma que ele corresponda à data no formato `13 JUN 1992`
 (dois dígitos, um espaço em branco, uma abreviação de mês, um espaço em branco, quatro dígitos).
+
 ---
 
 # Modelos de string (String templates)

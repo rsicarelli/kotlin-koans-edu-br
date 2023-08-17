@@ -10,6 +10,7 @@
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
 ---
+
 ### Tarefa
 
 [Kotlin Koans: Nothing type](https://play.kotlinlang.org/koans/Introduction/Nothing%20type/Task.kt)
@@ -18,6 +19,7 @@ Especifique o tipo de retorno `Nothing` para a função `failWithWrongAge`.
 
 Observe que, sem o tipo `Nothing`, a função `checkAge` não é compilada porque o compilador
 assume que `age` pode ser `null`.
+
 ---
 
 # Tipo "nenhum" (Nothing type)
