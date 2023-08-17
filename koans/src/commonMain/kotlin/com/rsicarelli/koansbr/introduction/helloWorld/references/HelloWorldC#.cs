@@ -6,15 +6,10 @@
 
 using System;
 
-public class Program
+class StartCSharp
 {
-    public static string Start()
+    public string Start()
     {
         return "OK";
-    }
-
-    public static void Main()
-    {
-        Console.WriteLine(Start());
     }
 }

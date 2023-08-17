@@ -7,10 +7,7 @@
 
 function containsEven($collection)
 {
-    foreach ($collection as $num) {
-        if ($num % 2 == 0) {
-            return true;
-        }
-    }
-    return false;
+    return in_array(true, array_map(function ($item) {
+        return $item % 2 === 0;
+    }, $collection));
 }

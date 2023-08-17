@@ -6,7 +6,7 @@
 
 package references
 
-func containsEven(collection []int) bool {
+func ContainsEven(collection []int) bool {
 	for _, item := range collection {
 		if item%2 == 0 {
 			return true
