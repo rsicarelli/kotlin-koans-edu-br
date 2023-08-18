@@ -31,8 +31,9 @@
 * [Introdução](#introdução)
   * [Lambdas](#lambdas)
     * [Tarefa](#tarefa)
-    * [Caso de uso](#caso-de-uso)
+    * [O que são lambdas?](#o-que-são-lambdas)
       * [Lambdas e os livros](#lambdas-e-os-livros)
+    * [Caso de uso](#caso-de-uso)
       * [O que é `it`?](#o-que-é-it)
       * [Lambdas como último argumento](#lambdas-como-último-argumento)
     * [Vantagens](#vantagens)
@@ -53,6 +54,8 @@ Passe um lambda para a função [`any`](https://kotlinlang.org/api/latest/jvm/st
 para verificar se a coleção contém um número par.
 A função `any` recebe um predicado como argumento e retorna verdadeiro se pelo menos um elemento satisfizer o predicado.
 
+### O que são lambdas?
+
 [Lambdas](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions) são funções anônimas que oferecem uma forma
 elegante e poderosa de representar ações ou comportamentos em Kotlin.
 
@@ -65,6 +68,18 @@ println(soma(5, 3))  // Saída: 8
 ```
 
 > `{ x, y -> x + y }` representa um lambda que soma dois valores.
+
+#### Lambdas e os livros
+
+Imagine que lambdas são como marcadores de página em um livro. Eles indicam rapidamente onde você quer agir, sem ter que folhear todo o
+livro.
+
+```kotlin
+val personagens = listOf("Frodo", "Sam", "Gandalf")
+val hobbits = personagens.filter { it != "Gandalf" }
+```
+
+O lambda `{ it != "Gandalf" }` age como um marcador, destacando rapidamente os hobbits da lista.```
 
 ### Caso de uso
 
@@ -95,18 +110,6 @@ val resultadoSubtracao = aplicarOperacao(operacao = divisao)
 val multiplicacao = { x, y -> x * y }
 val resultadoMultiplicacao = aplicarOperacao(operacao = multiplicacao)
 ```
-
-#### Lambdas e os livros
-
-Imagine que lambdas são como marcadores de página em um livro. Eles indicam rapidamente onde você quer agir, sem ter que folhear todo o
-livro.
-
-```kotlin
-val personagens = listOf("Frodo", "Sam", "Gandalf")
-val hobbits = personagens.filter { it != "Gandalf" }
-```
-
-O lambda `{ it != "Gandalf" }` age como um marcador, destacando rapidamente os hobbits da lista.```
 
 #### O que é `it`?
 
