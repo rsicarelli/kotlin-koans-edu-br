@@ -319,11 +319,14 @@ Java:
 
 ```java
 class JavaKt {
-    void exibeMensagem(String conteudo)
+    void exibeMensagem(String conteudo) {
+    }
 
-    void exibeMensagem(String conteudo, int vezes)
+    void exibeMensagem(String conteudo, int vezes) {
+    }
 
-    void exibeMensagem(String conteudo, int vezes, String prefixo)
+    void exibeMensagem(String conteudo, int vezes, String prefixo) {
+    }
 }
 ```
 
