@@ -32,7 +32,7 @@
   * [Lambdas](#lambdas)
     * [Tarefa](#tarefa)
     * [Caso de uso](#caso-de-uso)
-      * [Lambdas na analogia dos livros](#lambdas-na-analogia-dos-livros)
+      * [Lambdas e os livros](#lambdas-e-os-livros)
       * [O que é `it`?](#o-que-é-it)
       * [Lambdas como último argumento](#lambdas-como-último-argumento)
     * [Vantagens](#vantagens)
@@ -96,7 +96,7 @@ val multiplicacao = { x, y -> x * y }
 val resultadoMultiplicacao = aplicarOperacao(operacao = multiplicacao)
 ```
 
-#### Lambdas na analogia dos livros
+#### Lambdas e os livros
 
 Imagine que lambdas são como marcadores de página em um livro. Eles indicam rapidamente onde você quer agir, sem ter que folhear todo o
 livro.
