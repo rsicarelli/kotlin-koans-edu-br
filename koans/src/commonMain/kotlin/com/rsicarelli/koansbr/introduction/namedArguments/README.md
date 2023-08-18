@@ -24,7 +24,7 @@
 
 ## Argumentos nomeados (Named arguments)
 
-<details open>
+<details>
 <summary>&nbsp;<b>Tabela de conteúdo</b></summary>
 
 <p></p>
@@ -34,10 +34,11 @@
   * [Argumentos nomeados (Named arguments)](#argumentos-nomeados-named-arguments)
     * [Tarefa](#tarefa)
     * [Caso de uso](#caso-de-uso)
+      * [Clareza nos Argumentos](#clareza-nos-argumentos)
+      * [Ordens Flexíveis](#ordens-flexíveis)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
   * [Analogia](#analogia)
-    * [Named arguments e o restaurante à la carte](#named-arguments-e-o-restaurante-à-la-carte)
 <!-- TOC -->
 
 </details>
@@ -63,66 +64,78 @@ fun joinToString(
 
 ### Caso de uso
 
-Em Kotlin, os [Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) permitem que você especifique o
-nome do argumento diretamente ao chamar uma função, tornando o código mais claro e fácil de entender.
+[Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) são como etiquetas que você coloca nos valores
+que você passa para uma função. Isso torna o código mais claro e evita confusões.
 
-Você pode chamar essa função passando argumentos na ordem correta:
+Vamos considerar uma função `enviarEmail` que aceita informações do remetente e destinatário:
 
 ```kotlin
-joinToString(
-    ", ",
-    "prefixo",
-    "sufixo",
-): String
+fun enviarEmail(
+    de: String,
+    para: String,
+    assunto: String,
+) = Unit
 ```
 
-Mas ao usar argumentos nomeados, você pode especificar os nomes dos argumentos diretamente na chamada:
+Sem argumentos nomeados, você usaria assim:
 
 ```kotlin
-joinToString(
-    separator = ", ",
-    prefix = "prefixo",
-    postfix = "sufixo",
-): String
+enviarEmail(
+    "remetente@examplo.com",
+    "destinatario@examplo.com",
+    "Sobre a Reunião"
+)
 ```
 
-Com argumentos nomeados, você não precisa se lembrar da ordem dos argumentos. Você poderia até mesmo mudar a ordem, desde que você
-especifique o nome:
+Mas com argumentos nomeados, você pode especificar diretamente cada valor:
 
 ```kotlin
-joinToString(
-    postfix = "sufixo",
-    separator = ", ",
-    prefix = "prefixo",
-): String
+enviarEmail(
+    de = "remetente@examplo.com",
+    para = "destinataria@examplo.com",
+    assunto = "Sobre a Reunião"
+)
+```
+
+#### Clareza nos Argumentos
+
+Se você só quiser definir o assunto, deixando os outros valores como padrão:
+
+```kotlin
+enviarEmail(assunto = "Cancelamento da Reunião")
+```
+
+#### Ordens Flexíveis
+
+Imagine que você queira mudar a ordem dos valores, mas ainda mantendo tudo claro:
+
+```kotlin
+enviarEmail(
+    assunto = "Lembrete",
+    para = "area@example.com",
+    de = "equipe@example.com"
+)
 ```
 
 ### Vantagens
 
-- **Legibilidade**: Argumentos nomeados esclarecem a que cada valor se refere, melhorando a compreensão.
-- **Evita sobrecarga**: Ao invés de várias funções para diferentes números de argumentos, use argumentos nomeados e padrão.
-- **Flexibilidade na ordem**: Não precisa lembrar da ordem dos argumentos; ordene como preferir.
+- **Clareza nos Valores**: os nomes atribuídos esclarecem o propósito de cada argumento.
+- **Ordem Flexível**: você pode mudar a ordem dos valores sem confusão.
+- **Configuração Simplificada**: ótimo para funções com muitos parâmetros, onde você pode pular valores padrão.
+- **Personalização Precisa**: ideal para personalizar funções complexas sem se perder.
 
 ### Desvantagens
 
-- **Risco em mudanças**: Alterações no nome de um argumento requerem atualizações no código que o usa.
-- **Pode aumentar verbosidade**: Em certos casos, usar nomes longos pode tornar o código mais extenso.
+- **Atualizações de Nomes**: renomear um argumento na função exige atualizações em todos os locais onde a função é chamada.
+- **Aumento da Verbosidade**: nomes longos podem tornar o código mais extenso.
 
 ---
 
 ## Analogia
 
-### Named arguments e o restaurante à la carte
+Imagine entrar numa biblioteca cheia de livros, todos com a mesma capa, sem títulos. Você sabe que ali está o livro que você quer, mas como
+encontrar ele no meio de tantos iguais?
 
-Imagine que você está em um restaurante à la carte onde cada prato tem diversas opções de acompanhamentos. Quando você faz o pedido, em
-muitos lugares, é necessário escolher os acompanhamentos em uma sequência específica: primeiro a salada, depois o purê, a seguir o arroz, e
-assim por diante. Isso seria equivalente a chamar uma função sem usar argumentos nomeados; você precisa conhecer e seguir uma ordem
-específica.
-
-Porém, neste restaurante especial, eles têm um sistema diferente. Ao fazer o pedido, você simplesmente diz: "Quero o Tofu com salada de:
-Lentilha, arroz: integral, e purê: de batata-doce." Não importa a ordem em que você menciona os acompanhamentos; o garçom anota exatamente o
-que você quer, da maneira que você especificou.
-
-Os `Named Arguments` em Kotlin funcionam de maneira semelhante. Em vez de fornecer argumentos em uma ordem específica, você pode
-simplesmente nomeá-los, tornando o código mais claro e menos propenso a erros. Em vez de se lembrar da sequência correta, você só precisa
-saber o nome do argumento que deseja fornecer.
+Isso lembra programar sem os `named arguments` em Kotlin. A pessoa sabe o que quer fazer, mas sem identificar bem os argumentos, fica fácil
+se
+perder. No entanto, com named arguments, tudo fica mais claro, como se cada livro tivesse sua própria capa e título.

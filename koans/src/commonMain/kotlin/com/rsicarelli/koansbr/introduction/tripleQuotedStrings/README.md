@@ -20,7 +20,7 @@
 
 ## Strings com três aspas (Triple-quoted strings)
 
-<details open>
+<details>
 <summary>&nbsp;<b>Tabela de conteúdo</b></summary>
 
 <p></p>

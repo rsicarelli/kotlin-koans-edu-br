@@ -19,7 +19,7 @@
 ---
 
 ## Modelos de string (String templates)
-<details open>
+<details>
 <summary>&nbsp;<b>Tabela de conteúdo</b></summary>
 
 <p></p>

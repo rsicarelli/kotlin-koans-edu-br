@@ -22,7 +22,7 @@
 
 ## Lambdas
 
-<details open>
+<details>
 <summary>&nbsp;<b>Tabela de conteúdo</b></summary>
 
 <p></p>

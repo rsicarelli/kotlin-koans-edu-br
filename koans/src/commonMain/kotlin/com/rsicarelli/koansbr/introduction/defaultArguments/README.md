@@ -22,7 +22,7 @@ https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain
 
 ## Argumentos padrão (Default arguments)
 
-<details open>
+<details>
 <summary>&nbsp;<b>Tabela de conteúdo</b></summary>
 
 <p></p>
