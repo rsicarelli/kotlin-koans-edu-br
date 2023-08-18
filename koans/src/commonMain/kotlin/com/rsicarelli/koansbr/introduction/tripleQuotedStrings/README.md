@@ -21,7 +21,7 @@ Você pode usar as funções [`trimIndent`](https://kotlinlang.org/api/latest/jv
 
 ---
 
-# Strings com três aspas (Triple-quoted strings)
+## Strings com três aspas (Triple-quoted strings)
 
 Em Kotlin, as [aspas triplas](https://kotlinlang.org/docs/strings.html#multiline-strings) (`multiline strings`) são uma ferramenta poderosa
 para lidar com Strings que contêm várias linhas e caracteres especiais sem a necessidade de escape. Essa abordagem melhora a legibilidade do
@@ -30,7 +30,7 @@ código e facilita a manipulação de textos extensos ou formatados de maneira c
 Saiba mais sobre os [diferentes literais de string e modelos de string](https://kotlinlang.org/docs/strings.html#string-literals)
 em Kotlin.
 
-## Caso de uso
+### Caso de uso
 
 Uma string de aspas triplas é delimitada por três aspas duplas consecutivas (`"""`). Isso permite que você crie strings multilinha de forma
 simples, como mostrado no exemplo a seguir:

@@ -21,7 +21,7 @@ A função `any` recebe um predicado como argumento e retorna verdadeiro se pelo
 
 ---
 
-# Lambdas
+## Lambdas
 
 [Lambdas](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions) são funções anônimas que oferecem uma forma
 elegante e poderosa de representar ações ou comportamentos em Kotlin.
@@ -36,7 +36,7 @@ println(soma(5, 3))  // Saída: 8
 
 > `{ x, y -> x + y }` representa um lambda que soma dois valores.
 
-## Caso de uso
+### Caso de uso
 
 Outra grande vantagem é tratar funções como objetos, o que significa que podemos passar funções como argumentos:
 
@@ -78,7 +78,7 @@ val hobbits = personagens.filter { it != "Gandalf" }
 
 O lambda `{ it != "Gandalf" }` age como um marcador, destacando rapidamente os hobbits da lista.```
 
-#### O que é `it`?
+### O que é `it`?
 
 Em Kotlin, quando você trabalha com lambdas que têm apenas um parâmetro, esse único parâmetro pode ser acessado implicitamente usando a
 palavra-chave `it`, sem precisar declará-lo explicitamente.

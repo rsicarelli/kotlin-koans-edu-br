@@ -261,13 +261,13 @@ class SobrecargaTypeScript {
 
 ---
 
-# Argumentos padrão (Default arguments)
+## Argumentos padrão (Default arguments)
 
 Os [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) é uma característica útil que permite que argumentos
 sejam omitidos quando uma função é chamada, nesse caso,
 o compilador usará os "default argument" para cada argumento.
 
-## Caso de uso
+### Caso de uso
 
 ```kotlin
 fun printaDetalhes(nome: String, age: Int = 50) {
@@ -300,7 +300,7 @@ predefinido.
 - **Descarte no Bytecode Java**: Em Java, os argumentos padrão do Kotlin não são reconhecidos, por isso devemos utilizar a
   anotação `@JvmOverloads` para utilizá-los.
 
-### `@JvmOverloads`
+#### `@JvmOverloads`
 
 [`@JvmOverloads`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/) em Kotlin é uma anotação que instrui o compilador
 a criar sobrecargas de uma função para cada combinação fornecida.

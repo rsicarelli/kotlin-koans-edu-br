@@ -252,7 +252,7 @@ public void SendMessageToClient(
 
 ---
 
-# Tipos anuláveis (Nullable types)
+## Tipos anuláveis (Nullable types)
 
 Em Kotlin, quando falamos sobre tipos anuláveis, estamos nos referindo à capacidade de lidar com referências que podem não apontar para nenhum
 objeto ("nulas"). A grande sacada é que essa possibilidade de nulidade deve ser especificada explicitamente no sistema de tipos.
@@ -301,7 +301,7 @@ tamanho = textoNullable?.length ?: 0
 println(tamanho) //6
 ```
 
-#### Boas práticas
+### Boas práticas
 
 - **Use com Moderação**: Procure projetar seu código para evitar a necessidade de tipos nulos. Embora Kotlin lide bem com eles, o código
   tende a ser mais claro e simples sem o uso excessivo deles.
@@ -325,7 +325,7 @@ val elemento: String = list.find { ... } ?: ValorPadrao
 - **Manter as verificações de nulidade simples**: verificações de nulidade complexas levam a código desnecessariamente complicado. Tente
   mantê-los o mais simples possível.
 
-#### Compatibilidade com Java
+### Compatibilidade com Java
 
 Kotlin trata a nulidade de forma diferente do Java, evitando muitos erros comuns. Ao usar código Java em Kotlin ou vice-versa, é importante
 estar ciente das diferenças nos tipos nulos para evitar problemas de compilação.

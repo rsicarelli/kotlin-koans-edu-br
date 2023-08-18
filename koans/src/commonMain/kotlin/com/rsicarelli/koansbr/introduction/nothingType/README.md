@@ -22,7 +22,7 @@ assume que `age` pode ser `null`.
 
 ---
 
-# Tipo "nenhum" (Nothing type)
+## Tipo "nenhum" (Nothing type)
 
 Imagine que você está escrevendo um programa e em certos momentos você quer que uma função sempre lance uma exceção, ou talvez ela entre em
 um loop infinito. Nestes casos, o tipo [Nothing](https://kotlinlang.org/docs/exceptions.html#the-nothing-type) pode ser usado como o tipo de

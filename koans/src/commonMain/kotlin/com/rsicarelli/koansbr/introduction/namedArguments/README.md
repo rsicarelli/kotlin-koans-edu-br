@@ -32,7 +32,7 @@ fun joinToString(
 
 ---
 
-# Argumentos nomeados (Named arguments)
+## Argumentos nomeados (Named arguments)
 
 Em Kotlin, os [Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) permitem que você especifique o
 nome do argumento diretamente ao chamar uma função, tornando o código mais claro e fácil de entender.

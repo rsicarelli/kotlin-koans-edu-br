@@ -25,7 +25,7 @@ Usando a variável `month`, reescreva esse padrão de forma que ele corresponda 
 
 ---
 
-# Modelos de string (String templates)
+## Modelos de string (String templates)
 
 Em Kotlin, as [string templates](https://kotlinlang.org/docs/strings.html#string-templates) são uma maneira interessante de criar strings
 que incluem valores de variáveis ou expressões. Isso é como colocar peças de um quebra-cabeça numa frase para fazer sentido.

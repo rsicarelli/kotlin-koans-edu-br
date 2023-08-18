@@ -22,7 +22,7 @@ Para concluir o Kotlin Koans, você precisa substituir essa invocação de funç
 
 ---
 
-# Olá, mundo! (Hello, world!)
+## Olá, mundo! (Hello, world!)
 
 Ao abrir um novo livro, sentimos a expectativa do que está por vir em suas páginas. Esta sensação de descoberta é semelhante ao mergulho em
 uma nova linguagem de programação.
@@ -138,7 +138,9 @@ var paginaDeRascunho = "Isto é um esboço do capítulo 1."
 paginaDeRascunho = "Isto é um esboço revisado do capítulo 1." // Nenhum erro aqui, porque podemos mudar o valor de uma variável 'var'.
 ```
 
-### Tipos em Kotlin
+---
+
+## Tipos em Kotlin
 
 https://kotlinlang.org/docs/kotlin-tour-basic-types.html
 
