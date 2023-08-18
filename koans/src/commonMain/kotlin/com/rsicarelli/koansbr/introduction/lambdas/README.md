@@ -1,4 +1,7 @@
-### Índice:
+# Introdução
+
+<details open>
+<summary><b>Table of Contents</b> (clique para esconder)</summary>
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
@@ -7,9 +10,36 @@
 5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
 6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
-8. ➡️ **[Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)**
+8. **➡️ [Lambdas](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md
+   )**
+
+</details>
 
 ---
+
+## Lambdas
+
+<details open>
+<summary><b>Tabela de conteúdo</b> (clique para esconder) </summary>
+
+<!-- TOC -->
+* [Introdução](#introdução)
+  * [Lambdas](#lambdas)
+    * [Tarefa](#tarefa)
+    * [Caso de uso](#caso-de-uso)
+      * [Lambdas na analogia dos livros](#lambdas-na-analogia-dos-livros)
+      * [O que é `it`?](#o-que-é-it)
+      * [Lambdas como último argumento](#lambdas-como-último-argumento)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+    * [Testabilidade](#testabilidade)
+  * [Analogia](#analogia)
+    * [Lambdas e o Canivete Suíço](#lambdas-e-o-canivete-suíço)
+    * [Lambdas e RPG](#lambdas-e-rpg)
+<!-- TOC -->
+
+</details>
 
 ### Tarefa
 
@@ -18,10 +48,6 @@
 Passe um lambda para a função [`any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html)
 para verificar se a coleção contém um número par.
 A função `any` recebe um predicado como argumento e retorna verdadeiro se pelo menos um elemento satisfizer o predicado.
-
----
-
-## Lambdas
 
 [Lambdas](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions) são funções anônimas que oferecem uma forma
 elegante e poderosa de representar ações ou comportamentos em Kotlin.
@@ -78,7 +104,7 @@ val hobbits = personagens.filter { it != "Gandalf" }
 
 O lambda `{ it != "Gandalf" }` age como um marcador, destacando rapidamente os hobbits da lista.```
 
-### O que é `it`?
+#### O que é `it`?
 
 Em Kotlin, quando você trabalha com lambdas que têm apenas um parâmetro, esse único parâmetro pode ser acessado implicitamente usando a
 palavra-chave `it`, sem precisar declará-lo explicitamente.
@@ -101,7 +127,7 @@ val evenNumbers = numbers.filter { it % 2 == 0 }
 
 Aqui, `it` refere-se automaticamente ao único parâmetro do lambda, que, neste caso, é cada item da lista `numbers`.
 
-### Lambdas como último argumento
+#### Lambdas como último argumento
 
 Uma das características do Kotlin é a capacidade de mover lambdas para fora dos parênteses de uma função quando eles são o último
 argumento. Isso torna o código mais legível, especialmente quando a expressão lambda é longa.
@@ -145,6 +171,7 @@ aplicarOperacao(a = 5, b = 3) { x, y -> x + y }
 - **Simplicidade**: Mantenha lambdas focados e simples. Refatore se tornarem-se muito complexos.
 
 ---
+
 ## Analogia
 
 ### Lambdas e o Canivete Suíço
@@ -154,6 +181,7 @@ aplicarOperacao(a = 5, b = 3) { x, y -> x + y }
 - Não precisam de nomes, assim como você não nomeia cada uso do canivete.
 
 ### Lambdas e RPG
+
 - Uma "magia" que pode ser rapidamente adaptada conforme a situação.
 - Enfrentando um desafio específico? Crie uma magia no momento, sem ter que procurar na sua lista pré-definida de feitiços.
 - Lambdas oferecem essa mesma adaptabilidade no código, permitindo soluções rápidas e específicas.
