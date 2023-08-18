@@ -19,8 +19,8 @@
 </details>
 
 ---
-## Olá, mundo! (Hello, world!)
 
+## Olá, mundo! (Hello, world!)
 
 <details>
 <summary>&nbsp;<b>Tabela de conteúdo</b></summary>
@@ -28,21 +28,22 @@
 <p></p>
 
 <!-- TOC -->
+
 * [Introdução](#introdução)
-  * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
-    * [Tarefa](#tarefa)
-    * [O que é uma função em Kotlin?](#o-que-é-uma-função-em-kotlin)
-    * [Casos de uso](#casos-de-uso)
-      * [Funções em uma linha](#funções-em-uma-linha)
-      * [Tipo de retorno inferido](#tipo-de-retorno-inferido)
-      * [Funções com Varargs](#funções-com-varargs)
-    * [O tipo de unidade Unit](#o-tipo-de-unidade-unit)
-    * [Declarando variáveis](#declarando-variáveis)
-  * [Tipos em Kotlin](#tipos-em-kotlin)
+    * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
+        * [Tarefa](#tarefa)
+        * [O que é uma função em Kotlin?](#o-que-é-uma-função-em-kotlin)
+        * [Casos de uso](#casos-de-uso)
+            * [Funções em uma linha](#funções-em-uma-linha)
+            * [Tipo de retorno inferido](#tipo-de-retorno-inferido)
+            * [Funções com Varargs](#funções-com-varargs)
+        * [O tipo de unidade Unit](#o-tipo-de-unidade-unit)
+        * [Declarando variáveis](#declarando-variáveis)
+    * [Tipos em Kotlin](#tipos-em-kotlin)
+
 <!-- TOC -->
 
 </details>
-
 
 ### Tarefa
 
@@ -55,121 +56,118 @@ Para concluir o Kotlin Koans, você precisa substituir essa invocação de funç
 
 ### O que é uma função em Kotlin?
 
-Ao abrir um novo livro, sentimos a expectativa do que está por vir em suas páginas. Esta sensação de descoberta é semelhante ao mergulho em
-uma nova linguagem de programação.
+Funções em Kotlin são blocos de código que realizam tarefas específicas. Elas são partes fundamentais da linguagem, nos permitindo
+organizar, reutilizar e executar ações de forma eficiente.
 
-Imagine Kotlin como um livro de histórias. Dentro desse livro, temos diversos capítulos que narram diferentes partes da trama. Em Kotlin, as
-funções atuam como esses capítulos, contando suas próprias histórias ou tarefas.
+Uma função em Kotlin tem a seguinte estrutura:
 
 ```kotlin
-fun nomeDoCapitulo(
-    protagonista1: Descricao,
-    coadjuvante: Descricao,
-): Desfecho {
-    // narração do capítulo
+fun nomeDaFuncao(
+    argumento1: Tipo,
+    argumento2: Tipo,
+): TipoDeRetorno {
+    return valorDeRetorno
 }
 ```
 
-- **`fun`**: Assim como identificamos um novo capítulo ao virar a página, em Kotlin, a palavra "fun" nos indica que estamos prestes a
-  começar uma nova "narrativa" ou função.
-
-- **`nomeDoCapitulo`**: Cada capítulo de um livro tem um título, que nos dá uma ideia sobre o que ele irá tratar. Da mesma forma, o nome da
-  função nos dá pistas sobre seu propósito ou ação principal.
-
-- **`(protagonista1: Descrição, coadjuvante: Descrição)`**: Um capítulo tem personagens, e cada personagem têm um papel importante na
-  história. Em Kotlin, os argumentos da função são como esses personagens. Eles têm nomes e características (ou tipos), que nos informam sua
-  relevância no "capítulo".
-
-- **`: Desfecho`**: Ao final de um capítulo, chegamos a uma conclusão ou reviravolta. Em Kotlin, essa é a "conclusão" da nossa função,
-  conhecida como tipo de retorno (return type), indicando o que esperar ao final da execução.
-
-- **`{}`**: Este é o conteúdo do capítulo, onde os eventos se desenrolam. Em Kotlin, é dentro dessas chaves que colocamos a narrativa
-  principal da função, o código que ela executará.
+- `fun`: a palavra-chave e reservada, utilizada para declarar o início de uma função.
+- `nomeDaFuncao`: um nome significativo e específico à função.
+- `(argumento1: Tipo, argumento2: Tipo)` define os argumentos que a função espera receber. Cada argumento tem um nome e um tipo.
+- `: TipoDeRetorno` tipo de valor a função retornará após ser executada.
+- `{}` o corpo da função, onde o código é escrito. Aqui, você define as ações que a função executará.
 
 ### Casos de uso
 
+#### Função Simples
+
+A seguir temos uma função simples que soma dois números inteiros e retorna o resultado
+
+```kotlin
+fun somar(a: Int, b: Int): Int {
+    val resultado = a + b
+    return resultado
+}
+
+val resultadoSoma = somar(3, 5)
+println(resultadoSoma) // Resultado: 8
+```
+
 #### Funções em uma linha
 
-Em um livro, certos capítulos podem ter um resumo ou uma frase destacada para facilitar a compreensão. Kotlin permite expressar funções de
-forma concisa, quase como um resumo rápido.
+Em Kotlin, quando uma função possui apenas uma expressão após o símbolo `=`, e o tipo de retorno está especificado ou implícito, o
+compilador entende que
+o resultado dessa expressão é o valor de retorno da função.
 
-No exemplo a seguir, as chaves `{}` foram removidas, sendo substituída para atribuição `=`.
+Isso nos possibilita remover o corpo `{}` e utilizar como expressão `=`
 
 ```kotlin
-fun resumoDoCapitulo(título: String, definição: String): String = "$título: $definição"
+fun dobrar(numero: Int): Int = numero * 2
 
-val resumo = resumoDoCapitulo("Biblioteca", "Um lugar para guardar livros.")
-println(resumo)  // Saída: Biblioteca: Um lugar para guardar livros.
+val numeroDobrado = dobrar(7)
+println(numeroDobrado) // Resultado: 14
 ```
 
-#### Tipo de retorno inferido
+#### Função sem Retorno
 
-É comum calcular o tamanho de um livro pelo número de palavras. Em Kotlin, se uma função retorna "algo direto", substituindo o `{}`, o tipo
-de retorno pode ser inferido pelo compilador.
+Se uma função não tiver um valor de retorno explícito, seu tipo de retorno será inferido como `Unit`, o equivalente ao `void` em outras
+linguagens
+
+#### O tipo de unidade Unit
+
+O tipo `Unit` em Kotlin é utilizado para representar a ausência de valor de retorno de uma função.
+
+É como dizer "essa função não retorna nada". Isso é similar ao conceito de `void `em algumas outras linguagens de programação.
+
+A seguir, todas as expressões são válidas pelo compilador, que conseguir inferir o tipo pelo resultado da expressão.
 
 ```kotlin
-fun calcularTamanhoDoLivro(palavras: String) = palavras.length
-
-val tamanho = calcularTamanhoDoLivro("Era uma vez...")
-println(tamanho)  // Saída: 14
+fun exibirMensagem(texto: String): Unit {
+    println(texto)
+}
 ```
 
-#### Funções com Varargs
-
-Em uma estante de livros, você pode ter uma coleção de contos, onde cada conto é uma história única, mas todos estão contidos em um único
-volume. Da mesma forma, em Kotlin, existe um conceito chamado `varargs`, que permite que uma função aceite um número variável de argumentos.
+```kotlin
+fun exibirMensagem(texto: String): Unit = println(texto)
+```
 
 ```kotlin
-fun contosNoLivro(vararg contos: String) {
-    for (conto in contos) {
-        println("Nome do conto: $conto")
+fun exibirMensagem(texto: String) {
+    println(texto)
+}
+```
+
+```kotlin
+fun exibirMensagem(texto: String) = println(texto)
+```
+
+#### Lidando com múltiplos argumentos usando `vararg`
+
+O `vararg` em Kotlin permite passar uma quantidade variável de argumentos para uma função
+
+```kotlin
+fun imprimirItens(vararg itens: String) {
+    for (item in itens) {
+        println(item)
     }
 }
 
-contosNoLivro("O Aprendiz de Feiticeiro", "A Princesa e a Ervilha", "O Cavaleiro e o Dragão")
-```
-
-### O tipo de unidade Unit
-
-Em Kotlin, [`Unit`](https://kotlinlang.org/docs/functions.html#unit-returning-functions) é o equivalente ao `void` de outras linguagens de
-programação, como Java ou C++. No entanto, há uma diferença conceitual importante entre eles: enquanto `void` literalmente significa "sem
-valor", `Unit` é um tipo real com um único valor (também chamado de `Unit`).
-
-```kotlin
-fun semRetorno(): Unit = Unit
-fun semRetorno(): Unit = { }
-fun semRetorno() = Unit
-fun semRetorno() = { }
-
-val unidade: Unit = semRetorno()
-print(unidade) //Saída: Unit
+imprimirItens("Paçoca", "Cajú", "Açaí")
 ```
 
 ### Declarando variáveis
 
 Em Kotlin, temos duas maneiras principais de declarar variáveis: usando `val` e `var`.
 
-1. `val` de "value" ou valor
-
-Quando declaramos uma variável usando `val`, ela só pode receber um valor uma única vez. Depois de definido, esse valor não pode ser
-alterado.
-Em outras palavras, essa variável é **imutável**.
-
-```kotlin
-val tituloDoLivro = "A Jornada Dev"
-// tituloDoLivro = "Outro Título" -> Isto causará um erro, porque não podemos mudar o valor de uma variável 'val' após atribuí-la.
-```
-
-2. `var` "variable" ou variável
-
-Ao usar `var` na declaração de uma variável, ela pode ter seu valor modificado diversas vezes conforme necessário.
-
-```kotlin
-var paginaDeRascunho = "Isto é um esboço do capítulo 1."
-paginaDeRascunho = "Isto é um esboço revisado do capítulo 1." // Nenhum erro aqui, porque podemos mudar o valor de uma variável 'var'.
-```
-
----
+1. `val` valor final, que não pode ser alterado
+    ```kotlin
+    val tituloDoLivro = "A Jornada Dev"
+    // tituloDoLivro = "Outro Título" //impossível
+    ```
+2. `var` variável, que pode ser alterado
+    ```kotlin
+    var paginaDeRascunho = "Minha ideia"
+    paginaDeRascunho = "Uma ideia diferente" // permitido
+    ```
 
 ## Tipos em Kotlin
 
