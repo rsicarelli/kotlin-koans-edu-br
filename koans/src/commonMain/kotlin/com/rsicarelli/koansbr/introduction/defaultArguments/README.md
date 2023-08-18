@@ -265,7 +265,7 @@ class SobrecargaTypeScript {
 
 Os [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) é uma característica útil que permite que argumentos
 sejam omitidos quando uma função é chamada, nesse caso,
-o compilador usará os "default argument" para cada argumento.
+o compilador usará os "default arguments" para cada argumento.
 
 ### Caso de uso
 
@@ -307,9 +307,9 @@ a criar sobrecargas de uma função para cada combinação fornecida.
 
 ```kotlin
 @JvmOverloads
-fun displayMessage(message: String, times: Int = 1, prefix: String = "") {
-    for (i in 1..times) {
-        println("$prefix$message")
+fun exibeMensagem(conteudo: String, vezes: Int = 1, prefixo: String = "") {
+    for (i in 1..vezes) {
+        println("$prefixo$conteudo")
     }
 }
 ```
@@ -318,9 +318,9 @@ Neste caso, graças à anotação `@JvmOverloads`, o compilador Kotlin gerará a
 Java:
 
 ```java
-void displayMessage(String message){...}
-        void displayMessage(String message,int times){...}
-        void displayMessage(String message,int times,String prefix){...}
+void exibeMensagem(String conteudo)
+void exibeMensagem(String conteudo, int vezes)
+void exibeMensagem(String conteudo, int vezes, String prefixo)
 ```
 
 ---
