@@ -1,17 +1,49 @@
-### Índice:
+# Introdução
+
+<details open>
+<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
+
+<p></p>
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
 3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
 5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
-6. ➡️ **[Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)**
+6. **➡️ [Tipos anuláveis (Nullable types)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md
+   )**
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
+</details>
+
 ---
 
+## Tipos anuláveis (Nullable types)
+
+
+<details open>
+<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+
+<p></p>
+
+<!-- TOC -->
+* [Introdução](#introdução)
+  * [Tipos anuláveis (Nullable types)](#tipos-anuláveis-nullable-types)
+    * [Tarefa](#tarefa)
+    * [O que são os tipos anuláveis em Kotlin?](#o-que-são-os-tipos-anuláveis-em-kotlin)
+    * [Caso de uso](#caso-de-uso)
+    * [Boas práticas](#boas-práticas)
+    * [Compatibilidade com Java](#compatibilidade-com-java)
+  * [Analogia](#analogia)
+    * [Nullables e caixas de presente](#nullables-e-caixas-de-presente)
+<!-- TOC -->
+
+</details>
+
 ### Tarefa
+
 [Kotlin Koans: Nullable types](https://play.kotlinlang.org/koans/Introduction/Nullable%20types/Task.kt)
 
 Reescreva o código a seguir para que ele tenha apenas uma expressão `if`:
@@ -20,25 +52,25 @@ Reescreva o código a seguir para que ele tenha apenas uma expressão `if`:
 
 ```java
 package main
-        
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public void sendMessageToClient(
-    @Nullable Client client,
-    @Nullable String message,
-    @NotNull Mailer mailer
-) {
-    if (client == null || message == null) return;
-    
-    PersonalInfoJava personalInfo = client.getPersonalInfo();
-    if (personalInfo == null) return;
-    
-    String email = personalInfo.getEmail();
-    if (email == null) return;
-    
-    mailer.sendMessage(email, message);
-}
+@Nullable Client client,
+@Nullable String message,
+@NotNull Mailer mailer
+        ){
+        if(client==null||message==null)return;
+
+        PersonalInfoJava personalInfo=client.getPersonalInfo();
+        if(personalInfo==null)return;
+
+        String email=personalInfo.getEmail();
+        if(email==null)return;
+
+        mailer.sendMessage(email,message);
+        }
 ```
 
 </details>
@@ -252,9 +284,9 @@ public void SendMessageToClient(
 
 ---
 
-## Tipos anuláveis (Nullable types)
-
-Em Kotlin, quando falamos sobre tipos anuláveis, estamos nos referindo à capacidade de lidar com referências que podem não apontar para nenhum
+### O que são os tipos anuláveis em Kotlin?
+Em Kotlin, quando falamos sobre tipos anuláveis, estamos nos referindo à capacidade de lidar com referências que podem não apontar para
+nenhum
 objeto ("nulas"). A grande sacada é que essa possibilidade de nulidade deve ser especificada explicitamente no sistema de tipos.
 
 Isso significa que, se você tiver uma variável que pode ser nula, você precisa indicar isso usando o ponto de interrogação `?` logo após o
@@ -335,6 +367,7 @@ anotações [`@Nullable`](https://javadoc.io/doc/org.jetbrains/annotations/20.1.
 e [`@NonNull`](https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/latest/javax/annotation/Nonnull.html).
 
 ---
+
 ## Analogia
 
 ### Nullables e caixas de presente

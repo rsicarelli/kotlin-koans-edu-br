@@ -1,15 +1,46 @@
-### Índice:
+# Introdução
+
+<details open>
+<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
+
+<p></p>
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. ➡️ **[Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)**
+2. **➡️ [Argumentos nomeados (Named arguments)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md
+   )**
 3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
 5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
 6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
-8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
+8. [Lambdas](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md
+   )**
+
+</details>
 
 ---
+
+## Argumentos nomeados (Named arguments)
+
+<details open>
+<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+
+<p></p>
+
+<!-- TOC -->
+* [Introdução](#introdução)
+  * [Argumentos nomeados (Named arguments)](#argumentos-nomeados-named-arguments)
+    * [Tarefa](#tarefa)
+    * [Caso de uso](#caso-de-uso)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+  * [Analogia](#analogia)
+    * [Named arguments e o restaurante à la carte](#named-arguments-e-o-restaurante-à-la-carte)
+<!-- TOC -->
+
+</details>
 
 ### Tarefa
 
@@ -30,14 +61,10 @@ fun joinToString(
 ): String
 ```
 
----
-
-## Argumentos nomeados (Named arguments)
+### Caso de uso
 
 Em Kotlin, os [Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) permitem que você especifique o
 nome do argumento diretamente ao chamar uma função, tornando o código mais claro e fácil de entender.
-
-### Caso de uso
 
 Você pode chamar essa função passando argumentos na ordem correta:
 
@@ -82,6 +109,7 @@ joinToString(
 - **Pode aumentar verbosidade**: Em certos casos, usar nomes longos pode tornar o código mais extenso.
 
 ---
+
 ## Analogia
 
 ### Named arguments e o restaurante à la carte

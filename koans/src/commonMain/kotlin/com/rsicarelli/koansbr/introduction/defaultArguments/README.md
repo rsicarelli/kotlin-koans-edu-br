@@ -1,15 +1,45 @@
-### Índice:
+# Introdução
+
+<details open>
+<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
+
+<p></p>
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
-3. ➡️ **[Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)**
+3. **➡️ [Argumentos padrão (Default arguments)](
+https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md
+)**
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
 5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
 6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
+</details>
+
 ---
+
+## Argumentos padrão (Default arguments)
+
+<details open>
+<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+
+<p></p>
+
+<!-- TOC -->
+* [Introdução](#introdução)
+  * [Argumentos padrão (Default arguments)](#argumentos-padrão-default-arguments)
+    * [Tarefa](#tarefa)
+    * [Caso de uso](#caso-de-uso)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+      * [`@JvmOverloads`](#jvmoverloads)
+  * [Analogia](#analogia)
+    * [Padaria e default arguments](#padaria-e-default-arguments)
+<!-- TOC -->
+
+</details>
 
 ### Tarefa
 
@@ -260,8 +290,6 @@ class SobrecargaTypeScript {
 </details>
 
 ---
-
-## Argumentos padrão (Default arguments)
 
 Os [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) é uma característica útil que permite que argumentos
 sejam omitidos quando uma função é chamada, nesse caso,

@@ -1,7 +1,13 @@
-## Introdução
-### Índice:
+# Introdução
 
-1. ➡️ **[Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)**
+<details open>
+<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
+
+<p></p>
+
+1. **➡️ [Olá, mundo! (Hello, world!)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md
+   )**
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
 3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
@@ -10,9 +16,36 @@
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
----
+</details>
 
-### Tarefa 
+---
+## Olá, mundo! (Hello, world!)
+
+
+<details open>
+<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+
+<p></p>
+
+<!-- TOC -->
+* [Introdução](#introdução)
+  * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
+    * [Tarefa](#tarefa)
+    * [O que é uma função em Kotlin?](#o-que-é-uma-função-em-kotlin)
+    * [Casos de uso](#casos-de-uso)
+      * [Funções em uma linha](#funções-em-uma-linha)
+      * [Tipo de retorno inferido](#tipo-de-retorno-inferido)
+      * [Funções com Varargs](#funções-com-varargs)
+    * [O tipo de unidade Unit](#o-tipo-de-unidade-unit)
+    * [Declarando variáveis](#declarando-variáveis)
+  * [Tipos em Kotlin](#tipos-em-kotlin)
+<!-- TOC -->
+
+</details>
+
+
+### Tarefa
+
 [Kotlin Koan: Hello World!](https://play.kotlinlang.org/koans/Introduction/Hello,%20world!/Task.kt)
 
 Altere o código para que a função `start` retorne a string `"OK"`.
@@ -20,9 +53,7 @@ Altere o código para que a função `start` retorne a string `"OK"`.
 Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
 Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
 
----
-
-## Olá, mundo! (Hello, world!)
+### O que é uma função em Kotlin?
 
 Ao abrir um novo livro, sentimos a expectativa do que está por vir em suas páginas. Esta sensação de descoberta é semelhante ao mergulho em
 uma nova linguagem de programação.

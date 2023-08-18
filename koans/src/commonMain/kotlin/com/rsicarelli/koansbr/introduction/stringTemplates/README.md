@@ -1,4 +1,9 @@
-### Índice:
+# Índice:
+
+<details open>
+<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
+
+<p></p>
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
@@ -9,7 +14,30 @@
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
+</details>
+
 ---
+
+## Modelos de string (String templates)
+<details open>
+<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+
+<p></p>
+
+<!-- TOC -->
+* [Índice:](#índice)
+  * [Modelos de string (String templates)](#modelos-de-string-string-templates)
+    * [Tarefa](#tarefa)
+    * [O que são as String templates em Kotlin?](#o-que-são-as-string-templates-em-kotlin)
+    * [Caso de uso](#caso-de-uso)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+  * [Analogia](#analogia)
+    * [String templates e um quebra cabeça](#string-templates-e-um-quebra-cabeça)
+<!-- TOC -->
+
+</details>
+
 ### Tarefa
 [Kotlin Koans: String templates](https://play.kotlinlang.org/koans/Introduction/String%20templates/Task.kt)
 
@@ -23,9 +51,7 @@ fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
 Usando a variável `month`, reescreva esse padrão de forma que ele corresponda à data no formato `13 JUN 1992`
 (dois dígitos, um espaço em branco, uma abreviação de mês, um espaço em branco, quatro dígitos).
 
----
-
-## Modelos de string (String templates)
+### O que são as String templates em Kotlin?
 
 Em Kotlin, as [string templates](https://kotlinlang.org/docs/strings.html#string-templates) são uma maneira interessante de criar strings
 que incluem valores de variáveis ou expressões. Isso é como colocar peças de um quebra-cabeça numa frase para fazer sentido.
