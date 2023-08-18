@@ -325,9 +325,10 @@ void displayMessage(String message){...}
         void displayMessage(String message,int times,String prefix){...}
 ```
 
-### Analogia
+---
+## Analogia
 
-#### Padaria e default arguments
+### Padaria e default arguments
 
 Pense em uma padaria famosa pelo "_Café Padrão_". Esse café, por padrão, é um café preto de tamanho médio sem nenhum extra.
 

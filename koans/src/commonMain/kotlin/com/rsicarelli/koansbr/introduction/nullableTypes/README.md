@@ -334,9 +334,10 @@ Em Java, para expressar o tipo `null` de uma variável, precisamos das
 anotações [`@Nullable`](https://javadoc.io/doc/org.jetbrains/annotations/20.1.0/org/jetbrains/annotations/Nullable.html)
 e [`@NonNull`](https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/latest/javax/annotation/Nonnull.html).
 
-### Analogia
+---
+## Analogia
 
-#### Nullables e caixas de presente
+### Nullables e caixas de presente
 
 Imagine que cada variável em um programa é como uma caixa de presente. Essas caixas podem estar vazias, sem nenhum presente dentro, ou podem
 conter um presente específico. Esses presentes representam os valores que as variáveis podem armazenar.

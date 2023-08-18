@@ -54,22 +54,23 @@ val idade = 35
 println("Olá, $nome. Você irá completar ${idade + 5} em cinco anos.") // Olá, Alex. Você irá completar 40 em cinco anos.
 ```
 
-#### Vantagens
+### Vantagens
 
 - **Fácil e Limpo**: Templates de string ajudam você a criar mensagens combinando texto com variáveis de uma forma simples e limpa.
 - **Fácil Leitura**: As mensagens criadas com templates são fáceis de entender, pois fica claro onde estão os valores das variáveis.
 - **Evita Erros**: Usar templates evita erros que podem acontecer quando você precisa juntar várias partes de texto e variáveis.
 
-#### Desvantagens
+### Desvantagens
 
 - **Complexidade**: Se você exagerar nos templates, a string pode ficar difícil de entender.
 - **Riscos de segurança**: Se você inserir informações do usuário diretamente nos templates, pode abrir brechas para problemas de segurança.
 - **Problemas de desempenho**: Em situações específicas, usar muitos templates pode ser menos eficiente que juntar strings, especialmente
   para textos muito grandes.
 
-### Analogia
+---
+## Analogia
 
-#### String templates e um quebra cabeça
+### String templates e um quebra cabeça
 
 Imagine que você está montando um quebra-cabeça. Cada peça do quebra-cabeça é única e se encaixa perfeitamente em um espaço específico. Cada
 peça se assemelha a um "template" - um espaço vazio que aguarda a peça certa. Você não pode simplesmente

@@ -50,7 +50,7 @@ fun alwaysThrowsException(): Nothing {
 }
 ```
 
-#### Vantagens
+### Vantagens
 
 - **Compreensão mais clara do código**: quando você vê o tipo `Nothing` em uma função, você imediatamente entende que essa função não vai
   retornar normalmente, ou seja, ela vai lançar uma exceção ou ficar em um loop infinito.
@@ -59,7 +59,7 @@ fun alwaysThrowsException(): Nothing {
   realizar
   verificações de tipo mais precisas durante a compilação.
 
-#### Desvantagens
+### Desvantagens
 
 - **Pode ser confuso no início**: Se você está começando com Kotlin, o conceito de `Nothing` pode parecer estranho à primeira vista. Algumas
   pessoas podem pensar que é similar ao `void` de outras linguagens, mas na realidade é diferente.
@@ -67,9 +67,11 @@ fun alwaysThrowsException(): Nothing {
 - **Use com cuidado**: Lembre-se de usar o tipo `Nothing` somente quando a função nunca retorna algo útil. O uso incorreto pode tornar o
   código confuso e problemático.
 
-### Analogia
+---
 
-#### O tipo Nothing e uma estrada sem saída
+## Analogia
+
+### O tipo Nothing e uma estrada sem saída
 
 Imagine que você está dirigindo por uma estrada e de repente encontra uma placa que diz "Fim do Caminho". Essa placa indica que não importa
 o que aconteça a partir desse ponto, você não pode continuar seguindo a estrada normalmente. Pode haver um abismo, uma ponte quebrada ou

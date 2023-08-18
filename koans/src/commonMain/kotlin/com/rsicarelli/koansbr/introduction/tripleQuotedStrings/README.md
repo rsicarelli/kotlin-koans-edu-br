@@ -46,7 +46,7 @@ val texto = """
 Dentro das aspas triplas, o conteúdo é tratado como texto normal, o que significa que caracteres como `\n` (nova linha) e `\t` (tabulação)
 não são interpretados como caracteres de controle.
 
-#### Vantagens
+### Vantagens
 
 - **Strings Multilinha Simples**: As aspas triplas permitem criar strings multilinha com facilidade, tornando mais prático trabalhar com
   textos longos ou com formatações específicas.
@@ -55,7 +55,7 @@ não são interpretados como caracteres de controle.
 - **Templates de Strings**: As aspas triplas suportam templates de strings, facilitando a incorporação de valores dinâmicos em textos,
   tornando a manipulação de strings mais flexível.
 
-#### Desvantagens:
+### Desvantagens
 
 - **Espaço em branco indesejado**: Um desafio comum ao usar aspas triplas é a possibilidade de incluir espaços em branco indesejados na
   string. Isso pode ser evitado utilizando funções como `trimMargin()` e `trimIndent()` para remover esses espaços extras.
@@ -65,9 +65,10 @@ não são interpretados como caracteres de controle.
 - **Problemas de desempenho**: embora as aspas triplas sejam úteis, em algumas situações, como loops intensivos, seu uso excessivo pode
   levar a problemas de desempenho.
 
-### Analogia
+---
+## Analogia
 
-#### Aspas triplas e um palco amplo de teatro
+### Aspas triplas e um palco amplo de teatro
 
 Imagine que você está atuando em um palco teatral. Em uma peça convencional, você tem que se limitar a um pequeno espaço no palco, onde cada
 movimento precisa ser calculado. Isso pode ser restritivo e complicado, especialmente quando você precisa expressar emoções

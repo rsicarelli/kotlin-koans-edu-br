@@ -144,15 +144,16 @@ aplicarOperacao(a = 5, b = 3) { x, y -> x + y }
 - **Cobertura**: Inclua tanto cenários comuns quanto "edge cases".
 - **Simplicidade**: Mantenha lambdas focados e simples. Refatore se tornarem-se muito complexos.
 
-### Analogia
+---
+## Analogia
 
-#### Lambdas e o Canivete Suíço
+### Lambdas e o Canivete Suíço
 
 - Ferramentas rápidas e versáteis para tarefas específicas.
 - Assim como cada função do canivete, lambdas atendem a necessidades pontuais no código.
 - Não precisam de nomes, assim como você não nomeia cada uso do canivete.
 
-#### Lambdas e RPG
+### Lambdas e RPG
 - Uma "magia" que pode ser rapidamente adaptada conforme a situação.
 - Enfrentando um desafio específico? Crie uma magia no momento, sem ter que procurar na sua lista pré-definida de feitiços.
 - Lambdas oferecem essa mesma adaptabilidade no código, permitindo soluções rápidas e específicas.

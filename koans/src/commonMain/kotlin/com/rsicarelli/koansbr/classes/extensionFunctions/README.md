@@ -49,7 +49,7 @@ como seu primeiro argumento.
 
 Dessa forma, não existe uma sobrecarga de desempenho ao usar funções de extensão em comparação com funções normais.
 
-#### Vantagens
+### Vantagens
 
 - **Melhora a legibilidade do código**: Muitas vezes, chamar um método em um objeto é mais intuitivo do que passar o objeto como um
   argumento para uma função.
@@ -58,7 +58,7 @@ Dessa forma, não existe uma sobrecarga de desempenho ao usar funções de exten
 - **Evita subclasses desnecessárias**: Em vez de criar uma subclasse apenas para adicionar algumas funcionalidades, você pode criar
   extensões
 
-#### Desvantagens
+### Desvantagens
 
 - **Não substituem métodos originais**: Se a classe original tiver um método com a mesma assinatura da função de extensão, o método original
   será chamado.

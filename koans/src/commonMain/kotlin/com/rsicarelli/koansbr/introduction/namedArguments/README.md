@@ -1,7 +1,9 @@
 ### Índice:
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. ➡️ **[Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)**
+2. ➡️ *
+   *[Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
+   **
 3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
 5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
@@ -70,28 +72,21 @@ joinToString(
 ): String
 ```
 
-#### Vantagens
+### Vantagens
 
-- **Legibilidade de código**: ao chamar uma função com vários argumentos, especialmente se eles são do mesmo tipo, pode ser difícil entender
-  a que cada argumento se refere. Adicionar nomes aos seus argumentos os tornam explícitos, elevando a coesão do seu código e evitando
-  problemas futuros.
-- **Elimina a necessidade de [sobrecarga de funções](https://pt.wikipedia.org/wiki/Sobrecarga_de_fun%C3%A7%C3%A3o)**: no Java, você
-  precisaria criar várias versões de uma função para lidar com diferentes
-  números de argumentos. Em Kotlin, você pode usar argumentos nomeados combinados com argumentos padrão para evitar essa sobrecarga.
-- **Permite a reordenação de argumentos:** Com argumentos nomeados, você não precisa se lembrar da ordem dos argumentos ao chamar uma
-  função; você pode especificar os argumentos na ordem que quiser.
+- **Legibilidade**: Argumentos nomeados esclarecem a que cada valor se refere, melhorando a compreensão.
+- **Evita sobrecarga**: Ao invés de várias funções para diferentes números de argumentos, use argumentos nomeados e padrão.
+- **Flexibilidade na ordem**: Não precisa lembrar da ordem dos argumentos; ordene como preferir.
 
-#### Desvantagens
+### Desvantagens
 
-- **Compatibilidade entre versões:** Se o nome de um argumento é alterado na função, qualquer código que chame essa função usando um
-  argumento nomeado precisará ser atualizado. Isso pode tornar as mudanças no código mais problemáticas do que se estivesse usando
-  argumentos posicionais (quando você passa valores baseados apenas na ordem, sem especificar nomes).
-- **Verbosidade:** Em alguns casos, o uso de argumentos nomeados pode tornar o código mais verboso, especialmente se o nome do argumento for
-  longo.
+- **Risco em mudanças**: Alterações no nome de um argumento requerem atualizações no código que o usa.
+- **Pode aumentar verbosidade**: Em certos casos, usar nomes longos pode tornar o código mais extenso.
 
-### Analogia
+---
+## Analogia
 
-#### Named arguments e o restaurante à la carte
+### Named arguments e o restaurante à la carte
 
 Imagine que você está em um restaurante à la carte onde cada prato tem diversas opções de acompanhamentos. Quando você faz o pedido, em
 muitos lugares, é necessário escolher os acompanhamentos em uma sequência específica: primeiro a salada, depois o purê, a seguir o arroz, e
