@@ -1,7 +1,9 @@
 # Introdução
 
 <details open>
-<summary><b>Table of Contents</b> (clique para esconder)</summary>
+<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
+
+<p></p>
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
@@ -21,7 +23,9 @@
 ## Lambdas
 
 <details open>
-<summary><b>Tabela de conteúdo</b> (clique para esconder) </summary>
+<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+
+<p></p>
 
 <!-- TOC -->
 * [Introdução](#introdução)
