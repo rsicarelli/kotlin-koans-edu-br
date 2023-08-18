@@ -2,7 +2,9 @@
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
-3. 📖 **[Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)**
+3. ➡️ *
+   *[Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
+   **
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
 5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
 6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
@@ -263,11 +265,9 @@ class SobrecargaTypeScript {
 
 # Argumentos padrão (Default arguments)
 
-Em Kotlin, é possível ter [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) para os argumentos de uma
-função.
-
-Esta é uma característica útil que permite que argumentos sejam omitidos quando uma função é chamada, nesse caso, o compilador usará os
-"default argument" para cada argumento.
+Os [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) é uma característica útil que permite que argumentos
+sejam omitidos quando uma função é chamada, nesse caso,
+o compilador usará os "default argument" para cada argumento.
 
 ## Caso de uso
 
@@ -292,34 +292,20 @@ predefinido.
 
 ### Vantagens
 
-- **Menos sobrecarga de funções**: Em vez de criar várias versões da mesma função com diferentes listas de argumentos, podemos fornecer
-  default arguments para alguns argumentos.
-- **Flexibilidade ao chamar as funções**: Podemos chamar a mesma função com diferentes combinações de argumentos, enquanto todos os
-  argumentos sem valor predefinido sejam fornecidos.
-- **Código mais limpo e menos verboso**: O uso de argumentos predefinido ajuda a reduzir a quantidade de código que precisa ser escrita para
-  atender a todos os casos de uso possíveis de uma função.
-- **Compatibilidade total com Java**: Funções com argumentos predefinido podem ser chamadas a partir do código Java, como se fossem
-  sobrecargas
-  da mesma função.
+- **Menos Sobrecargas**: Permite uma única função em vez de várias versões com diferentes argumentos.
+- **Flexibilidade**: Você pode chamar a função com diferentes combinações de argumentos, contanto que os obrigatórios sejam fornecidos.
+- **Compatibilidade com Java**: Funções com argumentos padrão são compatíveis com código Java, atuando como sobrecargas.
 
 ### Desvantagens
 
-- **Complexidade do código:** O uso excessivo de argumentos predefinido pode tornar o código mais difícil de ler e entender, especialmente
-  para pessoas novatas.
-- **Default arguments são descartados no bytecode Java:** Quando utilizamos funções do Java no Kotlin, os default arguments não estão
-  disponíveis e cada combinação precisa ser sobrecarregada explicitamente na função `@JvmOverloads` para que os default arguments sejam
-  usados.
+- **Complexidade do Código**: Quando utilizado em excesso, pode complicar a leitura e entendimento do código.
+- **Descarte no Bytecode Java**: Em Java, os argumentos padrão do Kotlin não são reconhecidos, por isso devemos utilizar a
+  anotação `@JvmOverloads` para utilizá-los.
 
-### JVMOverloads
+### `@JvmOverloads`
 
-[`@JvmOverloads`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/) é uma anotação em Kotlin que instrui o compilador
-a gerar sobrecargas de uma função (ou construtor) para cada combinação de argumentos com default arguments.
-
-Em Kotlin, é possível definir default arguments para argumentos de funções, evitando a necessidade de criar múltiplas sobrecargas da mesma
-função. No entanto, esse conceito não existe em Java da mesma forma que existe em Kotlin. Portanto, se você quiser chamar uma função Kotlin
-com argumentos predefinido a partir do código Java, pode encontrar problemas.
-
-A anotação `@JvmOverloads` resolve esse problema gerando sobrecargas adequadas para o código Java.
+[`@JvmOverloads`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/) em Kotlin é uma anotação que instrui o compilador
+a criar sobrecargas de uma função para cada combinação fornecida.
 
 ```kotlin
 @JvmOverloads
@@ -330,7 +316,8 @@ fun displayMessage(message: String, times: Int = 1, prefix: String = "") {
 }
 ```
 
-Ao adicionar a anotação `@JvmOverloads`, o compilador Kotlin gerará as seguintes sobrecargas (para uso em Java):
+Neste caso, graças à anotação `@JvmOverloads`, o compilador Kotlin gerará as seguintes sobrecargas que podem ser chamadas a partir do código
+Java:
 
 ```java
 void displayMessage(String message){...}
@@ -338,41 +325,45 @@ void displayMessage(String message){...}
         void displayMessage(String message,int times,String prefix){...}
 ```
 
-Dessa forma, o código Java pode chamar qualquer uma dessas sobrecargas, dependendo de quantos argumentos a pessoa programadora deseja
-fornecer.
-
 ### Analogia
 
 #### Padaria e default arguments
 
-Imagine que você vá a uma padaria famosa pelo seu café da manhã chamado "Café Padrão". Esse "Café Padrão" é simplesmente um café preto
-médio, sem adições.
+Pense em uma padaria famosa pelo "_Café Padrão_". Esse café, por padrão, é um café preto de tamanho médio sem nenhum extra.
 
-No entanto, a padaria reconhece que nem todos gostam do café preto puro. Algumas pessoas podem querer alguma bebida vegetal, açúcar,
-caramelo, chantilly, entre outros.
+A padaria, no entanto, sabe que nem todos gostam de seu café dessa maneira. Alguns preferem adicionar leite vegetal, açúcar, caramelo ou até
+mesmo chantilly.
 
-Mas se um cliente entra e simplesmente diz: "Quero um café", sem dar mais detalhes, o atendente entregará o "Café Padrão" (café preto
-médio), porque esse é o predefinido.
+Quando um cliente simplesmente pede: "_Um cafézinho, por favor_", o atendente serve o "Café Padrão". Mas, se algum cliente for mais
+específico e disser, "_Quero um café grande com caramelo e chantilly_", o atendente personalizá o pedido.
 
-Agora, pense nos default arguments em Kotlin da mesma maneira. Ao definir uma função, você pode estabelecer alguns default arguments para
-certos argumentos. Se alguém chamar essa função sem fornecer detalhes para esses argumentos, os default arguments são usados.
+Isso é semelhante ao comportamento dos `default arguments` em Kotlin. Ao criar uma função, você pode determinar valores padrão para alguns
+de seus parâmetros. Se a função é chamada sem especificar esses parâmetros, os valores padrão são usados.
 
-Por exemplo, você pode ter uma função assim:
+Veja este exemplo:
 
 ```kotlin
 fun pedirCafe(tamanho: String = "médio", adicional: String? = null) {
-    // prepara o café
+    // código para preparar o café
 }
 
-pedirCafe()
+pedirCafe()  // Retorna: café médio
 ```
 
-Você receberá um café médio sem adições, pois são os default arguments.
-
-Mas, se você quiser algo diferente, pode ser específico:
+No exemplo acima, ao chamar `pedirCafe()` sem argumentos, você obtém um café médio, que é o comportamento padrão. Porém, pode personalizar
+seu pedido:
 
 ```kotlin
-pedirCafe("grande", "com caramelo e chantilly")
+pedirCafe(
+    tamanho = "grande",
+    adicional = "com nitrogênio"
+)
 ```
 
-E aí, você receberá um café grande com caramelo e chantilly!
+Dessa vez, você terá um café grande com os adicionais especificados.
+
+**É assim que os default arguments funcionam:** eles fornecem um valor padrão, a menos que você especifique algo diferente!
+
+
+
+

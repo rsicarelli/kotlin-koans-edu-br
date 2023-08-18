@@ -1,7 +1,7 @@
 ## Introdução
 ### Índice:
 
-1. 📖 **[Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)**
+1. ➡️ **[Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)**
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
 3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
@@ -45,12 +45,12 @@ fun nomeDoCapitulo(
 - **`nomeDoCapitulo`**: Cada capítulo de um livro tem um título, que nos dá uma ideia sobre o que ele irá tratar. Da mesma forma, o nome da
   função nos dá pistas sobre seu propósito ou ação principal.
 
-- **`(protagonista1: Descrição, coadjuvante: Descrição)`**: Um capítulo tem personagens, e cada personagem desempenha um papel importante na
+- **`(protagonista1: Descrição, coadjuvante: Descrição)`**: Um capítulo tem personagens, e cada personagem têm um papel importante na
   história. Em Kotlin, os argumentos da função são como esses personagens. Eles têm nomes e características (ou tipos), que nos informam sua
   relevância no "capítulo".
 
 - **`: Desfecho`**: Ao final de um capítulo, chegamos a uma conclusão ou reviravolta. Em Kotlin, essa é a "conclusão" da nossa função,
-  conhecida como tipo de retorno, indicando o que esperar ao final da execução.
+  conhecida como tipo de retorno (return type), indicando o que esperar ao final da execução.
 
 - **`{}`**: Este é o conteúdo do capítulo, onde os eventos se desenrolam. Em Kotlin, é dentro dessas chaves que colocamos a narrativa
   principal da função, o código que ela executará.

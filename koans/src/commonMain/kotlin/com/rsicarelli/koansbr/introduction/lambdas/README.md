@@ -7,11 +7,11 @@
 5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
 6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
 7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
-8. 📖 **[Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)**
+8. ➡️ **[Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)**
 
 ---
 
-## Tarefa
+### Tarefa
 
 [Kotlin Koans: Lambdas](https://play.kotlinlang.org/koans/Introduction/Lambdas/Task.kt)
 
@@ -20,62 +20,63 @@ para verificar se a coleção contém um número par.
 A função `any` recebe um predicado como argumento e retorna verdadeiro se pelo menos um elemento satisfizer o predicado.
 
 ---
+
 # Lambdas
 
-[Lambdas](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions) são uma das características mais poderosas e
-elegantes introduzidas em linguagens de programação modernas, e Kotlin não é exceção. Imagine conseguir representar uma ação ou
-comportamento como um objeto, de forma concisa e clara, e poder passar essa ação como se fosse uma variável comum. Isso é, em essência, o
-que os lambdas permitem fazer.
+[Lambdas](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions) são funções anônimas que oferecem uma forma
+elegante e poderosa de representar ações ou comportamentos em Kotlin.
 
-Em Kotlin, lambdas são funções anônimas: elas são funções que não têm nome. Isso pode parecer estranho à primeira vista, mas a beleza está
-em sua simplicidade. Em vez de definir uma função completa para realizar uma pequena tarefa, você pode simplesmente definir um bloco de
-código e passá-lo onde for necessário. Isso é especialmente útil em operações de curta duração e baixo processamento, como processar itens
-em uma lista ou responder a um clique em um botão.
+O poder dos lambdas está na sua simplicidade. Elas permitem expressar uma ideia ou ação concisamente. Por exemplo, uma ação de somar dois
+números pode ser representada assim:
 
-Além de sua concisão, os lambdas são tratadas como qualquer outro tipo em Kotlin. Isso significa que você pode armazená-las em variáveis,
-passá-las como parâmetros e até mesmo retorná-las de outras funções. Esse recurso abre uma ampla gama de possibilidades, especialmente
-quando se trata de programação funcional e design de API expressivo.
+```kotlin
+val soma = { x, y -> x + y }
+println(soma(5, 3))  // Saída: 8
+```
 
-Em Kotlin, toda expressão lambda é envolvida por chaves `{}`. Dentro delas, os parâmetros ficam à esquerda do símbolo `->`, enquanto o
-conjunto de instruções da função, ou seu corpo, fica à direita.
+> `{ x, y -> x + y }` representa um lambda que soma dois valores.
 
 ## Caso de uso
 
-```kotlin
-val multiplyByTwo: (Int) -> Int = { number -> number * 2 }
-val result = multiplyByTwo(4) //8
-```
-
-No exemplo acima, recebemos `Int` como argumento e retornamos `Int` como resultado. No corpo da função, nomeamos o argumento como `number` e
-o multiplicamos por 2.
-
-Quando a expressão lambda é o último argumento de uma função, a sintaxe pode ser simplificada movendo-a para fora dos parênteses.
+Outra grande vantagem é tratar funções como objetos, o que significa que podemos passar funções como argumentos:
 
 ```kotlin
-list.any({ number -> number % 2 == 0 })
-// podemos simplificar removendo os parenteses
-list.any { number -> number % 2 == 0 }
+fun aplicarOperacao(
+    a: Int = 5,
+    b: Int = 3,
+    operacao: (Int, Int) -> Int,
+): Int = operacao(a, b)
 ```
 
-#### Vantagens
+- `operacao:` É o nome da variável ou parâmetro que você está declarando, que neste contexto é um lambda.
+- `(Int, Int)` Os tipos dos parâmetros que a lamba aceita. Neste caso, aceita dois parâmetros, ambos do tipo `Int`.
+- `-> Int`: Define o tipo de retorno do lambda. Aqui, a função retorna um `Int`.
 
-- **Sintaxe concisa**: Lambdas oferecem uma sintaxe mais curta e clara para funções, resultando em um código mais limpo.
-- **[Funções de ordem superior](https://kotlinlang.org/docs/lambdas.html#higher-order-functions)
-  e [programação funcional](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_funcional)**: lambdas trazem capacidade para usar funções de
-  ordem superior, criando um novo nível de abstração e possibilitando código mais expressivo.
-- **Passagem de comportamento**: Com lambdas, o comportamento de uma função pode ser passado como argumento, tornando o código mais flexível
-  e reutilizável.
-- **Integração com APIs modernas**: Lambdas integram-se perfeitamente com APIs 'kotlin-first', como
-  o [Jetpack Compose](https://developer.android.com/jetpack/compose) e outras, tornando o código mais idiomático em Kotlin.
+```kotlin
+val soma = { x, y -> x + y }
+val resultadoSoma = aplicarOperacao(operacao = soma)
 
-#### Desvantagens
+val subtracao = { x, y -> x - y }
+val resultadoSubtracao = aplicarOperacao(operacao = subtracao)
 
-- **Desempenho**: Lambdas podem ter eficiência reduzida em certos casos, como captura intensiva de contexto.
-- **Legibilidade**: Códigos com uso intensivo de lambdas podem ser complexos se compreender, especialmente para iniciantes em programação
-  funcional.
-- **Depuração**: Devido à sua natureza anônima, depurar lambdas pode ser mais complicado, levando a stacktraces complexas.
-- **Retrocompabitilidade com Java é limitada**: As versões abaixo de Java 8 não suportam lambdas sem o uso de plug-ins ou ferramentas
-  adicionais.
+val divisao = { x, y -> x / y }
+val resultadoSubtracao = aplicarOperacao(operacao = divisao)
+
+val multiplicacao = { x, y -> x * y }
+val resultadoMultiplicacao = aplicarOperacao(operacao = multiplicacao)
+```
+
+#### Lambdas na analogia dos livros
+
+Imagine que lambdas são como marcadores de página em um livro. Eles indicam rapidamente onde você quer agir, sem ter que folhear todo o
+livro.
+
+```kotlin
+val personagens = listOf("Frodo", "Sam", "Gandalf")
+val hobbits = personagens.filter { it != "Gandalf" }
+```
+
+O lambda `{ it != "Gandalf" }` age como um marcador, destacando rapidamente os hobbits da lista.```
 
 #### O que é `it`?
 
@@ -100,53 +101,58 @@ val evenNumbers = numbers.filter { it % 2 == 0 }
 
 Aqui, `it` refere-se automaticamente ao único parâmetro do lambda, que, neste caso, é cada item da lista `numbers`.
 
+### Lambdas como último argumento
+
+Uma das características do Kotlin é a capacidade de mover lambdas para fora dos parênteses de uma função quando eles são o último
+argumento. Isso torna o código mais legível, especialmente quando a expressão lambda é longa.
+
+```kotlin
+fun aplicarOperacao(a: Int, b: Int, operacao: (Int, Int) -> Int): Int = operacao(a, b)
+
+//Forma convencional
+aplicarOperacao(
+    a = 5,
+    b = 3,
+    operacao = { x, y -> x + y }
+)
+
+//Simplificada, lambda foi pra "fora" dos ()
+aplicarOperacao(a = 5, b = 3) { x, y -> x + y }
+```
+
+### Vantagens
+
+- **Código conciso**: Lambdas simplificam a sintaxe das funções.
+- **[Funções de ordem superior](https://kotlinlang.org/docs/lambdas.html#higher-order-functions)
+  e [programação funcional](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_funcional)**: lambdas permitem abstrações mais expressivas e
+  utilizar conceitos funcionais com imperativo.
+- **Flexibilidade**: o comportamento pode ser passado como argumento usando lambdas.
+- **Integração Moderna**: Ótima compatibilidade com APIs 'kotlin-first', como
+  o [Jetpack Compose](https://developer.android.com/jetpack/compose).
+
+### Desvantagens
+
+- **Desempenho**: Em alguns casos, lambdas podem ser menos eficientes, como captura intensiva de contexto.
+- **Legibilidade**: O uso exagerado pode complicar a compreensão.
+- **Depuração**: Lambdas podem gerar stacktraces complexas.
+- **Retrocompatibilidade**: Limitada em versões superiores ao Java 8.
+
 ### Testabilidade
 
-- **Isolação**: Teste cada lambda de forma isolada, assim como faria com qualquer outra unidade de código.
-- **Entradas e Saídas**: Verifique o comportamento do lambda baseado nas entradas e saídas. Garanta que produza o resultado desejado para as
-  entradas fornecidas.
-- **Teste com múltiplos casos**: Assim como qualquer função, um teste de lambda deve abranger múltiplos casos, incluindo "edge cases" ou os
-  casos extremos, excepcionais.
-- **Simplicidade**: Lambdas idealmente devem ser simples e de responsabilidade única, o que facilita o teste. Se um lambda torna-se complexo
-  demais, considere refatorá-lo.
+- **Isolação**: é uma boa prática testar lambdas individualmente.
+- **Verificação**: Garanta que lambdas produzam resultados corretos para as entradas dadas.
+- **Cobertura**: Inclua tanto cenários comuns quanto "edge cases".
+- **Simplicidade**: Mantenha lambdas focados e simples. Refatore se tornarem-se muito complexos.
 
 ### Analogia
 
 #### Lambdas e o Canivete Suíço
 
-Imagine um canivete suíço, que você pode configurar rapidamente para atender a uma necessidade específica. Se precisa cortar algo, desliza
-para fora a lâmina. Se precisa de uma tesoura, puxa a pequena tesoura embutida. Cada configuração do canivete é uma resposta rápida e
-específica para uma necessidade pontual.
-
-Em programação, muitas vezes temos tarefas pequenas e específicas que queremos resolver sem criar uma ferramenta completa (ou seja, uma
-função ou classe completa com nome e tudo mais).
-
-Lambdas, então, são como esse canivete suíço:
-
-- Precisa fazer algo rapidamente com um item em uma lista? Configure seu "canivete" (lambda) para isso.
-- Precisa transformar um valor? Ajuste seu canivete para essa transformação.
-
-Assim como você não daria um nome específico para cada configuração que faz com seu canivete suíço, você não precisa nomear seus lambdas.
-
-E assim como o canivete é portátil e pode ser usado em diferentes situações, os lambdas podem ser passadas por aí em seu código, tornando
-tudo mais flexível e conciso.
+- Ferramentas rápidas e versáteis para tarefas específicas.
+- Assim como cada função do canivete, lambdas atendem a necessidades pontuais no código.
+- Não precisam de nomes, assim como você não nomeia cada uso do canivete.
 
 #### Lambdas e RPG
-
-Imagine um RPG (Role-Playing Game) onde seu personagem tem uma habilidade chamada "Magia Diferenciada". Esta habilidade permite que você,
-em vez de escolher entre magias pré-definidas, crie rapidamente um feitiço para lidar com situações específicas.
-
-Por exemplo, você está enfrentando um monstro que é resistente a fogo. Em vez de procurar em sua lista de feitiços e habilidades, você usa
-a "Magia Diferenciada" e rapidamente cria um feitiço de gelo, definindo os parâmetros: "Alvo: Monstro; Elemento: Gelo; Intensidade: Média".
-
-Nesta analogia:
-
-- **"Magia Diferenciada"**: representa o conceito de lambdas. Em vez de ter que criar e nomear uma função específica para cada situação,
-  você tem a flexibilidade de definir rapidamente o que deseja que essa "habilidade" faça, dependendo da situação.
-
-- **Definir os parâmetros da magia**: É como definir a expressão lambda. Em um contexto específico, você diz exatamente o que deseja que ela
-  faça.
-
-Desta forma, lambdas são como essa "Magia Personalizada" no mundo da programação. Permitem que você crie soluções rápidas e específicas para
-problemas sem ter que definir e nomear funções completas para cada situação. É a ferramenta perfeita para um herói (ou programador) que
-precisa de flexibilidade e eficiência em suas aventuras!
+- Uma "magia" que pode ser rapidamente adaptada conforme a situação.
+- Enfrentando um desafio específico? Crie uma magia no momento, sem ter que procurar na sua lista pré-definida de feitiços.
+- Lambdas oferecem essa mesma adaptabilidade no código, permitindo soluções rápidas e específicas.
