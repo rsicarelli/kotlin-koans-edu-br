@@ -31,7 +31,7 @@
 * [Introdução](#introdução)
   * [Lambdas](#lambdas)
     * [Tarefa](#tarefa)
-    * [O que são lambdas?](#o-que-são-lambdas)
+    * [O que sao lambdas?](#o-que-sao-lambdas)
       * [Lambdas e os livros](#lambdas-e-os-livros)
     * [Caso de uso](#caso-de-uso)
       * [O que é `it`?](#o-que-é-it)
@@ -54,7 +54,7 @@ Passe um lambda para a função [`any`](https://kotlinlang.org/api/latest/jvm/st
 para verificar se a coleção contém um número par.
 A função `any` recebe um predicado como argumento e retorna verdadeiro se pelo menos um elemento satisfizer o predicado.
 
-### O que são lambdas?
+### O que sao lambdas?
 
 [Lambdas](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions) são funções anônimas que oferecem uma forma
 elegante e poderosa de representar ações ou comportamentos em Kotlin.
