@@ -1,28 +1,4 @@
-# Introdução
-
-<details open>
-<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
-
-<p></p>
-
-1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
-3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
-4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
-5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
-6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
-7. **➡️ [Tipo "nenhum" (Nothing type)](
-https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md
-)**
-8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
-
-</details>
-
----
-
-
-## Tipo "nenhum" (Nothing type)
-
+# Tipo "nenhum" (Nothing type)
 
 <details>
 <summary>&nbsp;<b>Tabela de conteúdo</b></summary>
@@ -30,30 +6,41 @@ https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain
 <p></p>
 
 <!-- TOC -->
-* [Introdução](#introdução)
-  * [Tipo "nenhum" (Nothing type)](#tipo-nenhum-nothing-type)
-    * [Tarefa](#tarefa)
+* [Tipo "nenhum" (Nothing type)](#tipo-nenhum-nothing-type)
+  * [🔗 Tarefa](#-tarefa)
+  * [Caso de uso](#caso-de-uso)
     * [O que é o tipo Nothing em Kotlin?](#o-que-é-o-tipo-nothing-em-kotlin)
-    * [Caso de uso](#caso-de-uso)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
   * [Analogia](#analogia)
     * [O tipo Nothing e uma estrada sem saída](#o-tipo-nothing-e-uma-estrada-sem-saída)
+  * [Exercícios](#exercícios)
 <!-- TOC -->
 
 </details>
 
-
-### Tarefa
-
-[Kotlin Koans: Nothing type](https://play.kotlinlang.org/koans/Introduction/Nothing%20type/Task.kt)
+## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Nothing%20type/Task.kt)
 
 Especifique o tipo de retorno `Nothing` para a função `failWithWrongAge`.
 
 Observe que, sem o tipo `Nothing`, a função `checkAge` não é compilada porque o compilador
 assume que `age` pode ser `null`.
 
+## Caso de uso
+
+Em Kotlin, `Nothing` é um tipo que representa um valor que nunca ocorre. Em outras palavras, é um tipo que é usado quando uma função nunca
+retorna um valor útil.
+
+Por exemplo, uma função que sempre lança uma exceção pode ter `Nothing` como o seu tipo de retorno:
+
+```kotlin
+fun alwaysThrowsException(): Nothing {
+    throw RuntimeException("Esta função sempre lança uma exceção")
+}
+```
+
 ### O que é o tipo Nothing em Kotlin?
+
 Imagine que você está escrevendo um programa e em certos momentos você quer que uma função sempre lance uma exceção, ou talvez ela entre em
 um loop infinito. Nestes casos, o tipo [Nothing](https://kotlinlang.org/docs/exceptions.html#the-nothing-type) pode ser usado como o tipo de
 retorno dessa função especial.
@@ -67,18 +54,6 @@ programa não vai continuar normalmente após essa função, então ele lida com
   entende que a função pode encerrar antes de produzir um valor. Adicionalmente, o compilador pode aplicar otimizações e remover partes do
   código que são inalcançáveis, com base no conhecimento de que a função retorna um `Nothing`.
 
-### Caso de uso
-
-Em Kotlin, `Nothing` é um tipo que representa um valor que nunca ocorre. Em outras palavras, é um tipo que é usado quando uma função nunca
-retorna um valor útil.
-
-Por exemplo, uma função que sempre lança uma exceção pode ter `Nothing` como o seu tipo de retorno:
-
-```kotlin
-fun alwaysThrowsException(): Nothing {
-    throw RuntimeException("Esta função sempre lança uma exceção")
-}
-```
 
 ### Vantagens
 
@@ -117,3 +92,18 @@ incomum.
 
 Em resumo, assim como a placa "Fim do Caminho" muda o curso da sua viagem, uma função que retorna `Nothing` pode indicar ao compilador que
 algo anormal está ocorrendo, e ele ajusta a maneira como lida com essa situação.
+
+---
+
+## Exercícios
+
+1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
+2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
+3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
+4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
+5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
+6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
+7. **➡️ [Tipo "nenhum" (Nothing type)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md
+   )**
+8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
