@@ -11,7 +11,6 @@
   * [Caso de uso](#caso-de-uso)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
-      * [`@JvmOverloads`](#jvmoverloads)
   * [Analogia](#analogia)
   * [Índice de exercícios](#índice-de-exercícios)
 <!-- TOC -->
@@ -300,48 +299,6 @@ predefinido.
 - **Complexidade do Código**: Quando utilizado em excesso, pode complicar a leitura e entendimento do código.
 - **Descarte no Bytecode Java**: Em Java, os argumentos padrão do Kotlin não são reconhecidos, por isso devemos utilizar a
   anotação `@JvmOverloads` para utilizá-los.
-
-#### `@JvmOverloads`
-
-[`@JvmOverloads`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-jvm-overloads/) em Kotlin é uma anotação que instrui o compilador
-a criar sobrecargas de uma função para cada combinação fornecida.
-
-```kotlin
-@JvmOverloads
-fun exibeMensagem(conteudo: String, vezes: Int = 1, prefixo: String = "") {
-    for (i in 1..vezes) {
-        println("$prefixo$conteudo")
-    }
-}
-```
-
-Neste caso, graças à anotação `@JvmOverloads`, o compilador Kotlin gerará as seguintes sobrecargas que podem ser chamadas a partir do código
-Java:
-
-```java
-public class ExibirMensagem {
-
-    public static void main(String[] args) {
-        exibeMensagem("Olá");
-        exibeMensagem("Olá", 2);
-        exibeMensagem("Olá", 2, "Prefixo: ");
-    }
-
-    public static void exibeMensagem(String conteudo) {
-        exibeMensagem(conteudo, 1);
-    }
-
-    public static void exibeMensagem(String conteudo, int vezes) {
-        exibeMensagem(conteudo, vezes, "");
-    }
-
-    public static void exibeMensagem(String conteudo, int vezes, String prefixo) {
-        for (int i = 0; i < vezes; i++) {
-            System.out.println(prefixo + conteudo);
-        }
-    }
-}
-```
 
 ---
 
