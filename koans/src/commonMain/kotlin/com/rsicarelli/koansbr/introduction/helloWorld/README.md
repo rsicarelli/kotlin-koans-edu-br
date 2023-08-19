@@ -1,8 +1,7 @@
-<details open>
-<summary>&nbsp;
-
 # Olá, mundo! (Hello, world!)
-</summary>
+
+<details>
+<summary>&nbsp;<b>Conteúdo</b> (clique para expandir) </summary>
 
 <p></p>
 
