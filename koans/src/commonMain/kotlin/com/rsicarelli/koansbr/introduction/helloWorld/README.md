@@ -84,7 +84,7 @@ println(numeroDobrado) // Resultado: 14
 Se uma função não tiver um valor de retorno explícito, seu tipo de retorno será inferido como `Unit`, o equivalente ao `void` em outras
 linguagens
 
-#### O tipo de unidade `Unit`
+#### O tipo de unidade Unit
 
 O tipo `Unit` em Kotlin é utilizado para representar a ausência de valor de retorno de uma função.
 
@@ -102,7 +102,7 @@ fun exibirMensagem(texto: String) { println(texto) }
 fun exibirMensagem(texto: String) = println(texto)
 ```
 
-### Lidando com múltiplos argumentos usando `vararg`
+### Lidando com múltiplos argumentos usando _vararg_
 
 O `vararg` em Kotlin permite passar uma quantidade variável de argumentos para uma função
 
