@@ -9,7 +9,6 @@
 * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
   * [🔗 Tarefa](#-tarefa)
   * [Casos de uso](#casos-de-uso)
-    * [O que é uma função em Kotlin?](#o-que-é-uma-função-em-kotlin)
     * [Função simples](#função-simples)
     * [Funções em uma linha](#funções-em-uma-linha)
     * [Função sem Retorno](#função-sem-retorno)
@@ -30,8 +29,6 @@ Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
 Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
 
 ## Casos de uso
-
-### O que é uma função em Kotlin?
 
 Funções em Kotlin são blocos de código que realizam tarefas específicas. Elas são partes fundamentais da linguagem, nos permitindo
 organizar, reutilizar e executar ações de forma eficiente.
