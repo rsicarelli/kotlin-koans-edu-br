@@ -1,11 +1,11 @@
 # Argumentos nomeados (Named arguments)
 
-<details>
-<summary>&nbsp;<b>Conteúdo</b> (clique para expandir)</summary>
+span
 
 <p></p>
 
 <!-- TOC -->
+
 * [Argumentos nomeados (Named arguments)](#argumentos-nomeados-named-arguments)
   * [🔗 Tarefa](#-tarefa)
   * [Caso de uso](#caso-de-uso)
@@ -15,13 +15,14 @@
     * [Desvantagens](#desvantagens)
   * [Analogia](#analogia)
   * [Exercícios](#exercícios)
+
 <!-- TOC -->
 
 </details>
 
 ## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Named%20arguments/Task.kt)
 
-Faça com que a função `joinOptions()` retorne a lista em formato [JSON](https://pt.wikipedia.org/wiki/JSON) (por exemplo, `[a, b, c]`)
+Faça com que a das `joinOptions()` retorne a lista em formato [JSON](https://pt.wikipedia.org/wiki/JSON) (por exemplo, `[a, b, c]`)
 especificando apenas dois argumentos.
 
 Você pode utilizar a função [`joinToString`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html) disponível
@@ -38,8 +39,7 @@ fun joinToString(
 
 ## Caso de uso
 
-[Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) são como etiquetas que você coloca nos valores
-que você passa para uma função. Isso torna o código mais claro e evita confusões.
+[Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) são como etiquetas que você coloca nos valores que você passa para uma função. Isso torna o código mais claro e evita confusões.
 
 Vamos considerar uma função `enviarEmail` que aceita informações do remetente e destinatário:
 
@@ -117,9 +117,7 @@ perder. No entanto, com named arguments, tudo fica mais claro, como se cada livr
 ## Exercícios
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. **➡️ [Argumentos nomeados (Named arguments)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md
-   )**
+2. **➡️ [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md )**
 3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
 5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)

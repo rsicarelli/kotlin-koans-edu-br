@@ -1,11 +1,12 @@
 # Olá, mundo! (Hello, world!)
 
 <details>
-<summary>&nbsp;<b>Conteúdo</b> (clique para expandir) </summary>
+<summary> <b>Conteúdo</b> (clique para expandir) </summary>
 
-<p></p>
+> span
 
-<!-- TOC -->
+span
+
 * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
   * [🔗 Tarefa](#-tarefa)
   * [Casos de uso](#casos-de-uso)
@@ -17,6 +18,7 @@
     * [Declarando variáveis](#declarando-variáveis)
   * [Tipos em Kotlin](#tipos-em-kotlin)
   * [Índice de exercícios](#índice-de-exercícios)
+
 <!-- TOC -->
 
 </details>
@@ -48,7 +50,7 @@ fun nomeDaFuncao(
 - `nomeDaFuncao`: um nome significativo e específico à função.
 - `(argumento1: Tipo, argumento2: Tipo)` define os argumentos que a função espera receber. Cada argumento tem um nome e um tipo.
 - `: TipoDeRetorno` tipo de valor a função retornará após ser executada.
-- `{}` o corpo da função, onde o código é escrito. Aqui, você define as ações que a função executará.
+- `{}` o corpo da função, onde as ações que a função executará.
 
 ### Função simples
 
@@ -121,15 +123,15 @@ imprimirItens("Paçoca", "Cajú", "Açaí")
 Em Kotlin, temos duas maneiras principais de declarar variáveis: usando `val` e `var`.
 
 1. `val` valor final, que não pode ser alterado
-    ```kotlin
-    val tituloDoLivro = "A Jornada Dev"
-    // tituloDoLivro = "Outro Título" //impossível
-    ```
+   ```kotlin
+   val tituloDoLivro = "A Jornada Dev"
+   // tituloDoLivro = "Outro Título" //impossível
+   ```
 2. `var` variável, que pode ser alterado
-    ```kotlin
-    var paginaDeRascunho = "Minha ideia"
-    paginaDeRascunho = "Uma ideia diferente" // permitido
-    ```
+   ```kotlin
+   var paginaDeRascunho = "Minha ideia"
+   paginaDeRascunho = "Uma ideia diferente" // permitido
+   ```
 
 ## Tipos em Kotlin
 
@@ -200,9 +202,7 @@ val uLongExemplo: ULong = 18446744073709551615uL
 
 ## Índice de exercícios
 
-1. **➡️ [Olá, mundo! (Hello, world!)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md
-   )**
+1. **➡️ [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md )**
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
 3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)

@@ -290,9 +290,9 @@ predefinido.
 
 ### Vantagens
 
-- **Menos Sobrecargas**: Permite uma única função em vez de várias versões com diferentes argumentos.
-- **Flexibilidade**: Você pode chamar a função com diferentes combinações de argumentos, contanto que os obrigatórios sejam fornecidos.
-- **Compatibilidade com Java**: Funções com argumentos padrão são compatíveis com código Java, atuando como sobrecargas.
+- **Menos Sobrecargas**: permite uma única função em vez de várias versões com diferentes argumentos.
+- **Flexibilidade**: é possível chamar a função com diferentes combinações de argumentos, contanto que os obrigatórios sejam fornecidos.
+- **Compatibilidade com Java**: funções com argumentos padrão são compatíveis com código Java, atuando como sobrecargas.
 
 ### Desvantagens
 

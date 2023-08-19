@@ -6,21 +6,23 @@
 <p></p>
 
 <!-- TOC -->
+
 * [Lambdas](#lambdas)
-  * [🔗 Tarefa](#-tarefa)
-  * [Caso de uso](#caso-de-uso)
-    * [O que são lambdas?](#o-que-são-lambdas)
-    * [Lambdas e os livros](#lambdas-e-os-livros)
-    * [Lamba também é um tipo](#lamba-também-é-um-tipo)
-    * [O que é `it`?](#o-que-é-it)
-    * [Lambdas como último argumento](#lambdas-como-último-argumento)
-    * [Vantagens](#vantagens)
-    * [Desvantagens](#desvantagens)
-    * [Testabilidade](#testabilidade)
-  * [Analogia](#analogia)
-    * [Lambdas e o Canivete Suíço](#lambdas-e-o-canivete-suíço)
-    * [Lambdas e RPG](#lambdas-e-rpg)
-  * [Exercícios](#exercícios)
+    * [🔗 Tarefa](#-tarefa)
+    * [Caso de uso](#caso-de-uso)
+        * [O que são lambdas?](#o-que-são-lambdas)
+        * [Lambdas e os livros](#lambdas-e-os-livros)
+        * [Lamba também é um tipo](#lamba-também-é-um-tipo)
+        * [O que é `it`?](#o-que-é-it)
+        * [Lambdas como último argumento](#lambdas-como-último-argumento)
+        * [Vantagens](#vantagens)
+        * [Desvantagens](#desvantagens)
+        * [Testabilidade](#testabilidade)
+    * [Analogia](#analogia)
+        * [Lambdas e o Canivete Suíço](#lambdas-e-o-canivete-suíço)
+        * [Lambdas e RPG](#lambdas-e-rpg)
+    * [Exercícios](#exercícios)
+
 <!-- TOC -->
 
 </details>
@@ -48,18 +50,6 @@ println(soma(5, 3))  // Saída: 8
 
 > `{ x, y -> x + y }` representa um lambda que soma dois valores.
 
-### Lambdas e os livros
-
-Imagine que lambdas são como marcadores de página em um livro. Eles indicam rapidamente onde você quer agir, sem ter que folhear todo o
-livro.
-
-```kotlin
-val personagens = listOf("Frodo", "Sam", "Gandalf")
-val hobbits = personagens.filter { it != "Gandalf" }
-```
-
-O lambda `{ it != "Gandalf" }` age como um marcador, destacando rapidamente os hobbits da lista.```
-
 ### Lamba também é um tipo
 
 Outra grande vantagem é tratar funções como objetos, o que significa que podemos passar funções como argumentos:
@@ -72,7 +62,7 @@ fun aplicarOperacao(
 ): Int = operacao(a, b)
 ```
 
-- `operacao:` É o nome da variável ou parâmetro que você está declarando, que neste contexto é um lambda.
+- `operacao:` É o nome da variável ou parâmetro, que neste contexto é um lambda.
 - `(Int, Int)` Os tipos dos parâmetros que a lamba aceita. Neste caso, aceita dois parâmetros, ambos do tipo `Int`.
 - `-> Int`: Define o tipo de retorno do lambda. Aqui, a função retorna um `Int`.
 
@@ -92,44 +82,28 @@ val resultadoMultiplicacao = aplicarOperacao(operacao = multiplicacao)
 
 ### O que é `it`?
 
-Em Kotlin, quando você trabalha com lambdas que têm apenas um parâmetro, esse único parâmetro pode ser acessado implicitamente usando a
+Em Kotlin, quando lambdas possuem apenas um parâmetro, esse único parâmetro pode ser acessado implicitamente usando a
 palavra-chave `it`, sem precisar declará-lo explicitamente.
 
-Imagine que você tem uma lista de números e quer filtrar apenas os pares. Usando lambdas, você poderia fazer algo assim:
-
 ```kotlin
-val numbers = listOf(1, 2, 3, 4, 5)
-val evenNumbers = numbers.filter { number -> number % 2 == 0 }
+val numeros = listOf(1, 2, 3, 4, 5)
+val numerosImpares = numbers.filter { numbero -> numbero % 2 == 0 }
+val numerosPares = numbers.filter { it % 2 != 0 }
 ```
-
-No exemplo acima, o lambda passado para a função filter tem um único parâmetro, `number`, que representa cada item da lista durante a
-iteração.
-
-Porém, como é comum ter lambdas com um único parâmetro, Kotlin oferece uma forma mais concisa de fazer o mesmo, usando o it:
-
-```kotlin
-val evenNumbers = numbers.filter { it % 2 == 0 }
-```
-
-Aqui, `it` refere-se automaticamente ao único parâmetro do lambda, que, neste caso, é cada item da lista `numbers`.
 
 ### Lambdas como último argumento
 
-Uma das características do Kotlin é a capacidade de mover lambdas para fora dos parênteses de uma função quando eles são o último
-argumento. Isso torna o código mais legível, especialmente quando a expressão lambda é longa.
+Se um lambda for o último argumento de uma função, podemos fechar os `)` e acessar a lambda do terceiro parâmetro abrindo um par de`{}`
 
 ```kotlin
 fun aplicarOperacao(a: Int, b: Int, operacao: (Int, Int) -> Int): Int = operacao(a, b)
 
-//Forma convencional
 aplicarOperacao(
     a = 5,
-    b = 3,
-    operacao = { x, y -> x + y }
-)
-
-//Simplificada, lambda foi pra "fora" dos ()
-aplicarOperacao(a = 5, b = 3) { x, y -> x + y }
+    b = 3
+) { x, y ->
+    x + y
+}
 ```
 
 ### Vantagens
@@ -164,13 +138,11 @@ aplicarOperacao(a = 5, b = 3) { x, y -> x + y }
 
 - Ferramentas rápidas e versáteis para tarefas específicas.
 - Assim como cada função do canivete, lambdas atendem a necessidades pontuais no código.
-- Não precisam de nomes, assim como você não nomeia cada uso do canivete.
 
 ### Lambdas e RPG
 
 - Uma "magia" que pode ser rapidamente adaptada conforme a situação.
 - Enfrentando um desafio específico? Crie uma magia no momento, sem ter que procurar na sua lista pré-definida de feitiços.
-- Lambdas oferecem essa mesma adaptabilidade no código, permitindo soluções rápidas e específicas.
 
 ---
 
