@@ -1,5 +1,5 @@
 <details>
-<summary>&nbsp;
+<summary>
 
 # Exercícios
 
