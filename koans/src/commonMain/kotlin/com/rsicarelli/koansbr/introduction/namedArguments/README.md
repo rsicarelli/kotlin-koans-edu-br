@@ -1,7 +1,7 @@
 # Argumentos nomeados (Named arguments)
 
 <details>
-<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+<summary>&nbsp;<b>Conteúdo</b> (clique para expandir)</summary>
 
 <p></p>
 
