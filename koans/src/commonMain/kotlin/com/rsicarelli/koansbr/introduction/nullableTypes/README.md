@@ -6,21 +6,17 @@
 <p></p>
 
 <!-- TOC -->
-
 * [Tipos anuláveis (Nullable types)](#tipos-anuláveis-nullable-types)
-    * [🔗 Tarefa](#-tarefa)
-    * [Caso de uso](#caso-de-uso)
-        * [Kotlin gerenciando variáveis que podem ser nulas](#kotlin-gerenciando-variáveis-que-podem-ser-nulas)
-        * [O operador "Elvis" `?:`](#o-operador-elvis-)
-        * [Burlando a Nulabilidade em Kotlin](#burlando-a-nulabilidade-em-kotlin)
-            * [Operador `!!`](#operador-)
-            * [Utilizando `lateinit`](#utilizando-lateinit)
-            * [Use com cuidado](#use-com-cuidado)
-    * [Boas práticas](#boas-práticas)
-    * [Analogia](#analogia)
-        * [Nullables e caixas de presente](#nullables-e-caixas-de-presente)
-    * [Exercícios](#exercícios)
-
+  * [🔗 Tarefa](#-tarefa)
+  * [Caso de uso](#caso-de-uso)
+    * [Kotlin gerenciando variáveis que podem ser nulas](#kotlin-gerenciando-variáveis-que-podem-ser-nulas)
+    * [O operador "Elvis" `?:`](#o-operador-elvis-)
+    * [Burlando a Nulabilidade em Kotlin](#burlando-a-nulabilidade-em-kotlin)
+      * [Operador `!!`](#operador-)
+      * [Utilizando `lateinit`](#utilizando-lateinit)
+  * [Boas práticas](#boas-práticas)
+  * [Analogia](#analogia)
+  * [Exercícios](#exercícios)
 <!-- TOC -->
 
 </details>
