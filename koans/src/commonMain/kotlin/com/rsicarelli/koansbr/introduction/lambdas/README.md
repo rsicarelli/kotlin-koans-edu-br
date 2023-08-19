@@ -1,58 +1,37 @@
-# Introdução
-
-<details open>
-<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
-
-<p></p>
-
-1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
-3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
-4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
-5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
-6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
-7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
-8. **➡️ [Lambdas](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md
-   )**
-
-</details>
-
----
-
-## Lambdas
+# Lambdas
 
 <details>
-<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+<summary>&nbsp;<b>Conteúdo</b> (clique para expandir)</summary>
 
 <p></p>
 
 <!-- TOC -->
-* [Introdução](#introdução)
-  * [Lambdas](#lambdas)
-    * [Tarefa](#tarefa)
+* [Lambdas](#lambdas)
+  * [🔗 Tarefa](#-tarefa)
+  * [Caso de uso](#caso-de-uso)
     * [O que são lambdas?](#o-que-são-lambdas)
-      * [Lambdas e os livros](#lambdas-e-os-livros)
-    * [Caso de uso](#caso-de-uso)
-      * [O que é `it`?](#o-que-é-it)
-      * [Lambdas como último argumento](#lambdas-como-último-argumento)
+    * [Lambdas e os livros](#lambdas-e-os-livros)
+    * [Lamba também é um tipo](#lamba-também-é-um-tipo)
+    * [O que é `it`?](#o-que-é-it)
+    * [Lambdas como último argumento](#lambdas-como-último-argumento)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
     * [Testabilidade](#testabilidade)
   * [Analogia](#analogia)
     * [Lambdas e o Canivete Suíço](#lambdas-e-o-canivete-suíço)
     * [Lambdas e RPG](#lambdas-e-rpg)
+  * [Exercícios](#exercícios)
 <!-- TOC -->
 
 </details>
 
-### Tarefa
-
-[Kotlin Koans: Lambdas](https://play.kotlinlang.org/koans/Introduction/Lambdas/Task.kt)
+## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Lambdas/Task.kt)
 
 Passe um lambda para a função [`any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html)
 para verificar se a coleção contém um número par.
 A função `any` recebe um predicado como argumento e retorna verdadeiro se pelo menos um elemento satisfizer o predicado.
+
+## Caso de uso
 
 ### O que são lambdas?
 
@@ -69,7 +48,7 @@ println(soma(5, 3))  // Saída: 8
 
 > `{ x, y -> x + y }` representa um lambda que soma dois valores.
 
-#### Lambdas e os livros
+### Lambdas e os livros
 
 Imagine que lambdas são como marcadores de página em um livro. Eles indicam rapidamente onde você quer agir, sem ter que folhear todo o
 livro.
@@ -81,7 +60,7 @@ val hobbits = personagens.filter { it != "Gandalf" }
 
 O lambda `{ it != "Gandalf" }` age como um marcador, destacando rapidamente os hobbits da lista.```
 
-### Caso de uso
+### Lamba também é um tipo
 
 Outra grande vantagem é tratar funções como objetos, o que significa que podemos passar funções como argumentos:
 
@@ -111,7 +90,7 @@ val multiplicacao = { x, y -> x * y }
 val resultadoMultiplicacao = aplicarOperacao(operacao = multiplicacao)
 ```
 
-#### O que é `it`?
+### O que é `it`?
 
 Em Kotlin, quando você trabalha com lambdas que têm apenas um parâmetro, esse único parâmetro pode ser acessado implicitamente usando a
 palavra-chave `it`, sem precisar declará-lo explicitamente.
@@ -134,7 +113,7 @@ val evenNumbers = numbers.filter { it % 2 == 0 }
 
 Aqui, `it` refere-se automaticamente ao único parâmetro do lambda, que, neste caso, é cada item da lista `numbers`.
 
-#### Lambdas como último argumento
+### Lambdas como último argumento
 
 Uma das características do Kotlin é a capacidade de mover lambdas para fora dos parênteses de uma função quando eles são o último
 argumento. Isso torna o código mais legível, especialmente quando a expressão lambda é longa.
@@ -192,3 +171,18 @@ aplicarOperacao(a = 5, b = 3) { x, y -> x + y }
 - Uma "magia" que pode ser rapidamente adaptada conforme a situação.
 - Enfrentando um desafio específico? Crie uma magia no momento, sem ter que procurar na sua lista pré-definida de feitiços.
 - Lambdas oferecem essa mesma adaptabilidade no código, permitindo soluções rápidas e específicas.
+
+---
+
+## Exercícios
+
+1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
+2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
+3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
+4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
+5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
+6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
+7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
+8. **➡️ [Lambdas](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md
+   )**
