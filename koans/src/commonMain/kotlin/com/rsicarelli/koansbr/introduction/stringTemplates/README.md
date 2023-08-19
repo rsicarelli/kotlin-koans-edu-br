@@ -1,45 +1,27 @@
-# Índice:
+# Modelos de string (String templates)
 
-<details open>
-<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
-
-<p></p>
-
-1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
-3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
-4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
-5. ➡️ **[Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)**
-6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
-7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
-8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
-
-</details>
-
----
-
-## Modelos de string (String templates)
 <details>
-<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+<summary>&nbsp;<b>Conteúdo</b> (clique para expandir)</summary>
 
 <p></p>
 
 <!-- TOC -->
-* [Índice:](#índice)
-  * [Modelos de string (String templates)](#modelos-de-string-string-templates)
-    * [Tarefa](#tarefa)
-    * [O que são as String templates em Kotlin?](#o-que-são-as-string-templates-em-kotlin)
+
+* [Modelos de string (String templates)](#modelos-de-string-string-templates)
+    * [🔗 Tarefa](#-tarefa)
     * [Caso de uso](#caso-de-uso)
-    * [Vantagens](#vantagens)
-    * [Desvantagens](#desvantagens)
-  * [Analogia](#analogia)
-    * [String templates e um quebra cabeça](#string-templates-e-um-quebra-cabeça)
+        * [O que são as String templates em Kotlin?](#o-que-são-as-string-templates-em-kotlin)
+        * [Vantagens](#vantagens)
+        * [Desvantagens](#desvantagens)
+    * [Analogia](#analogia)
+        * [String templates e um quebra cabeça](#string-templates-e-um-quebra-cabeça)
+    * [Exercícios](#exercícios)
+
 <!-- TOC -->
 
 </details>
 
-### Tarefa
-[Kotlin Koans: String templates](https://play.kotlinlang.org/koans/Introduction/String%20templates/Task.kt)
+### 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/String%20templates/Task.kt)
 
 O padrão a seguir corresponde a uma data no formato `13.06.1992`
 (dois dígitos, um ponto, dois dígitos, um ponto, quatro dígitos):
@@ -51,17 +33,7 @@ fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
 Usando a variável `month`, reescreva esse padrão de forma que ele corresponda à data no formato `13 JUN 1992`
 (dois dígitos, um espaço em branco, uma abreviação de mês, um espaço em branco, quatro dígitos).
 
-### O que são as String templates em Kotlin?
-
-Em Kotlin, as [string templates](https://kotlinlang.org/docs/strings.html#string-templates) são uma maneira interessante de criar strings
-que incluem valores de variáveis ou expressões. Isso é como colocar peças de um quebra-cabeça numa frase para fazer sentido.
-
-As cadeias de caracteres entre aspas triplas não são úteis apenas para cadeias de caracteres de várias linhas, mas também
-para criar padrões de regex, pois não é necessário escapar de uma barra invertida com uma barra invertida.
-
-
-
-### Caso de uso
+## Caso de uso
 
 Um template é como um espaço reservado onde você coloca um cifrão `$` seguido do nome da variável. O valor real
 será colocado no espaço do template quando a string for usada.
@@ -80,6 +52,14 @@ val idade = 35
 println("Olá, $nome. Você irá completar ${idade + 5} em cinco anos.") // Olá, Alex. Você irá completar 40 em cinco anos.
 ```
 
+### O que são as String templates em Kotlin?
+
+Em Kotlin, as [string templates](https://kotlinlang.org/docs/strings.html#string-templates) são uma maneira interessante de criar strings
+que incluem valores de variáveis ou expressões. Isso é como colocar peças de um quebra-cabeça numa frase para fazer sentido.
+
+As cadeias de caracteres entre aspas triplas não são úteis apenas para cadeias de caracteres de várias linhas, mas também
+para criar padrões de regex, pois não é necessário escapar de uma barra invertida com uma barra invertida.
+
 ### Vantagens
 
 - **Fácil e Limpo**: Templates de string ajudam você a criar mensagens combinando texto com variáveis de uma forma simples e limpa.
@@ -93,7 +73,6 @@ println("Olá, $nome. Você irá completar ${idade + 5} em cinco anos.") // Olá
 - **Problemas de desempenho**: Em situações específicas, usar muitos templates pode ser menos eficiente que juntar strings, especialmente
   para textos muito grandes.
 
----
 ## Analogia
 
 ### String templates e um quebra cabeça
@@ -108,3 +87,18 @@ um valor específico deve ser inserido.
 Montar um quebra-cabeça é como criar uma mensagem em etapas, encaixando peças para formar uma imagem. Usar string templates é semelhante -
 você está montando uma mensagem, encaixando valores em espaços vazios. Em ambos os casos, você obtém um resultado coeso e cheio de
 significado!
+
+---
+
+## Exercícios
+
+1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
+2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
+3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
+4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
+5. ➡️ **[Modelos de string (String templates)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md
+   )**
+6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
+7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
+8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)

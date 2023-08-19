@@ -1,50 +1,25 @@
-# Introdução
-
-<details open>
-<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
-
-<p></p>
-
-1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
-3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
-4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
-5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
-6. **➡️ [Tipos anuláveis (Nullable types)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md
-   )**
-7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
-8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
-
-</details>
-
----
-
-## Tipos anuláveis (Nullable types)
-
+# Tipos anuláveis (Nullable types)
 
 <details>
-<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+<summary>&nbsp;<b>Conteúdo</b> (clique para expandir)</summary>
 
 <p></p>
 
 <!-- TOC -->
-* [Introdução](#introdução)
-  * [Tipos anuláveis (Nullable types)](#tipos-anuláveis-nullable-types)
-    * [Tarefa](#tarefa)
+* [Tipos anuláveis (Nullable types)](#tipos-anuláveis-nullable-types)
+  * [🔗 Tarefa](#-tarefa)
+  * [Caso de uso](#caso-de-uso)
     * [O que são os tipos anuláveis em Kotlin?](#o-que-são-os-tipos-anuláveis-em-kotlin)
-    * [Caso de uso](#caso-de-uso)
     * [Boas práticas](#boas-práticas)
     * [Compatibilidade com Java](#compatibilidade-com-java)
   * [Analogia](#analogia)
     * [Nullables e caixas de presente](#nullables-e-caixas-de-presente)
+  * [Exercícios](#exercícios)
 <!-- TOC -->
 
 </details>
 
-### Tarefa
-
-[Kotlin Koans: Nullable types](https://play.kotlinlang.org/koans/Introduction/Nullable%20types/Task.kt)
+## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Nullable%20types/Task.kt)
 
 Reescreva o código a seguir para que ele tenha apenas uma expressão `if`:
 <details>
@@ -282,23 +257,7 @@ public void SendMessageToClient(
 
 </details>
 
----
-
-### O que são os tipos anuláveis em Kotlin?
-Em Kotlin, quando falamos sobre tipos anuláveis, estamos nos referindo à capacidade de lidar com referências que podem não apontar para
-nenhum
-objeto ("nulas"). A grande sacada é que essa possibilidade de nulidade deve ser especificada explicitamente no sistema de tipos.
-
-Isso significa que, se você tiver uma variável que pode ser nula, você precisa indicar isso usando o ponto de interrogação `?` logo após o
-tipo da variável:
-
-```kotlin
-var textoNullable: String? = null
-```
-
-Aprenda mais sobre [nullables e chamadas seguras](https://kotlinlang.org/docs/null-safety.html)
-
-### Caso de uso
+## Caso de uso
 
 Quando você tem uma variável que pode ser nula, você precisa usar a operação segura de chamada `?.` para acessar suas propriedades ou
 métodos:
@@ -333,6 +292,21 @@ tamanho = textoNullable?.length ?: 0
 println(tamanho) //6
 ```
 
+### O que são os tipos anuláveis em Kotlin?
+
+Em Kotlin, quando falamos sobre tipos anuláveis, estamos nos referindo à capacidade de lidar com referências que podem não apontar para
+nenhum
+objeto ("nulas"). A grande sacada é que essa possibilidade de nulidade deve ser especificada explicitamente no sistema de tipos.
+
+Isso significa que, se você tiver uma variável que pode ser nula, você precisa indicar isso usando o ponto de interrogação `?` logo após o
+tipo da variável:
+
+```kotlin
+var textoNullable: String? = null
+```
+
+Aprenda mais sobre [nullables e chamadas seguras](https://kotlinlang.org/docs/null-safety.html)
+
 ### Boas práticas
 
 - **Use com Moderação**: Procure projetar seu código para evitar a necessidade de tipos nulos. Embora Kotlin lide bem com eles, o código
@@ -366,8 +340,6 @@ Em Java, para expressar o tipo `null` de uma variável, precisamos das
 anotações [`@Nullable`](https://javadoc.io/doc/org.jetbrains/annotations/20.1.0/org/jetbrains/annotations/Nullable.html)
 e [`@NonNull`](https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/latest/javax/annotation/Nonnull.html).
 
----
-
 ## Analogia
 
 ### Nullables e caixas de presente
@@ -388,3 +360,17 @@ no Kotlin.
 
 Além disso, você pode pensar no operador Elvis (`?:`) como um presente reserva. Se a caixa estiver vazia, em vez de ficar desapontado, você
 pode pegar um presente reserva que já estava preparado. Isso é comparável a atribuir um valor padrão a uma variável nula no Kotlin.
+
+---
+## Exercícios
+
+1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
+2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
+3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
+4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
+5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
+6. **➡️ [Tipos anuláveis (Nullable types)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md
+   )**
+7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
+8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)

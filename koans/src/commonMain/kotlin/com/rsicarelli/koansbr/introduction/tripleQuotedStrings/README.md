@@ -1,45 +1,25 @@
-# Índice:
-
-<details open>
-<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
-
-<p></p>
-
-1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
-3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
-4. ➡️ **[Strings com três aspas (Triple-quoted strings)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md
-   )**
-5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
-6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
-7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
-8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
-
-</details>
-
-## Strings com três aspas (Triple-quoted strings)
+# Strings com três aspas (Triple-quoted strings)
 
 <details>
-<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+<summary>&nbsp;<b>Conteúdo</b> (clique para expandir)</summary>
 
 <p></p>
 
 <!-- TOC -->
-* [Índice:](#índice)
-  * [Strings com três aspas (Triple-quoted strings)](#strings-com-três-aspas-triple-quoted-strings)
-    * [Tarefa](#tarefa)
+* [Strings com três aspas (Triple-quoted strings)](#strings-com-três-aspas-triple-quoted-strings)
+  * [Tarefa](#tarefa)
+  * [Caso de uso](#caso-de-uso)
     * [O que são as aspas triplas em Kotlin?](#o-que-são-as-aspas-triplas-em-kotlin)
-    * [Caso de uso](#caso-de-uso)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
   * [Analogia](#analogia)
     * [Aspas triplas e um palco amplo de teatro](#aspas-triplas-e-um-palco-amplo-de-teatro)
+  * [Exercícios](#exercícios)
 <!-- TOC -->
 
 </details>
 
-### Tarefa
+## Tarefa
 
 [Kotlin Koans: Triple quoted Strings](https://play.kotlinlang.org/koans/Introduction/Triple-quoted%20strings/Task.kt)
 
@@ -50,16 +30,7 @@ Você pode usar as funções [`trimIndent`](https://kotlinlang.org/api/latest/jv
 e [`trimMargin`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html)para formatar ‘strings’ de múltiplas linhas com
 aspas triplas conforme o código ao redor.
 
-### O que são as aspas triplas em Kotlin?
-
-Em Kotlin, as [aspas triplas](https://kotlinlang.org/docs/strings.html#multiline-strings) (`multiline strings`) são uma ferramenta poderosa
-para lidar com Strings que contêm várias linhas e caracteres especiais sem a necessidade de escape. Essa abordagem melhora a legibilidade do
-código e facilita a manipulação de textos extensos ou formatados de maneira complexa.
-
-Saiba mais sobre os [diferentes literais de string e modelos de string](https://kotlinlang.org/docs/strings.html#string-literals)
-em Kotlin.
-
-### Caso de uso
+## Caso de uso
 
 Uma string de aspas triplas é delimitada por três aspas duplas consecutivas (`"""`). Isso permite que você crie strings multilinha de forma
 simples, como mostrado no exemplo a seguir:
@@ -74,6 +45,15 @@ val texto = """
 
 Dentro das aspas triplas, o conteúdo é tratado como texto normal, o que significa que caracteres como `\n` (nova linha) e `\t` (tabulação)
 não são interpretados como caracteres de controle.
+
+### O que são as aspas triplas em Kotlin?
+
+Em Kotlin, as [aspas triplas](https://kotlinlang.org/docs/strings.html#multiline-strings) (`multiline strings`) são uma ferramenta poderosa
+para lidar com Strings que contêm várias linhas e caracteres especiais sem a necessidade de escape. Essa abordagem melhora a legibilidade do
+código e facilita a manipulação de textos extensos ou formatados de maneira complexa.
+
+Saiba mais sobre os [diferentes literais de string e modelos de string](https://kotlinlang.org/docs/strings.html#string-literals)
+em Kotlin.
 
 ### Vantagens
 
@@ -94,8 +74,6 @@ não são interpretados como caracteres de controle.
 - **Problemas de desempenho**: embora as aspas triplas sejam úteis, em algumas situações, como loops intensivos, seu uso excessivo pode
   levar a problemas de desempenho.
 
----
-
 ## Analogia
 
 ### Aspas triplas e um palco amplo de teatro
@@ -110,3 +88,18 @@ mover, expressar-se e interagir de maneira natural. Você não precisa se preocu
 Da mesma forma, as aspas triplas permitem que você crie strings sem se preocupar com a formatação precisa ou com a necessidade de escapar de
 caracteres especiais. Você pode escrever com fluidez, dividindo suas ideias em várias linhas, como se estivesse usando o espaço amplo do
 palco para se expressar.
+
+---
+
+## Exercícios
+
+1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
+2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
+3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
+4. ➡️ **[Strings com três aspas (Triple-quoted strings)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md
+   )**
+5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
+6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
+7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
+8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
