@@ -1,10 +1,8 @@
-<p></p>
-<p></p>
-
 <details>
 <summary>&nbsp;
 
-### Exercícios
+# Exercícios
+
 </summary>
 
 <p></p>
