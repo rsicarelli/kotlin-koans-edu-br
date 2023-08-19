@@ -1,7 +1,11 @@
-# Introdução
+<p></p>
+<p></p>
 
-<details open>
-<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
+<details>
+<summary>&nbsp;
+
+### Exercícios
+</summary>
 
 <p></p>
 
