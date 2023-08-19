@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="koans-js">
-    <output-path>$PROJECT_DIR$/koans/build/libs</output-path>
-    <root id="archive" name="koans-js.jar">
-      <element id="module-output" name="kotlin-koans-edu-br.koans.jsMain" />
-    </root>
-  </artifact>
-</component>

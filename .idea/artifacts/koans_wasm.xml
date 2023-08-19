@@ -1,6 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="koans-wasm">
-    <output-path>$PROJECT_DIR$/koans/build/libs</output-path>
-    <root id="archive" name="koans-wasm.jar" />
-  </artifact>
-</component>

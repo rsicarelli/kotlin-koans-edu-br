@@ -1,21 +1,18 @@
 # Argumentos nomeados (Named arguments)
 
-span
-
-<p></p>
+<details>
+<summary> <b>Conteúdo</b> (clique para expandir) </summary>
 
 <!-- TOC -->
-
 * [Argumentos nomeados (Named arguments)](#argumentos-nomeados-named-arguments)
   * [🔗 Tarefa](#-tarefa)
   * [Caso de uso](#caso-de-uso)
-    * [Clareza nos Argumentos](#clareza-nos-argumentos)
-    * [Ordens Flexíveis](#ordens-flexíveis)
+    * [Definindo apenas o necessário](#definindo-apenas-o-necessário)
+    * [Flexibilidade na organização](#flexibilidade-na-organização)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
   * [Analogia](#analogia)
   * [Exercícios](#exercícios)
-
 <!-- TOC -->
 
 </details>
@@ -39,9 +36,8 @@ fun joinToString(
 
 ## Caso de uso
 
-[Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) são como etiquetas que você coloca nos valores que você passa para uma função. Isso torna o código mais claro e evita confusões.
-
-Vamos considerar uma função `enviarEmail` que aceita informações do remetente e destinatário:
+Ao se deparar com [Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) em Kotlin, imagina-se
+colocando etiquetas em valores enviados para funções, tornando tudo mais compreensível e minimizando equívocos.
 
 ```kotlin
 fun enviarEmail(
@@ -51,7 +47,7 @@ fun enviarEmail(
 ) = Unit
 ```
 
-Sem argumentos nomeados, você usaria assim:
+Normalmente, a função seria usada da seguinte maneira:
 
 ```kotlin
 enviarEmail(
@@ -61,7 +57,7 @@ enviarEmail(
 )
 ```
 
-Mas com argumentos nomeados, você pode especificar diretamente cada valor:
+Mas com argumentos nomeados, cada valor é especificado de maneira clara:
 
 ```kotlin
 enviarEmail(
@@ -71,17 +67,17 @@ enviarEmail(
 )
 ```
 
-### Clareza nos Argumentos
+### Definindo apenas o necessário
 
-Se você só quiser definir o assunto, deixando os outros valores como padrão:
+Digamos que só o assunto precisa ser definido, deixando o resto como padrão:
 
 ```kotlin
 enviarEmail(assunto = "Cancelamento da Reunião")
 ```
 
-### Ordens Flexíveis
+### Flexibilidade na organização
 
-Imagine que você queira mudar a ordem dos valores, mas ainda mantendo tudo claro:
+Mudar a ordem dos valores? Sem problemas, tudo continua entendível:
 
 ```kotlin
 enviarEmail(
@@ -93,15 +89,18 @@ enviarEmail(
 
 ### Vantagens
 
-- **Clareza nos Valores**: os nomes atribuídos esclarecem o propósito de cada argumento.
-- **Ordem Flexível**: você pode mudar a ordem dos valores sem confusão.
-- **Configuração Simplificada**: ótimo para funções com muitos parâmetros, onde você pode pular valores padrão.
-- **Personalização Precisa**: ideal para personalizar funções complexas sem se perder.
+- **Clareza ao chamar funções**: os argumentos nomeados eliminam qualquer dúvida sobre a correspondência entre os valores fornecidos e os
+  parâmetros da função.
+- **Flexibilidade**: não há necessidade de seguir a ordem padrão dos parâmetros, permitindo focar apenas nos argumentos relevantes.
+- **Redução e prevenção de erros**: Ao nomear argumentos, diminui-se a chance de passar acidentalmente um valor errado para um parâmetro.
+- **Documentação implícita**: O código se torna autoexplicativo, reduzindo a necessidade de comentários adicionais para explicar a
+  finalidade de cada valor.
 
 ### Desvantagens
 
-- **Atualizações de Nomes**: renomear um argumento na função exige atualizações em todos os locais onde a função é chamada.
-- **Aumento da Verbosidade**: nomes longos podem tornar o código mais extenso.
+- **Manutenção de Nomeação**: quando um nome de argumento é alterado na definição da função, todos os lugares que utilizam esse argumento
+  precisam ser atualizados.
+- **Verbosidade nas chamadas**: em funções com muitos argumentos, nomear cada um pode tornar a chamada da função extensa e poluída.
 
 ## Analogia
 
@@ -117,7 +116,9 @@ perder. No entanto, com named arguments, tudo fica mais claro, como se cada livr
 ## Exercícios
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. **➡️ [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md )**
+2. **➡️ [Argumentos nomeados (Named arguments)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md
+   )**
 3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
 5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)

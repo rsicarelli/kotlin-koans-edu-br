@@ -3,22 +3,18 @@
 <details>
 <summary> <b>Conteúdo</b> (clique para expandir) </summary>
 
-> span
-
-span
-
+<!-- TOC -->
 * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
   * [🔗 Tarefa](#-tarefa)
   * [Casos de uso](#casos-de-uso)
     * [Função simples](#função-simples)
     * [Funções em uma linha](#funções-em-uma-linha)
     * [Função sem Retorno](#função-sem-retorno)
-      * [O tipo de unidade `Unit`](#o-tipo-de-unidade-unit)
-    * [Lidando com múltiplos argumentos usando `vararg`](#lidando-com-múltiplos-argumentos-usando-vararg)
+      * [O tipo de unidade Unit](#o-tipo-de-unidade-unit)
+    * [Lidando com múltiplos argumentos usando _vararg_](#lidando-com-múltiplos-argumentos-usando-vararg)
     * [Declarando variáveis](#declarando-variáveis)
-  * [Tipos em Kotlin](#tipos-em-kotlin)
+  * [🔗 Tipos em Kotlin](#-tipos-em-kotlin)
   * [Índice de exercícios](#índice-de-exercícios)
-
 <!-- TOC -->
 
 </details>
@@ -28,14 +24,13 @@ span
 Altere o código para que a função `start` retorne a string `"OK"`.
 
 Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
+
 Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
 
 ## Casos de uso
 
 Funções em Kotlin são blocos de código que realizam tarefas específicas. Elas são partes fundamentais da linguagem, nos permitindo
 organizar, reutilizar e executar ações de forma eficiente.
-
-Uma função em Kotlin tem a seguinte estrutura:
 
 ```kotlin
 fun nomeDaFuncao(
@@ -69,10 +64,9 @@ println(resultadoSoma) // Resultado: 8
 ### Funções em uma linha
 
 Em Kotlin, quando uma função possui apenas uma expressão após o símbolo `=`, e o tipo de retorno está especificado ou implícito, o
-compilador entende que
-o resultado dessa expressão é o valor de retorno da função.
+compilador entende que o resultado dessa expressão é o valor de retorno da função.
 
-Isso nos possibilita remover o corpo `{}` e utilizar como expressão `=`
+Isso possibilita remover o corpo `{}` e utilizar como expressão `=`
 
 ```kotlin
 fun dobrar(numero: Int): Int = numero * 2
@@ -88,18 +82,21 @@ linguagens
 
 #### O tipo de unidade Unit
 
-O tipo `Unit` em Kotlin é utilizado para representar a ausência de valor de retorno de uma função.
-
-É como dizer "essa função não retorna nada". Isso é similar ao conceito de `void `em algumas outras linguagens de programação.
+O tipo `Unit` em Kotlin é utilizado para representar a ausência de valor de retorno de uma função. É como dizer "essa função retorna uma
+unidade que não é nada". Isso é similar ao conceito de `void` em algumas outras linguagens de programação.
 
 A seguir, todas as expressões são válidas pelo compilador, que conseguir inferir o tipo pelo resultado da expressão.
 
 ```kotlin
-fun exibirMensagem(texto: String): Unit { println(texto) }
+fun exibirMensagem(texto: String): Unit {
+    println(texto)
+}
 
 fun exibirMensagem(texto: String): Unit = println(texto)
 
-fun exibirMensagem(texto: String) { println(texto) }
+fun exibirMensagem(texto: String) {
+    println(texto)
+}
 
 fun exibirMensagem(texto: String) = println(texto)
 ```
@@ -133,12 +130,11 @@ Em Kotlin, temos duas maneiras principais de declarar variáveis: usando `val` e
    paginaDeRascunho = "Uma ideia diferente" // permitido
    ```
 
-## Tipos em Kotlin
+## 🔗 [Tipos em Kotlin](https://kotlinlang.org/docs/kotlin-tour-basic-types.html)
 
-https://kotlinlang.org/docs/kotlin-tour-basic-types.html
+Os tipos definem a natureza de um valor e determinam as operações que podem ser realizadas com esse valor.
 
-Em Kotlin, assim como em outras linguagens de programação, os tipos definem a natureza de um valor e determinam as operações que podem ser
-realizadas com esse valor.
+Alguns tipos no Kotlin:
 
 ```kotlin
 // ExemplosTipos.kt
@@ -202,7 +198,9 @@ val uLongExemplo: ULong = 18446744073709551615uL
 
 ## Índice de exercícios
 
-1. **➡️ [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md )**
+1. **➡️ [Olá, mundo! (Hello, world!)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md
+   )**
 2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
 3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
 4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
