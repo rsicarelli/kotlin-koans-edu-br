@@ -284,7 +284,7 @@ val tamanho: Int? = textoNulo?.length
 
 A ideia é que o operador Elvis fornece um valor "fallback" ou padrão se o valor à sua esquerda for `null`
 
-Esse operador é extremamente útil para definir valores padrões e garantir que você não está lidando com valores nulos.
+Esse operador é extremamente útil para definir valores padrões.
 
 ```kotlin
 var tamanho: Int = textoNulo?.length ?: 0
