@@ -9,9 +9,13 @@
 * [Tipos anuláveis (Nullable types)](#tipos-anuláveis-nullable-types)
   * [🔗 Tarefa](#-tarefa)
   * [Caso de uso](#caso-de-uso)
-    * [O que são os tipos anuláveis em Kotlin?](#o-que-são-os-tipos-anuláveis-em-kotlin)
-    * [Boas práticas](#boas-práticas)
-    * [Compatibilidade com Java](#compatibilidade-com-java)
+    * [Kotlin gerenciando variáveis que podem ser nulas](#kotlin-gerenciando-variáveis-que-podem-ser-nulas)
+    * [O operador "Elvis" `?:`](#o-operador-elvis-)
+    * [Burlando a Nulabilidade em Kotlin](#burlando-a-nulabilidade-em-kotlin)
+      * [Operador `!!`](#operador-)
+      * [Utilizando `lateinit`](#utilizando-lateinit)
+      * [Use com cuidado](#use-com-cuidado)
+  * [Boas práticas](#boas-práticas)
   * [Analogia](#analogia)
     * [Nullables e caixas de presente](#nullables-e-caixas-de-presente)
   * [Exercícios](#exercícios)
@@ -259,86 +263,80 @@ public void SendMessageToClient(
 
 ## Caso de uso
 
-Quando você tem uma variável que pode ser nula, você precisa usar a operação segura de chamada `?.` para acessar suas propriedades ou
-métodos:
+No mundo da programação, é comum encontrar situações em que variáveis não possuem um valor atribuído, sendo identificadas como "nulas".
+
+Em Kotlin, os tipos anuláveis permitem que variáveis possam ou não ter um valor. Essa característica traz uma camada extra de segurança ao
+código, garantindo que a possibilidade de um valor ser nulo seja sempre explicitamente sinalizada.
+
+### Kotlin gerenciando variáveis que podem ser nulas
+
+Em Kotlin, sempre que uma variável tem potencial para ser nula, a linguagem sugere a adição de um `?` logo após o tipo da variável.
 
 ```kotlin
-var textoNullable: String? = null
+val textoNulo: String? = null
+```
+
+Para ter uma garantia que a variável não é nula, podemos utilizar a operação `?.` para acessar membros dessa variável
+
+```kotlin
 val tamanho: Int? = textoNulo?.length
-println(tamanho) //null
 ```
 
-Este é um recurso poderoso do Kotlin, pois elimina a possibilidade de ocorrer um erro de ponteiro
-nulo ([`NullPointerException`](https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html)) em tempo de execução, já que
-se você
-tentar acessar um membro (função ou atributo) de uma variável nullable sem ter certeza se não é nula, o compilador irá emitir um erro.
+### O operador "Elvis" `?:`
+
+A ideia é que o operador Elvis fornece um valor "fallback" ou padrão se o valor à sua esquerda for `null`
+
+Esse operador é extremamente útil para definir valores padrões e garantir que você não está lidando com valores nulos.
 
 ```kotlin
-var textoNullable: String? = "Kotlin"
-val tamanho: Int? = textoNulo?.length
-println(tamanho) //6
+var tamanho: Int = textoNulo?.length ?: 0
 ```
 
-Além disso, o Kotlin também inclui o operador [Elvis `?:`](https://kotlinlang.org/docs/null-safety.html#elvis-operator) que permite
-especificar um valor fallback para usar quando o valor à esquerda for `null`:
+> Se você inclinar a cabeça para o lado esquerdo, o símbolo `?:` parece os olhos e a mecha de cabelo característica de Elvis Presley.
+
+### Burlando a Nulabilidade em Kotlin
+
+Por mais que Kotlin lide com nulabilidade de forma segura, há momentos em que é preciso contornar essa segurança por várias razões, como ao
+integrar com bibliotecas Java ou por outros requisitos específicos.
+
+#### Operador `!!`
+
+Ao ter certeza de que uma variável nullable não é nula, é possível usar o operador `!!` para forçar o tratamento da variável como não
+nula. No entanto, se a variável for realmente nula, o programa lançará uma `NullPointerException`.
 
 ```kotlin
-var textoNullable: String? = null
-var tamanho: Int = textoNullable?.length ?: 0
-println(tamanho) //0
-
-textoNullable = "Kotlin"
-tamanho = textoNullable?.length ?: 0
-println(tamanho) //6
+val nome: String? = obterNome()
+val tamanho = nome!!.length  // Atenção! Isso pode lançar NullPointerException.
 ```
 
-### O que são os tipos anuláveis em Kotlin?
+#### Utilizando `lateinit`
 
-Em Kotlin, quando falamos sobre tipos anuláveis, estamos nos referindo à capacidade de lidar com referências que podem não apontar para
-nenhum
-objeto ("nulas"). A grande sacada é que essa possibilidade de nulidade deve ser especificada explicitamente no sistema de tipos.
+Se uma variável deve ser inicializada posteriormente, pode-se usar o modificador `lateinit`, que informa ao compilador que essa variável
+será inicializada antes de seu acesso, evitando a necessidade de torná-la nullable.
 
-Isso significa que, se você tiver uma variável que pode ser nula, você precisa indicar isso usando o ponto de interrogação `?` logo após o
-tipo da variável:
+No entanto, se tentarem acessá-la antes da sua inicialização, ocorrerá uma `UninitializedPropertyAccessException`.
 
 ```kotlin
-var textoNullable: String? = null
+lateinit var nome: String
+
+println(nome) // Atenção! Isso pode lançar UninitializedPropertyAccessException.
+
+fun inicializar() {
+    nome = "Kotlin"
+}
 ```
 
-Aprenda mais sobre [nullables e chamadas seguras](https://kotlinlang.org/docs/null-safety.html)
+## Boas práticas
 
-### Boas práticas
-
-- **Use com Moderação**: Procure projetar seu código para evitar a necessidade de tipos nulos. Embora Kotlin lide bem com eles, o código
-  tende a ser mais claro e simples sem o uso excessivo deles.
-- **Defina Valores Padrão**: Se uma função pode retornar nulo, pense em um valor padrão sensato que possa ser usado. Por exemplo:
-
- ```kotlin
-val elemento: String = list.find { ... } ?: ValorPadrao
-```
-
-- **Evitar!!**: O operador `!!` pode ser perigoso, pois força o uso de uma variável nullable e lança uma exceção se ela for nula. Tente
-  evitar seu
-  uso sempre que possível e optar por manipulação segura de nulos.
-- **Usar [let](https://kotlinlang.org/docs/scope-functions.html#let), [run](https://kotlinlang.org/docs/scope-functions.html#run)
-  e [also](https://kotlinlang.org/docs/scope-functions.html#also) para trabalhar com nullables**: Eles fornecem maneiras idiomáticas de
-  trabalhar com nullables e podem ajudar a tornar o código mais compacto e legível.
-- **Use declarações `if` para verificações de nulidade**: Graças aos [smart casts](https://kotlinlang.org/docs/typecasts.html#smart-casts)
-  do Kotlin, se você verificar a nulidade de uma variável usando `if`, então dentro desse bloco `if` você pode usar a variável como se ela
-  fosse não-nula.
-- **Usar tipos não nullables quando possível**: se um valor nunca deveria ser nulo durante o ciclo de vida normal de um programa, deve ser
-  um tipo não nullable.
-- **Manter as verificações de nulidade simples**: verificações de nulidade complexas levam a código desnecessariamente complicado. Tente
-  mantê-los o mais simples possível.
-
-### Compatibilidade com Java
-
-Kotlin trata a nulidade de forma diferente do Java, evitando muitos erros comuns. Ao usar código Java em Kotlin ou vice-versa, é importante
-estar ciente das diferenças nos tipos nulos para evitar problemas de compilação.
-
-Em Java, para expressar o tipo `null` de uma variável, precisamos das
-anotações [`@Nullable`](https://javadoc.io/doc/org.jetbrains/annotations/20.1.0/org/jetbrains/annotations/Nullable.html)
-e [`@NonNull`](https://www.javadoc.io/doc/com.google.code.findbugs/jsr305/latest/javax/annotation/Nonnull.html).
+1. **Minimizar o uso:** se há certeza de que uma variável nunca será nula, é aconselhável defini-la como não anulável. Isso
+   simplifica o código e minimiza possíveis erros.
+2. **Prudência no uso do Elvis `?:`**:  crucial ter certeza de que o valor padrão faça sentido no contexto da expressão.
+3. **Priorizar `?.` ao invés de `!!`**: ao invés de forçar uma variável a ser tratada como não nula com `!!`, é benéfico optar pelo `?.` e
+   modelar seu código com uma tipagem segura.
+4. **Cuidado ao utilizar `lateinit`**: seu uso imprudente pode ser arriscado. É vital garantir a inicialização da variável antes de
+   acessá-la.
+5. **Testar rigorosamente**: Ao desenvolver testes, é essencial cobrir cenários em que variáveis possam ser nulas. Isso ajuda a identificar
+   potenciais problemas ainda na fase de desenvolvimento.
 
 ## Analogia
 
@@ -362,6 +360,7 @@ Além disso, você pode pensar no operador Elvis (`?:`) como um presente reserva
 pode pegar um presente reserva que já estava preparado. Isso é comparável a atribuir um valor padrão a uma variável nula no Kotlin.
 
 ---
+
 ## Exercícios
 
 1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
