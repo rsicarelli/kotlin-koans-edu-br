@@ -1,58 +1,35 @@
-<details>
-<summary>
-
-## Exercícios <a id='1'></a>
-
-</summary>
-
-<p></p>
-
-1. **➡️ [Olá, mundo! (Hello, world!)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md
-   )**
-2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
-3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
-4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
-5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
-6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
-7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
-8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
-
-</details>
-
-## Olá, mundo! (Hello, world!)
+# Olá, mundo! (Hello, world!)
 
 <details>
-<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+<summary>&nbsp;<b>Conteúdo</b></summary>
 
 <p></p>
 
 <!-- TOC -->
-
-* [Introdução](#introdução)
-    * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
-        * [Tarefa](#tarefa)
-        * [O que é uma função em Kotlin?](#o-que-é-uma-função-em-kotlin)
-        * [Casos de uso](#casos-de-uso)
-            * [Funções em uma linha](#funções-em-uma-linha)
-            * [Tipo de retorno inferido](#tipo-de-retorno-inferido)
-            * [Funções com Varargs](#funções-com-varargs)
-        * [O tipo de unidade Unit](#o-tipo-de-unidade-unit)
-        * [Declarando variáveis](#declarando-variáveis)
-    * [Tipos em Kotlin](#tipos-em-kotlin)
-
+* [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
+    * [🔗 Tarefa](#-tarefa)
+    * [O que é uma função em Kotlin?](#o-que-é-uma-função-em-kotlin)
+    * [Casos de uso](#casos-de-uso)
+      * [Função Simples](#função-simples)
+      * [Funções em uma linha](#funções-em-uma-linha)
+      * [Função sem Retorno](#função-sem-retorno)
+      * [O tipo de unidade Unit](#o-tipo-de-unidade-unit)
+      * [Lidando com múltiplos argumentos usando `vararg`](#lidando-com-múltiplos-argumentos-usando-vararg)
+    * [Declarando variáveis](#declarando-variáveis)
+  * [Tipos em Kotlin](#tipos-em-kotlin)
+  * [Índice de exercícios <a id='1'></a>](#índice-de-exercícios-a-id1a)
 <!-- TOC -->
 
 </details>
 
-### Tarefa
-
-[Kotlin Koan: Hello World!](https://play.kotlinlang.org/koans/Introduction/Hello,%20world!/Task.kt)
+### 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Hello,%20world!/Task.kt)
 
 Altere o código para que a função `start` retorne a string `"OK"`.
 
 Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
 Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
+
+---
 
 ### O que é uma função em Kotlin?
 
@@ -233,3 +210,18 @@ val uIntExemplo: UInt = 4294967295u
 // ULong: um long não assinado que representa um valor integral entre 0 e 18,446,744,073,709,551,615.
 val uLongExemplo: ULong = 18446744073709551615uL
 ```
+
+---
+
+## Índice de exercícios <a id='1'></a>
+
+1. **➡️ [Olá, mundo! (Hello, world!)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md
+   )**
+2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
+3. [Argumentos padrão (Default arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md)
+4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
+5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
+6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
+7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
+8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
