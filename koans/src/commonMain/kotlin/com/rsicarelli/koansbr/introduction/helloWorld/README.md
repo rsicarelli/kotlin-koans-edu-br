@@ -96,22 +96,12 @@ O tipo `Unit` em Kotlin é utilizado para representar a ausência de valor de re
 A seguir, todas as expressões são válidas pelo compilador, que conseguir inferir o tipo pelo resultado da expressão.
 
 ```kotlin
-fun exibirMensagem(texto: String): Unit {
-    println(texto)
-}
-```
+fun exibirMensagem(texto: String): Unit { println(texto) }
 
-```kotlin
 fun exibirMensagem(texto: String): Unit = println(texto)
-```
 
-```kotlin
-fun exibirMensagem(texto: String) {
-    println(texto)
-}
-```
+fun exibirMensagem(texto: String) { println(texto) }
 
-```kotlin
 fun exibirMensagem(texto: String) = println(texto)
 ```
 

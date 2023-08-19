@@ -1,49 +1,24 @@
-# Introdução
-
-<details open>
-<summary>&nbsp;<b>Índice</b> (clique para esconder)</summary>
-
-<p></p>
-
-1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
-2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
-3. **➡️ [Argumentos padrão (Default arguments)](
-https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md
-)**
-4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
-5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
-6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
-7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
-8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
-
-</details>
-
----
-
-## Argumentos padrão (Default arguments)
+# Argumentos padrão (Default arguments)
 
 <details>
-<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+<summary>&nbsp;<b>Conteúdo</b> (clique para expandir)</summary>
 
 <p></p>
 
 <!-- TOC -->
-* [Introdução](#introdução)
-  * [Argumentos padrão (Default arguments)](#argumentos-padrão-default-arguments)
-    * [Tarefa](#tarefa)
-    * [Caso de uso](#caso-de-uso)
+* [Argumentos padrão (Default arguments)](#argumentos-padrão-default-arguments)
+  * [🔗 Tarefa](#-tarefa)
+  * [Caso de uso](#caso-de-uso)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
       * [`@JvmOverloads`](#jvmoverloads)
   * [Analogia](#analogia)
-    * [Padaria e default arguments](#padaria-e-default-arguments)
+  * [Índice de exercícios](#índice-de-exercícios)
 <!-- TOC -->
 
 </details>
 
-### Tarefa
-
-[Kotlin Koans: Default Arguments](https://play.kotlinlang.org/koans/Introduction/Default%20arguments/Task.kt)
+## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Default%20arguments/Task.kt)
 
 Imagine que você tenha várias sobrecargas de `foo()` em na sua linguagem favorita.
 
@@ -289,13 +264,11 @@ class SobrecargaTypeScript {
 
 </details>
 
----
+## Caso de uso
 
 Os [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) é uma característica útil que permite que argumentos
 sejam omitidos quando uma função é chamada, nesse caso,
 o compilador usará os "default arguments" para cada argumento.
-
-### Caso de uso
 
 ```kotlin
 fun printaDetalhes(nome: String, age: Int = 50) {
@@ -346,58 +319,62 @@ Neste caso, graças à anotação `@JvmOverloads`, o compilador Kotlin gerará a
 Java:
 
 ```java
-class JavaKt {
-    void exibeMensagem(String conteudo) {
+public class ExibirMensagem {
+
+    public static void main(String[] args) {
+        exibeMensagem("Olá");
+        exibeMensagem("Olá", 2);
+        exibeMensagem("Olá", 2, "Prefixo: ");
     }
 
-    void exibeMensagem(String conteudo, int vezes) {
+    public static void exibeMensagem(String conteudo) {
+        exibeMensagem(conteudo, 1);
     }
 
-    void exibeMensagem(String conteudo, int vezes, String prefixo) {
+    public static void exibeMensagem(String conteudo, int vezes) {
+        exibeMensagem(conteudo, vezes, "");
+    }
+
+    public static void exibeMensagem(String conteudo, int vezes, String prefixo) {
+        for (int i = 0; i < vezes; i++) {
+            System.out.println(prefixo + conteudo);
+        }
     }
 }
 ```
 
 ---
+
 ## Analogia
 
-### Padaria e default arguments
-
-Pense em uma padaria famosa pelo "_Café Padrão_". Esse café, por padrão, é um café preto de tamanho médio sem nenhum extra.
-
-A padaria, no entanto, sabe que nem todos gostam de seu café dessa maneira. Alguns preferem adicionar leite vegetal, açúcar, caramelo ou até
-mesmo chantilly.
-
-Quando um cliente simplesmente pede: "_Um cafézinho, por favor_", o atendente serve o "Café Padrão". Mas, se algum cliente for mais
-específico e disser, "_Quero um café grande com caramelo e chantilly_", o atendente personalizá o pedido.
-
-Isso é semelhante ao comportamento dos `default arguments` em Kotlin. Ao criar uma função, você pode determinar valores padrão para alguns
-de seus parâmetros. Se a função é chamada sem especificar esses parâmetros, os valores padrão são usados.
-
-Veja este exemplo:
+No Brasil, o nome dado ao pão francês varia de cidade para cidade. Em Kotlin, da mesma forma, podemos ter valores padrão que diferem
+conforme a configuração:
 
 ```kotlin
-fun pedirCafe(tamanho: String = "médio", adicional: String? = null) {
-    // código para preparar o café
+enum class TipoPao {
+    FRANCÊS, CACETINHO, CARIOQUINHA,
+    DE_SAL, CARECA, PÃOZINHO, JACÓ,
 }
 
-pedirCafe()  // Retorna: café médio
+fun pedidoRecife(tipo: TipoPao = TipoPao.DE_SAL) = tipo.name
+fun pedidoManaus(tipo: TipoPao = TipoPao.CARECA) = tipo.name
+fun pedidoAracaju(tipo: TipoPao = TipoPao.JACÓ) = tipo.name
+fun pedidoSaoPaulo(tipo: TipoPao = TipoPao.FRANCÊS) = tipo.name
+fun pedidoBrasilia(tipo: TipoPao = TipoPao.PÃOZINHO) = tipo.name
+fun pedidoFortaleza(tipo: TipoPao = TipoPao.CARIOQUINHA) = tipo.name
+fun pedidoPortoAlegre(tipo: TipoPao = TipoPao.CACETINHO) = tipo.name
 ```
+---
 
-No exemplo acima, ao chamar `pedirCafe()` sem argumentos, você obtém um café médio, que é o comportamento padrão. Porém, pode personalizar
-seu pedido:
+## Índice de exercícios
 
-```kotlin
-pedirCafe(
-    tamanho = "grande",
-    adicional = "com nitrogênio"
-)
-```
-
-Dessa vez, você terá um café grande com os adicionais especificados.
-
-**É assim que os default arguments funcionam:** eles fornecem um valor padrão, a menos que você especifique algo diferente!
-
-
-
-
+1. [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
+2. [Argumentos nomeados (Named arguments)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/README.md)
+3. **➡️ [Argumentos padrão (Default arguments)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/README.md
+   )**
+4. [Strings com três aspas (Triple-quoted strings)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/README.md)
+5. [Modelos de string (String templates)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/README.md)
+6. [Tipos anuláveis (Nullable types)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/README.md)
+7. [Tipo "nenhum" (Nothing type)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/README.md)
+8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
