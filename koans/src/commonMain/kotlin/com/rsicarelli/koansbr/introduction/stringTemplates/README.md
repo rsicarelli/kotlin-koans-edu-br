@@ -6,17 +6,15 @@
 <p></p>
 
 <!-- TOC -->
-
 * [Modelos de string (String templates)](#modelos-de-string-string-templates)
     * [🔗 Tarefa](#-tarefa)
-    * [Caso de uso](#caso-de-uso)
-        * [O que são as String templates em Kotlin?](#o-que-são-as-string-templates-em-kotlin)
-        * [Vantagens](#vantagens)
-        * [Desvantagens](#desvantagens)
-    * [Analogia](#analogia)
-        * [String templates e um quebra cabeça](#string-templates-e-um-quebra-cabeça)
-    * [Exercícios](#exercícios)
-
+  * [Caso de uso](#caso-de-uso)
+    * [O que são as String templates em Kotlin?](#o-que-são-as-string-templates-em-kotlin)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+  * [Analogia](#analogia)
+    * [String templates e um quebra cabeça](#string-templates-e-um-quebra-cabeça)
+  * [Exercícios](#exercícios)
 <!-- TOC -->
 
 </details>

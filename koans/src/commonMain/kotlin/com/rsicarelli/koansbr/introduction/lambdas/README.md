@@ -6,23 +6,20 @@
 <p></p>
 
 <!-- TOC -->
-
 * [Lambdas](#lambdas)
-    * [🔗 Tarefa](#-tarefa)
-    * [Caso de uso](#caso-de-uso)
-        * [O que são lambdas?](#o-que-são-lambdas)
-        * [Lambdas e os livros](#lambdas-e-os-livros)
-        * [Lamba também é um tipo](#lamba-também-é-um-tipo)
-        * [O que é `it`?](#o-que-é-it)
-        * [Lambdas como último argumento](#lambdas-como-último-argumento)
-        * [Vantagens](#vantagens)
-        * [Desvantagens](#desvantagens)
-        * [Testabilidade](#testabilidade)
-    * [Analogia](#analogia)
-        * [Lambdas e o Canivete Suíço](#lambdas-e-o-canivete-suíço)
-        * [Lambdas e RPG](#lambdas-e-rpg)
-    * [Exercícios](#exercícios)
-
+  * [🔗 Tarefa](#-tarefa)
+  * [Caso de uso](#caso-de-uso)
+    * [O que são lambdas?](#o-que-são-lambdas)
+    * [Lamba também é um tipo](#lamba-também-é-um-tipo)
+    * [O que é `it`?](#o-que-é-it)
+    * [Lambdas como último argumento](#lambdas-como-último-argumento)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+    * [Testabilidade](#testabilidade)
+  * [Analogia](#analogia)
+    * [Lambdas e o Canivete Suíço](#lambdas-e-o-canivete-suíço)
+    * [Lambdas e RPG](#lambdas-e-rpg)
+  * [Exercícios](#exercícios)
 <!-- TOC -->
 
 </details>
