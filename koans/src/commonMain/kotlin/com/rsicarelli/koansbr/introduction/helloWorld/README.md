@@ -1,7 +1,8 @@
-# Olá, mundo! (Hello, world!)
+<details open>
+<summary>&nbsp;
 
-<details>
-<summary>&nbsp;<b>Conteúdo</b></summary>
+# Olá, mundo! (Hello, world!)
+</summary>
 
 <p></p>
 
@@ -28,8 +29,6 @@ Altere o código para que a função `start` retorne a string `"OK"`.
 
 Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
 Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
-
----
 
 ## Casos de uso
 
