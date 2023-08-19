@@ -7,22 +7,22 @@
 
 <!-- TOC -->
 * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
-    * [🔗 Tarefa](#-tarefa)
+  * [🔗 Tarefa](#-tarefa)
+  * [Casos de uso](#casos-de-uso)
     * [O que é uma função em Kotlin?](#o-que-é-uma-função-em-kotlin)
-    * [Casos de uso](#casos-de-uso)
-      * [Função Simples](#função-simples)
-      * [Funções em uma linha](#funções-em-uma-linha)
-      * [Função sem Retorno](#função-sem-retorno)
-      * [O tipo de unidade Unit](#o-tipo-de-unidade-unit)
-      * [Lidando com múltiplos argumentos usando `vararg`](#lidando-com-múltiplos-argumentos-usando-vararg)
+    * [Função simples](#função-simples)
+    * [Funções em uma linha](#funções-em-uma-linha)
+    * [Função sem Retorno](#função-sem-retorno)
+      * [O tipo de unidade `Unit`](#o-tipo-de-unidade-unit)
+    * [Lidando com múltiplos argumentos usando `vararg`](#lidando-com-múltiplos-argumentos-usando-vararg)
     * [Declarando variáveis](#declarando-variáveis)
   * [Tipos em Kotlin](#tipos-em-kotlin)
-  * [Índice de exercícios <a id='1'></a>](#índice-de-exercícios-a-id1a)
+  * [Índice de exercícios](#índice-de-exercícios)
 <!-- TOC -->
 
 </details>
 
-### 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Hello,%20world!/Task.kt)
+## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Hello,%20world!/Task.kt)
 
 Altere o código para que a função `start` retorne a string `"OK"`.
 
@@ -30,6 +30,8 @@ Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
 Para concluir o Kotlin Koans, você precisa substituir essa invocação de função por um código significativo de acordo com o problema.
 
 ---
+
+## Casos de uso
 
 ### O que é uma função em Kotlin?
 
@@ -53,9 +55,7 @@ fun nomeDaFuncao(
 - `: TipoDeRetorno` tipo de valor a função retornará após ser executada.
 - `{}` o corpo da função, onde o código é escrito. Aqui, você define as ações que a função executará.
 
-### Casos de uso
-
-#### Função Simples
+### Função simples
 
 A seguir temos uma função simples que soma dois números inteiros e retorna o resultado
 
@@ -69,7 +69,7 @@ val resultadoSoma = somar(3, 5)
 println(resultadoSoma) // Resultado: 8
 ```
 
-#### Funções em uma linha
+### Funções em uma linha
 
 Em Kotlin, quando uma função possui apenas uma expressão após o símbolo `=`, e o tipo de retorno está especificado ou implícito, o
 compilador entende que
@@ -84,12 +84,12 @@ val numeroDobrado = dobrar(7)
 println(numeroDobrado) // Resultado: 14
 ```
 
-#### Função sem Retorno
+### Função sem Retorno
 
 Se uma função não tiver um valor de retorno explícito, seu tipo de retorno será inferido como `Unit`, o equivalente ao `void` em outras
 linguagens
 
-#### O tipo de unidade Unit
+#### O tipo de unidade `Unit`
 
 O tipo `Unit` em Kotlin é utilizado para representar a ausência de valor de retorno de uma função.
 
@@ -117,7 +117,7 @@ fun exibirMensagem(texto: String) {
 fun exibirMensagem(texto: String) = println(texto)
 ```
 
-#### Lidando com múltiplos argumentos usando `vararg`
+### Lidando com múltiplos argumentos usando `vararg`
 
 O `vararg` em Kotlin permite passar uma quantidade variável de argumentos para uma função
 
@@ -213,7 +213,7 @@ val uLongExemplo: ULong = 18446744073709551615uL
 
 ---
 
-## Índice de exercícios <a id='1'></a>
+## Índice de exercícios
 
 1. **➡️ [Olá, mundo! (Hello, world!)](
    https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md
