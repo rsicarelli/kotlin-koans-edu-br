@@ -1,7 +1,7 @@
 # Tipo "nenhum" (Nothing type)
 
 <details>
-<summary>&nbsp;<b>Tabela de conteúdo</b></summary>
+<summary>&nbsp;<b>Conteúdo</b> (clique para expandir)</summary>
 
 <p></p>
 
@@ -9,11 +9,10 @@
 * [Tipo "nenhum" (Nothing type)](#tipo-nenhum-nothing-type)
   * [🔗 Tarefa](#-tarefa)
   * [Caso de uso](#caso-de-uso)
-    * [O que é o tipo Nothing em Kotlin?](#o-que-é-o-tipo-nothing-em-kotlin)
+    * [O papel especial de `Nothing`](#o-papel-especial-de-nothing)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
   * [Analogia](#analogia)
-    * [O tipo Nothing e uma estrada sem saída](#o-tipo-nothing-e-uma-estrada-sem-saída)
   * [Exercícios](#exercícios)
 <!-- TOC -->
 
@@ -28,70 +27,60 @@ assume que `age` pode ser `null`.
 
 ## Caso de uso
 
-Em Kotlin, `Nothing` é um tipo que representa um valor que nunca ocorre. Em outras palavras, é um tipo que é usado quando uma função nunca
-retorna um valor útil.
+`Nothing` representa um valor que nunca existe, e não é permitido ter um valor ou objeto desta classe porque seu construtor é privado.
 
-Por exemplo, uma função que sempre lança uma exceção pode ter `Nothing` como o seu tipo de retorno:
+O `Nothing` é utilizado para indicar o tipo de funções que nunca retornam um valor.
 
 ```kotlin
-fun alwaysThrowsException(): Nothing {
-    throw RuntimeException("Esta função sempre lança uma exceção")
-}
+fun esperarPraSempre(): Nothing {
+    while (true) {
+        // Estou esperando...
+    }
+}   
 ```
 
-### O que é o tipo Nothing em Kotlin?
+### O papel especial de `Nothing`
 
-Imagine que você está escrevendo um programa e em certos momentos você quer que uma função sempre lance uma exceção, ou talvez ela entre em
-um loop infinito. Nestes casos, o tipo [Nothing](https://kotlinlang.org/docs/exceptions.html#the-nothing-type) pode ser usado como o tipo de
-retorno dessa função especial.
+Na [teoria dos tipos](https://es.wikipedia.org/wiki/Teor%C3%ADa_de_tipos), `Nothing` é considerado o "tipo mais baixo", ou seja,
+é um subtipo de todos os outros tipos em Kotlin. Isso faz com que o valor de `Nothing` possa ser atribuído a variáveis de todos os tipos.
 
-Quando você chama uma função que retorna `Nothing`, o compilador entende que algo excepcional está acontecendo. Ele sabe que a execução do
-programa não vai continuar normalmente após essa função, então ele lida com isso de maneira especial:
+```kotlin
+fun erro(mensagem: String): Nothing = throw IllegalStateException(mensagem)
 
-- **Não espera retorno**: Quando chamamos uma função `Nothing`, o compilador não espera um resultado dela, pois sabe que o programa não
-  segue em frente após isso.
-- **Não adivinha tipos e aplica otimizações**: ao utilizar uma função com retorno `Nothing`, o compilador não tenta adivinhar um tipo e
-  entende que a função pode encerrar antes de produzir um valor. Adicionalmente, o compilador pode aplicar otimizações e remover partes do
-  código que são inalcançáveis, com base no conhecimento de que a função retorna um `Nothing`.
+fun encontrarSessao(idSessao: Int): Sessao =
+    sessoesEmAndamento
+        .firstOrNull { it.id == idSessao }
+        ?: erro("Sessão não encontrada!")
+```
 
+Mesmo que a função `erro()` retorne `Nothing`, é aceitável atribuir seu valor a uma variável do tipo `Sessao` porque `Nothing` é um subtipo
+de `Sessao`.
 
 ### Vantagens
 
-- **Compreensão mais clara do código**: quando você vê o tipo `Nothing` em uma função, você imediatamente entende que essa função não vai
-  retornar normalmente, ou seja, ela vai lançar uma exceção ou ficar em um loop infinito.
-
-- **Ajuda o compilador a entender melhor os tipos**: usar o tipo `Nothing` ajuda o compilador a entender certas situações complexas e
-  realizar
-  verificações de tipo mais precisas durante a compilação.
+- **Comunicação clara e direta**: uma função que retorna `Nothing` não tem a intenção de retornar um valor,
+  removendo qualquer ambiguidade.
+- **Flexibilidade**: se comporta como um "camaleão" no mundo dos tipos em Kotlin, tornando-se útil em diferentes cenários.
+- **Economia de Recursos**: devido à inteligência do compilador, não gastamos memória alocando algo que nunca deveria existir.
+- **Blindagem contra erros:** o `Nothing` deixa claro: _nunca vou retornar_. Esse tipo de garantia pode evitar surpresas
+  desagradáveis em tempo de execução.
 
 ### Desvantagens
 
-- **Pode ser confuso no início**: Se você está começando com Kotlin, o conceito de `Nothing` pode parecer estranho à primeira vista. Algumas
-  pessoas podem pensar que é similar ao `void` de outras linguagens, mas na realidade é diferente.
-
-- **Use com cuidado**: Lembre-se de usar o tipo `Nothing` somente quando a função nunca retorna algo útil. O uso incorreto pode tornar o
-  código confuso e problemático.
-
----
+- **Desafio inicial**: para novatos em Kotlin, o `Nothing` pode parecer um enigma. É um conceito que exige um pouco de
+  adaptação.
+- **Uso excessivo**: é possível cair na armadilha de usar o `Nothing` de maneira confusa e excessiva, complicando o
+  código ao invés de simplificar.
 
 ## Analogia
 
-### O tipo Nothing e uma estrada sem saída
+Imagine um livro colorido que tenha uma capa com título, autores e editora. No entanto, ao abrir, todas as
+páginas estão em branco. O livro existe, tem peso, tem formato, mas não tem conteúdo.
 
-Imagine que você está dirigindo por uma estrada e de repente encontra uma placa que diz "Fim do Caminho". Essa placa indica que não importa
-o que aconteça a partir desse ponto, você não pode continuar seguindo a estrada normalmente. Pode haver um abismo, uma ponte quebrada ou
-algo
-incomum.
+Assim é o `Nothing` em Kotlin. Ele está lá, tem uma representação, mas não carrega valor ou significado em si.
 
-- A estrada representa o fluxo normal do seu programa.
-- A placa "Fim do Caminho" é como uma função que retorna `Nothing`.
-- Quando você encontra essa placa, sabe que algo inesperado aconteceu e o programa não vai seguir a rota usual.
-- Você não pode continuar dirigindo normalmente, assim como o compilador não espera um valor de retorno normal de uma função `Nothing`.
-- A placa é uma indicação de que você está em uma situação incomum, assim como o compilador lida de forma especial com funções que
-  retornam `Nothing`.
-
-Em resumo, assim como a placa "Fim do Caminho" muda o curso da sua viagem, uma função que retorna `Nothing` pode indicar ao compilador que
-algo anormal está ocorrendo, e ele ajusta a maneira como lida com essa situação.
+No código, quando uma função retorna `Nothing`, é como se estivéssemos abrindo um livro esperando uma história, mas encontramos páginas
+vazias.
 
 ---
 
