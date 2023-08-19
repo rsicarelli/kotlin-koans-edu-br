@@ -9,11 +9,9 @@
 * [Strings com três aspas (Triple-quoted strings)](#strings-com-três-aspas-triple-quoted-strings)
   * [Tarefa](#tarefa)
   * [Caso de uso](#caso-de-uso)
-    * [O que são as aspas triplas em Kotlin?](#o-que-são-as-aspas-triplas-em-kotlin)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
   * [Analogia](#analogia)
-    * [Aspas triplas e um palco amplo de teatro](#aspas-triplas-e-um-palco-amplo-de-teatro)
   * [Exercícios](#exercícios)
 <!-- TOC -->
 
@@ -32,8 +30,12 @@ aspas triplas conforme o código ao redor.
 
 ## Caso de uso
 
-Uma string de aspas triplas é delimitada por três aspas duplas consecutivas (`"""`). Isso permite que você crie strings multilinha de forma
-simples, como mostrado no exemplo a seguir:
+Em Kotlin, as [aspas triplas](https://kotlinlang.org/docs/strings.html#multiline-strings) (`multiline strings`)  facilitam a representação
+de Strings com várias linhas e caracteres especiais, eliminando a necessidade de escapá-los.
+
+Esta técnica realça a clareza do código e simplifica a gestão de textos longos ou com estruturas intrincadas.
+
+Com um par de três aspas `""" """` é possível declara um texto com multipla linhas em Kotlin
 
 ```kotlin
 val texto = """
@@ -43,51 +45,39 @@ val texto = """
 """
 ```
 
-Dentro das aspas triplas, o conteúdo é tratado como texto normal, o que significa que caracteres como `\n` (nova linha) e `\t` (tabulação)
-não são interpretados como caracteres de controle.
-
-### O que são as aspas triplas em Kotlin?
-
-Em Kotlin, as [aspas triplas](https://kotlinlang.org/docs/strings.html#multiline-strings) (`multiline strings`) são uma ferramenta poderosa
-para lidar com Strings que contêm várias linhas e caracteres especiais sem a necessidade de escape. Essa abordagem melhora a legibilidade do
-código e facilita a manipulação de textos extensos ou formatados de maneira complexa.
-
-Saiba mais sobre os [diferentes literais de string e modelos de string](https://kotlinlang.org/docs/strings.html#string-literals)
-em Kotlin.
+No contexto das aspas triplas, tudo é considerado literal. Portanto, sequências como `\n` (nova linha) e `\t` (tabulação) são apenas texto, sem
+qualquer tratamento especial.
 
 ### Vantagens
 
-- **Strings Multilinha Simples**: As aspas triplas permitem criar strings multilinha com facilidade, tornando mais prático trabalhar com
-  textos longos ou com formatações específicas.
-- **Escape de caracteres não é necessário**: ao usar aspas triplas, você não precisa escapar caracteres especiais, melhorando a clareza e a
-  legibilidade do código.
-- **Templates de Strings**: As aspas triplas suportam templates de strings, facilitando a incorporação de valores dinâmicos em textos,
-  tornando a manipulação de strings mais flexível.
+- **Simplicidade**: facilidade para trabalhar com textos longos ou com formatações específicas.
+- **Escape de caracteres não é necessário**: caracteres especiais não precisam ser "escapados", melhorando a clareza e a legibilidade do
+  código.
+- **Um tipo de modelo de String** facilitando a incorporação de valores dinâmicos em textos, tornando a manipulação de strings mais
+  flexível.
 
 ### Desvantagens
 
-- **Espaço em branco indesejado**: Um desafio comum ao usar aspas triplas é a possibilidade de incluir espaços em branco indesejados na
-  string. Isso pode ser evitado utilizando funções como `trimMargin()` e `trimIndent()` para remover esses espaços extras.
-- **Menos suporte em algumas IDEs e ferramentas de edição de texto**: É importante notar que algumas IDEs e ferramentas de edição de texto
-  podem apresentar dificuldades na coloração de sintaxe, formatação automática ou em outros recursos ao trabalhar com strings de aspas
-  triplas.
-- **Problemas de desempenho**: embora as aspas triplas sejam úteis, em algumas situações, como loops intensivos, seu uso excessivo pode
-  levar a problemas de desempenho.
+- **Espaço em branco indesejado** pode ser evitado utilizando funções como `trimMargin()` e `trimIndent()` para remover esses espaços
+  extras.
+- **Menos suporte em algumas IDEs** embora muito raro, que algumas IDEs e ferramentas de edição de texto podem apresentar dificuldades na
+  coloração de sintaxe, formatação automática, etc.
+- **Problemas de desempenho**: em algumas situações, como loops intensivos, seu uso excessivo pode levar a problemas de desempenho.
 
 ## Analogia
 
-### Aspas triplas e um palco amplo de teatro
+As aspas triplas em Kotlin são como os murais nas paredes. Um mural não é interrompido por molduras ou limites, permitindo que
+a arte se estenda por toda a superfície sem interrupção.
 
-Imagine que você está atuando em um palco teatral. Em uma peça convencional, você tem que se limitar a um pequeno espaço no palco, onde cada
-movimento precisa ser calculado. Isso pode ser restritivo e complicado, especialmente quando você precisa expressar emoções
-fortes ou executar movimentos complexos.
-
-Agora, considere as aspas triplas em Kotlin como um palco grande, amplo. Quando você está nesse tipo de palco, você tem liberdade para se
-mover, expressar-se e interagir de maneira natural. Você não precisa se preocupar com limitações rígidas de espaço ou movimento.
-
-Da mesma forma, as aspas triplas permitem que você crie strings sem se preocupar com a formatação precisa ou com a necessidade de escapar de
-caracteres especiais. Você pode escrever com fluidez, dividindo suas ideias em várias linhas, como se estivesse usando o espaço amplo do
-palco para se expressar.
+```kotlin
+val coracao = """
+    ,d88b.d88b,
+    88888888888
+    `Y8888888Y'
+      `Y888Y'  
+        `Y'    
+"""
+```
 
 ---
 
