@@ -1,7 +1,7 @@
 <details>
 <summary>
 
-# Exercícios
+<h3>Exercícios</h3>
 
 </summary>
 
@@ -19,8 +19,6 @@
 8. [Lambdas](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/README.md)
 
 </details>
-
----
 
 ## Olá, mundo! (Hello, world!)
 
