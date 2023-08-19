@@ -6,17 +6,19 @@
 <p></p>
 
 <!-- TOC -->
+
 * [Tipos anuláveis (Nullable types)](#tipos-anuláveis-nullable-types)
-  * [🔗 Tarefa](#-tarefa)
-  * [Caso de uso](#caso-de-uso)
-    * [Kotlin gerenciando variáveis que podem ser nulas](#kotlin-gerenciando-variáveis-que-podem-ser-nulas)
-    * [O operador "Elvis" `?:`](#o-operador-elvis-)
-    * [Burlando a Nulabilidade em Kotlin](#burlando-a-nulabilidade-em-kotlin)
-      * [Operador `!!`](#operador-)
-      * [Utilizando `lateinit`](#utilizando-lateinit)
-  * [Boas práticas](#boas-práticas)
-  * [Analogia](#analogia)
-  * [Exercícios](#exercícios)
+    * [🔗 Tarefa](#-tarefa)
+    * [Caso de uso](#caso-de-uso)
+        * [Kotlin gerenciando variáveis que podem ser nulas](#kotlin-gerenciando-variáveis-que-podem-ser-nulas)
+        * [O operador "Elvis" `?:`](#o-operador-elvis-)
+        * [Burlando a Nulabilidade em Kotlin](#burlando-a-nulabilidade-em-kotlin)
+            * [Operador `!!`](#operador-)
+            * [Utilizando `lateinit`](#utilizando-lateinit)
+    * [Boas práticas](#boas-práticas)
+    * [Analogia](#analogia)
+    * [Exercícios](#exercícios)
+
 <!-- TOC -->
 
 </details>
@@ -263,78 +265,77 @@ public void SendMessageToClient(
 
 No mundo da programação, é comum encontrar situações em que variáveis não possuem um valor atribuído, sendo identificadas como "nulas".
 
-Em Kotlin, os tipos anuláveis permitem que variáveis possam ou não ter um valor. Essa característica traz uma camada extra de segurança ao
-código, garantindo que a possibilidade de um valor ser nulo seja sempre explicitamente sinalizada.
+Em Kotlin, o tipo nulo permite que variáveis possuam ou não um valor, criando uma camada extra de segurança ao código, garantindo que a
+possibilidade de um valor ser nulo seja sempre explicitamente sinalizada.
 
-### Kotlin gerenciando variáveis que podem ser nulas
+### Variáveis que podem ser nulas
 
-Em Kotlin, sempre que uma variável tem potencial para ser nula, a linguagem sugere a adição de um `?` logo após o tipo da variável.
+Sempre que uma variável pode ser nula, a linguagem permite adicionar umm `?` logo após o tipo da variável:
+
+Para acessar os atributos desse tipo nulo de forma segura, podemos utilizar a operação `?.`
 
 ```kotlin
 val textoNulo: String? = null
-```
-
-Para ter uma garantia que a variável não é nula, podemos utilizar a operação `?.` para acessar membros dessa variável
-
-```kotlin
 val tamanho: Int? = textoNulo?.length
+println(tamanho == null) //Saída: true
 ```
 
-### O operador "Elvis" `?:`
+### O operador Elvis `?:`
 
-A ideia é que o operador Elvis fornece um valor "fallback" ou padrão se o valor à sua esquerda for `null`
+O operador Elvis fornece um valor de "reserva" ou padrão se o valor à sua esquerda for `null`
 
-Esse operador é extremamente útil para definir valores padrões.
+Note que com o operador Elvis, podemos remover o tipo nulo do `Int`:
 
 ```kotlin
-var tamanho: Int = textoNulo?.length ?: 0
+val textoNulo: String? = null
+val tamanho: Int = textoNulo?.length ?: 0
+println(tamanho == null) //Saída: false
 ```
 
 > Se você inclinar a cabeça para o lado esquerdo, o símbolo `?:` parece os olhos e a mecha de cabelo característica de Elvis Presley.
 
 ### Burlando a Nulabilidade em Kotlin
 
-Por mais que Kotlin lide com nulabilidade de forma segura, há momentos em que é preciso contornar essa segurança por várias razões, como ao
-integrar com bibliotecas Java ou por outros requisitos específicos.
+Por mais que Kotlin lide com nulabilidade de forma segura, há momentos em que é preciso contornar essa segurança.
 
 #### Operador `!!`
 
-Ao ter certeza de que uma variável nullable não é nula, é possível usar o operador `!!` para forçar o tratamento da variável como não
-nula. No entanto, se a variável for realmente nula, o programa lançará uma `NullPointerException`.
+Tendo certeza de que uma variável nullable não é nula, é possível usar o operador `!!` para forçar o tratamento da variável como não
+nula. 
+
+❗❗️No entanto, se a variável for realmente nula, o programa lançará uma `NullPointerException`.
 
 ```kotlin
-val nome: String? = obterNome()
-val tamanho = nome!!.length  // Atenção! Isso pode lançar NullPointerException.
+val nome: String? = null
+val tamanho = nome!!.length  // NullPointerException
 ```
 
 #### Utilizando `lateinit`
+Em Kotlin, as variáveis precisam ter um valor inicial ao serem inicializadas.
 
-Se uma variável deve ser inicializada posteriormente, pode-se usar o modificador `lateinit`, que informa ao compilador que essa variável
+É comum utilizar o tipo nulo para representar o estado de uma variável não inicializada.
+
+Para esses casos, podemos utilizar o modificador `lateinit`, que informa ao compilador que essa variável
 será inicializada antes de seu acesso, evitando a necessidade de torná-la nullable.
 
 No entanto, se tentarem acessá-la antes da sua inicialização, ocorrerá uma `UninitializedPropertyAccessException`.
 
 ```kotlin
 lateinit var nome: String
-
-println(nome) // Atenção! Isso pode lançar UninitializedPropertyAccessException.
-
-fun inicializar() {
-    nome = "Kotlin"
-}
+println(nome) // UninitializedPropertyAccessException
+nome = "Kotlin"
 ```
 
 ## Boas práticas
 
 1. **Minimizar o uso:** se há certeza de que uma variável nunca será nula, é aconselhável defini-la como não anulável. Isso
    simplifica o código e minimiza possíveis erros.
-2. **Prudência no uso do Elvis `?:`**:  crucial ter certeza de que o valor padrão faça sentido no contexto da expressão.
-3. **Priorizar `?.` ao invés de `!!`**: ao invés de forçar uma variável a ser tratada como não nula com `!!`, é benéfico optar pelo `?.` e
+2. **Prudência no uso do Elvis `?:`**  crucial ter certeza de que o valor padrão faça sentido no contexto da expressão.
+3. **Evitar burlar os tipos nulos**: ao invés de forçar uma variável a ser tratada como não nula com `!!`, é benéfico optar pelo `?.` e
    modelar seu código com uma tipagem segura.
 4. **Cuidado ao utilizar `lateinit`**: seu uso imprudente pode ser arriscado. É vital garantir a inicialização da variável antes de
-   acessá-la.
-5. **Testar rigorosamente**: Ao desenvolver testes, é essencial cobrir cenários em que variáveis possam ser nulas. Isso ajuda a identificar
-   potenciais problemas ainda na fase de desenvolvimento.
+   acessá-la, além de poder violar princípios de imutabilidade.
+5. **Testar rigorosamente**: ao escrever testes, é essencial cobrir cenários em que variáveis possam ser nulas. 
 
 ## Analogia
 
