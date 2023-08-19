@@ -6,19 +6,21 @@
 <p></p>
 
 <!-- TOC -->
+
 * [Tipos anuláveis (Nullable types)](#tipos-anuláveis-nullable-types)
-  * [🔗 Tarefa](#-tarefa)
-  * [Caso de uso](#caso-de-uso)
-    * [Kotlin gerenciando variáveis que podem ser nulas](#kotlin-gerenciando-variáveis-que-podem-ser-nulas)
-    * [O operador "Elvis" `?:`](#o-operador-elvis-)
-    * [Burlando a Nulabilidade em Kotlin](#burlando-a-nulabilidade-em-kotlin)
-      * [Operador `!!`](#operador-)
-      * [Utilizando `lateinit`](#utilizando-lateinit)
-      * [Use com cuidado](#use-com-cuidado)
-  * [Boas práticas](#boas-práticas)
-  * [Analogia](#analogia)
-    * [Nullables e caixas de presente](#nullables-e-caixas-de-presente)
-  * [Exercícios](#exercícios)
+    * [🔗 Tarefa](#-tarefa)
+    * [Caso de uso](#caso-de-uso)
+        * [Kotlin gerenciando variáveis que podem ser nulas](#kotlin-gerenciando-variáveis-que-podem-ser-nulas)
+        * [O operador "Elvis" `?:`](#o-operador-elvis-)
+        * [Burlando a Nulabilidade em Kotlin](#burlando-a-nulabilidade-em-kotlin)
+            * [Operador `!!`](#operador-)
+            * [Utilizando `lateinit`](#utilizando-lateinit)
+            * [Use com cuidado](#use-com-cuidado)
+    * [Boas práticas](#boas-práticas)
+    * [Analogia](#analogia)
+        * [Nullables e caixas de presente](#nullables-e-caixas-de-presente)
+    * [Exercícios](#exercícios)
+
 <!-- TOC -->
 
 </details>
@@ -340,24 +342,19 @@ fun inicializar() {
 
 ## Analogia
 
-### Nullables e caixas de presente
+Uma caixa de correios pode ou não conter encomendas, assim como uma variável em Kotlin: em alguns dias ela contém uma encomenda (um valor) e
+em outros, está vazia (nula).
 
-Imagine que cada variável em um programa é como uma caixa de presente. Essas caixas podem estar vazias, sem nenhum presente dentro, ou podem
-conter um presente específico. Esses presentes representam os valores que as variáveis podem armazenar.
+Da mesma forma que alguém verifica a caixa antes de pegar uma encomenda, em Kotlin, o `?` sinaliza a possibilidade da "caixa" estar vazia.
 
-Quando a caixa de presente contém algo, podemos comparar isso a uma variável que contém um valor **não nulo**. É como ter um presente real e
-tangível que você pode usar. Você sabe que tem algo útil e significativo para aproveitar.
+```kotlin
+val encomenda: Encomenda? = checarCaixaDeCorreio()
+val remetente: String? = encomenda?.remetente
 
-Por outro lado, se a caixa de presente estiver vazia, isso é comparável a uma variável **nula** em Kotlin. Não há valor presente, o que
-significa que a variável não está apontando para nada no momento. Assim como você não pode desfrutar de um presente que não está dentro da
-caixa, você não pode realizar operações em uma variável nula sem tomar medidas especiais.
-
-Em termos de programação, antes de tentar usar o valor de uma variável que pode ser nula, você deve verificar se há um valor presente, assim
-como você verificará se há um presente dentro da caixa antes de entregá-lo para alguém. Isso é semelhante a usar a verificação de nulidade
-no Kotlin.
-
-Além disso, você pode pensar no operador Elvis (`?:`) como um presente reserva. Se a caixa estiver vazia, em vez de ficar desapontado, você
-pode pegar um presente reserva que já estava preparado. Isso é comparável a atribuir um valor padrão a uma variável nula no Kotlin.
+if (remetente == null || encomenda == null) {
+    println("Ainda não chegou")
+}
+```
 
 ---
 
