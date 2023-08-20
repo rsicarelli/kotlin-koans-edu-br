@@ -1,25 +1,43 @@
-# Kotlin Koans em Português Brasileiro 🇧🇷
+# Kotlin Koans BR 🇧🇷
 
-Este projeto é uma adaptação dos "Kotlin Koans" visando oferecer ensino interativo da linguagem Kotlin em português brasileiro.
+Uma coleção de conteúdo baseada no renomado [Kotlin Koans](https://play.kotlinlang.org/koans/overview): uma ferramenta interativa para
+aprender Kotlin.
 
-## Sobre o Projeto
+## 🌌 Inspiração
 
-Os "Kotlin Koans" são exercícios projetados para auxiliar no aprendizado da linguagem Kotlin de forma prática. Esta adaptação visa traduzir
-o conteúdo original para o português, facilitando o acesso aos falantes nativos.
+O [Kotlin Koans original](https://github.com/Kotlin/kotlin-koans-edu) é uma sequência de exercícios criados pela JetBrains.
 
-## Como Utilizar
+Devido à sua eficácia, o Kotlin Koans tornou-se um dos métodos preferidos por quem já conhece Java para iniciar no mundo do Kotlin.
 
-1. Visite o [Kotlin Koans](https://play.kotlinlang.org/koans/overview) para conhecer os módulos e exercícios disponíveis.
-2. Neste repositório, você encontrará uma pasta para cada módulo dos Kotlin Koans, contendo traduções e outros recursos relevantes.
-3. Utilize os exercícios do site Kotlin Koans em combinação com os arquivos deste repositório para uma aprendizagem mais interativa.
+Este repositório apresenta uma adaptação do conteúdo em português 🇧🇷 com muito conteúdo exclusivo que auxilia no aprendizado. Além disso,
+foram feitas adaptações para 9 outras linguagens de programação, incluindo:
 
-### Comece por aqui
+- Swift, Dart, JavaScript, TypeScript, Python, Go, entre outras.
 
-👋 [Olá, mundo! (Hello, world!)](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/README.md)
+## 🧰 Formato
+
+Cada exercício é proposto como um desafio: começando com um teste unitário falhando que precisa ser resolvido.
+
+### 🚀 Como utilizar
+
+Existem três formas principais de explorar os exercícios:
+
+1. 🥉**Pelo site do [Kotlin Koans](https://play.kotlinlang.org/koans/overview)**: Ideal para quem gosta de ambientes online e tem facilidade
+   com o inglês.
+2. 🥈**Usando
+   o [Plugin para IntelliJ ou Android Studio](https://plugins.jetbrains.com/plugin/10081-jetbrains-academy/docs/learner-start-guide.html)**:
+   Recomendado para quem prefere ter tudo integrado ao ambiente de desenvolvimento e tem familiaridade com o inglês.
+3. 🥇**Através deste projeto**, em conjunto com a opção 1 ou 2. Com conteúdo e exemplos totalmente em português, encontra-se soluções e
+   tarefas com exemplos em outras linguagens como Swift, JavaScript e Dart, além de conteúdo adicional com analogias, casos de uso, entre
+   outros.
+
+## Por onde começar?
+
+🔗 [Introdução](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/README.md)
 
 ## Tirando Dúvidas
 
-Caso tenha dúvidas ou precise de esclarecimentos sobre o conteúdo, ou as soluções, siga os passos:
+Em caso de dúvidas ou necessidade de esclarecimentos sobre o conteúdo, ou as soluções, recomenda-se seguir estes passos:
 
 1. **Utilize a Busca**: Antes de abrir uma issue, veja se sua dúvida já foi abordada.
 2. **Abra uma Issue**: Se não encontrar sua dúvida, abra uma issue
@@ -35,8 +53,8 @@ A sua contribuição é essencial para a evolução deste projeto!
 
 ### 1. Abrindo uma Issue
 
-Se encontrou um problema ou tem uma sugestão, abra uma issue. Antes disso, use a busca para ver se o assunto já foi discutido. Para criar
-uma issue, [clique aqui](https://github.com/rsicarelli/kotlin-koans-edu-br/issues/new).
+Ao encontrar um problema ou ao ter uma sugestão, recomenda-se abrir
+uma [issue](https://github.com/rsicarelli/kotlin-koans-edu-br/issues/new).
 
 ### 2. Contribuindo com Código
 
@@ -49,12 +67,12 @@ Para contribuir diretamente:
 5. **Push**: Envie para o seu fork.
 6. **Pull Request**: Crie um pull request para submeter suas alterações no repositório original.
 
-### Contribuindo com as Traduções de Código
+### 🤝 Contribuindo com as traduções de código
 
 Em cada pasta, você encontrará soluções adaptadas para várias linguagens como: Java, C#, Go, JavaScript, PHP, Dart, Python, Swift e
-TypeScript. As soluções foram adaptadas com conhecimento limitado destas linguagens.
+TypeScript. As soluções se adaptaram com base em um conhecimento limitado destas linguagens.
 
-**Precisamos da ajuda da comunidade para**:
+**Como você pode ajudar**:
 
 - **Revisar as Implementações**: Se tem conhecimento em alguma destas linguagens, sua revisão será valiosa.
 - **Corrigir Erros**: Se encontrar erros na tradução ou lógica, informe ou corrija.
@@ -62,8 +80,5 @@ TypeScript. As soluções foram adaptadas com conhecimento limitado destas lingu
 - **Novas Linguagens**: Contribua com soluções em linguagens ainda não abordadas.
 
 ## Licença
+
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE.txt](LICENSE.txt) para detalhes.
-
-## Agradecimentos
-
-- Agradecemos à equipe do projeto original "Kotlin Koans Edu" pelo recurso educativo providenciado.
