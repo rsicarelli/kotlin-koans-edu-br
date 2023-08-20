@@ -9,11 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/DataClassesTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/DataClassesTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/ExtensionsFunctionsTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/ExtensionsFunctionsTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/RenameOnImportKotlinTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/RenameOnImportKotlinTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/SealedClassesTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/SealedClassesTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/SmartCastsTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/classes/SmartCastsTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +319,7 @@
       <workItem from="1692384784877" duration="18872000" />
       <workItem from="1692448863324" duration="173000" />
       <workItem from="1692449037646" duration="48000" />
-      <workItem from="1692449092726" duration="23252000" />
+      <workItem from="1692449092726" duration="23620000" />
     </task>
     <servers />
   </component>

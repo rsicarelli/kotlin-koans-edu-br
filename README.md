@@ -32,6 +32,39 @@ Existem três formas principais de explorar os exercícios:
 
 ### 🧱Estrutura
 
+```
+koans/
+├── commonMain/
+│   ├── introduction/
+│   │   ├── helloWorld/
+│   │   │   ├── references/
+│   │   │   │   ├── HelloWorldJava.java
+│   │   │   │   ├── HelloWorldC#.cs
+│   │   │   │   ├── HelloWorldDart.dart
+│   │   │   │   ├── HelloWorldGo.go
+│   │   │   │   ├── HelloWorldJavaScript.js
+│   │   │   │   ├── HelloWorldPHP.php
+│   │   │   │   ├── HelloWorldPython.py
+│   │   │   │   ├── HelloWorldSwift.swift
+│   │   │   │   └── HelloWorldTypeScript.ts
+│   │   │   ├── HelloWorldKotlin.kt
+│   │   │   └── README.md
+│   │   ├── namedArguments/
+│   │   │   ├── references/
+│   │   │   │   ├── NamedArgumentsSwift.swift
+│   │   │   │   └── ...            
+│   │   │   ├── NamedArgumentsKotlin.kt
+│   │   │   └── README.md
+│   │   └── ...    
+│   ├── classes
+│   └── ...         
+└── commonTest/
+    ├── introduction/
+    │   ├── HelloWorldTests.kt
+    │   └── ...
+    └── ...
+```
+
 ## 🚀 Por onde começar?
 
 🔗 [Introdução](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/README.md)
