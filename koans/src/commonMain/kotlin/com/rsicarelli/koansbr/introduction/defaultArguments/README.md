@@ -6,15 +6,13 @@
 <p></p>
 
 <!-- TOC -->
-
 * [Argumentos padrão (Default arguments)](#argumentos-padrão-default-arguments)
-    * [🔗 Tarefa](#-tarefa)
-    * [Caso de uso](#caso-de-uso)
-        * [Vantagens](#vantagens)
-        * [Desvantagens](#desvantagens)
-    * [Analogia](#analogia)
-    * [Índice de exercícios](#índice-de-exercícios)
-
+  * [🔗 Tarefa](#-tarefa)
+  * [Caso de uso](#caso-de-uso)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+  * [Analogia](#analogia)
+  * [Índice de exercícios](#índice-de-exercícios)
 <!-- TOC -->
 
 </details>

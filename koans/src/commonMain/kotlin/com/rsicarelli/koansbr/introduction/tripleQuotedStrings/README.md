@@ -6,15 +6,13 @@
 <p></p>
 
 <!-- TOC -->
-
 * [Strings com três aspas (Triple-quoted strings)](#strings-com-três-aspas-triple-quoted-strings)
-    * [Tarefa](#tarefa)
-    * [Caso de uso](#caso-de-uso)
-        * [Vantagens](#vantagens)
-        * [Desvantagens](#desvantagens)
-    * [Analogia](#analogia)
-    * [Exercícios](#exercícios)
-
+  * [Tarefa](#tarefa)
+  * [Caso de uso](#caso-de-uso)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+  * [Analogia](#analogia)
+  * [Exercícios](#exercícios)
 <!-- TOC -->
 
 </details>
