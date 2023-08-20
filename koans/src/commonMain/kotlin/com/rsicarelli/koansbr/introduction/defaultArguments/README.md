@@ -6,20 +6,22 @@
 <p></p>
 
 <!-- TOC -->
+
 * [Argumentos padrão (Default arguments)](#argumentos-padrão-default-arguments)
-  * [🔗 Tarefa](#-tarefa)
-  * [Caso de uso](#caso-de-uso)
-    * [Vantagens](#vantagens)
-    * [Desvantagens](#desvantagens)
-  * [Analogia](#analogia)
-  * [Índice de exercícios](#índice-de-exercícios)
+    * [🔗 Tarefa](#-tarefa)
+    * [Caso de uso](#caso-de-uso)
+        * [Vantagens](#vantagens)
+        * [Desvantagens](#desvantagens)
+    * [Analogia](#analogia)
+    * [Índice de exercícios](#índice-de-exercícios)
+
 <!-- TOC -->
 
 </details>
 
 ## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Default%20arguments/Task.kt)
 
-Imagine que você tenha várias sobrecargas de `foo()` em na sua linguagem favorita.
+Imagine que você tenha várias sobrecargas de `foo()` na sua linguagem favorita.
 
 Você pode substituir todas essas sobrecargas por uma única função em Kotlin.
 
@@ -265,62 +267,51 @@ class SobrecargaTypeScript {
 
 ## Caso de uso
 
-Os [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) é uma característica útil que permite que argumentos
-sejam omitidos quando uma função é chamada, nesse caso,
-o compilador usará os "default arguments" para cada argumento.
+Quando se fala em [`default arguments`](https://kotlinlang.org/docs/functions.html#default-arguments) ou argumentos padrão, está se
+referindo a uma característica bem prática em Kotlin.
+
+Ela permite que alguns argumentos sejam deixados de lado quando alguém chama uma função.
+
+Se isso acontecer, o compilador usa esses argumentos padrão no lugar dos argumentos que foram pulados.
 
 ```kotlin
-fun printaDetalhes(nome: String, age: Int = 50) {
-    println("Nome: $name, Idade: $age")
-}
+fun calculaDesconto(preco: Double, taxaDesconto: Double = 0.05) = preco - preco * taxaDesconto
 
-fun main(args: Array<String>) {
-    printaDetalhes("Aurora") // A idade não é passada
-    printaDetalhes("João", 30) // A idade é passada
-}
+calculaDesconto(preco = 50.0)
+calculaDesconto(preco = 100.0, taxaDesconto = 0.10) 
 ```
 
-No exemplo acima, a função `printaDetalhes` recebe dois argumentos, `nome` e `idade`.
+No exemplo acima, o argumento `taxaDesconto` tem um valor padrão de 5% de desconto. Ao chamar a função `calculaDesconto` sem especificar
+a `taxaDesconto`, o desconto de 5% será aplicado sobre o preço.
 
-Perceba que no argumento `idade`, temos uma idade predefinida como `50`. Assim, quando chamamos a função `printaDetalhes` e omitimos o
-argumento `idade`, a função irá mostrar `50` para a idade.
-
-No entanto, se passarmos o argumento `idade`, como fizemos na segunda chamada da função, o valor passado `30` será usado, e não o valor
-predefinido.
+Porém, ao passar o valor `0.10` para `taxaDesconto`, esse será o valor utilizado, substituindo o desconto padrão de 5% para 10%.
 
 ### Vantagens
 
-- **Menos Sobrecargas**: permite uma única função em vez de várias versões com diferentes argumentos.
+- **Menos sobrecargas**: permite uma única função em vez de várias versões com diferentes argumentos.
 - **Flexibilidade**: é possível chamar a função com diferentes combinações de argumentos, contanto que os obrigatórios sejam fornecidos.
 - **Compatibilidade com Java**: funções com argumentos padrão são compatíveis com código Java, atuando como sobrecargas.
 
 ### Desvantagens
 
-- **Complexidade do Código**: Quando utilizado em excesso, pode complicar a leitura e entendimento do código.
-- **Descarte no Bytecode Java**: Em Java, os argumentos padrão do Kotlin não são reconhecidos, por isso devemos utilizar a
-  anotação `@JvmOverloads` para utilizá-los.
+- **Complexidade do código**: se usados em excesso, podem complicar a leitura e o entendimento do código.
+- **Descarte no bytecode Java**: No Java, argumentos padrão do Kotlin não são reconhecidos. Para contornar isso, é necessário usar a
+  anotação `@JvmOverloads`
 
 ---
 
 ## Analogia
 
-No Brasil, o nome dado ao pão francês varia de cidade para cidade. Em Kotlin, da mesma forma, podemos ter valores padrão que diferem
-conforme a configuração:
-
+No Brasil, a denominação para o "pão francês" varia conforme a região ou cidade:
 ```kotlin
-enum class TipoPao {
-    FRANCÊS, CACETINHO, CARIOQUINHA,
-    DE_SAL, CARECA, PÃOZINHO, JACÓ,
-}
-
-fun pedidoRecife(tipo: TipoPao = TipoPao.DE_SAL) = tipo.name
-fun pedidoManaus(tipo: TipoPao = TipoPao.CARECA) = tipo.name
-fun pedidoAracaju(tipo: TipoPao = TipoPao.JACÓ) = tipo.name
-fun pedidoSaoPaulo(tipo: TipoPao = TipoPao.FRANCÊS) = tipo.name
-fun pedidoBrasilia(tipo: TipoPao = TipoPao.PÃOZINHO) = tipo.name
-fun pedidoFortaleza(tipo: TipoPao = TipoPao.CARIOQUINHA) = tipo.name
-fun pedidoPortoAlegre(tipo: TipoPao = TipoPao.CACETINHO) = tipo.name
+fun pedirEmRecife(tipo: String = "Pão de sal") = Pao(tipo)
+fun pedirEmManaus(tipo: String = "Pão careca") = Pao(tipo)
+fun pedirEmAracaju(tipo: String = "Pão jacó") = Pao(tipo)
+fun pedirEmSaoPaulo(tipo: String = "Pão francês") = Pao(tipo)
+fun pedirEmFortaleza(tipo: String = "Pão carioquinha") = Pao(tipo)
+fun pedirEmPortoAlegre(tipo: String = "Pão cacetinho") = Pao(tipo)
 ```
+
 ---
 
 ## Índice de exercícios
