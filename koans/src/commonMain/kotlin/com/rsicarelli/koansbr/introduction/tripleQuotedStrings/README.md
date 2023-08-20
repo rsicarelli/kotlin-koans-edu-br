@@ -6,27 +6,27 @@
 <p></p>
 
 <!-- TOC -->
+
 * [Strings com três aspas (Triple-quoted strings)](#strings-com-três-aspas-triple-quoted-strings)
-  * [Tarefa](#tarefa)
-  * [Caso de uso](#caso-de-uso)
-    * [Vantagens](#vantagens)
-    * [Desvantagens](#desvantagens)
-  * [Analogia](#analogia)
-  * [Exercícios](#exercícios)
+    * [Tarefa](#tarefa)
+    * [Caso de uso](#caso-de-uso)
+        * [Vantagens](#vantagens)
+        * [Desvantagens](#desvantagens)
+    * [Analogia](#analogia)
+    * [Exercícios](#exercícios)
+
 <!-- TOC -->
 
 </details>
 
-## Tarefa
+## [Tarefa](https://play.kotlinlang.org/koans/Introduction/Triple-quoted%20strings/Task.kt)
 
-[Kotlin Koans: Triple quoted Strings](https://play.kotlinlang.org/koans/Introduction/Triple-quoted%20strings/Task.kt)
+Substitua a chamada `trimIndent` pela chamada `trimMargin`, definindo `#` como valor de prefixo, assim a string resultante não
+conterá o caractere de prefixo.
 
-Substitua a chamada `trimIndent` pela chamada `trimMargin` tomando `#` como valor de prefixo para que a string resultante não contenha o
-caractere de prefixo.
-
-Você pode usar as funções [`trimIndent`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html)
-e [`trimMargin`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html)para formatar ‘strings’ de múltiplas linhas com
-aspas triplas conforme o código ao redor.
+Há funções como [`trimIndent`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html)
+e [`trimMargin`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html) que servem para formatar strings de múltiplas
+linhas com aspas triplas conforme o contexto do código.
 
 ## Caso de uso
 
@@ -35,7 +35,7 @@ de Strings com várias linhas e caracteres especiais, eliminando a necessidade d
 
 Esta técnica realça a clareza do código e simplifica a gestão de textos longos ou com estruturas intrincadas.
 
-Com um par de três aspas `""" """` é possível declara um texto com multipla linhas em Kotlin
+Utilizando um par de três aspas `""" """`, torna-se possível declarar um texto de múltiplas linhas em Kotlin.
 
 ```kotlin
 val texto = """
@@ -45,23 +45,23 @@ val texto = """
 """
 ```
 
-No contexto das aspas triplas, tudo é considerado literal. Portanto, sequências como `\n` (nova linha) e `\t` (tabulação) são apenas texto, sem
-qualquer tratamento especial.
+Neste contexto, sequências como `\n` (nova linha) e `\t` (tabulação) são interpretadas literalmente como texto, sem receber tratamento
+especial.
 
 ### Vantagens
 
 - **Simplicidade**: facilidade para trabalhar com textos longos ou com formatações específicas.
 - **Escape de caracteres não é necessário**: caracteres especiais não precisam ser "escapados", melhorando a clareza e a legibilidade do
   código.
-- **Um tipo de modelo de String** facilitando a incorporação de valores dinâmicos em textos, tornando a manipulação de strings mais
-  flexível.
+- **Oferecem um tipo de modelo de String**, facilitando a incorporação de valores dinâmicos em textos e tornando a manipulação de strings
+  mais versátil.
 
 ### Desvantagens
 
 - **Espaço em branco indesejado** pode ser evitado utilizando funções como `trimMargin()` e `trimIndent()` para remover esses espaços
   extras.
-- **Menos suporte em algumas IDEs** embora muito raro, que algumas IDEs e ferramentas de edição de texto podem apresentar dificuldades na
-  coloração de sintaxe, formatação automática, etc.
+- **Menos suporte em algumas IDEs** embora seja raro, é possível que algumas IDEs e ferramentas de edição de texto enfrentam desafios
+  na coloração de sintaxe ou na formatação automática.
 - **Problemas de desempenho**: em algumas situações, como loops intensivos, seu uso excessivo pode levar a problemas de desempenho.
 
 ## Analogia
