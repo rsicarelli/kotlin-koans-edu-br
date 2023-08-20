@@ -263,12 +263,12 @@ public void SendMessageToClient(
 
 No mundo da programação, é comum encontrar situações em que variáveis não possuem um valor atribuído, sendo identificadas como "nulas".
 
-Em Kotlin, o tipo nulo permite que variáveis possuam ou não um valor, criando uma camada extra de segurança ao código, garantindo que a
-possibilidade de um valor ser nulo seja sempre explicitamente sinalizada.
+No Kotlin, o tipo nulo assegura que variáveis tenham ou não um valor, proporcionando uma camada extra de segurança ao código. Assim, quando
+um valor pode ser nulo, isso é claramente indicado.
 
 ### Variáveis que podem ser nulas
 
-Sempre que uma variável pode ser nula, a linguagem permite adicionar umm `?` logo após o tipo da variável:
+Sempre que uma variável pode ser nula, a linguagem permite adicionar um `?` logo após o tipo da variável:
 
 Para acessar os atributos desse tipo nulo de forma segura, podemos utilizar a operação `?.`
 
@@ -280,7 +280,7 @@ println(tamanho == null) //Saída: true
 
 ### O operador Elvis `?:`
 
-O operador Elvis fornece um valor de "reserva" ou padrão se o valor à sua esquerda for `null`
+O operador Elvis entrega um valor substituto ou padrão quando o valor à sua esquerda é `null`.
 
 Note que com o operador Elvis, podemos remover o tipo nulo do `Int`:
 
@@ -290,16 +290,15 @@ val tamanho: Int = textoNulo?.length ?: 0
 println(tamanho == null) //Saída: false
 ```
 
-> Se você inclinar a cabeça para o lado esquerdo, o símbolo `?:` parece os olhos e a mecha de cabelo característica de Elvis Presley.
+> Inclinando a cabeça para o lado esquerdo, nota-se que o símbolo `?:` lembra os olhos e a mecha de cabelo típica de Elvis Presley.
 
 ### Burlando a Nulabilidade em Kotlin
 
-Por mais que Kotlin lide com nulabilidade de forma segura, há momentos em que é preciso contornar essa segurança.
+Embora Kotlin trate nulabilidade de maneira segura, existem situações que exigem um contorno dessa proteção.
 
 #### Operador `!!`
 
-Tendo certeza de que uma variável nullable não é nula, é possível usar o operador `!!` para forçar o tratamento da variável como não
-nula. 
+Ao ter certeza de que uma variável nullable não está nula, pode-se utilizar o operador `!!` para tratá-la como se não fosse nula.
 
 ❗❗️No entanto, se a variável for realmente nula, o programa lançará uma `NullPointerException`.
 
@@ -309,7 +308,8 @@ val tamanho = nome!!.length  // NullPointerException
 ```
 
 #### Utilizando `lateinit`
-Em Kotlin, as variáveis precisam ter um valor inicial ao serem inicializadas.
+
+No Kotlin, as variáveis devem ser inicializadas com um valor.
 
 É comum utilizar o tipo nulo para representar o estado de uma variável não inicializada.
 
@@ -328,19 +328,19 @@ nome = "Kotlin"
 
 1. **Minimizar o uso:** se há certeza de que uma variável nunca será nula, é aconselhável defini-la como não anulável. Isso
    simplifica o código e minimiza possíveis erros.
-2. **Prudência no uso do Elvis `?:`**  crucial ter certeza de que o valor padrão faça sentido no contexto da expressão.
+2. **Prudência no uso do Elvis `?:`** é crucial. Assegure-se de que o valor padrão é apropriado para o contexto da expressão.
 3. **Evitar burlar os tipos nulos**: ao invés de forçar uma variável a ser tratada como não nula com `!!`, é benéfico optar pelo `?.` e
    modelar seu código com uma tipagem segura.
 4. **Cuidado ao utilizar `lateinit`**: seu uso imprudente pode ser arriscado. É vital garantir a inicialização da variável antes de
    acessá-la, além de poder violar princípios de imutabilidade.
-5. **Testar rigorosamente**: ao escrever testes, é essencial cobrir cenários em que variáveis possam ser nulas. 
+5. **Realize testes rigorosos**: quando criar testes, é fundamental abordar cenários onde variáveis possam estar nulas.
 
 ## Analogia
 
-Uma caixa de correios pode ou não conter encomendas, assim como uma variável em Kotlin: em alguns dias ela contém uma encomenda (um valor) e
-em outros, está vazia (nula).
+Uma caixa de correio pode ter ou não encomendas em seu interior, semelhante a uma variável no Kotlin. Em certos momentos, ela pode conter
+uma encomenda (um valor), enquanto em outros, está vazia (nula).
 
-Da mesma forma que alguém verifica a caixa antes de pegar uma encomenda, em Kotlin, o `?` sinaliza a possibilidade da "caixa" estar vazia.
+Assim como alguém checa a caixa antes de retirar uma encomenda, no Kotlin o `?` indica que essa "caixa" pode estar vazia.
 
 ```kotlin
 val encomenda: Encomenda? = checarCaixaDeCorreio()
