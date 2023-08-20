@@ -22,14 +22,13 @@
 
 Especifique o tipo de retorno `Nothing` para a função `failWithWrongAge`.
 
-Observe que, sem o tipo `Nothing`, a função `checkAge` não é compilada porque o compilador
-assume que `age` pode ser `null`.
+Sem especificar o tipo `Nothing`, a compilação da função `checkAge` falha, uma vez que o compilador pressupõe que age possa ser `null`.
 
 ## Caso de uso
 
 `Nothing` representa um valor que nunca existe, e não é permitido ter um valor ou objeto desta classe porque seu construtor é privado.
 
-O `Nothing` é utilizado para indicar o tipo de funções que nunca retornam um valor.
+`Nothing` serve para denotar funções que nunca devolvem um valor.
 
 ```kotlin
 fun esperarPraSempre(): Nothing {
@@ -41,7 +40,7 @@ fun esperarPraSempre(): Nothing {
 
 ### O papel especial de `Nothing`
 
-Na [teoria dos tipos](https://es.wikipedia.org/wiki/Teor%C3%ADa_de_tipos), `Nothing` é considerado o "tipo mais baixo", ou seja,
+Na [teoria dos tipos](https://pt.wikipedia.org/wiki/Teoria_dos_tipos), `Nothing` é considerado o "tipo mais baixo", ou seja,
 é um subtipo de todos os outros tipos em Kotlin. Isso faz com que o valor de `Nothing` possa ser atribuído a variáveis de todos os tipos.
 
 ```kotlin
@@ -53,8 +52,8 @@ fun encontrarSessao(idSessao: Int): Sessao =
         ?: erro("Sessão não encontrada!")
 ```
 
-Mesmo que a função `erro()` retorne `Nothing`, é aceitável atribuir seu valor a uma variável do tipo `Sessao` porque `Nothing` é um subtipo
-de `Sessao`.
+Ainda que a função `erro()` devolva `Nothing`, a atribuição do seu resultado a uma variável de tipo `Sessao` é válida, pois `Nothing` atua
+como subtipo de `Sessao`.
 
 ### Vantagens
 
@@ -67,8 +66,8 @@ de `Sessao`.
 
 ### Desvantagens
 
-- **Desafio inicial**: para novatos em Kotlin, o `Nothing` pode parecer um enigma. É um conceito que exige um pouco de
-  adaptação.
+- **Adaptação necessária**: para quem está iniciando em Kotlin, o `Nothing` pode se apresentar como um conceito enigmático, requerendo uma
+  curva de aprendizado.
 - **Uso excessivo**: é possível cair na armadilha de usar o `Nothing` de maneira confusa e excessiva, complicando o
   código ao invés de simplificar.
 
@@ -77,7 +76,7 @@ de `Sessao`.
 Imagine um livro colorido que tenha uma capa com título, autores e editora. No entanto, ao abrir, todas as
 páginas estão em branco. O livro existe, tem peso, tem formato, mas não tem conteúdo.
 
-Assim é o `Nothing` em Kotlin. Ele está lá, tem uma representação, mas não carrega valor ou significado em si.
+É assim que o `Nothing` funciona em Kotlin. Ele tem presença, possui representação, porém não contém um valor ou significado intrínseco.
 
 No código, quando uma função retorna `Nothing`, é como se estivéssemos abrindo um livro esperando uma história, mas encontramos páginas
 vazias.
