@@ -19,10 +19,10 @@
     * [🎓 História](#-história)
     * [📈 Kotlin na atualidade](#-kotlin-na-atualidade)
     * [🚀 Kotlin e o futuro](#-kotlin-e-o-futuro)
-      * [🌍 **Multiplataforma por natureza**](#-multiplataforma-por-natureza)
-      * [🖥️ **Execução nativa**:](#-execução-nativa)
-      * [🔝 **Demanda em alta**:](#-demanda-em-alta)
-      * [🌱 **Investindo no amanhã**:](#-investindo-no-amanhã)
+      * [🌍 Multiplataforma por natureza](#-multiplataforma-por-natureza)
+      * [🖥️ Execução nativa](#-execução-nativa)
+      * [🔝 Demanda em alta](#-demanda-em-alta)
+      * [🌱 Investindo no amanhã](#-investindo-no-amanhã)
 <!-- TOC -->
 
 </details>
