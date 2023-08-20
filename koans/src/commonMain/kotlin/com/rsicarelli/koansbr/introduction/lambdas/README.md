@@ -9,7 +9,6 @@
 * [Lambdas](#lambdas)
   * [🔗 Tarefa](#-tarefa)
   * [Caso de uso](#caso-de-uso)
-    * [O que são lambdas?](#o-que-são-lambdas)
     * [Lamba também é um tipo](#lamba-também-é-um-tipo)
     * [O que é `it`?](#o-que-é-it)
     * [Lambdas como último argumento](#lambdas-como-último-argumento)
@@ -26,13 +25,13 @@
 
 ## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Lambdas/Task.kt)
 
-Passe um lambda para a função [`any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html)
-para verificar se a coleção contém um número par.
-A função `any` recebe um predicado como argumento e retorna verdadeiro se pelo menos um elemento satisfizer o predicado.
+Passe um lambda para a função [`any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html)para verificar se a coleção
+contém um número par.
+
+A função any, quando aplicada a uma coleção, recebe um predicado como argumento e retorna verdadeiro se pelo menos um elemento satisfizer a
+condição.
 
 ## Caso de uso
-
-### O que são lambdas?
 
 [Lambdas](https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions) são funções anônimas que oferecem uma forma
 elegante e poderosa de representar ações ou comportamentos em Kotlin.
@@ -41,40 +40,34 @@ O poder dos lambdas está na sua simplicidade. Elas permitem expressar uma ideia
 números pode ser representada assim:
 
 ```kotlin
-val soma = { x, y -> x + y }
+val soma: (Int, Int) -> Int = { x, y -> x + y }
 println(soma(5, 3))  // Saída: 8
 ```
 
-> `{ x, y -> x + y }` representa um lambda que soma dois valores.
+- `(Int, Int) -> Int`: é a assinatura do lambda: recebe dois argumentos `Int` e retorna outro `Int`.
+- `{ x, y -> x + y }` define o bloco de execução. Os argumentos são nomeados antes do símbolo ->. Em seguida, vem a expressão que fornece o
+  resultado do tipo esperado.
 
 ### Lamba também é um tipo
 
-Outra grande vantagem é tratar funções como objetos, o que significa que podemos passar funções como argumentos:
+Em Kotlin os lambdas são tratados de forma flexível, podendo, por exemplo, ser passadas como argumentos,
+retornadas por outras funções ou atribuídas a variáveis.
 
 ```kotlin
-fun aplicarOperacao(
-    a: Int = 5,
-    b: Int = 3,
-    operacao: (Int, Int) -> Int,
-): Int = operacao(a, b)
-```
+val formulaTriangulo: (Polígono) -> Double = { it.base * it.altura / 2 }
+val formulaRetangulo: (Polígono) -> Double = { it.base * it.altura }
 
-- `operacao:` É o nome da variável ou parâmetro, que neste contexto é um lambda.
-- `(Int, Int)` Os tipos dos parâmetros que a lamba aceita. Neste caso, aceita dois parâmetros, ambos do tipo `Int`.
-- `-> Int`: Define o tipo de retorno do lambda. Aqui, a função retorna um `Int`.
+class Polígono(val base: Double, val altura: Double) {
+    fun calcularArea(formula: (Polígono) -> Double): Double {
+        return formula(this) //this representa "esta instancia"
+    }
+}
 
-```kotlin
-val soma = { x, y -> x + y }
-val resultadoSoma = aplicarOperacao(operacao = soma)
+val triangulo = Polígono(base = 10.0, altura = 5.0)
+val retângulo = Polígono(base = 8.0, altura = 6.0)
 
-val subtracao = { x, y -> x - y }
-val resultadoSubtracao = aplicarOperacao(operacao = subtracao)
-
-val divisao = { x, y -> x / y }
-val resultadoSubtracao = aplicarOperacao(operacao = divisao)
-
-val multiplicacao = { x, y -> x * y }
-val resultadoMultiplicacao = aplicarOperacao(operacao = multiplicacao)
+println("Área triangulo: ${triangulo.calcularArea(formulaTriangulo)}")
+println("Área retângulo: ${retângulo.calcularArea(formulaRetangulo)}")
 ```
 
 ### O que é `it`?
@@ -84,13 +77,14 @@ palavra-chave `it`, sem precisar declará-lo explicitamente.
 
 ```kotlin
 val numeros = listOf(1, 2, 3, 4, 5)
-val numerosImpares = numbers.filter { numbero -> numbero % 2 == 0 }
-val numerosPares = numbers.filter { it % 2 != 0 }
+
+val impares = numbers.filter { numero -> numero % 2 == 0 }
+val pares = numbers.filter { it % 2 != 0 }
 ```
 
 ### Lambdas como último argumento
 
-Se um lambda for o último argumento de uma função, podemos fechar os `)` e acessar a lambda do terceiro parâmetro abrindo um par de`{}`
+Se um lambda for o último argumento de uma função, pode-se fechar os `)` e colocar o lambda fora dos parênteses usando `{}`.
 
 ```kotlin
 fun aplicarOperacao(a: Int, b: Int, operacao: (Int, Int) -> Int): Int = operacao(a, b)
@@ -107,8 +101,8 @@ aplicarOperacao(
 
 - **Código conciso**: Lambdas simplificam a sintaxe das funções.
 - **[Funções de ordem superior](https://kotlinlang.org/docs/lambdas.html#higher-order-functions)
-  e [programação funcional](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_funcional)**: lambdas permitem abstrações mais expressivas e
-  utilizar conceitos funcionais com imperativo.
+  e [programação funcional](https://pt.wikipedia.org/wiki/Programa%C3%A7%C3%A3o_funcional)**: lambdas permite a combinação de conceitos
+  funcionais com programação imperativa
 - **Flexibilidade**: o comportamento pode ser passado como argumento usando lambdas.
 - **Integração Moderna**: Ótima compatibilidade com APIs 'kotlin-first', como
   o [Jetpack Compose](https://developer.android.com/jetpack/compose).
@@ -118,7 +112,7 @@ aplicarOperacao(
 - **Desempenho**: Em alguns casos, lambdas podem ser menos eficientes, como captura intensiva de contexto.
 - **Legibilidade**: O uso exagerado pode complicar a compreensão.
 - **Depuração**: Lambdas podem gerar stacktraces complexas.
-- **Retrocompatibilidade**: Limitada em versões superiores ao Java 8.
+- **Retrocompatibilidade**: Em versões anteriores ao Java 8, a retrocompatibilidade é limitada.
 
 ### Testabilidade
 
