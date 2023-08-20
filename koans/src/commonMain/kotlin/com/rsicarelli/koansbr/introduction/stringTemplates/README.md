@@ -34,15 +34,16 @@ Usando a variável `month`, reescreva esse padrão de forma que ele corresponda 
 Em Kotlin, as [string templates](https://kotlinlang.org/docs/strings.html#string-templates) são uma maneira de combinar strings com
 variáveis ou expressões.
 
-Um modelo de string é como um espaço reservado que é possível inserir um cifrão `$` seguido do nome da variável ou expressão. O valor real
-será colocado no espaço nesse modelo quando a string for utilizada.
+Um modelo de string funciona como um espaço reservado no qual se pode inserir um cifrão `$` seguido do nome da variável ou expressão.
+
+O valor real será colocado no espaço nesse modelo quando a string for utilizada.
 
 ```kotlin
 val nome = "Mel"
 println("Bom dia, $nome.") // Saída: Bom dia, Mel.
 ```
 
-Também é possível ter expressões e chamar outros métodos, adicionando chaves `${}`
+Também se pode incluir expressões e chamar outros métodos, utilizando chaves `${}`.
 
 ```kotlin
 fun recuperaNome() = "Dani"
@@ -57,19 +58,18 @@ println("Olá, ${recuperaNome()}. Você irá completar ${idade + 5} em cinco ano
 
 ### Desvantagens
 
-- **Complexidade**: Se você exagerar nos templates, a string pode ficar difícil de entender.
-- **Riscos de segurança**: Se você inserir informações do usuário diretamente nos templates, pode abrir brechas para problemas de segurança.
-  principalmente se você loga esse valor.
-- **Problemas de desempenho**: Em situações específicas, usar muitos templates pode ser menos eficiente que juntar strings, especialmente
-  para textos muito grandes.
+- **Complexidade**: quando se exagera no uso dos templates, a string pode ser difícil de entender.
+- **Riscos de segurança**: Ao inserir informações sensíveis diretamente nos templates, podem surgir brechas para problemas de segurança.
+- **Problemas de desempenho**: Em situações específicas, o uso excessivo de templates pode ser menos eficiente do que concatenar strings,
+  especialmente em textos muito extensos.
 
 ## Analogia
 
 Imagine um mosaico, uma arte feita de fragmentos que formam uma imagem completa. Nesse mosaico, alguns espaços são deixados
 vazios para serem preenchidos posteriormente, conforme a escolha do artista.
 
-Os modelos de string em Kotlin funcionam de maneira similar: as strings são o mosaico completo, e os espaços reservados (ou templates) são
-os espaços vazios que serão preenchidos com variáveis ou expressões.
+Os modelos de string em Kotlin têm uma dinâmica similar: as strings formam o mosaico completo, enquanto os espaços reservados (ou templates)
+representam os espaços vazios destinados a serem preenchidos com variáveis ou expressões.
 
 ```kotlin
 val lugarEspecial = "Praia"
@@ -78,6 +78,7 @@ println("Meu lugar especial é $lugarEspecial.")
 fun lugarFavorito() = "Montanhas"
 println("O lugar favorito da Carla é ${lugarFavorito()}.")
 ```
+
 ---
 
 ## Exercícios
