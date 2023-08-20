@@ -22,14 +22,14 @@ Cada exercício é proposto como um desafio: começando com um teste unitário f
 
 Existem três formas principais de explorar os exercícios:
 
-1. 🥉**Pelo site do [Kotlin Koans](https://play.kotlinlang.org/koans/overview)**: Ideal para quem gosta de ambientes online e tem facilidade
-   com o inglês.
-2. 🥈**Usando
-   o [Plugin para IntelliJ ou Android Studio](https://plugins.jetbrains.com/plugin/10081-jetbrains-academy/docs/learner-start-guide.html)**:
-   Recomendado para quem prefere ter tudo integrado ao ambiente de desenvolvimento e tem familiaridade com o inglês.
-3. 🥇**Através deste projeto**, em conjunto com a opção 1 ou 2. Com conteúdo e exemplos totalmente em português, encontra-se soluções e
-   tarefas com exemplos em outras linguagens como Swift, JavaScript e Dart, além de conteúdo adicional com analogias, casos de uso, entre
-   outros.
+- 🥉**Pelo site do [Kotlin Koans](https://play.kotlinlang.org/koans/overview)**: Ideal para quem gosta de ambientes online e tem facilidade
+  com o inglês.
+- 🥈**Usando
+  o [Plugin para IntelliJ ou Android Studio](https://plugins.jetbrains.com/plugin/10081-jetbrains-academy/docs/learner-start-guide.html)**:
+  Recomendado para quem prefere tudo integrado ao ambiente de desenvolvimento com familiaridade com o inglês.
+- 🥇**Através deste projeto**, em conjunto com uma das anteriores. Com conteúdo e exemplos totalmente em português, encontra-se soluções e
+  tarefas com exemplos em outras linguagens como Swift, JavaScript e Dart, além de conteúdo adicional com analogias, casos de uso, entre
+  outros.
 
 ## Por onde começar?
 
