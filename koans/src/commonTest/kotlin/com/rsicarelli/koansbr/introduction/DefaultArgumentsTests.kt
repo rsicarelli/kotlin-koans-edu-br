@@ -14,7 +14,7 @@ import kotlin.test.assertEquals
 class DefaultArgumentsTests {
 
     @Test
-    fun `DADO um nome e um número, QUANDO o método foo é chamado, ENTÃO ele deve retornar a concatenação do nome e número`() {
+    fun `DADO um nome e um número, QUANDO a função foo é chamado, ENTÃO ele deve retornar a concatenação do nome e número`() {
         // DADO
         val name = "test"
         val number = 123
@@ -35,7 +35,7 @@ class DefaultArgumentsTests {
     }
 
     @Test
-    fun `DADO um nome e um número, com a opção de tornar maiúsculo, QUANDO o método foo é chamado, ENTÃO ele deve retornar a concatenação do nome (em maiúsculas) e número`() {
+    fun `DADO um nome e um número, com a opção de tornar maiúsculo, QUANDO a função foo é chamado, ENTÃO ele deve retornar a concatenação do nome (em maiúsculas) e número`() {
         // DADO
         val name = "test"
         val number = 123
@@ -57,7 +57,7 @@ class DefaultArgumentsTests {
     }
 
     @Test
-    fun `QUANDO o método useFoo é chamado, ENTÃO ele deve retornar uma lista com strings formatadas corretamente`() {
+    fun `QUANDO a função useFoo é chamado, ENTÃO ele deve retornar uma lista com strings formatadas corretamente`() {
         // QUANDO
         val resultado: List<String> = useFoo()
 

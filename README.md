@@ -30,6 +30,8 @@ Existem três formas principais de explorar os exercícios:
 - 🥇**Através deste projeto**, em conjunto com uma das anteriores. Com conteúdo e exemplos totalmente em português, cada solução conta com a
   tradução em outras linguagens como Swift, JavaScript e Dart, além de analogias, casos de uso, boas práticas, etc.
 
+### 🧱Estrutura
+
 ## 🚀 Por onde começar?
 
 🔗 [Introdução](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/README.md)

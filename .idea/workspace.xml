@@ -8,7 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="" />
+    <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +130,7 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DataClassesJava">
+  <component name="RunManager" selected="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)">
     <configuration name="DataClassesJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.rsicarelli.koansbr.classes.dataClasses.references.DataClassesJava" />
       <module name="kotlin-koans-edu-br.koans.commonMain" />
@@ -266,11 +269,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)" />
+        <item itemvalue="Gradle.DefaultArgumentsTests" />
         <item itemvalue="Application.DataClassesJava" />
         <item itemvalue="Gradle.DefaultArgumentsTests" />
         <item itemvalue="Gradle.SealedClassesKotlin [desktop]" />
-        <item itemvalue="Gradle.Tests in 'com.rsicarelli'" />
-        <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -317,7 +320,7 @@
       <workItem from="1692384784877" duration="18872000" />
       <workItem from="1692448863324" duration="173000" />
       <workItem from="1692449037646" duration="48000" />
-      <workItem from="1692449092726" duration="21177000" />
+      <workItem from="1692449092726" duration="22312000" />
     </task>
     <servers />
   </component>

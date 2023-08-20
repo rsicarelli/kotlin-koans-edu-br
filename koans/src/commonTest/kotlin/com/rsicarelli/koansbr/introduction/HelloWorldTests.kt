@@ -13,7 +13,7 @@ import kotlin.test.assertEquals
 class HelloWorldTests {
 
     @Test
-    fun `DADO que o método start seja chamado, QUANDO nenhum parâmetro for passado, ENTÃO o método deve retornar OK`() {
+    fun `DADO que a função start seja chamado, QUANDO nenhum parâmetro for passado, ENTÃO a função deve retornar OK`() {
         // DADO
         // sem estado inicial
 

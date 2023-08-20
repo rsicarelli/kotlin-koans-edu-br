@@ -376,7 +376,7 @@ fun testCoberturaCasos() {
 }
 ```
 
-- **Testes de Comportamentos**: Teste os métodos e comportamentos específicos de cada caso de sealed class. Isso ajuda a garantir que a
+- **Testes de Comportamentos**: Teste as funções e comportamentos específicos de cada caso de sealed class. Isso ajuda a garantir que a
   lógica
   interna de cada caso esteja funcionando como esperado.
 

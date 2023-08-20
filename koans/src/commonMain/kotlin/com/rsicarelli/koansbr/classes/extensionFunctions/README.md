@@ -60,7 +60,7 @@ Dessa forma, não existe uma sobrecarga de desempenho ao usar funções de exten
 
 ### Desvantagens
 
-- **Não substituem métodos originais**: Se a classe original tiver um método com a mesma assinatura da função de extensão, o método original
+- **Não substituem métodos originais**: Se a classe original tiver um método com a mesma assinatura da função de extensão, a função original
   será chamado.
 - **Acesso limitado**: funções de extensão não podem acessar membros protegidos ou privados da classe.
 - **Podem levar à confusão**: O uso excessivo sem organização adequada pode tornar o código difícil de entender.

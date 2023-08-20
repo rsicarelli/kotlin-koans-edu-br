@@ -226,6 +226,6 @@ println(maria2) // Pessoa(nome=Maria, idade=31)
 
 ### Testabilidade
 
-- Alterações nas propriedades da data class afetam os métodos `equals()`, `hashCode()`, o que pode impactar os seus testes.
+- Alterações nas propriedades da data class afetam as funções `equals()`, `hashCode()`, o que pode impactar os seus testes.
 - O método `copy()` facilita a criação de versões modificadas de objetos para testes.
 - Data classes imutáveis (quando as suas propriedades são `val`) garantem que não haja efeitos colaterais indesejados.

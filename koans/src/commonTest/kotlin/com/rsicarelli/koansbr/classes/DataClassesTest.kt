@@ -33,7 +33,7 @@ class DataClassesTest {
     }
 
     @Test
-    fun `DADO uma pessoa, QUANDO o método toString é chamado, ENTÃO ele deve seguir o formato esperado`() {
+    fun `DADO uma pessoa, QUANDO a função toString é chamado, ENTÃO ele deve seguir o formato esperado`() {
         // DADO
         val pessoa = Person(name = "Raquel", age = 30)
 
