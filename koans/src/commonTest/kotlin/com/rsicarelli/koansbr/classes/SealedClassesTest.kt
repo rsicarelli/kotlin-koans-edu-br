@@ -18,7 +18,7 @@ import kotlin.test.fail
 class SealedClassesTest {
 
     @Test
-    fun `DADO um valor do tipo Num QUANDO eu avalio ENTÃO o resultado deve ser igual ao valor fornecido`() {
+    fun `DADO um valor do tipo Num, QUANDO se avalia, ENTÃO o resultado deve ser igual ao valor fornecido`() {
         // DADO
         val num = Num(value = 2)
 
@@ -33,7 +33,7 @@ class SealedClassesTest {
     }
 
     @Test
-    fun `DADO uma soma de dois números QUANDO eu avalio ENTÃO o resultado deve ser a soma dos dois números`() {
+    fun `DADO uma soma de dois números, QUANDO se avalia, ENTÃO o resultado deve ser a soma dos dois números`() {
         // DADO
         val sum = Sum(
             left = Num(value = 2),
@@ -51,7 +51,7 @@ class SealedClassesTest {
     }
 
     @Test
-    fun `DADO uma soma que inclui outra soma QUANDO eu avalio ENTÃO o resultado deve ser a soma das somas`() {
+    fun `DADO uma soma que inclui outra soma, QUANDO se avalia, ENTÃO o resultado deve ser a soma das somas`() {
         // DADO
         val sumWithSum = Sum(
             left = Sum(
@@ -72,7 +72,7 @@ class SealedClassesTest {
     }
 
     @Test
-    fun `DADO todas as possíveis variações de Expr QUANDO cada uma é avaliada ENTÃO não ocorre exceção de implementação faltante`() {
+    fun `DADO todas as possíveis variações de Expr, QUANDO cada uma é avaliada, ENTÃO não ocorre exceção de implementação faltante`() {
         val allPossibleExprTypes: List<KClass<out Expr>> = Expr::class.sealedSubclasses
 
         allPossibleExprTypes.forEach { exprType ->

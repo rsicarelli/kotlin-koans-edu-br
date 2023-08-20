@@ -14,7 +14,7 @@ import kotlin.test.assertTrue
 class LambdaTests {
 
     @Test
-    fun `DADO uma coleção contendo um numero par, QUANDO containsEven é chamado, ENTÃO deve retornar true`() {
+    fun `DADO uma coleção contendo um número par, QUANDO containsEven é chamado, ENTÃO deve retornar true`() {
         val testInputs = listOf(
             "1,2,3,126,555",
             "2",

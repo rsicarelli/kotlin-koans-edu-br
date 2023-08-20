@@ -18,7 +18,7 @@ import kotlin.test.assertFailsWith
 class SmartCastsTests {
 
     @Test
-    fun `DADO uma expressão do tipo específico QUANDO o Smart Cast é usado ENTÃO as propriedades do tipo especifico estao acessiveis`() {
+    fun `DADO uma expressão do tipo específico, QUANDO o Smart Cast é usado, ENTÃO as propriedades do tipo específico estão acessíveis`() {
 
         // DADO
         val expr: Expr = Num(value = 5)
@@ -36,7 +36,7 @@ class SmartCastsTests {
     }
 
     @Test
-    fun `DADO uma expressão do tipo Num QUANDO eu verifico o tipo ENTÃO consigo acessar as propriedades de Num`() {
+    fun `DADO uma expressão do tipo Num, QUANDO se verifica o tipo, ENTÃO consegue-se acessar as propriedades de Num`() {
         // DADO
         val expr: Expr = Num(value = 2)
 
@@ -53,7 +53,7 @@ class SmartCastsTests {
     }
 
     @Test
-    fun `DADO uma expressão do tipo Sum QUANDO eu verifico o tipo ENTÃO consigo acessar as propriedades de Sum`() {
+    fun `DADO uma expressão do tipo Sum, QUANDO se verifica o tipo, ENTÃO consegue-se acessar as propriedades de Sum`() {
         // DADO
         val expr: Expr = Sum(Num(value = 2), Num(value = 4))
 

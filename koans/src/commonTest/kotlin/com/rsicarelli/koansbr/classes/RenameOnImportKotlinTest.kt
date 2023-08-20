@@ -13,7 +13,7 @@ import kotlin.test.assertTrue
 class RenameOnImportKotlinTest {
 
     @Test
-    fun `DADO que invocamos a função useDifferentRandomClasses, QUANDO recebemos o resultado da funcao, ENTÃO deve conter numeros aleatórios 0 ou 1`() {
+    fun `DADO que invocamos a função useDifferentRandomClasses, QUANDO se recebe o resultado da função, ENTÃO deve conter números aleatórios 0 ou 1`() {
         //DADO, QUANDO
         val result: String = useDifferentRandomClasses()
 

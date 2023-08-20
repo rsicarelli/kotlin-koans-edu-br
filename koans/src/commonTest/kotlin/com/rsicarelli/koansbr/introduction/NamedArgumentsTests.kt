@@ -13,7 +13,7 @@ import kotlin.test.assertEquals
 class NamedArgumentsTests {
 
     @Test
-    fun `DADO uma lista de opções, QUANDO a função joinOptions é chamado, ENTÃO deve retornar as opções em uma String formatada corretamente`() {
+    fun `DADO uma lista de opções, QUANDO a função joinOptions é chamada, ENTÃO ela deve retornar as opções em uma String formatada corretamente`() {
         // DADO
         val options: List<String> = listOf("opção1", "opção2", "opção3")
 
@@ -28,7 +28,7 @@ class NamedArgumentsTests {
     }
 
     @Test
-    fun `DADO uma lista vazia, QUANDO a função joinOptions é chamado, ENTÃO deve retornar uma String com brackets vazios`() {
+    fun `DADO uma lista vazia, QUANDO a função joinOptions é chamada, ENTÃO ela deve retornar uma String com brackets vazios`() {
         // DADO
         val options: List<String> = emptyList()
 

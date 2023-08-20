@@ -14,7 +14,7 @@ import kotlin.test.assertEquals
 class ExtensionsFunctionsTest {
 
     @Test
-    fun `DADO um número inteiro, QUANDO r() é chamada, ENTÃO deve retornar o número racional correto`() {
+    fun `DADO um número inteiro, QUANDO r() é chamada, ENTÃO ela deve retornar o número racional correto`() {
         val testInputs = listOf(0, -3, 2, 5, -13)
 
         for (input in testInputs) {
@@ -33,7 +33,7 @@ class ExtensionsFunctionsTest {
     }
 
     @Test
-    fun `DADO um par de inteiros, QUANDO r() é chamada, ENTÃO deve retornar o número racional correto`() {
+    fun `DADO um par de inteiros, QUANDO r() é chamada, ENTÃO ela deve retornar o número racional correto`() {
         val testInputs: List<Pair<Int, Int>> = listOf(
             Pair(1, 2),
             Pair(-3, 7),
