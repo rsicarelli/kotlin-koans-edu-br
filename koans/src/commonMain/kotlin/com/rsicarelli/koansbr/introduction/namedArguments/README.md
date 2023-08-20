@@ -19,7 +19,7 @@
 
 ## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Named%20arguments/Task.kt)
 
-Faça com que a das `joinOptions()` retorne a lista em formato [JSON](https://pt.wikipedia.org/wiki/JSON) (por exemplo, `[a, b, c]`)
+Faça com que a função `joinOptions()` retorne a lista em formato [JSON](https://pt.wikipedia.org/wiki/JSON) (por exemplo, `[a, b, c]`)
 especificando apenas dois argumentos.
 
 Você pode utilizar a função [`joinToString`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html) disponível
@@ -51,8 +51,8 @@ Normalmente, a função seria usada da seguinte maneira:
 
 ```kotlin
 enviarEmail(
-    "remetente@examplo.com",
-    "destinatario@examplo.com",
+    "remetente@exemplo.com",
+    "destinatario@exemplo.com",
     "Sobre a Reunião"
 )
 ```
@@ -61,8 +61,8 @@ Mas com argumentos nomeados, cada valor é especificado de maneira clara:
 
 ```kotlin
 enviarEmail(
-    de = "remetente@examplo.com",
-    para = "destinataria@examplo.com",
+    de = "remetente@exemplo.com",
+    para = "destinataria@exemplo.com",
     assunto = "Sobre a Reunião"
 )
 ```
@@ -89,11 +89,11 @@ enviarEmail(
 
 ### Vantagens
 
-- **Clareza ao chamar funções**: os argumentos nomeados eliminam qualquer dúvida sobre a correspondência entre os valores fornecidos e os
-  parâmetros da função.
+- **Clareza nas chamadas de funções**: os argumentos nomeados eliminam qualquer dúvida sobre a correspondência entre os valores fornecidos e
+  os parâmetros da função.
 - **Flexibilidade**: não há necessidade de seguir a ordem padrão dos parâmetros, permitindo focar apenas nos argumentos relevantes.
 - **Redução e prevenção de erros**: Ao nomear argumentos, diminui-se a chance de passar acidentalmente um valor errado para um parâmetro.
-- **Documentação implícita**: O código se torna autoexplicativo, reduzindo a necessidade de comentários adicionais para explicar a
+- **Documentação implícita**: o código se torna autoexplicativo, reduzindo a necessidade de comentários adicionais para explicar a
   finalidade de cada valor.
 
 ### Desvantagens
@@ -104,12 +104,12 @@ enviarEmail(
 
 ## Analogia
 
-Imagine entrar numa biblioteca cheia de livros, todos com a mesma capa, sem títulos. Você sabe que ali está o livro que você quer, mas como
+Imagine entrar em uma biblioteca cheia de livros, todos com a mesma capa e sem títulos na lombada. Você sabe que ali está o livro que você
+quer, mas como
 encontrar ele no meio de tantos iguais?
 
-Isso lembra programar sem os `named arguments` em Kotlin. A pessoa sabe o que quer fazer, mas sem identificar bem os argumentos, fica fácil
-se
-perder. No entanto, com named arguments, tudo fica mais claro, como se cada livro tivesse sua própria capa e título.
+Isso é similar aos `named arguments` em Kotlin. Sem identificar bem os argumentos, a pessoa pode facilmente se perder, mesmo sabendo o que
+quer fazer. No entanto, com named arguments, tudo fica mais claro, como se cada livro tivesse sua própria capa e título.
 
 ---
 
