@@ -33,7 +33,7 @@ class DataClassesTest {
     }
 
     @Test
-    fun `DADO uma pessoa, QUANDO a função toString é chamado, ENTÃO ele deve seguir o formato esperado`() {
+    fun `DADO uma pessoa, QUANDO a função toString é chamado, ENTÃO deve seguir o formato esperado`() {
         // DADO
         val pessoa = Person(name = "Raquel", age = 30)
 
@@ -62,7 +62,7 @@ class DataClassesTest {
     }
 
     @Test
-    fun `DADO duas pessoas iguais, QUANDO hashCode é chamado, ENTÃO ele deve retornar o mesmo valor para ambos`() {
+    fun `DADO duas pessoas iguais, QUANDO hashCode é chamado, ENTÃO deve retornar o mesmo valor para ambos`() {
         // DADO
         val pessoa1 = Person(name = "Luciana", age = 30)
         val pessoa2 = Person(name = "Luciana", age = 30)

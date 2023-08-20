@@ -14,7 +14,7 @@ import kotlin.test.assertTrue
 class StringTemplateTests {
 
     @Test
-    fun `DADO um mês, QUANDO getPattern for chamado, ENTÃO ele deve conter o mês passado no meio do resultado`() {
+    fun `DADO um mês, QUANDO getPattern for chamado, ENTÃO deve conter o mês passado no meio do resultado`() {
         val testInputs: List<String> = listOf(
             "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
             "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
