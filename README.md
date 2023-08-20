@@ -14,11 +14,11 @@ foram feitas adaptações para 9 outras linguagens de programação, incluindo:
 
 - Swift, Dart, JavaScript, TypeScript, Python, Go, entre outras.
 
-## 🧰 Formato
+## 🧩 Formato
 
 Cada exercício é proposto como um desafio: começando com um teste unitário falhando que precisa ser resolvido.
 
-### 🚀 Como utilizar
+### 🛠️ Como utilizar
 
 Existem três formas principais de explorar os exercícios:
 
@@ -31,41 +31,25 @@ Existem três formas principais de explorar os exercícios:
   tarefas com exemplos em outras linguagens como Swift, JavaScript e Dart, além de conteúdo adicional com analogias, casos de uso, entre
   outros.
 
-## Por onde começar?
+## 🚀 Por onde começar?
 
 🔗 [Introdução](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/README.md)
 
-## Tirando Dúvidas
+---
 
-Em caso de dúvidas ou necessidade de esclarecimentos sobre o conteúdo, ou as soluções, recomenda-se seguir estes passos:
+## 🌱 Como contribuir
 
-1. **Utilize a Busca**: Antes de abrir uma issue, veja se sua dúvida já foi abordada.
-2. **Abra uma Issue**: Se não encontrar sua dúvida, abra uma issue
-   através [deste link](https://github.com/rsicarelli/kotlin-koans-edu-br/issues).
-3. **Forneça Detalhes**: Ao criar a issue, forneça informações detalhadas como:
-    - **Contexto**: Em que parte ou exercício surgiu a dúvida?
-    - **Referências**: Links ou referências ao material em questão, se aplicável.
-    - **Detalhes da Dúvida**: Descreva claramente sua dúvida ou o que precisa de esclarecimento.
+### Criando uma nova Issue
 
-## Como Contribuir
+🔗 [Abra uma nova issue](https://github.com/rsicarelli/kotlin-koans-edu-br/issues/new) caso você tenha:
 
-A sua contribuição é essencial para a evolução deste projeto!
+- Alguma dúvida sobre o conteúdo, aplicação, exemplos
+- Ideias de como melhorar o conteúdo
+- Sugestões de outros formatos, exemplos diferentes
+- Sugestões do que adicionar em cada conteúdo
+- Algum problema no seu ambiente ou na configuração do projeto
 
-### 1. Abrindo uma Issue
-
-Ao encontrar um problema ou ao ter uma sugestão, recomenda-se abrir
-uma [issue](https://github.com/rsicarelli/kotlin-koans-edu-br/issues/new).
-
-### 2. Contribuindo com Código
-
-Para contribuir diretamente:
-
-1. **Fork**: Faça um fork do projeto.
-2. **Clone**: Clone o fork para sua máquina.
-3. **Branch**: Crie uma branch para suas alterações.
-4. **Commit**: Faça suas alterações e realize um commit.
-5. **Push**: Envie para o seu fork.
-6. **Pull Request**: Crie um pull request para submeter suas alterações no repositório original.
+> 💡 **Utilize a busca** antes de abrir uma issue, veja se sua dúvida já foi abordada.
 
 ### 🤝 Contribuindo com as traduções de código
 
@@ -74,11 +58,11 @@ TypeScript. As soluções se adaptaram com base em um conhecimento limitado dest
 
 **Como você pode ajudar**:
 
-- **Revisar as Implementações**: Se tem conhecimento em alguma destas linguagens, sua revisão será valiosa.
-- **Corrigir Erros**: Se encontrar erros na tradução ou lógica, informe ou corrija.
+- **Revisar as implementações**: Se tem conhecimento em alguma destas linguagens, sua revisão será valiosa.
+- **Corrigir erros**: Se encontrar erros na tradução ou lógica, informe ou corrija.
 - **Sugestões**: Sugira formas mais claras ou eficientes de apresentar soluções.
-- **Novas Linguagens**: Contribua com soluções em linguagens ainda não abordadas.
+- **Novas linguagens**: Contribua com soluções em linguagens ainda não abordadas.
 
-## Licença
+## 📜 Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE.txt](LICENSE.txt) para detalhes.
