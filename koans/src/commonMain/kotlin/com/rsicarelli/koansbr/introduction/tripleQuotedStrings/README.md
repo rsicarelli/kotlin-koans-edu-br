@@ -33,7 +33,7 @@ de Strings com várias linhas e caracteres especiais, eliminando a necessidade d
 
 Esta técnica realça a clareza do código e simplifica a gestão de textos longos ou com estruturas intrincadas.
 
-Utilizando um par de três aspas `""" """`, torna-se possível declarar um texto de múltiplas linhas em Kotlin.
+Utilizando um par de três aspas `""" """`, é possível declarar um texto de múltiplas linhas em Kotlin.
 
 ```kotlin
 val texto = """

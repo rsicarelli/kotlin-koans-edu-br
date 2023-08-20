@@ -222,7 +222,7 @@ println(maria2) // Pessoa(nome=Maria, idade=31)
 
 - **Focado em dados**: Menos apropriadas para classes que requerem comportamento complexo.
 - **Extensibilidade restrita**: Data classes não podem herdar de outras classes de dados.
-- **Métodos automáticos podem ser inflexíveis**: `equals()` e `hashCode()` aplicam-se a todas as propriedades, podendo não ser desejado.
+- **Métodos automáticos podem ser inflexíveis**: `equals()` e `hashCode()` se usam a todas as propriedades, podendo não ser desejado.
 
 ### Testabilidade
 

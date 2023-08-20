@@ -59,7 +59,7 @@ como subtipo de `Sessao`.
 
 - **Comunicação clara e direta**: uma função que retorna `Nothing` não tem a intenção de retornar um valor,
   removendo qualquer ambiguidade.
-- **Flexibilidade**: se comporta como um "camaleão" no mundo dos tipos em Kotlin, tornando-se útil em diferentes cenários.
+- **Flexibilidade**: se comporta como um "camaleão" no mundo dos tipos em Kotlin, se tornando útil em diferentes cenários.
 - **Economia de Recursos**: devido à inteligência do compilador, não gastamos memória alocando algo que nunca deveria existir.
 - **Blindagem contra erros:** o `Nothing` deixa claro: _nunca vou retornar_. Esse tipo de garantia pode evitar surpresas
   desagradáveis em tempo de execução.

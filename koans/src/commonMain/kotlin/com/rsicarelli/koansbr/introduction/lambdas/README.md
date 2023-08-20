@@ -84,7 +84,7 @@ val pares = numbers.filter { it % 2 != 0 }
 
 ### Lambdas como último argumento
 
-Se um lambda for o último argumento de uma função, pode-se fechar os `)` e colocar o lambda fora dos parênteses usando `{}`.
+Se um lambda for o último argumento de uma função, é possível fechar os `)` e colocar o lambda fora dos parênteses usando `{}`.
 
 ```kotlin
 fun aplicarOperacao(a: Int, b: Int, operacao: (Int, Int) -> Int): Int = operacao(a, b)
@@ -119,7 +119,7 @@ aplicarOperacao(
 - **Isolação**: é uma boa prática testar lambdas individualmente.
 - **Verificação**: Garanta que lambdas produzam resultados corretos para as entradas dadas.
 - **Cobertura**: Inclua tanto cenários comuns quanto "edge cases".
-- **Simplicidade**: Mantenha lambdas focados e simples. Refatore se tornarem-se muito complexos.
+- **Simplicidade**: Mantenha lambdas focados e simples. Refatore se se estiverem muito complexos.
 
 ---
 

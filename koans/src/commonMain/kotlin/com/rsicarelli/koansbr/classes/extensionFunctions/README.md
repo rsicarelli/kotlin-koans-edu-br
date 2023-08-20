@@ -39,7 +39,7 @@ val name = "Kotlin"
 name.printHello() // Imprime: "Hello, Kotlin"
 ```
 
-No exemplo acima, a função `printHello` é extension function para a classe `String`. No contexto dessa função, `$this` refere-se ao objeto
+No exemplo acima, a função `printHello` é extension function para a classe `String`. No contexto dessa função, `$this` se refere ao objeto
 `String` ao qual a função foi aplicada.
 
 #### Como Elas Funcionam?

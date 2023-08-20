@@ -298,7 +298,7 @@ Embora Kotlin trate nulabilidade de maneira segura, existem situações que exig
 
 #### Operador `!!`
 
-Ao ter certeza de que uma variável nullable não está nula, pode-se utilizar o operador `!!` para tratá-la como se não fosse nula.
+Ao ter certeza de que uma variável nullable não está nula, é possível utilizar o operador `!!` para tratá-la como se não fosse nula.
 
 ❗❗️No entanto, se a variável for realmente nula, o programa lançará uma `NullPointerException`.
 
@@ -328,7 +328,7 @@ nome = "Kotlin"
 
 1. **Minimizar o uso:** se há certeza de que uma variável nunca será nula, é aconselhável defini-la como não anulável. Isso
    simplifica o código e minimiza possíveis erros.
-2. **Prudência no uso do Elvis `?:`** é crucial. Assegure-se de que o valor padrão é apropriado para o contexto da expressão.
+2. **Prudência no uso do Elvis `?:`** é crucial. o valor padrão precisa ser apropriado para o contexto da expressão.
 3. **Evitar burlar os tipos nulos**: ao invés de forçar uma variável a ser tratada como não nula com `!!`, é benéfico optar pelo `?.` e
    modelar seu código com uma tipagem segura.
 4. **Cuidado ao utilizar `lateinit`**: seu uso imprudente pode ser arriscado. É vital garantir a inicialização da variável antes de

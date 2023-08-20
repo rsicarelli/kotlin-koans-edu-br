@@ -71,7 +71,7 @@ Uma introdução às funções lambda em Kotlin, proporcionando um código mais 
 
 ---
 
-Ao finalizar este módulo, espera-se obter um entendimento robusto sobre os conceitos iniciais do Kotlin.
+Ao finalizar este módulo, se espera obter um entendimento robusto sobre os conceitos iniciais do Kotlin.
 
 Com os tópicos abordados, terá as ferramentas essenciais para avançar com confiança aos módulos mais avançados desse guia.
 

@@ -7,7 +7,7 @@ aprender Kotlin.
 
 O [Kotlin Koans original](https://github.com/Kotlin/kotlin-koans-edu) é uma sequência de exercícios criados pela JetBrains.
 
-Devido à sua eficácia, o Kotlin Koans tornou-se um dos métodos preferidos por quem já conhece Java para iniciar no mundo do Kotlin.
+Devido à sua eficácia, o Kotlin Koans se tornou um dos métodos preferidos por quem já conhece Java para iniciar no mundo do Kotlin.
 
 Este repositório apresenta uma adaptação do conteúdo em português 🇧🇷 com muito conteúdo exclusivo que auxilia no aprendizado. Além disso,
 foram feitas adaptações para 9 outras linguagens de programação, incluindo:
@@ -27,9 +27,8 @@ Existem três formas principais de explorar os exercícios:
 - 🥈**Usando
   o [Plugin para IntelliJ ou Android Studio](https://plugins.jetbrains.com/plugin/10081-jetbrains-academy/docs/learner-start-guide.html)**:
   Recomendado para quem prefere tudo integrado ao ambiente de desenvolvimento com familiaridade com o inglês.
-- 🥇**Através deste projeto**, em conjunto com uma das anteriores. Com conteúdo e exemplos totalmente em português, encontra-se soluções e
-  tarefas com exemplos em outras linguagens como Swift, JavaScript e Dart, além de conteúdo adicional com analogias, casos de uso, entre
-  outros.
+- 🥇**Através deste projeto**, em conjunto com uma das anteriores. Com conteúdo e exemplos totalmente em português, cada solução conta com a
+  tradução em outras linguagens como Swift, JavaScript e Dart, além de analogias, casos de uso, boas práticas, etc.
 
 ## 🚀 Por onde começar?
 

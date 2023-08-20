@@ -36,8 +36,8 @@ fun joinToString(
 
 ## Caso de uso
 
-Ao se deparar com [Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) em Kotlin, imagina-se
-colocando etiquetas em valores enviados para funções, tornando tudo mais compreensível e minimizando equívocos.
+Ao se deparar com [Argumentos nomeados](https://kotlinlang.org/docs/kotlin-tour-functions.html#named-arguments) em Kotlin, é possível imaginar
+colocando marcadores ou etiquetas em valores enviados para funções, tornando tudo mais compreensível e minimizando equívocos.
 
 ```kotlin
 fun enviarEmail(
@@ -92,7 +92,7 @@ enviarEmail(
 - **Clareza nas chamadas de funções**: os argumentos nomeados eliminam qualquer dúvida sobre a correspondência entre os valores fornecidos e
   os parâmetros da função.
 - **Flexibilidade**: não há necessidade de seguir a ordem padrão dos parâmetros, permitindo focar apenas nos argumentos relevantes.
-- **Redução e prevenção de erros**: Ao nomear argumentos, diminui-se a chance de passar acidentalmente um valor errado para um parâmetro.
+- **Redução e prevenção de erros**: Ao nomear argumentos, se reduz a chance de passar acidentalmente um valor errado para um parâmetro.
 - **Documentação implícita**: o código se torna autoexplicativo, reduzindo a necessidade de comentários adicionais para explicar a
   finalidade de cada valor.
 

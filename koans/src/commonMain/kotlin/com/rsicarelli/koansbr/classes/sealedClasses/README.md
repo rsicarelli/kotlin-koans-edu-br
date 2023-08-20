@@ -364,11 +364,6 @@ object EstadoVazio : EstadoCampo() // Uso desnecessário de sealed class
   fluxo de
   controle do código.
 
-### Testabilidade
-
-- **Cobertura de Casos**: Certifique-se de testar cada caso possível da sealed class. Cada subclasse deve ser testada para garantir que os
-  comportamentos específicos sejam tratados corretamente.
-
 ```kotlin
 sealed class Resultado
 object Sucesso : Resultado()
