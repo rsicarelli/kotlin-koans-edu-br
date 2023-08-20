@@ -169,28 +169,34 @@ val cores: Set<String> = setOf("Vermelho", "Azul", "Verde")
 val numeros: Sequence<Int> = sequenceOf(1, 2, 3, 4, 5)
 
 // Map: Relaciona chaves e valores.
-val dicionario: Map<String, String> = mapOf("Kotlin" to "Uma linguagem de programação", "Lua" to "Outra linguagem de programação")
+val dicionario: Map<String, String> = mapOf(
+    "Kotlin" to "Uma linguagem de programação",
+    "Lua" to "Outra linguagem de programação"
+)
 
 // HashSet: Conjunto baseado em hash, sem ordenação específica.
 val frutas: HashSet<String> = hashSetOf("Maçã", "Banana", "Laranja")
 
 // HashMap: Mapa baseado em hash, sem ordenação específica.
-val capitais: HashMap<String, String> = hashMapOf("Brasil" to "Brasília", "China" to "Beijing")
+val capitais: HashMap<String, String> = hashMapOf(
+    "Brasil" to "Brasília",
+    "China" to "Beijing"
+)
 
 // Array: Parecido com List, mas tem tamanho definido.
 val diasDaSemana: Array<String> = arrayOf("Segunda", "Terça", "Quarta")
 
 // Pair: Agrupa dois valores de possivelmente diferentes tipos.
-val nomeIdade: Pair<String, Int> = Pair("Rodrigo", 30)
+val nomeIdade: Pair<String, Int> = Pair(first = "Rodrigo", second = 30)
 
 // Triple: Agrupa três valores de possivelmente diferentes tipos.
-val coordenadas: Triple<Double, Double, Double> = Triple(12.5, 45.6, 78.9)
+val coordenadas: Triple<Double, Double, Double> = Triple(first = 12.5, second = 45.6, third = 78.9)
 
 // Any: Superclasse de todos os tipos não-nulos em Kotlin.
 val qualquerCoisa: Any = "Isso poderia ser qualquer objeto"
 
 // Nothing: Representa um valor que nunca ocorre, usado para funções que nunca retornam.
-val erro: Nothing
+val erro: Nothing = Nothing
 
 // Byte: Valor integral de 8 bits, entre -128 e 127.
 val exemploByte: Byte = 127
