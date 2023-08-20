@@ -24,7 +24,7 @@ Altere o código para que a função `start` retorne a string `"OK"`.
 
 Nas tarefas do Kotlin Koans, a função `TODO()` lançará uma exceção.
 
-Para concluir o Kotlin Koans, a invocação de função deve ser substituída por um código significativo de acordo com o problema.
+Para concluir o Kotlin Koans, a invocação de função deve ser substituída por um código significativo conforme o problema.
 
 ## Casos de uso
 
