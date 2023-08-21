@@ -1,36 +1,55 @@
 # Kotlin Koans BR 🇧🇷
 
-Uma coleção de conteúdo baseada no renomado [Kotlin Koans](https://play.kotlinlang.org/koans/overview): uma ferramenta interativa para
-aprender Kotlin.
+Uma coleção de conteúdo baseada no renomado [Kotlin Koans](https://play.kotlinlang.org/koans/overview) para aprender Kotlin em português
+🇧🇷, com conteúdo exclusivo e adaptações para 9 outras linguagens de programação.
 
 ## 🌌 Inspiração
 
-O [Kotlin Koans original](https://github.com/Kotlin/kotlin-koans-edu) é uma sequência de exercícios criados pela JetBrains.
+O [Kotlin Koans original](https://github.com/Kotlin/kotlin-koans-edu) foi criado pela JetBrains e se tornou um método preferido por quem
+conhece Java para iniciar no Kotlin. Esta versão em português traz conteúdo exclusivo e traduções para outras linguagens como: Swift, Dart,
+JavaScript, TypeScript, Python, Go, entre outras.
 
-Devido à sua eficácia, o Kotlin Koans se tornou um dos métodos preferidos por quem já conhece Java para iniciar no mundo do Kotlin.
+## 🧩 Formato e utilização
 
-Este repositório apresenta uma adaptação do conteúdo em português 🇧🇷 com muito conteúdo exclusivo que auxilia no aprendizado. Além disso,
-foram feitas adaptações para 9 outras linguagens de programação, incluindo:
+Os exercícios são propostos como desafios que começam com um teste unitário falhando. Você pode explorar os exercícios de três formas:
 
-- Swift, Dart, JavaScript, TypeScript, Python, Go, entre outras.
+1. 🥉**Pelo site [Kotlin Koans](https://play.kotlinlang.org/koans/overview)**: Ambiente online para quem é fluente em inglês.
+2. 🥈**Usando
+   o [Plugin para IntelliJ ou Android Studio](https://plugins.jetbrains.com/plugin/10081-jetbrains-academy/docs/learner-start-guide.html)**:
+   Para quem prefere integração ao ambiente de desenvolvimento e tem facilidade com o inglês.
+3. 🥇**Através deste projeto**: Conteúdo e exemplos em português, incluindo traduções em outras linguagens, analogias, casos de uso e boas
+   práticas.
 
-## 🧩 Formato
+### 🗂️ Estrutura do Projeto
 
-Cada exercício é proposto como um desafio: começando com um teste unitário falhando que precisa ser resolvido.
+A estrutura deste repositório foi desenhada para oferecer uma experiência de aprendizado fluida, com uma organização lógica dos tópicos e
+exemplos.
 
-### 🛠️ Como utilizar
+#### 📁 `koans/src/commonMain`
 
-Existem três formas principais de explorar os exercícios:
+Aqui, os exercícios e soluções do Kotlin Koan estão organizados por módulos. Cada módulo tem seu próprio diretório, como `introduction`, que
+hospeda tópicos introdutórios.
 
-- 🥉**Pelo site do [Kotlin Koans](https://play.kotlinlang.org/koans/overview)**: Ideal para quem gosta de ambientes online e tem facilidade
-  com o inglês.
-- 🥈**Usando
-  o [Plugin para IntelliJ ou Android Studio](https://plugins.jetbrains.com/plugin/10081-jetbrains-academy/docs/learner-start-guide.html)**:
-  Recomendado para quem prefere tudo integrado ao ambiente de desenvolvimento com familiaridade com o inglês.
-- 🥇**Através deste projeto**, em conjunto com uma das anteriores. Com conteúdo e exemplos totalmente em português, cada solução conta com a
-  tradução em outras linguagens como Swift, JavaScript e Dart, além de analogias, casos de uso, boas práticas, etc.
+**Dentro de cada diretório de módulo:**
 
-### 🧱Estrutura
+- `README.md`: Serve como um guia para o tópico, com sugestões e informações que enriquecem o aprendizado.
+
+- `NomeDoTopicoKotlin.kt`: É a solução principal do Kotlin Koan. Embora seja tentador, tente resolver o Koan sem espiar a solução. Está aqui
+  para ajudá-lo a compreender se estiver preso.
+
+- `references/`: Este diretório é uma adição especial. Contém adaptações da solução principal para outras linguagens de programação,
+  permitindo uma comparação lado a lado.
+
+#### 📁 `koans/src/commonTest`
+
+> 💡 Os testes em conjunto com a solução torna a experiência completa.
+
+> ✅ No final de cada exercício, verifique o teste correspondente para máxima absorção.
+
+Aqui estão os testes unitários que verificam as soluções dos Koans. Estes testes são escritos seguindo o
+padrão [Gherkin](https://cucumber.io/docs/gherkin/), tornando-os compreensíveis mesmo para quem é novo em testes.
+
+### 📂 Exemplo
 
 ```
 koans/
@@ -65,37 +84,18 @@ koans/
     └── ...
 ```
 
-## 🚀 Por onde começar?
+## 🎬 Por onde começar?
 
 🔗 [Introdução](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/README.md)
 
----
+## 🌱 Como Contribuir
 
-## 🌱 Como contribuir
+Se você tem dúvidas, sugestões ou quer ajudar com traduções e revisões:
 
-### Criando uma nova Issue
-
-🔗 [Abra uma nova issue](https://github.com/rsicarelli/kotlin-koans-edu-br/issues/new) caso você tenha:
-
-- Alguma dúvida sobre o conteúdo, aplicação, exemplos
-- Ideias de como melhorar o conteúdo
-- Sugestões de outros formatos, exemplos diferentes
-- Sugestões do que adicionar em cada conteúdo
-- Algum problema no seu ambiente ou na configuração do projeto
-
-> 💡 **Utilize a busca** antes de abrir uma issue, veja se sua dúvida já foi abordada.
-
-### 🤝 Contribuindo com as traduções de código
-
-Em cada pasta, você encontrará soluções adaptadas para várias linguagens como: Java, C#, Go, JavaScript, PHP, Dart, Python, Swift e
-TypeScript. As soluções se adaptaram com base em um conhecimento limitado destas linguagens.
-
-**Como você pode ajudar**:
-
-- **Revisar as implementações**: Se tem conhecimento em alguma destas linguagens, sua revisão será valiosa.
-- **Corrigir erros**: Se encontrar erros na tradução ou lógica, informe ou corrija.
-- **Sugestões**: Sugira formas mais claras ou eficientes de apresentar soluções.
-- **Novas linguagens**: Contribua com soluções em linguagens ainda não abordadas.
+- **Criando uma nova Issue**: [Abra uma nova issue](https://github.com/rsicarelli/kotlin-koans-edu-br/issues/new) e faça suas sugestões,
+  ideias, solicitações ou dúvidas.
+- **Contribuindo com as traduções de código**: em cada pasta, você encontrará soluções em várias linguagens. Ajude revisando, corrigindo,
+  sugerindo ou contribuindo com novas linguagens.
 
 ## 📜 Licença
 
