@@ -7,7 +7,7 @@
 
 <!-- TOC -->
 * [Strings com três aspas (Triple-quoted strings)](#strings-com-três-aspas-triple-quoted-strings)
-  * [Tarefa](#tarefa)
+  * [🔗 Tarefa](#-tarefa)
   * [Caso de uso](#caso-de-uso)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
@@ -17,7 +17,7 @@
 
 </details>
 
-## [Tarefa](https://play.kotlinlang.org/koans/Introduction/Triple-quoted%20strings/Task.kt)
+## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Introduction/Triple-quoted%20strings/Task.kt)
 
 Substitua a chamada `trimIndent` pela chamada `trimMargin`, definindo `#` como valor de prefixo, assim a string resultante não
 conterá o caractere de prefixo.
