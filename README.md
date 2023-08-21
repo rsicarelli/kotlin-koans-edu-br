@@ -34,8 +34,7 @@ hospeda tópicos introdutórios.
 
 - `README.md`: Serve como um guia para o tópico, com sugestões e informações que enriquecem o aprendizado.
 
-- `NomeDoTopicoKotlin.kt`: É a solução principal do Kotlin Koan. Embora seja tentador, tente resolver o Koan sem espiar a solução. Está aqui
-  para ajudá-lo a compreender se estiver preso.
+- `NomeDoTopicoKotlin.kt`: É a solução principal do Kotlin Koan. Embora seja tentador, tente resolver o Koan sem espiar a solução.
 
 - `references/`: Este diretório é uma adição especial. Contém adaptações da solução principal para outras linguagens de programação,
   permitindo uma comparação lado a lado.
