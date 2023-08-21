@@ -86,7 +86,11 @@ koans/
 
 ## 🎬 Por onde começar?
 
-🔗 [Introdução](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/README.md)
+### 🔗 [Introdução](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/README.md)
+
+## 🏗️ Em construção
+
+Muito conteúdo ainda está por vir! Verifique a pasta `migrar` desse projeto e veja o que vêm por aí.
 
 ## 🌱 Como Contribuir
 
