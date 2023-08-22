@@ -4,18 +4,16 @@
 <summary> <b>Conteúdo</b> (clique para expandir) </summary>
 
 <!-- TOC -->
-
 * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
-    * [🔗 Tarefa](#-tarefa)
-    * [Casos de uso](#casos-de-uso)
-        * [Função simples](#função-simples)
-        * [Funções em uma linha](#funções-em-uma-linha)
-        * [Função sem retorno](#função-sem-retorno)
-        * [Lidando com múltiplos argumentos usando _vararg_](#lidando-com-múltiplos-argumentos-usando-vararg)
-        * [Declarando variáveis](#declarando-variáveis)
-    * [🔗 Tipos em Kotlin](#-tipos-em-kotlin)
-    * [Índice de exercícios](#índice-de-exercícios)
-
+  * [🔗 Tarefa](#-tarefa)
+  * [Casos de uso](#casos-de-uso)
+    * [Função simples](#função-simples)
+    * [Funções em uma linha](#funções-em-uma-linha)
+    * [Função sem retorno](#função-sem-retorno)
+    * [Lidando com múltiplos parâmetros usando _vararg_](#lidando-com-múltiplos-parâmetros-usando-vararg)
+    * [Declarando variáveis](#declarando-variáveis)
+  * [🔗 Tipos em Kotlin](#-tipos-em-kotlin)
+  * [Índice de exercícios](#índice-de-exercícios)
 <!-- TOC -->
 
 </details>
@@ -44,8 +42,8 @@ fun nomeDaFuncao(
 
 - `fun` palavra-chave reservada para declarar uma função.
 - `nomeDaFuncao` indica e declara a função de forma clara e específica.
-- `(argumento1: Tipo, argumento2: Tipo)` especifica os argumentos que a função irá receber, separados por `,`. Obrigatóriamente, todo
-  argumento precisa ter um nome que fica à esquerda do símbolo `:`, e à direita o seu tipo.
+- `(argumento1: Tipo, argumento2: Tipo)` especifica os parâmetros que a função irá receber, separados por `,`. Obrigatóriamente, todo
+  parâmetro precisa ter um nome que fica à esquerda do símbolo `:`, e à direita o seu tipo.
 - `: TipoDeRetorno` após o símbolo `:`, indica o tipo de valor que a função vai retornar após sua execução.
 - `{}` representa o corpo da função, onde estão as instruções a serem executadas.
 
@@ -101,7 +99,7 @@ fun exibirMensagem(): Unit {
 fun exibirMensagem(): Unit = Unit
 ```
 
-### Lidando com múltiplos argumentos usando _vararg_
+### Lidando com múltiplos parâmetros usando _vararg_
 
 O `vararg` no Kotlin é usado para aceitar vários argumentos em uma função.
 

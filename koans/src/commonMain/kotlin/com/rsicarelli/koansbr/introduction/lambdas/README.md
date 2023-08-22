@@ -11,7 +11,7 @@
   * [Caso de uso](#caso-de-uso)
     * [Lamba também é um tipo](#lamba-também-é-um-tipo)
     * [O que é `it`?](#o-que-é-it)
-    * [Lambdas como último argumento](#lambdas-como-último-argumento)
+    * [Lambdas como último parâmetro](#lambdas-como-último-parâmetro)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
     * [Testabilidade](#testabilidade)
@@ -44,8 +44,8 @@ val soma: (Int, Int) -> Int = { x, y -> x + y }
 println(soma(5, 3))  // Saída: 8
 ```
 
-- `(Int, Int) -> Int`: é a assinatura do lambda: recebe dois argumentos `Int` e retorna outro `Int`.
-- `{ x, y -> x + y }` define o bloco de execução. Os argumentos são nomeados antes do símbolo ->. Em seguida, vem a expressão que fornece o
+- `(Int, Int) -> Int`: é a assinatura do lambda: recebe dois parâmetros `Int` e retorna outro `Int`.
+- `{ x, y -> x + y }` define o bloco de execução. Os parâmetros são nomeados antes do símbolo `->`. Em seguida, vem a expressão que fornece o
   resultado do tipo esperado.
 
 ### Lamba também é um tipo
@@ -82,9 +82,9 @@ val impares = numbers.filter { numero -> numero % 2 == 0 }
 val pares = numbers.filter { it % 2 != 0 }
 ```
 
-### Lambdas como último argumento
+### Lambdas como último parâmetro
 
-Se um lambda for o último argumento de uma função, é possível fechar os `)` e colocar o lambda fora dos parênteses usando `{}`.
+Se um lambda for o último parâmetro de uma função, é possível fechar os `)` e colocar o lambda fora dos parênteses usando `{}`.
 
 ```kotlin
 fun aplicarOperacao(a: Int, b: Int, operacao: (Int, Int) -> Int): Int = operacao(a, b)

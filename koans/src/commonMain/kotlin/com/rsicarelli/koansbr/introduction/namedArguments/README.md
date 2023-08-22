@@ -57,7 +57,7 @@ enviarEmail(
 )
 ```
 
-Mas com argumentos nomeados, cada valor é especificado de maneira clara:
+Mas quando nomeamos os argumentos, cada valor é especificado de maneira clara:
 
 ```kotlin
 enviarEmail(
@@ -89,7 +89,7 @@ enviarEmail(
 
 ### Vantagens
 
-- **Clareza nas chamadas de funções**: os argumentos nomeados eliminam qualquer dúvida sobre a correspondência entre os valores fornecidos e
+- **Clareza nas chamadas de funções**: nomear argumentos elimina qualquer dúvida sobre a correspondência entre os valores fornecidos e
   os parâmetros da função.
 - **Flexibilidade**: não há necessidade de seguir a ordem padrão dos parâmetros, permitindo focar apenas nos argumentos relevantes.
 - **Redução e prevenção de erros**: Ao nomear argumentos, se reduz a chance de passar acidentalmente um valor errado para um parâmetro.
@@ -98,7 +98,7 @@ enviarEmail(
 
 ### Desvantagens
 
-- **Manutenção de Nomeação**: quando um nome de argumento é alterado na definição da função, todos os lugares que utilizam esse argumento
+- **Manutenção de Nomeação**: quando um nome de um parâmetro é alterado na definição da função, todos os argumentos que utilizam esse parâmetro
   precisam ser atualizados.
 - **Verbosidade nas chamadas**: em funções com muitos argumentos, nomear cada um pode tornar a chamada da função extensa e poluída.
 

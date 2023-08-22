@@ -279,15 +279,16 @@ calculaDesconto(preco = 50.0)
 calculaDesconto(preco = 100.0, taxaDesconto = 0.10) 
 ```
 
-No exemplo acima, o argumento `taxaDesconto` tem um valor padrão de 5% de desconto. Ao chamar a função `calculaDesconto` sem especificar
+No exemplo acima, o parâmetro `taxaDesconto` tem um valor padrão de 5% de desconto. Ao chamar a função `calculaDesconto` sem especificar
 a `taxaDesconto`, o desconto de 5% será aplicado sobre o preço.
 
-Porém, ao passar o valor `0.10` para `taxaDesconto`, esse será o valor utilizado, substituindo o desconto padrão de 5% para 10%.
+Porém, ao passar `0.10` como argumento para o parâmetro `taxaDesconto`, esse será o valor utilizado, substituindo o desconto padrão de 5% para 10%.
 
 ### Vantagens
 
 - **Menos sobrecargas**: permite uma única função em vez de várias versões com diferentes argumentos.
-- **Flexibilidade**: é possível chamar a função com diferentes combinações de argumentos, contanto que os obrigatórios sejam fornecidos.
+- **Flexibilidade**: é possível chamar a função com diferentes combinações de parâmetros, contanto que os argumentos obrigatórios sejam 
+fornecidos.
 - **Compatibilidade com Java**: funções com argumentos padrão são compatíveis com código Java, atuando como sobrecargas.
 
 ### Desvantagens
