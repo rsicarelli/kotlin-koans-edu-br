@@ -18,11 +18,10 @@
   * [ℹ️ Sobre o Kotlin](#ℹ-sobre-o-kotlin)
     * [🎓 História](#-história)
     * [📈 Kotlin na atualidade](#-kotlin-na-atualidade)
-    * [🚀 Kotlin e o futuro](#-kotlin-e-o-futuro)
-      * [🌍 Multiplataforma por natureza](#-multiplataforma-por-natureza)
-      * [🖥️ Execução nativa](#-execução-nativa)
-      * [🔝 Demanda em alta](#-demanda-em-alta)
-      * [🌱 Investindo no amanhã](#-investindo-no-amanhã)
+    * [🌍 Multiplataforma por natureza](#-multiplataforma-por-natureza)
+    * [🖥️ Execução nativa](#-execução-nativa)
+    * [🔝 Demanda em alta](#-demanda-em-alta)
+    * [🌱 Investindo no amanhã](#-investindo-no-amanhã)
 <!-- TOC -->
 
 </details>
@@ -98,26 +97,22 @@ Avançando para 2023, Kotlin não é só queridinha dos desenvolvedores Android.
 A linguagem expandiu seus horizontes para iOS, web, Windows, Mac, Linux e até para a nuvem. Com uma comunidade ativa e inovações constantes,
 o Kotlin tem se destacado no mundo da tecnologia.
 
-### 🚀 Kotlin e o futuro
-
-Em tecnologia, mudanças são a única constante. Mas entre tantas opções, por que Kotlin se destaca?
-
-#### 🌍 Multiplataforma por natureza
+### 🌍 Multiplataforma por natureza
 
 O Kotlin foi pensado para ser versátil. Não é só para Android; ela se adapta desde o desenvolvimento mobile até soluções para web e desktop.
 Ao dominar Kotlin, as oportunidades se multiplicam.
 
-#### 🖥️ Execução nativa
+### 🖥️ Execução nativa
 
 Aqui, o Kotlin se sobressai. Com seu recurso Multiplataforma, ele compila diretamente para código nativo, fazendo frente a outras
 ferramentas populares. Enquanto alguns frameworks dependem de camadas extras, o Kotlin fala direto com o hardware.
 
-#### 🔝 Demanda em alta
+### 🔝 Demanda em alta
 
 Empresas de todos os tamanhos, no Brasil e no mundo, estão incorporando Kotlin em seus projetos, sinalizando uma demanda crescente por
 especialistas na linguagem.
 
-#### 🌱 Investindo no amanhã
+### 🌱 Investindo no amanhã
 
 Kotlin não é só uma moda passageira. A linguagem demonstra um potencial incrível. Se está pensando no longo prazo, vale a pena dar uma
 olhada no Kotlin.
