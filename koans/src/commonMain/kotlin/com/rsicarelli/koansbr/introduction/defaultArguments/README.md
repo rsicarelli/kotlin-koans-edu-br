@@ -9,6 +9,7 @@
 * [Argumentos padrão (Default arguments)](#argumentos-padrão-default-arguments)
   * [🔗 Tarefa](#-tarefa)
   * [Caso de uso](#caso-de-uso)
+    * [Parâmetro x Argumento](#parâmetro-x-argumento)
     * [Vantagens](#vantagens)
     * [Desvantagens](#desvantagens)
   * [Analogia](#analogia)
@@ -282,13 +283,38 @@ calculaDesconto(preco = 100.0, taxaDesconto = 0.10)
 No exemplo acima, o parâmetro `taxaDesconto` tem um valor padrão de 5% de desconto. Ao chamar a função `calculaDesconto` sem especificar
 a `taxaDesconto`, o desconto de 5% será aplicado sobre o preço.
 
-Porém, ao passar `0.10` como argumento para o parâmetro `taxaDesconto`, esse será o valor utilizado, substituindo o desconto padrão de 5% para 10%.
+Porém, ao passar `0.10` como argumento para o parâmetro `taxaDesconto`, esse será o valor utilizado, substituindo o desconto padrão de 5%
+para 10%.
+
+### Parâmetro x Argumento
+
+A diferença entre parâmetro e argumento em Kotlin pode ser compreendida da seguinte forma:
+
+- **Parâmetro**: identificado dentro da definição de uma função.
+- **Argumento**: identificado ao invocar ou usar essa função, ou seja, fora da definição.
+
+Imagine uma função que simula a preparação de um café:
+
+```kotlin
+fun prepararCafe(tipo: String) = "Preparando um café $tipo..."
+```
+
+Nesta definição, `tipo` é considerado um parâmetro da função.
+
+Ao solicitar a preparação de um café:
+
+```kotlin
+val pedido = prepararCafe("espresso")
+```
+
+Neste contexto, _"espresso"_ é um argumento passado para a função `prepararCafe()`.
+
 
 ### Vantagens
 
 - **Menos sobrecargas**: permite uma única função em vez de várias versões com diferentes argumentos.
-- **Flexibilidade**: é possível chamar a função com diferentes combinações de parâmetros, contanto que os argumentos obrigatórios sejam 
-fornecidos.
+- **Flexibilidade**: é possível chamar a função com diferentes combinações de parâmetros, contanto que os argumentos obrigatórios sejam
+  fornecidos.
 - **Compatibilidade com Java**: funções com argumentos padrão são compatíveis com código Java, atuando como sobrecargas.
 
 ### Desvantagens
@@ -302,6 +328,7 @@ fornecidos.
 ## Analogia
 
 No Brasil, a denominação para o "pão francês" varia conforme a região ou cidade:
+
 ```kotlin
 fun pedirEmRecife(tipo: String = "Pão de sal") = Pao(tipo)
 fun pedirEmManaus(tipo: String = "Pão careca") = Pao(tipo)
