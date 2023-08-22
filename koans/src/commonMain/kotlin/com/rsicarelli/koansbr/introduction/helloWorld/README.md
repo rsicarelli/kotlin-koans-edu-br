@@ -4,18 +4,16 @@
 <summary> <b>Conteúdo</b> (clique para expandir) </summary>
 
 <!-- TOC -->
-
 * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
-    * [🔗 Tarefa](#-tarefa)
-    * [Casos de uso](#casos-de-uso)
-        * [Função simples](#função-simples)
-        * [Funções em uma linha](#funções-em-uma-linha)
-        * [Função sem retorno](#função-sem-retorno)
-        * [Lidando com múltiplos parâmetros usando _vararg_](#lidando-com-múltiplos-parâmetros-usando-vararg)
-        * [Declarando variáveis](#declarando-variáveis)
-    * [🔗 Tipos em Kotlin](#-tipos-em-kotlin)
-    * [Índice de exercícios](#índice-de-exercícios)
-
+  * [🔗 Tarefa](#-tarefa)
+  * [Casos de uso](#casos-de-uso)
+    * [Função simples](#função-simples)
+    * [Funções em uma linha](#funções-em-uma-linha)
+    * [Função sem retorno](#função-sem-retorno)
+    * [Lidando com múltiplos parâmetros usando _vararg_](#lidando-com-múltiplos-parâmetros-usando-vararg)
+    * [Declarando variáveis](#declarando-variáveis)
+  * [🔗 Tipos em Kotlin](#-tipos-em-kotlin)
+  * [Índice de exercícios](#índice-de-exercícios)
 <!-- TOC -->
 
 </details>
@@ -135,10 +133,7 @@ No Kotlin, há duas maneiras comuns de declarar variáveis: com `val` e com `var
    paginaDeRascunho = "Uma ideia diferente" // permitido
    ```
 
-Peço desculpas pelo lapso. Vamos refinar:
-
-> 💡 Se você entende sobre objetos, lembre-se de que `val` não os torna imutáveis. Embora não possa reatribuir um valor, o conteúdo interno
-> ainda pode se alterar de alguma forma. Em Kotlin, costuma-se chamar `val` de "read-only" e não "imutável".
+> 💡 `val` não é sinônimo de imutável. Embora não possa reatribuir um valor, o conteúdo interno ainda pode ser alterado.
 
 ```kotlin
 val lista = mutableListOf("a", "b", "c")
