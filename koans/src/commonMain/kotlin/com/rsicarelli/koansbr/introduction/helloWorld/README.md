@@ -4,16 +4,18 @@
 <summary> <b>Conteúdo</b> (clique para expandir) </summary>
 
 <!-- TOC -->
+
 * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
-  * [🔗 Tarefa](#-tarefa)
-  * [Casos de uso](#casos-de-uso)
-    * [Função simples](#função-simples)
-    * [Funções em uma linha](#funções-em-uma-linha)
-    * [Função sem retorno](#função-sem-retorno)
-    * [Lidando com múltiplos parâmetros usando _vararg_](#lidando-com-múltiplos-parâmetros-usando-vararg)
-    * [Declarando variáveis](#declarando-variáveis)
-  * [🔗 Tipos em Kotlin](#-tipos-em-kotlin)
-  * [Índice de exercícios](#índice-de-exercícios)
+    * [🔗 Tarefa](#-tarefa)
+    * [Casos de uso](#casos-de-uso)
+        * [Função simples](#função-simples)
+        * [Funções em uma linha](#funções-em-uma-linha)
+        * [Função sem retorno](#função-sem-retorno)
+        * [Lidando com múltiplos parâmetros usando _vararg_](#lidando-com-múltiplos-parâmetros-usando-vararg)
+        * [Declarando variáveis](#declarando-variáveis)
+    * [🔗 Tipos em Kotlin](#-tipos-em-kotlin)
+    * [Índice de exercícios](#índice-de-exercícios)
+
 <!-- TOC -->
 
 </details>
@@ -66,7 +68,9 @@ println(resultadoSoma) // Resultado: 8
 Em Kotlin, quando a função tem só uma expressão depois do símbolo `=`, e o tipo de retorno é claro ou pode ser inferido, o compilador sabe
 que o resultado dessa expressão é o retorno da função.
 
-Isso possibilita remover o corpo `{}` e utilizar como expressão `=`
+Isso possibilita remover o corpo `{}` e utilizar como expressão `=`.
+
+Ou seja, ela é transformada de **block body** para **expression body**:
 
 ```kotlin
 fun dobrar(numero: Int): Int = numero * 2
@@ -74,6 +78,9 @@ fun dobrar(numero: Int): Int = numero * 2
 val numeroDobrado = dobrar(7)
 println(numeroDobrado) // Resultado: 14
 ```
+
+> 💡 Em Kotlin, ao ter uma função que avalia uma expressão simples, a prática convencional é utilizar o corpo de expressão (expression
+> body) em vez do corpo em bloco (block body). Geralmente, funções mais curtas são mais fáceis de serem compreendidas.
 
 ### Função sem retorno
 
