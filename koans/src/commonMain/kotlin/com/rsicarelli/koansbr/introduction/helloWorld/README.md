@@ -70,7 +70,7 @@ que o resultado dessa expressão é o retorno da função.
 
 Isso possibilita remover o corpo `{}` e utilizar como expressão `=`.
 
-Ou seja, ela é transformada de **block body** para **expression body**:
+Ou seja, ela é transformada de **block body** (corpo em block) para **expression body** (corpo como expressão):
 
 ```kotlin
 fun dobrar(numero: Int): Int = numero * 2
@@ -79,7 +79,7 @@ val numeroDobrado = dobrar(7)
 println(numeroDobrado) // Resultado: 14
 ```
 
-> 💡 Em Kotlin, ao ter uma função que avalia uma expressão simples, a prática convencional é utilizar o corpo de expressão (expression
+> 💡 Em Kotlin, ao ter uma função que avalia uma expressão simples, a prática convencional é utilizar o corpo como expressão (expression
 > body) em vez do corpo em bloco (block body). Geralmente, funções mais curtas são mais fáceis de serem compreendidas.
 
 ### Função sem retorno
