@@ -4,16 +4,18 @@
 <summary> <b>Conteúdo</b> (clique para expandir) </summary>
 
 <!-- TOC -->
+
 * [Olá, mundo! (Hello, world!)](#olá-mundo-hello-world)
-  * [🔗 Tarefa](#-tarefa)
-  * [Casos de uso](#casos-de-uso)
-    * [Função simples](#função-simples)
-    * [Funções em uma linha](#funções-em-uma-linha)
-    * [Função sem retorno](#função-sem-retorno)
-    * [Lidando com múltiplos argumentos usando _vararg_](#lidando-com-múltiplos-argumentos-usando-vararg)
-    * [Declarando variáveis](#declarando-variáveis)
-  * [🔗 Tipos em Kotlin](#-tipos-em-kotlin)
-  * [Índice de exercícios](#índice-de-exercícios)
+    * [🔗 Tarefa](#-tarefa)
+    * [Casos de uso](#casos-de-uso)
+        * [Função simples](#função-simples)
+        * [Funções em uma linha](#funções-em-uma-linha)
+        * [Função sem retorno](#função-sem-retorno)
+        * [Lidando com múltiplos argumentos usando _vararg_](#lidando-com-múltiplos-argumentos-usando-vararg)
+        * [Declarando variáveis](#declarando-variáveis)
+    * [🔗 Tipos em Kotlin](#-tipos-em-kotlin)
+    * [Índice de exercícios](#índice-de-exercícios)
+
 <!-- TOC -->
 
 </details>
@@ -43,7 +45,7 @@ fun nomeDaFuncao(
 - `fun` palavra-chave reservada para declarar uma função.
 - `nomeDaFuncao` indica e declara a função de forma clara e específica.
 - `(argumento1: Tipo, argumento2: Tipo)` especifica os argumentos que a função irá receber, separados por `,`. Obrigatóriamente, todo
-  argumento precisa ter um nome que fica à esquerda do símbolo `:`, e à direita o seu tipo. 
+  argumento precisa ter um nome que fica à esquerda do símbolo `:`, e à direita o seu tipo.
 - `: TipoDeRetorno` após o símbolo `:`, indica o tipo de valor que a função vai retornar após sua execução.
 - `{}` representa o corpo da função, onde estão as instruções a serem executadas.
 
@@ -117,16 +119,28 @@ imprimirItens("Paçoca", "Cajú", "Açaí")
 
 No Kotlin, há duas maneiras comuns de declarar variáveis: com `val` e com `var`.
 
-1. `val` é um valor fixo e não muda.
+1. `val` é um valor fixo, apenas para leitura.
    ```kotlin
    val tituloDoLivro = "A Jornada Dev"
    // tituloDoLivro = "Outro Título" //impossível
    ```
-2. `var` não fixo que pode mudar ao longo da execução.
+2. `var` é um valor não fixo, tanto para escrita quanto para leitura.
    ```kotlin
    var paginaDeRascunho = "Minha ideia"
    paginaDeRascunho = "Uma ideia diferente" // permitido
    ```
+
+Peço desculpas pelo lapso. Vamos refinar:
+
+> 💡 Se você entende sobre objetos, lembre-se de que `val` não os torna imutáveis. Embora não possa reatribuir um valor, o conteúdo interno
+> ainda pode se alterar de alguma forma. Em Kotlin, costuma-se chamar `val` de "read-only" e não "imutável".
+
+```kotlin
+val lista = mutableListOf("a", "b", "c")
+// lista = mutableListOf("d", "e", "f") // Erro de compilação, pois `val` é só para leitura.
+
+lista.add("d") // Isso é permitido, pois estamos modificando o conteúdo interno da lista e não reatribuindo um novo valor a ela.
+```
 
 ## 🔗 [Tipos em Kotlin](https://kotlinlang.org/docs/kotlin-tour-basic-types.html)
 
