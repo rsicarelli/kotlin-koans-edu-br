@@ -152,12 +152,12 @@ class Person {
 
 ```go
 type Person struct {
-    Name string
-    Age  int
+Name string
+Age  int
 }
 
 func NewPerson(name string, age int) *Person {
-    return &Person{name, age}
+return &Person{name, age}
 }
 ```
 
@@ -229,3 +229,27 @@ println(maria2) // Pessoa(nome=Maria, idade=31)
 - Alterações nas propriedades da data class afetam as funções `equals()`, `hashCode()`, o que pode impactar os seus testes.
 - O método `copy()` facilita a criação de versões modificadas de objetos para testes.
 - Data classes imutáveis (quando as suas propriedades são `val`) garantem que não haja efeitos colaterais indesejados.
+
+---
+
+## Índice de exercícios
+
+1. ➡️ **[Classes de Dados (Data Classes)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/dataClasses/README.md
+   )**
+
+2. [Tipagem inteligente (Smart casts)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/README.md
+   )
+
+3. [Classes seladas (Sealed classes)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md
+   )
+
+4. [Renomear ao importar (Rename on import)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/README.md
+   )
+
+5. [Funções de extensão (Extension functions)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/extensionFunctions/README.md
+   )

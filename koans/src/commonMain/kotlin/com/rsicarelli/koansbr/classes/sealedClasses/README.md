@@ -71,7 +71,7 @@ sealed class StatusPedido(open val id: Int) {
 
 ```kotlin
 sealed interface Desconto {
-    
+
     val aplicadoAs = System.currentTimeMillis()
     fun calcularDesconto(preçoOriginal: Double): Double
 
@@ -513,3 +513,27 @@ fun testDesempenho() {
     assertEquals("Projeto concluído", executarTrabalho(Projeto))
 }
 ```
+
+---
+
+## Índice de exercícios
+
+1. [Classes de Dados (Data Classes)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/dataClasses/README.md
+   )
+
+2. [Tipagem inteligente (Smart casts)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/README.md
+   )
+
+3. ➡️ **[Classes seladas (Sealed classes)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md
+   )**
+
+4. [Renomear ao importar (Rename on import)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/README.md
+   )
+
+5. [Funções de extensão (Extension functions)](
+   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/extensionFunctions/README.md
+   )
