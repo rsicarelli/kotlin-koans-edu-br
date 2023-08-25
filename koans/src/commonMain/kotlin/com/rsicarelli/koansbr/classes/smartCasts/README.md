@@ -9,10 +9,11 @@
 * [Tipagem inteligente (Smart casts)](#tipagem-inteligente-smart-casts)
   * [🔗 Tarefa](#-tarefa)
   * [Casos de uso](#casos-de-uso)
-    * [Tipo dinâmico após verificação de tipo](#tipo-dinâmico-após-verificação-de-tipo)
+    * [Verificação de tipo e inferência](#verificação-de-tipo-e-inferência)
       * [Verificação positiva](#verificação-positiva)
       * [Verificação negativa](#verificação-negativa)
     * [Smart Casts com operadores lógicos](#smart-casts-com-operadores-lógicos)
+    * [Limitações com variáveis mutáveis (`var`)](#limitações-com-variáveis-mutáveis-var)
   * [Índice de exercícios](#índice-de-exercícios)
 <!-- TOC -->
 
@@ -276,55 +277,129 @@ func eval(_ expr: Expr) -> Int {
 
 ## Casos de uso
 
-Em muitas linguagens de programação, é comum a necessidade de se fazer um "casting" (ou "conversão de tipo") de uma variável para outro
-tipo.
+Em programação, cada tipo de dado é representado e operado diferentemente na memória. O "casting" é uma técnica usada para informar ao
+compilador que uma variável deve ser tratada como outro tipo. Isso é útil para realizar operações específicas com essa variável ou para
+garantir compatibilidade com outras partes do código.
 
 Em Kotlin, existe um recurso do compilador chamado **Smart casts** que rastreia verificações de tipos (como com o operador `is`) e infere
 automaticamente o seu tipo quando necessário.
 
-### Tipo dinâmico após verificação de tipo
+### Verificação de tipo e inferência
 
 #### Verificação positiva
 
-Quando você verifica uma variável com `is`, se essa verificação for positiva, Kotlin automaticamente entende o tipo daquela variável naquele
-bloco de código:
+Ao verificar uma variável com o operador `is`, e se a verificação for bem-sucedida, Kotlin reconhece imediatamente o tipo dessa variável
+dentro do bloco de código:
 
 ```kotlin
-class Felino(val emoji : String = "🐱")
-class Canino(val emoji : String = "🐶")
+class Gato(val emojiGato: String = "🐱")
+class Cachorro(val emojiCachoro: String = "🐶")
+class Peixe(val emojiPeixe: String = "🐟")
+class Pássaro(val emojiPassaro: String = "🐦")
 
-fun falar(animal: Any) {
-    if (animal is Felino) println("Miau $emoji") 
-    if (animal is Canino) println("Au au $emoji")
+fun falar(animal: Any): String {
+    return when (animal) {
+        is Gato -> "Miau ${animal.emojiGato}"
+        is Cachorro -> "Au au ${animal.emojiCachoro}"
+        is Peixe -> "Blub blub ${animal.emojiPeixe}"
+        is Pássaro -> "Pi pi ${animal.emojiPassaro}"
+        else -> "Não reconhecemos esse animal."
+    }
+}
+
+fun ondeVive(animal: Any) {
+    if (animal is Gato || animal is Cachorro) {
+        println("Vive em terra.")
+    } else if (animal is Peixe) {
+        println("Vive na água.")
+    } else if (animal is Pássaro) {
+        println("Vive no ar e na terra.")
+    } else {
+        println("Não reconhecemos esse animal.")
+    }
 }
 ```
 
 #### Verificação negativa
 
-Adicionando-se um `!` antes do `is`, permite-se executar uma ação caso o tipo da variável não seja o esperado
+Usando `!` antes do operador `is`, é possível reagir quando a variável não é do tipo esperado:
 
 ```kotlin
-if (animal !is Felino) return
+class Ave(val canto: String)
+class Macaco(val grito: String)
+class Reptil(val som: String = "Ssssss")
 
-print("O nome do felino é ${animal.nome}") 
+fun documentarSom(animal: Any) {
+    if (animal !is Ave) return
+
+    print("O som da ave é: ${animal.canto}")
+}
+
+// Testando a função
+val tucano = Ave("Pi-pi-piu")
+documentarSom(tucano)  // Saída: "O som da ave é: Pi-pi-piu"
 ```
 
 ### Smart Casts com operadores lógicos
 
-Em Kotlin, ao usar operadores lógicos como `&&` (E) ou `||` (OU), a verificação (ou sua negação) de tipo no lado esquerdo do
-operador também pode influenciar o tipo inferido do lado direito.
-
-Isso é extremamente útil para evitar casts explícitos e tornar o código mais legível, flúido e eliminar verbosidade.
+Kotlin vai além e integra a capacidade de "Smart Casts" com operadores lógicos como `&&` e `||`. Isso evita a necessidade de conversões
+explícitas, tornando o código mais limpo e legível.
 
 ```kotlin
-// Após o ||, a variável é considerada do tipo "Cachorro" e tem acesso a atributos especiais de classe
-if (animal !is Cachorro || animal.nome.isEmpty()) return
+open class Animal(val nome: String, val energia: Int = 100)
+
+class Peixe(nome: String, energia: Int, val habitatPreferido: String) : Animal(nome, energia) {
+    fun explorar() = "está explorando o habitat $habitatPreferido!"
+}
+
+class Passaro(nome: String, energia: Int, val tipoBico: String) : Animal(nome, energia) {
+    fun bicar() = "está usando seu bico $tipoBico para buscar comida!"
+}
+
+fun acaoEspecifica(animal: Animal) {
+    when {
+        animal is Peixe && animal.energia > 50 -> {
+            println("${animal.nome} ${animal.explorar()}")
+        }
+
+        animal is Passaro && animal.tipoBico == "afiado" -> {
+            println("${animal.nome} ${animal.bicar()}")
+        }
+
+        else -> {
+            println("${animal.nome} não está realizando uma ação específica no momento.")
+        }
+    }
+}
+
+// Testando a função
+val tilapia = Peixe("Tilápia", 60, "lago de água doce")
+val aguia = Passaro("Águia", 80, "afiado")
+val canario = Passaro("Canário", 50, "pequeno")
+
+acaoEspecifica(tilapia)  // Saída: "Tilápia está explorando o habitat lago de água doce!"
+acaoEspecifica(aguia)    // Saída: "Águia está usando seu bico afiado para buscar comida!"
+acaoEspecifica(canario)  // Saída: "Canário não está realizando uma ação específica no momento."
 ```
 
+### Limitações com variáveis mutáveis (`var`)
+
+O compilador pode não realizar um Smart Cast se não
+puder garantir que o valor da variável não mudou entre o momento da verificação e o momento do uso:
+
 ```kotlin
-// Similarmente, após o &&, a variável tem seu tipo inferido, sem necessidade de expressar seu tipo 
-if (animal is Cachorro && animal.nome.isNotEmpty()) {
-    println("O nome do cachorro é ${animal.nome}")
+open class Animal
+class Cachorro(val nome: String) : Animal() {
+    fun alimentar() = Unit
+}
+
+fun main() {
+    var animal: Animal? = Cachorro("a")
+
+    if (animal is Cachorro) {
+        animal = null
+        animal.alimentar()  // Erro de compilação: Smart cast to 'Cachorro' is impossible, because 'animal' is a mutable property
+    }
 }
 ```
 

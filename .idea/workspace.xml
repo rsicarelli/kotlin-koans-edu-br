@@ -10,8 +10,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/SmartCastsKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/SmartCastsKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/task.md" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/task.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +264,7 @@
       <workItem from="1692856965256" duration="1085000" />
       <workItem from="1692858143688" duration="7000" />
       <workItem from="1692858197242" duration="13000" />
-      <workItem from="1692858230768" duration="3830000" />
+      <workItem from="1692858230768" duration="3873000" />
     </task>
     <servers />
   </component>
