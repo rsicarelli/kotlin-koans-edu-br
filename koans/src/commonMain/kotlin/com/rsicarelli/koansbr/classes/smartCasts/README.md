@@ -12,8 +12,11 @@
     * [Verificação de tipo e inferência](#verificação-de-tipo-e-inferência)
       * [Verificação positiva](#verificação-positiva)
       * [Verificação negativa](#verificação-negativa)
+      * [Limitações com variáveis mutáveis (`var`)](#limitações-com-variáveis-mutáveis-var)
     * [Smart Casts com operadores lógicos](#smart-casts-com-operadores-lógicos)
-    * [Limitações com variáveis mutáveis (`var`)](#limitações-com-variáveis-mutáveis-var)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+  * [Analogia](#analogia)
   * [Índice de exercícios](#índice-de-exercícios)
 <!-- TOC -->
 
@@ -278,8 +281,8 @@ func eval(_ expr: Expr) -> Int {
 ## Casos de uso
 
 Em programação, cada tipo de dado é representado e operado diferentemente na memória. O "casting" é uma técnica usada para informar ao
-compilador que uma variável deve ser tratada como outro tipo. Isso é útil para realizar operações específicas com essa variável ou para
-garantir compatibilidade com outras partes do código.
+compilador que uma variável deve ser tratada como outro tipo. Isso permite realizar operações específicas com essa variável, além de
+garantir a compatibilidade com outras partes do código.
 
 Em Kotlin, existe um recurso do compilador chamado **Smart casts** que rastreia verificações de tipos (como com o operador `is`) e infere
 automaticamente o seu tipo quando necessário.
@@ -340,6 +343,25 @@ val tucano = Ave("Pi-pi-piu")
 documentarSom(tucano)  // Saída: "O som da ave é: Pi-pi-piu"
 ```
 
+#### Limitações com variáveis mutáveis (`var`)
+
+O compilador pode não realizar um Smart Cast se não
+puder garantir que o valor da variável não mudou entre o momento da verificação e o momento do uso:
+
+```kotlin
+open class Animal
+class Cachorro() : Animal() {
+    fun alimentar() = Unit
+}
+
+var animal: Animal? = Cachorro()
+
+if (animal is Cachorro) {
+    animal = null
+    animal.alimentar()  // Erro de compilação: Smart cast para 'Cachorro' é impossível
+}
+```
+
 ### Smart Casts com operadores lógicos
 
 Kotlin vai além e integra a capacidade de "Smart Casts" com operadores lógicos como `&&` e `||`. Isso evita a necessidade de conversões
@@ -382,26 +404,31 @@ acaoEspecifica(aguia)    // Saída: "Águia está usando seu bico afiado para bu
 acaoEspecifica(canario)  // Saída: "Canário não está realizando uma ação específica no momento."
 ```
 
-### Limitações com variáveis mutáveis (`var`)
+### Vantagens
 
-O compilador pode não realizar um Smart Cast se não
-puder garantir que o valor da variável não mudou entre o momento da verificação e o momento do uso:
+- **Sintaxe limpa e código legível**: permite um código mais limpo, direto e legível, evitando repetições de conversões explícitas de tipo.
+- **Segurança de tipo**: o compilador realiza o Smart Cast apenas quando é seguro, reduzindo a possibilidade de erros de conversão em tempo
+  de execução.
+- **Integração com controle de fluxo**: dentro de controles condicionais como `if`, `else`, `when`, ou loops como `for`, `while`, o Kotlin
+  reconhece e ajusta o tipo da variável de acordo, permitindo o acesso direto a suas propriedades específicas sem
+  necessidade de casting explícito.
 
-```kotlin
-open class Animal
-class Cachorro(val nome: String) : Animal() {
-    fun alimentar() = Unit
-}
+### Desvantagens
 
-fun main() {
-    var animal: Animal? = Cachorro("a")
+- **Limitações com Variáveis Mutáveis**: com variáveis mutáveis, Smart Casts pode não ser garantido pelo compilador, já que o tipo pode ter
+  mudado entre a verificação e o uso.
+- **Concorrência**: em ambientes com múltiplos threads, o Smart Cast pode apresentar riscos se uma variável for alterada por outro thread
+  após a verificação.
+- **Potencial confusão com lógica complexa**: em certas lógicas condicionais, o compilador pode não conseguir inferir o tipo, mesmo que
+  pareça claro para o desenvolvedor.
 
-    if (animal is Cachorro) {
-        animal = null
-        animal.alimentar()  // Erro de compilação: Smart cast to 'Cachorro' is impossible, because 'animal' is a mutable property
-    }
-}
-```
+## Analogia
+
+Ao ouvir o canto de um pássaro específico na floresta, um ornitólogo pode identificar imediatamente a espécie, mesmo sem vê-la. Esse
+reconhecimento imediato permite ao especialista saber tudo sobre esse pássaro, desde seus hábitos até seu habitat.
+
+O Smart Cast no Kotlin age de forma semelhante, permitindo utilizar o tipo específico assim que identificado, sem necessidade de
+verificações adicionais.
 
 ## Índice de exercícios
 
