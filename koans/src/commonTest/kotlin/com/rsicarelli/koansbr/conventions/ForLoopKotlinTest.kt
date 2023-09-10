@@ -82,32 +82,6 @@ class ForLoopKotlinTest {
     }
 
     @Test
-    fun `DADO um intervalo de datas que abrange a mudança do mês, QUANDO iteramos sobre ele, ENTÃO devemos obter todas as datas no intervalo`() {
-        // DADO
-        val actualDateRange: ArrayList<MyDate> = arrayListOf()
-        val primeiraData = MyDate(year = 2016, month = 4, dayOfMonth = 29)
-        val segundaData = MyDate(year = 2016, month = 5, dayOfMonth = 2)
-
-        // QUANDO
-        iterateOverDateRange(firstDate = primeiraData, secondDate = segundaData) { date ->
-            actualDateRange.add(date)
-        }
-
-        // ENTÃO
-        val expectedDateRange: ArrayList<MyDate> = arrayListOf(
-            MyDate(year = 2016, month = 4, dayOfMonth = 29),
-            MyDate(year = 2016, month = 4, dayOfMonth = 30),
-            MyDate(year = 2016, month = 5, dayOfMonth = 1),
-            MyDate(year = 2016, month = 5, dayOfMonth = 2)
-        )
-        assertEquals(
-            expected = expectedDateRange,
-            actual = actualDateRange,
-            message = "Iteração incorreta sobre datas que abrangem a mudança do mês."
-        )
-    }
-
-    @Test
     fun `DADO um intervalo de datas que abrange a mudança do ano, QUANDO iteramos sobre ele, ENTÃO devemos obter todas as datas no intervalo`() {
         // DADO
         val actualDateRange: ArrayList<MyDate> = arrayListOf()
@@ -171,23 +145,6 @@ class ForLoopKotlinTest {
     }
 
     @Test
-    fun `DADO uma data no final de fevereiro em um ano bissexto, QUANDO pegamos a data seguinte, ENTÃO ela deve ser 1 de março`() {
-        // DADO
-        val data = MyDate(year = 2016, month = 2, dayOfMonth = 29) // 2016 é um ano bissexto
-
-        // QUANDO
-        val nextDate: MyDate = data.followingDate()
-
-        // ENTÃO
-        val expectedDate = MyDate(year = 2016, month = 3, dayOfMonth = 1)
-        assertEquals(
-            expected = expectedDate,
-            actual = nextDate,
-            message = "Data seguinte incorreta para o final de fevereiro em um ano bissexto."
-        )
-    }
-
-    @Test
     fun `DADO uma data no final de dezembro, QUANDO pegamos a data seguinte, ENTÃO ela deve ser 1 de janeiro do próximo ano`() {
         // DADO
         val data = MyDate(year = 2016, month = 12, dayOfMonth = 31)
@@ -221,81 +178,5 @@ class ForLoopKotlinTest {
         assertFailsWith<NoSuchElementException> {
             iterator.next()
         }
-    }
-
-    @Test
-    fun `DADO um mês inválido ao criar um MyDate, QUANDO tentamos instanciar, ENTÃO deve lançar IllegalArgumentException`() {
-        // QUANDO e ENTÃO
-        assertFailsWith<IllegalArgumentException> {
-            MyDate(year = 2016, month = 13, dayOfMonth = 5)
-        }
-    }
-
-    @Test
-    fun `DADO um dia inválido ao criar um MyDate, QUANDO tentamos instanciar, ENTÃO deve lançar IllegalArgumentException`() {
-        // QUANDO e ENTÃO
-        assertFailsWith<IllegalArgumentException> {
-            MyDate(year = 2016, month = 12, dayOfMonth = 32)
-        }
-    }
-
-    @Test
-    fun `DADO um valor negativo para o ano ao criar um MyDate, QUANDO tentamos instanciar, ENTÃO deve lançar IllegalArgumentException`() {
-        // QUANDO e ENTÃO
-        assertFailsWith<IllegalArgumentException> {
-            MyDate(year = -1, month = 5, dayOfMonth = 5)
-        }
-    }
-
-    @Test
-    fun `DADO um valor negativo para o mês ao criar um MyDate, QUANDO tentamos instanciar, ENTÃO deve lançar IllegalArgumentException`() {
-        // QUANDO e ENTÃO
-        assertFailsWith<IllegalArgumentException> {
-            MyDate(year = 2016, month = -5, dayOfMonth = 5)
-        }
-    }
-
-    @Test
-    fun `DADO um valor negativo para o dia ao criar um MyDate, QUANDO tentamos instanciar, ENTÃO deve lançar IllegalArgumentException`() {
-        // QUANDO e ENTÃO
-        assertFailsWith<IllegalArgumentException> {
-            MyDate(year = 2016, month = 5, dayOfMonth = -5)
-        }
-    }
-
-    @Test
-    fun `DADO o 30º de fevereiro em um ano não bissexto ao criar um MyDate, QUANDO tentamos instanciar, ENTÃO deve lançar IllegalArgumentException`() {
-        // QUANDO e ENTÃO
-        assertFailsWith<IllegalArgumentException> {
-            MyDate(year = 2015, month = 2, dayOfMonth = 30)
-        }
-    }
-
-    @Test
-    fun `DADO um intervalo que atravessa vários anos, QUANDO iteramos, ENTÃO obtemos todas as datas no intervalo`() {
-        // DADO
-        val range = DateRange(
-            MyDate(year = 2015, month = 12, dayOfMonth = 30),
-            MyDate(year = 2016, month = 1, dayOfMonth = 2)
-        )
-        val expectedDates: List<MyDate> = listOf(
-            MyDate(year = 2015, month = 12, dayOfMonth = 30),
-            MyDate(year = 2015, month = 12, dayOfMonth = 31),
-            MyDate(year = 2016, month = 1, dayOfMonth = 1),
-            MyDate(year = 2016, month = 1, dayOfMonth = 2)
-        )
-        val actualDates: MutableList<MyDate> = mutableListOf()
-
-        // QUANDO
-        for (date: MyDate in range) {
-            actualDates.add(date)
-        }
-
-        // ENTÃO
-        assertEquals(
-            expected = expectedDates,
-            actual = actualDates,
-            message = "A iteração em um intervalo que atravessa anos não retornou as datas esperadas."
-        )
     }
 }

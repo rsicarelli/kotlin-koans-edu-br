@@ -9,9 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/koans_desktop.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/koans_desktop.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/conventions/RangesKotlinTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/conventions/RangesKotlinTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/conventions/OperatorsOverloadingKotlinTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/conventions/OperatorsOverloadingKotlinTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +115,7 @@
       <recent name="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/forloop" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.SmartCastsKotlinKt">
+  <component name="RunManager" selected="Gradle.OperatorsOverloadingKotlinTest">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -134,18 +133,20 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
-    <configuration name="SealedClassesKotlin [desktop]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OperatorsOverloadingKotlinTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/koans" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="-DmainClass=com.rsicarelli.koansbr.classes.sealedClasses.SealedClassesKotlinKt --quiet" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="desktopRun" />
+            <option value=":koans:cleanDesktopTest" />
+            <option value=":koans:desktopTest" />
+            <option value="--tests &quot;com.rsicarelli.koansbr.conventions.OperatorsOverloadingKotlinTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -153,7 +154,56 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OperatorsOverloadingKotlinTest.DADO uma data QUANDO adicionamos uma combinação de dias, semanas e anos ENTÃO deve retornar a data correta" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/koans" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":koans:cleanDesktopTest" />
+            <option value=":koans:desktopTest" />
+            <option value="--tests &quot;com.rsicarelli.koansbr.conventions.OperatorsOverloadingKotlinTest.DADO uma data QUANDO adicionamos uma combinação de dias, semanas e anos ENTÃO deve retornar a data correta&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'com.rsicarelli.koansbr.conventions'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":koans:cleanDesktopTest" />
+            <option value=":koans:desktopTest" />
+            <option value="--tests" />
+            <option value="&quot;com.rsicarelli.koansbr.conventions.*&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -198,15 +248,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.SealedClassesKotlin [desktop]" />
+      <item itemvalue="Gradle.OperatorsOverloadingKotlinTest" />
+      <item itemvalue="Gradle.OperatorsOverloadingKotlinTest.DADO uma data QUANDO adicionamos uma combinação de dias, semanas e anos ENTÃO deve retornar a data correta" />
+      <item itemvalue="Gradle.Tests in 'com.rsicarelli.koansbr.conventions'" />
       <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)" />
       <item itemvalue="Kotlin.SmartCastsKotlinKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OperatorsOverloadingKotlinTest" />
+        <item itemvalue="Gradle.OperatorsOverloadingKotlinTest.DADO uma data QUANDO adicionamos uma combinação de dias, semanas e anos ENTÃO deve retornar a data correta" />
+        <item itemvalue="Gradle.Tests in 'com.rsicarelli.koansbr.conventions'" />
         <item itemvalue="Kotlin.SmartCastsKotlinKt" />
         <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)" />
-        <item itemvalue="Gradle.SealedClassesKotlin [desktop]" />
       </list>
     </recent_temporary>
   </component>
@@ -264,6 +318,7 @@
       <workItem from="1692955507713" duration="623000" />
       <workItem from="1694339284146" duration="5175000" />
       <workItem from="1694344587102" duration="23000" />
+      <workItem from="1694344615989" duration="304000" />
     </task>
     <servers />
   </component>

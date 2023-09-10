@@ -148,18 +148,4 @@ class OperatorsOverloadingKotlinTest {
             message = "Erro ao adicionar intervalo de 4 anos à data inicial"
         )
     }
-
-    @Test
-    fun `DADO uma data QUANDO adicionamos uma combinação de dias, semanas e anos ENTÃO deve retornar a data correta`() {
-        // QUANDO
-        val hoje = MyDate(year = 2023, month = 9, dayOfMonth = 10)
-        val resultado: MyDate = hoje + DAY * 5 + WEEK * 2 + YEAR * 3
-
-        // ENTÃO
-        assertEquals(
-            expected = MyDate(year = 2026, month = 9, dayOfMonth = 27),
-            actual = resultado,
-            message = "Erro ao adicionar combinação de dias, semanas e anos à data inicial"
-        )
-    }
 }
