@@ -9,9 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/koans_desktop.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/koans_desktop.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/conventions/RangesKotlinTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/conventions/RangesKotlinTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,13 +55,6 @@
       </list>
     </option>
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="false" />
-    <option name="myAllFileTypesSelected" value="true" />
-    <option name="mySelectedFileTypes">
-      <set />
-    </option>
-  </component>
   <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.21.0" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,13 +65,6 @@
   <component name="KotlinMultiplatform" KONAN_HOME="$USER_HOME$/.konan/kotlin-native-prebuilt-macos-aarch64-1.9.0" />
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
-  </component>
-  <component name="OptimizeOnSaveOptions">
-    <option name="myRunOnSave" value="false" />
-    <option name="myAllFileTypesSelected" value="true" />
-    <option name="mySelectedFileTypes">
-      <set />
-    </option>
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -102,7 +88,6 @@
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
@@ -124,11 +109,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references" />
-      <recent name="$PROJECT_DIR$/koans" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/referencias" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/typescript" />
-      <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart" />
+      <recent name="$PROJECT_DIR$/koans/src/commonTest/kotlin/com/rsicarelli/koansbr/conventions" />
+      <recent name="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/ranges" />
+      <recent name="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/operatorsoverloading" />
+      <recent name="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/invoke" />
+      <recent name="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/forloop" />
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.SmartCastsKotlinKt">
@@ -277,6 +262,8 @@
       <workItem from="1692858230768" duration="3873000" />
       <workItem from="1692941468702" duration="5190000" />
       <workItem from="1692955507713" duration="623000" />
+      <workItem from="1694339284146" duration="5175000" />
+      <workItem from="1694344587102" duration="23000" />
     </task>
     <servers />
   </component>

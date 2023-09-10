@@ -2,31 +2,98 @@
  * SPDX-License-Identifier: MIT
  * Copyright (c) 2023 Rodrigo Sicarelli
  */
+package com.rsicarelli.koansbr.conventions
 
 import com.rsicarelli.koansbr.conventions.ranges.MyDate
 import com.rsicarelli.koansbr.conventions.ranges.checkInRange
-import org.junit.Assert
 import kotlin.test.Test
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class RangesKotlinTest {
 
-    private fun doTest(date: MyDate, first: MyDate, last: MyDate, shouldBeInRange: Boolean) {
-        val message = "$date should${if (shouldBeInRange) "" else "n't"} be in range: $first..$last:\n"
-        Assert.assertEquals(message, shouldBeInRange, checkInRange(date, first, last))
+    @Test
+    fun `DADO um intervalo de datas QUANDO verificamos uma data dentro desse intervalo ENTÃO ela deve estar no intervalo`() {
+        // DADO
+        val data = MyDate(year = 2014, month = 3, dayOfMonth = 22)
+        val inicio = MyDate(year = 2014, month = 1, dayOfMonth = 1)
+        val fim = MyDate(year = 2015, month = 1, dayOfMonth = 1)
+
+        // QUANDO
+        val estaNoIntervalo = checkInRange(date = data, first = inicio, last = fim)
+
+        // ENTÃO
+        assertTrue(
+            actual = estaNoIntervalo,
+            message = "Esperado que a data $data esteja no intervalo $inicio..$fim"
+        )
     }
 
-    @Test(timeout = 1000)
-    fun testInRange() {
-        doTest(MyDate(2014, 3, 22), MyDate(2014, 1, 1), MyDate(2015, 1, 1), shouldBeInRange = true)
+    @Test
+    fun `DADO um intervalo de datas QUANDO verificamos uma data exatamente no início desse intervalo ENTÃO ela deve estar no intervalo`() {
+        // DADO
+        val data = MyDate(year = 2014, month = 1, dayOfMonth = 1)
+        val inicio = MyDate(year = 2014, month = 1, dayOfMonth = 1)
+        val fim = MyDate(year = 2015, month = 1, dayOfMonth = 1)
+
+        // QUANDO
+        val estaNoIntervalo = checkInRange(date = data, first = inicio, last = fim)
+
+        // ENTÃO
+        assertTrue(
+            actual = estaNoIntervalo,
+            message = "Esperado que a data $data esteja no intervalo $inicio..$fim"
+        )
     }
 
-    @Test(timeout = 1000)
-    fun testBefore() {
-        doTest(MyDate(2013, 3, 22), MyDate(2014, 1, 1), MyDate(2015, 1, 1), shouldBeInRange = false)
+    @Test
+    fun `DADO um intervalo de datas QUANDO verificamos uma data exatamente no fim desse intervalo ENTÃO ela deve estar no intervalo`() {
+        // DADO
+        val data = MyDate(year = 2015, month = 1, dayOfMonth = 1)
+        val inicio = MyDate(year = 2014, month = 1, dayOfMonth = 1)
+        val fim = MyDate(year = 2015, month = 1, dayOfMonth = 1)
+
+        // QUANDO
+        val estaNoIntervalo = checkInRange(date = data, first = inicio, last = fim)
+
+        // ENTÃO
+        assertTrue(
+            actual = estaNoIntervalo,
+            message = "Esperado que a data $data esteja no intervalo $inicio..$fim"
+        )
     }
 
-    @Test(timeout = 1000)
-    fun testAfter() {
-        doTest(MyDate(2015, 3, 22), MyDate(2014, 1, 1), MyDate(2015, 1, 1), shouldBeInRange = false)
+    @Test
+    fun `DADO um intervalo de datas QUANDO verificamos uma data anterior a esse intervalo ENTÃO ela não deve estar no intervalo`() {
+        // DADO
+        val data = MyDate(year = 2013, month = 3, dayOfMonth = 22)
+        val inicio = MyDate(year = 2014, month = 1, dayOfMonth = 1)
+        val fim = MyDate(year = 2015, month = 1, dayOfMonth = 1)
+
+        // QUANDO
+        val estaNoIntervalo = checkInRange(date = data, first = inicio, last = fim)
+
+        // ENTÃO
+        assertFalse(
+            actual = estaNoIntervalo,
+            message = "Esperado que a data $data não esteja no intervalo $inicio..$fim"
+        )
+    }
+
+    @Test
+    fun `DADO um intervalo de datas QUANDO verificamos uma data posterior a esse intervalo ENTÃO ela não deve estar no intervalo`() {
+        // DADO
+        val data = MyDate(year = 2015, month = 3, dayOfMonth = 22)
+        val inicio = MyDate(year = 2014, month = 1, dayOfMonth = 1)
+        val fim = MyDate(year = 2015, month = 1, dayOfMonth = 1)
+
+        // QUANDO
+        val estaNoIntervalo = checkInRange(date = data, first = inicio, last = fim)
+
+        // ENTÃO
+        assertFalse(
+            actual = estaNoIntervalo,
+            message = "Esperado que a data $data não esteja no intervalo $inicio..$fim"
+        )
     }
 }
