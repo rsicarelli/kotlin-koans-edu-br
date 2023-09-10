@@ -23,4 +23,4 @@ SOFTWARE.
 
 ---
 
-Contribuições adicionais e adaptações em 2023 por Rodrigo Sicarelli podem estar sujeitas a licenças adicionais. As modificações/adaptações feitas em 2023 estão licenciadas sob a mesma licença MIT, a menos que especificado de outra forma.
+Additional contributions and adaptations in 2023 by Rodrigo Sicarelli may be subject to additional licenses. Modifications/adaptations made in 2023 are licensed under the same MIT license, unless otherwise specified.

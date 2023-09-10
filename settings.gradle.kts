@@ -1,5 +1,6 @@
 /*
  * SPDX-License-Identifier: MIT
+ * Copyright (c) 2014-2019 JetBrains s.r.o.
  * Copyright (c) 2023-2023 Rodrigo Sicarelli
  */
 
@@ -9,12 +10,10 @@ pluginManagement {
     repositories {
         gradlePluginPortal()
         mavenCentral()
-        maven("https://maven.pkg.jetbrains.space/kotlin/p/wasm/experimental")
-
     }
 
     plugins {
-        kotlin("jvm").version(extra["kotlin.version"] as String)
+        kotlin("multiplatform").version(extra["kotlin.version"] as String)
     }
 }
 
@@ -24,7 +23,6 @@ dependencyResolutionManagement {
     repositories {
         mavenCentral()
         google()
-        maven("https://nodesource.com/repos/nodejs")
     }
 }
 
