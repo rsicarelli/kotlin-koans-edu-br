@@ -430,6 +430,8 @@ reconhecimento imediato permite ao especialista saber tudo sobre esse pássaro, 
 O Smart Cast no Kotlin age de forma semelhante, permitindo utilizar o tipo específico assim que identificado, sem necessidade de
 verificações adicionais.
 
+---
+
 ## Índice de exercícios
 
 1. [Classes de Dados (Data Classes)](

@@ -10,6 +10,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +131,7 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/rsicarelli/koansbr/__Classes/RenameOnImport/referencias/dart" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)">
+  <component name="RunManager" selected="Kotlin.SmartCastsKotlinKt">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -192,6 +194,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="SmartCastsKotlinKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.rsicarelli.koansbr.classes.smartCasts.SmartCastsKotlinKt" />
+      <module name="kotlin-koans-edu-br.koans.commonMain" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -206,11 +215,12 @@
     <list>
       <item itemvalue="Gradle.SealedClassesKotlin [desktop]" />
       <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)" />
+      <item itemvalue="Kotlin.SmartCastsKotlinKt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.SmartCastsKotlinKt" />
         <item itemvalue="Gradle.Tests in 'kotlin-koans-edu-br.koans.commonTest' (5)" />
-        <item itemvalue="Gradle.DefaultArgumentsTests" />
         <item itemvalue="Gradle.SealedClassesKotlin [desktop]" />
       </list>
     </recent_temporary>
@@ -265,6 +275,8 @@
       <workItem from="1692858143688" duration="7000" />
       <workItem from="1692858197242" duration="13000" />
       <workItem from="1692858230768" duration="3873000" />
+      <workItem from="1692941468702" duration="5190000" />
+      <workItem from="1692955507713" duration="623000" />
     </task>
     <servers />
   </component>

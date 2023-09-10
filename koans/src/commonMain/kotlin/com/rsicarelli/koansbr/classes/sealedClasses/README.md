@@ -1,4 +1,37 @@
-## Sealed classes
+# Sealed classes
+
+<details>
+<summary>&nbsp;<b>Conteúdo</b> (clique para expandir)</summary>
+
+<p></p>
+
+<!-- TOC -->
+* [Sealed classes](#sealed-classes)
+    * [🔗 Tarefa](#-tarefa)
+    * [Casos de uso](#casos-de-uso)
+      * [Por que usar Sealed Classes?](#por-que-usar-sealed-classes)
+      * [Sealed Class vs Interface](#sealed-class-vs-interface)
+        * [Sealed Class](#sealed-class)
+        * [Sealed Interface](#sealed-interface)
+      * [Relação das Sealed Classes com Enums](#relação-das-sealed-classes-com-enums)
+      * [Sealed na Programação Funcional](#sealed-na-programação-funcional)
+        * [Sealed, Kotlin e a forte tipagem](#sealed-kotlin-e-a-forte-tipagem)
+        * [Melhor suporte da IDE para tratar suas sealed](#melhor-suporte-da-ide-para-tratar-suas-sealed)
+      * [Data Object](#data-object)
+    * [Vantagens](#vantagens)
+    * [Desvantagens](#desvantagens)
+  * [Índice de exercícios](#índice-de-exercícios)
+<!-- TOC -->
+
+</details>
+
+### 🔗 [Tarefa](https://play.kotlinlang.org/koans/Classes/Sealed%20classes/Task.kt)
+
+Reutilize sua solução da tarefa anterior, mas substitua a interface
+pela interface [`sealed`](https://kotlinlang.org/docs/sealed-classes.html).
+Assim, você não precisará mais do bloco `else` na expressão `when`.
+
+### Casos de uso
 
 [Sealed Classes e Interfaces](https://kotlinlang.org/docs/sealed-classes.html) em Kotlin são um recurso especial para criar um conjunto
 específico e limitado de classes relacionadas. São como caixas que
@@ -20,16 +53,6 @@ data object Corda : TipoInstrumento
 data object Percussao : TipoInstrumento
 data object Tecla : TipoInstrumento
 ```
-
-### Tarefa
-
-https://play.kotlinlang.org/koans/Classes/Sealed%20classes/Task.kt
-
-Reutilize sua solução da tarefa anterior, mas substitua a interface
-pela interface [`sealed`](https://kotlinlang.org/docs/sealed-classes.html).
-Assim, você não precisará mais do bloco `else` na expressão `when`.
-
-### Casos de uso
 
 #### Por que usar Sealed Classes?
 
@@ -280,7 +303,7 @@ fun atualizarStatusDoPedido(status: PedidoStatus) {
 #### Data Object
 
 A partir do Kotlin `1.9.0`, temos disponível um novo tipo de classe chamado `data object`. Esse tipo de classe brilha muito quando utilizada
-junto a sealed classes. Vamos entender o por quê
+junto a sealed classes. Vamos entender o porquê
 
 ```kotlin
 package com.rsicarelli.koansbr.classes.sealedClasses
