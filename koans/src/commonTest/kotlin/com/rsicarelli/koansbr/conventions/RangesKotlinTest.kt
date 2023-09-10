@@ -6,7 +6,7 @@
 import com.rsicarelli.koansbr.conventions.ranges.MyDate
 import com.rsicarelli.koansbr.conventions.ranges.checkInRange
 import org.junit.Assert
-import org.junit.Test
+import kotlin.test.Test
 
 class RangesKotlinTest {
 

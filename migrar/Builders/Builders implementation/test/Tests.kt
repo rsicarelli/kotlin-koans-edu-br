@@ -1,5 +1,5 @@
 import org.junit.Assert
-import org.junit.Test
+import kotlin.test.Test
 
 class HtmlDslTest {
     @Test(timeout = 1000)

@@ -1,6 +1,6 @@
 import koans.util.errorMessage
 import org.junit.Assert
-import org.junit.Test
+import kotlin.test.Test
 
 class K_Compound_Tasks {
 

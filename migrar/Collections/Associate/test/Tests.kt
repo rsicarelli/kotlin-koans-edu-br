@@ -1,6 +1,6 @@
 import koans.util.errorMessage
 import org.junit.Assert
-import org.junit.Test
+import kotlin.test.Test
 
 class TestAssociate {
     @Test(timeout = 1000)

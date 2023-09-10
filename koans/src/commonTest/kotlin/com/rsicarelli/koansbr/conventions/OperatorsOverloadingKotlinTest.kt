@@ -7,7 +7,7 @@ import com.rsicarelli.koansbr.conventions.operatorsoverloading.MyDate
 import com.rsicarelli.koansbr.conventions.operatorsoverloading.task1
 import com.rsicarelli.koansbr.conventions.operatorsoverloading.task2
 import org.junit.Assert
-import org.junit.Test
+import kotlin.test.Test
 import sun.security.krb5.KrbException.errorMessage
 
 class OperatorsOverloadingKotlinTest {

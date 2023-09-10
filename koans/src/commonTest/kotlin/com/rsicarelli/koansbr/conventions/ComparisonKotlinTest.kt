@@ -1,9 +1,9 @@
 package com.rsicarelli.koansbr.conventions
 
 import com.rsicarelli.koansbr.conventions.comparison.MyDate
+import kotlin.test.Test
 import kotlin.test.assertFalse
 import kotlin.test.assertTrue
-import org.junit.Test
 
 class ComparisonKotlinTest {
 

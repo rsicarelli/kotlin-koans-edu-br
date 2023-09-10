@@ -1,5 +1,5 @@
 import org.junit.Assert
-import org.junit.Test
+import kotlin.test.Test
 
 class TestProperties {
     @Test(timeout = 1000)
