@@ -1,7 +1,15 @@
+
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023 Rodrigo Sicarelli
+ */
+
+import com.rsicarelli.koansbr.conventions.invoke.Invokable
+import com.rsicarelli.koansbr.conventions.invoke.invokeTwice
 import org.junit.Assert
 import org.junit.Test
 
-class TestInvoke {
+class InvokeKotlinTest {
     @Test(timeout = 1000)
     fun testInvokeTwice() = testInvokable(2, ::invokeTwice)
 

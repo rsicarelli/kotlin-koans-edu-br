@@ -8,12 +8,12 @@ You can build a range of any comparable elements.
 In Kotlin [`in` checks](https://kotlinlang.org/docs/operator-overloading.html#in-operator)
 are translated to the corresponding `contains` calls
 and [`..`](https://kotlinlang.org/docs/operator-overloading.html#arithmetic-operators)
-to `rangeTo` calls:
+to `com.rsicarelli.koansbr.conventions.forloop.rangeTo` calls:
 
 ```kotlin
 val list = listOf("a", "b")
 "a" in list  // list.contains("a")
 "a" !in list // !list.contains("a")
 
-date1..date2 // date1.rangeTo(date2)
+date1..date2 // date1.com.rsicarelli.koansbr.conventions.forloop.rangeTo(date2)
 ```

@@ -1,8 +1,16 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023 Rodrigo Sicarelli
+ */
+
+import com.rsicarelli.koansbr.conventions.ranges.MyDate
+import com.rsicarelli.koansbr.conventions.ranges.checkInRange
 import org.junit.Assert
 import org.junit.Test
 
-class TestRangeTo {
-    fun doTest(date: MyDate, first: MyDate, last: MyDate, shouldBeInRange: Boolean) {
+class RangesKotlinTest {
+
+    private fun doTest(date: MyDate, first: MyDate, last: MyDate, shouldBeInRange: Boolean) {
         val message = "$date should${if (shouldBeInRange) "" else "n't"} be in range: $first..$last:\n"
         Assert.assertEquals(message, shouldBeInRange, checkInRange(date, first, last))
     }

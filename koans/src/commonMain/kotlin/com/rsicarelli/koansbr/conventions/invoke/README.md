@@ -11,4 +11,4 @@ operator fun Int.invoke() { println(this) }
 1() //huh?..
 ```
 
-Implement the function `Invokable.invoke()` to count the number of times it is invoked.
+Implement the function `com.rsicarelli.koansbr.conventions.invoke.Invokable.invoke()` to count the number of times it is invoked.

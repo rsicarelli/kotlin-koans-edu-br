@@ -1,4 +1,13 @@
+
+/*
+ * SPDX-License-Identifier: MIT
+ * Copyright (c) 2023 Rodrigo Sicarelli
+ */
+
+package com.rsicarelli.koansbr.conventions.ranges
+
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) : Comparable<MyDate> {
+
     override fun compareTo(other: MyDate): Int {
         if (year != other.year) return year - other.year
         if (month != other.month) return month - other.month
@@ -6,4 +15,6 @@ data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) : Comparab
     }
 }
 
-operator fun MyDate.rangeTo(other: MyDate) = DateRange(this, other)
+fun checkInRange(date: MyDate, first: MyDate, last: MyDate): Boolean {
+    return date in first..last
+}
