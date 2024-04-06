@@ -1,14 +1,43 @@
-## Rename on import
+## 🔗 [Tarefa](https://play.kotlinlang.org/koans/Classes/Rename%20on%20import/Task.kt) 
 
-When you [import](https://kotlinlang.org/docs/packages.html#imports)
-a class or a function, you can specify a different name for it
-by adding `as NewName` after the import directive.
-It can be useful if you want to use two classes or functions with similar names
-from different libraries.
+Ao [importar](https://kotlinlang.org/docs/packages.html#imports) uma classe ou função, você pode especificar um nome diferente para ela adicionando como NewName após a diretiva de importação. Isso pode ser útil se você quiser usar duas classes ou funções com nomes semelhantes de bibliotecas diferentes.
 
-Uncomment the code and make it compile.
-Rename `Random` from the `kotlin` package to `KRandom`,
-and `Random` from the `java` package to `JRandom`. 
+Descomente o código e faça-o compilar. Renomeie `Random` do pacote Kotlin para `KRandom` e `Random` do pacote Java para `JRandom`.
+
+## Introdução ao "rename imports" do Kotlin.
+Constantemente durante o dia a dia do desenvolvimento, utilizamos diversas funções e classes que possuem o mesmo nome. 
+
+Por exemplo, vamos supor que você precise utilizar o Random do pacote `kotlin.random` e, ao mesmo tempo, o `Random` do pacote `java.util`:
+```kotlin
+fun useDifferentRandomClasses(): String {
+   val kotlinRandom = kotlin.random.Random.nextInt(2)
+   val javaRandom = java.util.Random().nextInt(2)
+
+   return "Kotlin: $kotlinRandom, Java: $javaRandom."
+}
+```
+
+Aqui, você precisa fazer uma escolha: ou importar o `java.util` ou `kotlin.random`:
+```kotlin
+import kotlin.random.Random
+
+fun useDifferentRandomClasses() {
+    val kotlinRandom = Random.nextInt(2)
+    val javaRandom= java.util.Random().nextInt(2)
+}
+```
+ou...
+```kotlin
+import java.util.Random
+
+fun useDifferentRandomClasses(): String {
+    val kotlinRandom = kotlin.random.Random.nextInt(2)
+    val javaRandom = Random().nextInt(/* bound = */ 2)
+}
+```
+Ao tentar importar os 2, recebemos um erro na IDE:
+
+
 
 ---
 

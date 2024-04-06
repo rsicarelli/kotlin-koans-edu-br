@@ -9,46 +9,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3db5a7b5-fe95-4d8f-acf6-83b07429113a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/copyright/MIT___Pessoal.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copyright/MIT___Pessoal.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/koans/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/dataClasses/DataClassesKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/dataClasses/DataClassesKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/dataClasses/references/DataClassesJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/dataClasses/references/DataClassesJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/extensionFunctions/ExtensionFunctionsKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/extensionFunctions/ExtensionFunctionsKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/extensionFunctions/references/ExtensionFunctionsJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/extensionFunctions/references/ExtensionFunctionsJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/RenameOnImportKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/RenameOnImportKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/referencias/RenameOnImportJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/referencias/RenameOnImportJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/SealedClassesKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/SealedClassesKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references/SealedClassesJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/references/SealedClassesJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/SmartCastsKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/SmartCastsKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/references/SmartCastsJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/references/SmartCastsJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/comparison/ComparisonKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/comparison/ComparisonKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/forloop/ForLoopKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/forloop/ForLoopKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/invoke/InvokeKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/invoke/InvokeKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/operatorsoverloading/OperatorsOverloadingKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/operatorsoverloading/OperatorsOverloadingKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/ranges/RangesKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/conventions/ranges/RangesKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/DefaultArgumentsKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/DefaultArgumentsKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/references/DefaultArgumentsJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/defaultArguments/references/DefaultArgumentsJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/HelloWorldKoltin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/HelloWorldKoltin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/references/HelloWorldJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/helloWorld/references/HelloWorldJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/LambdasKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/LambdasKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/references/LambdasJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/lambdas/references/LambdasJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/NamedArgumentsKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/NamedArgumentsKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/references/NamedArgumentsJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/namedArguments/references/NamedArgumentsJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/NothingTypeKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/NothingTypeKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/references/NothingTypeJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nothingType/references/NothingTypeJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/NullableTypesKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/NullableTypesKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/references/NullableTypesJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/nullableTypes/references/NullableTypesJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/StringTemplateKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/StringTemplateKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/references/StringTemplateJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/stringTemplates/references/StringTemplateJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/TripleQuotedKotlin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/TripleQuotedKotlin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/references/TripleQuotedJava.java" beforeDir="false" afterPath="$PROJECT_DIR$/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/introduction/tripleQuotedStrings/references/TripleQuotedJava.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,30 +78,31 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "jdk.selected.JAVA_MODULE": "HOME-11",
-    "last_opened_file_path": "/Users/rodrigosicarelli/Workspace/Educacional/kotlin-koans-edu-br",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "copyright.profiles",
-    "ts.external.directory.path": "/Users/rodrigosicarelli/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;HOME-11&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/rsicarelli/Workspace/Personal/kotlin-koans-edu-br&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/rodrigosicarelli/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -357,6 +319,8 @@
       <workItem from="1694339284146" duration="5175000" />
       <workItem from="1694344587102" duration="23000" />
       <workItem from="1694344615989" duration="929000" />
+      <workItem from="1709893141664" duration="1092000" />
+      <workItem from="1709894461789" duration="654000" />
     </task>
     <servers />
   </component>
@@ -364,6 +328,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
+    <option featureType="com.intellij.facetType" implementationName="Python" />
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="UpdateCopyrightCheckinHandler">
