@@ -5,9 +5,9 @@ Ao [importar](https://kotlinlang.org/docs/packages.html#imports) uma classe ou f
 Descomente o código e faça-o compilar. Renomeie `Random` do pacote Kotlin para `KRandom` e `Random` do pacote Java para `JRandom`.
 
 ## Introdução ao "rename imports" do Kotlin.
-Constantemente durante o dia a dia do desenvolvimento, utilizamos diversas funções e classes que possuem o mesmo nome. 
+Constantemente, durante o dia a dia do desenvolvimento, utilizamos diversas funções e classes que têm o mesmo nome. 
 
-Por exemplo, vamos supor que você precise utilizar o Random do pacote `kotlin.random` e, ao mesmo tempo, o `Random` do pacote `java.util`:
+Por exemplo, suponha que você precise usar o Random do pacote `kotlin.random` e, ao mesmo tempo, o `Random` do pacote `java.util`:
 ```kotlin
 fun useDifferentRandomClasses(): String {
    val kotlinRandom = kotlin.random.Random.nextInt(2)
@@ -37,28 +37,41 @@ fun useDifferentRandomClasses(): String {
 ```
 Ao tentar importar os 2, recebemos um erro na IDE:
 
+![Conflito ao importar](https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/resources/import-conflict-kotlin.png?raw=true)
 
+## Introduzindo o "import alias"
+
+Existem duas formas de resolver esse problema. A primeira é você utilizar o "full qualifier", ou seja, declarar a classe que deseja usar juntamente com o pacote:
+```kotlin
+kotlin.random.Random.nextInt(2)
+java.util.Random().nextInt(2)
+```
+
+Essa abordagem é totalmente válida, mas requer um esforço cognitivo adicional para compreender a origem de cada instância de `Random`.
+
+Há também uma preocupação estética e de organização. Imagine, por exemplo, que você tenha duas classes com o mesmo nome em seu repositório, e ambas estejam em pacotes extensos:
+```kotlin
+val errorCore = br.com.rsicarelli.multiplatform.core.errorMessages.shared.apiErrors.Error
+val errorFeature = br.com.rsicarelli.multiplatform.feartures.home.errorMessages.shared.apiErrors.Error
+```
+
+A leitura fica bastante prejudicada, o que causa problemas de compreensão.
+
+É aqui que os *import aliases* do Kotlin entram em jogo:
+
+```kotlin
+import br.com.rsicarelli.multiplatform.core.errorMessages.shared.apiErrors.Error as CoreError
+import br.com.rsicarelli.multiplatform.feartures.home.errorMessages.shared.apiErrors.Error as FeatureError
+
+val errorCore = CoreError
+val errorFeature = FeatureError
+```
+
+Dessa forma, os imports ficam organizados, reaproveitáveis, e você reduz o esforço cognitivo de ler e seguir seu código, tornando-o mais limpo e coeso!
+
+## Conclusão
+O import alias no Kotlin serve para ajudar a organizar melhor nosso código, além de resolver conflitos de import com classes e funções com o mesmo nome.
+
+Essa funcionalidade é poderosa e nos permite contextualizar melhor nosso código, auxiliando na leitura e compreensão.
 
 ---
-
-## Índice de exercícios
-
-1. [Classes de Dados (Data Classes)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/dataClasses/README.md
-   )
-
-2. [Tipagem inteligente (Smart casts)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/smartCasts/README.md
-   )
-
-3. [Classes seladas (Sealed classes)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/sealedClasses/README.md
-   )
-
-4. ➡️ ** [Renomear ao importar (Rename on import)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/renameOnImport/README.md
-   ) **
-
-5. [Funções de extensão (Extension functions)](
-   https://github.com/rsicarelli/kotlin-koans-edu-br/blob/main/koans/src/commonMain/kotlin/com/rsicarelli/koansbr/classes/extensionFunctions/README.md
-   )
